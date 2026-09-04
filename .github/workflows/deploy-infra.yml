@@ -1,0 +1,87 @@
+name: Deploy infrastructure
+
+# S3 + CloudFront for cavedrepa.org
+# Requires GitHub variables: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'templates/**'
+      - 'samconfig.toml'
+      - '.github/workflows/deploy-infra.yml'
+
+env:
+  AWS_REGION: us-east-1
+  STACK_NAME: website-cavedrepa-prod
+  TEMPLATE_FILE: templates/template.yaml
+
+jobs:
+  deploy:
+    name: SAM deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate AWS variables
+        env:
+          AWS_ACCESS_KEY_ID: ${{ vars.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ vars.AWS_SECRET_ACCESS_KEY }}
+        run: |
+          missing=0
+          if [ -z "$AWS_ACCESS_KEY_ID" ]; then
+            echo "::error::Falta la variable AWS_ACCESS_KEY_ID en GitHub (Settings → Secrets and variables → Actions → Variables)."
+            missing=1
+          fi
+          if [ -z "$AWS_SECRET_ACCESS_KEY" ]; then
+            echo "::error::Falta la variable AWS_SECRET_ACCESS_KEY en GitHub."
+            missing=1
+          fi
+          if [ "$missing" -ne 0 ]; then
+            exit 1
+          fi
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ vars.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ vars.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Setup SAM CLI
+        uses: aws-actions/setup-sam@v2
+
+      - name: Validate template
+        run: sam validate --lint -t ${{ env.TEMPLATE_FILE }} --region ${{ env.AWS_REGION }}
+
+      - name: Deploy stack
+        run: |
+          sam deploy \
+            --template-file "${TEMPLATE_FILE}" \
+            --stack-name "${STACK_NAME}" \
+            --region "${AWS_REGION}" \
+            --capabilities CAPABILITY_IAM \
+            --no-confirm-changeset \
+            --no-fail-on-empty-changeset \
+            --resolve-s3 \
+            --parameter-overrides \
+              "ProjectName=website-cavedrepa" \
+              "SiteName=cavedrepa" \
+              "Environment=prod" \
+              "BucketName=cavedrepa-org-prod" \
+              "DomainName=cavedrepa.org" \
+              "WwwDomainName=www.cavedrepa.org" \
+              "PriceClass=PriceClass_100"
+
+      - name: Show stack outputs
+        run: |
+          aws cloudformation describe-stacks \
+            --stack-name "${STACK_NAME}" \
+            --region "${AWS_REGION}" \
+            --query 'Stacks[0].Outputs' \
+            --output table

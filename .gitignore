@@ -1,0 +1,8 @@
+.aws-sam/
+.packaged/
+.env
+.env.*
+*.pem
+*.key
+.idea/
+.vscode/
