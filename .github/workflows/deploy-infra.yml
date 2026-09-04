@@ -1,7 +1,7 @@
 name: Deploy infrastructure
 
 # S3 + CloudFront for cavedrepa.org
-# Requires GitHub variables: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
+# Requires GitHub secrets: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
 
 on:
   workflow_dispatch:
@@ -28,18 +28,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Validate AWS variables
+      - name: Validate AWS secrets
         env:
-          AWS_ACCESS_KEY_ID: ${{ vars.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ vars.AWS_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           missing=0
           if [ -z "$AWS_ACCESS_KEY_ID" ]; then
-            echo "::error::Falta la variable AWS_ACCESS_KEY_ID en GitHub (Settings → Secrets and variables → Actions → Variables)."
+            echo "::error::Falta el secret AWS_ACCESS_KEY_ID en GitHub (Settings → Secrets and variables → Actions → Secrets)."
             missing=1
           fi
           if [ -z "$AWS_SECRET_ACCESS_KEY" ]; then
-            echo "::error::Falta la variable AWS_SECRET_ACCESS_KEY en GitHub."
+            echo "::error::Falta el secret AWS_SECRET_ACCESS_KEY en GitHub."
             missing=1
           fi
           if [ "$missing" -ne 0 ]; then
@@ -49,8 +49,8 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ vars.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ vars.AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Setup SAM CLI
