@@ -148,10 +148,12 @@ const renderDetail = (company) => {
         ? `<div class="detail-image-wrap"><img src="${company.image_url}?v=4" alt="" width="640" height="360" onerror="this.remove()"></div>`
         : ""
     }
-    <p class="eyebrow">Ficha de afiliado</p>
-    <h2 id="company-title">${company.name || ""}</h2>
-    <p class="company-meta">${termNames(company.sectors)} ${company.locations?.length ? "· " + termNames(company.locations) : ""}</p>
-    ${company.tagline ? `<p class="detail-tagline">${company.tagline}</p>` : ""}
+    <header class="detail-head">
+      <p class="eyebrow">Ficha de afiliado</p>
+      <h2 id="company-title">${company.name || ""}</h2>
+      <p class="detail-sub">${termNames(company.sectors)} ${company.locations?.length ? "· " + termNames(company.locations) : ""}</p>
+      ${company.tagline ? `<p class="detail-tagline">${company.tagline}</p>` : ""}
+    </header>
     <dl class="detail-list">
       ${line("RIF", company.rif)}
       ${line("Representante legal", company.legal_rep)}
@@ -164,12 +166,22 @@ const renderDetail = (company) => {
     </dl>
     ${
       company.brands?.length
-        ? `<div class="brand-chips">${company.brands
-            .map((brand) => `<a href="/directorio/?marca=${encodeURIComponent(brand.slug)}">${brand.name}</a>`)
-            .join("")}</div>`
+        ? `<section class="detail-section">
+            <h3 class="detail-heading">Marcas</h3>
+            <div class="brand-chips">${company.brands
+              .map((brand) => `<a href="/directorio/?marca=${encodeURIComponent(brand.slug)}">${brand.name}</a>`)
+              .join("")}</div>
+          </section>`
         : ""
     }
-    ${company.description ? `<div class="detail-copy">${company.description}</div>` : ""}
+    ${
+      company.description
+        ? `<section class="detail-section">
+            <h3 class="detail-heading">Perfil</h3>
+            <div class="detail-copy">${company.description}</div>
+          </section>`
+        : ""
+    }
   `;
   drawer.hidden = false;
   document.body.classList.add("drawer-open");
