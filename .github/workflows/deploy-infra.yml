@@ -1,6 +1,6 @@
 name: Deploy infrastructure
 
-# S3 + CloudFront + API Gateway + Lambda + DynamoDB for cavedrepa.org
+# S3 + CloudFront + API Gateway + Lambda + DynamoDB for cavedrepa.smartravelevents.com
 # Requires GitHub secrets: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
 
 on:
@@ -18,11 +18,14 @@ env:
   AWS_REGION: us-east-1
   STACK_NAME: website-cavedrepa-prod
   TEMPLATE_FILE: templates/template.yaml
+  SITE_DOMAIN: cavedrepa.smartravelevents.com
+  HOSTED_ZONE_DNS: smartravelevents.com.
 
 jobs:
   deploy:
     name: SAM deploy
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     permissions:
       contents: read
     steps:
@@ -62,6 +65,21 @@ jobs:
       - name: Setup SAM CLI
         uses: aws-actions/setup-sam@v2
 
+      - name: Resolve Route 53 hosted zone
+        id: zone
+        run: |
+          set -euo pipefail
+          zone_id=$(aws route53 list-hosted-zones-by-name \
+            --dns-name "${HOSTED_ZONE_DNS}" \
+            --query "HostedZones[?Name=='${HOSTED_ZONE_DNS}'].Id" \
+            --output text | sed 's|/hostedzone/||' | awk '{print $1}')
+          if [ -z "${zone_id}" ] || [ "${zone_id}" = "None" ]; then
+            echo "::error::No se encontró la hosted zone ${HOSTED_ZONE_DNS} en Route 53 de esta cuenta."
+            exit 1
+          fi
+          echo "id=${zone_id}" >> "$GITHUB_OUTPUT"
+          echo "Hosted zone ${HOSTED_ZONE_DNS} → ${zone_id}"
+
       - name: Validate template
         run: sam validate --lint -t ${{ env.TEMPLATE_FILE }} --region ${{ env.AWS_REGION }}
 
@@ -69,6 +87,8 @@ jobs:
         run: sam build -t ${{ env.TEMPLATE_FILE }} --region ${{ env.AWS_REGION }}
 
       - name: Deploy stack
+        env:
+          HOSTED_ZONE_ID: ${{ steps.zone.outputs.id }}
         run: |
           sam deploy \
             --template-file .aws-sam/build/template.yaml \
@@ -79,13 +99,14 @@ jobs:
             --no-fail-on-empty-changeset \
             --resolve-s3 \
             --parameter-overrides \
-              "ProjectName=website-cavedrepa" \
-              "SiteName=cavedrepa" \
-              "Environment=prod" \
-              "BucketName=cavedrepa-org-prod" \
-              "DomainName=cavedrepa.org" \
-              "WwwDomainName=www.cavedrepa.org" \
-              "PriceClass=PriceClass_100"
+              ParameterKey=ProjectName,ParameterValue=website-cavedrepa \
+              ParameterKey=SiteName,ParameterValue=cavedrepa \
+              ParameterKey=Environment,ParameterValue=prod \
+              ParameterKey=BucketName,ParameterValue=cavedrepa-org-prod \
+              ParameterKey=DomainName,ParameterValue=${SITE_DOMAIN} \
+              ParameterKey=WwwDomainName,ParameterValue= \
+              ParameterKey=HostedZoneId,ParameterValue=${HOSTED_ZONE_ID} \
+              ParameterKey=PriceClass,ParameterValue=PriceClass_100
 
       - name: Show stack outputs
         run: |

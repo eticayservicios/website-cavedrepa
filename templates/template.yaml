@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >-
-  cavedrepa.org — static WordPress export hosting plus web API.
+  cavedrepa.smartravelevents.com — static hosting plus web API.
   Private S3 origin behind CloudFront with Origin Access Control.
   REST API, Lambda stub and DynamoDB table (logic comes later).
 
@@ -33,15 +33,15 @@ Parameters:
 
   DomainName:
     Type: String
-    Default: cavedrepa.org
+    Default: cavedrepa.smartravelevents.com
     Description: >-
-      Apex domain. CloudFront uses it only when a certificate is available.
+      Public hostname on CloudFront. Requires HostedZoneId for DNS and ACM.
       Without HostedZoneId the stack deploys on *.cloudfront.net.
 
   WwwDomainName:
     Type: String
-    Default: www.cavedrepa.org
-    Description: Optional www hostname. Redirects to the apex when active.
+    Default: ''
+    Description: Optional www hostname. Leave empty for a subdomain.
 
   CertificateArn:
     Type: String
