@@ -40,8 +40,8 @@ Parameters:
 
   WwwDomainName:
     Type: String
-    Default: ''
-    Description: Optional www hostname. Leave empty for a subdomain.
+    Default: none
+    Description: Optional www hostname. Use none to skip www.
 
   CertificateArn:
     Type: String
@@ -67,6 +67,7 @@ Conditions:
   HasWwwDomain: !And
     - !Not [!Equals [!Ref DomainName, '']]
     - !Not [!Equals [!Ref WwwDomainName, '']]
+    - !Not [!Equals [!Ref WwwDomainName, 'none']]
   HasHostedZone: !Not [!Equals [!Ref HostedZoneId, '']]
   UseProvidedCertificate: !Not [!Equals [!Ref CertificateArn, '']]
   CreateCertificate: !And

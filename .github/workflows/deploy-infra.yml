@@ -99,14 +99,14 @@ jobs:
             --no-fail-on-empty-changeset \
             --resolve-s3 \
             --parameter-overrides \
-              ParameterKey=ProjectName,ParameterValue=website-cavedrepa \
-              ParameterKey=SiteName,ParameterValue=cavedrepa \
-              ParameterKey=Environment,ParameterValue=prod \
-              ParameterKey=BucketName,ParameterValue=cavedrepa-org-prod \
-              ParameterKey=DomainName,ParameterValue=${SITE_DOMAIN} \
-              ParameterKey=WwwDomainName,ParameterValue= \
-              ParameterKey=HostedZoneId,ParameterValue=${HOSTED_ZONE_ID} \
-              ParameterKey=PriceClass,ParameterValue=PriceClass_100
+              "ProjectName=website-cavedrepa" \
+              "SiteName=cavedrepa" \
+              "Environment=prod" \
+              "BucketName=cavedrepa-org-prod" \
+              "DomainName=${SITE_DOMAIN}" \
+              "WwwDomainName=none" \
+              "HostedZoneId=${HOSTED_ZONE_ID}" \
+              "PriceClass=PriceClass_100"
 
       - name: Show stack outputs
         run: |
