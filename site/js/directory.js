@@ -1,3 +1,4 @@
+(() => {
 const form = document.getElementById("directory-search");
 const results = document.getElementById("directory-results");
 const status = document.getElementById("directory-status");
@@ -251,4 +252,5 @@ if (drawer && !params.get("empresa")) {
   if (params.get("vista")) activateTab(params.get("vista"));
   await loadView();
   await openFromQuery();
+})();
 })();

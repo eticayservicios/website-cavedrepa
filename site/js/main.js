@@ -1,3 +1,4 @@
+(() => {
 const nav = document.getElementById("site-nav");
 const toggle = document.getElementById("menu-toggle");
 const search = document.getElementById("directory-search");
@@ -70,3 +71,4 @@ if (search && !isDirectoryPage) {
   search.setAttribute("action", "/directorio/");
   search.setAttribute("method", "get");
 }
+})();
