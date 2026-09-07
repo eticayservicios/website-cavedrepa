@@ -7,7 +7,7 @@ from io import BytesIO
 from PIL import Image, ImageOps
 
 SIZE = (640, 360)
-CANVAS = (247, 251, 246)
+CANVAS = (255, 255, 255)
 PAD_X = 64
 PAD_Y = 52
 

@@ -689,7 +689,7 @@ select {
   position: relative;
   aspect-ratio: 640 / 360;
   width: 100%;
-  background: #f4f1ea;
+  background: var(--white);
   box-sizing: border-box;
   padding: 18px 22px;
   overflow: hidden;

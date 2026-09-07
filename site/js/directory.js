@@ -52,7 +52,7 @@ const companyHref = (company) => {
 const cardHtml = (company) => {
   const initial = (company.name || "?").slice(0, 1);
   const image = company.image_url
-    ? `<img src="${company.image_url}?v=3" alt="" width="640" height="360" onerror="this.remove()">`
+    ? `<img src="${company.image_url}?v=4" alt="" width="640" height="360" onerror="this.remove()">`
     : "";
   return `
     <article class="company-card">
@@ -145,7 +145,7 @@ const renderDetail = (company) => {
   detail.innerHTML = `
     ${
       company.image_url
-        ? `<div class="detail-image-wrap"><img src="${company.image_url}?v=3" alt="" width="640" height="360" onerror="this.remove()"></div>`
+        ? `<div class="detail-image-wrap"><img src="${company.image_url}?v=4" alt="" width="640" height="360" onerror="this.remove()"></div>`
         : ""
     }
     <p class="eyebrow">Ficha de afiliado</p>
