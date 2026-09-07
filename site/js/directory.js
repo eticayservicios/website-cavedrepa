@@ -2,6 +2,7 @@
 const form = document.getElementById("directory-search");
 const results = document.getElementById("directory-results");
 const status = document.getElementById("directory-status");
+const sortSelect = document.getElementById("directory-sort");
 const tabs = document.querySelectorAll(".directory-tabs button");
 const drawer = document.getElementById("company-drawer");
 const detail = document.getElementById("company-detail");
@@ -41,13 +42,14 @@ const companyHref = (company) => {
 };
 
 const cardHtml = (company) => {
+  const initial = (company.name || "?").slice(0, 1);
   const image = company.image_url
-    ? `<img src="${company.image_url}" alt="">`
-    : `<div class="company-fallback">${(company.name || "?").slice(0, 1)}</div>`;
+    ? `<img src="${company.image_url}" alt="" width="640" height="360" onerror="this.remove()">`
+    : "";
   return `
     <article class="company-card">
       <a class="company-card-link" href="${companyHref(company)}">
-        ${image}
+        <div class="company-media">${image}<div class="company-fallback">${initial}</div></div>
         <div class="company-card-body">
           <h3>${company.name || "Empresa"}</h3>
           <p class="company-meta">${termNames(company.sectors) || "Sin sector"}</p>
@@ -102,7 +104,11 @@ const renderDetail = (company) => {
       : `https://${company.website}`
     : "";
   detail.innerHTML = `
-    ${company.image_url ? `<img class="detail-image" src="${company.image_url}" alt="">` : ""}
+    ${
+      company.image_url
+        ? `<div class="detail-image-wrap"><img src="${company.image_url}" alt="" width="640" height="360" onerror="this.remove()"></div>`
+        : ""
+    }
     <p class="eyebrow">Ficha de afiliado</p>
     <h2 id="company-title">${company.name || ""}</h2>
     <p class="company-meta">${termNames(company.sectors)} ${company.locations?.length ? "· " + termNames(company.locations) : ""}</p>
@@ -149,7 +155,13 @@ const loadView = async () => {
     sector: form?.sector?.value || "",
     ubicacion: form?.ubicacion?.value || "",
     marca: form?.marca?.value || "",
+    orden: sortSelect?.value || "nombre",
   };
+
+  if (sortSelect) {
+    const field = sortSelect.closest(".sort-field");
+    if (field) field.hidden = currentView !== "empresas";
+  }
 
   if (currentView === "sectores") {
     setStatus("Directorio por sector");
@@ -194,6 +206,7 @@ const hydrateForm = () => {
     params.get("marca") || "",
     "Todas las marcas"
   );
+  if (sortSelect) sortSelect.value = params.get("orden") || "nombre";
 };
 
 const openFromQuery = async () => {
@@ -218,20 +231,29 @@ tabs.forEach((tab) => {
   });
 });
 
-form?.addEventListener("submit", (event) => {
-  event.preventDefault();
+const applyQuery = () => {
   const next = new URL(window.location.href);
   ["q", "sector", "ubicacion", "marca"].forEach((key) => {
-    const value = form[key]?.value || "";
+    const value = form?.[key]?.value || "";
     if (value) next.searchParams.set(key, value);
     else next.searchParams.delete(key);
   });
+  const orden = sortSelect?.value || "nombre";
+  if (orden && orden !== "nombre") next.searchParams.set("orden", orden);
+  else next.searchParams.delete("orden");
   next.searchParams.set("vista", "empresas");
   next.searchParams.delete("empresa");
   window.history.replaceState({}, "", next);
   activateTab("empresas");
   loadView();
+};
+
+form?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  applyQuery();
 });
+
+sortSelect?.addEventListener("change", applyQuery);
 
 document.getElementById("drawer-close")?.addEventListener("click", closeDrawer);
 drawer?.addEventListener("click", (event) => {

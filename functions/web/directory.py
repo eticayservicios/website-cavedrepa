@@ -24,6 +24,7 @@ CARD_FIELDS = (
     "brands",
     "rif",
     "status",
+    "created_at",
 )
 
 
@@ -238,6 +239,17 @@ def get_item(table, pk: str, sk: str) -> dict[str, Any] | None:
     return response.get("Item")
 
 
+def sort_companies(companies: list[dict[str, Any]], orden: str) -> None:
+    if orden in {"fecha-desc", "date-desc", "recientes"}:
+        companies.sort(key=lambda item: item.get("created_at") or "", reverse=True)
+    elif orden in {"fecha", "fecha-asc", "date", "antiguas"}:
+        companies.sort(key=lambda item: item.get("created_at") or "")
+    elif orden in {"nombre-desc", "z-a"}:
+        companies.sort(key=lambda item: fold(item.get("name") or ""), reverse=True)
+    else:
+        companies.sort(key=lambda item: fold(item.get("name") or ""))
+
+
 def public_card(item: dict[str, Any]) -> dict[str, Any]:
     return {field: item.get(field) for field in CARD_FIELDS if field in item or field in CARD_FIELDS}
 
@@ -267,7 +279,8 @@ def search_directory(table, filters: dict[str, str]) -> dict[str, Any]:
         seen.add(company_id)
         companies.append(public_card(row))
 
-    companies.sort(key=lambda item: fold(item.get("name") or ""))
+    orden = clean(filters.get("orden") or filters.get("sort")).lower() or "nombre"
+    sort_companies(companies, orden)
     return {
         "ok": True,
         "total": len(companies),
@@ -276,6 +289,7 @@ def search_directory(table, filters: dict[str, str]) -> dict[str, Any]:
             "sector": sector,
             "ubicacion": location,
             "marca": brand,
+            "orden": orden,
         },
         "companies": companies,
     }
@@ -317,6 +331,7 @@ def get_company(table, key: str) -> dict[str, Any] | None:
             "lat": item.get("lat") or "",
             "lng": item.get("lng") or "",
             "video_url": item.get("video_url") or "",
+            "created_at": item.get("created_at") or "",
         }
     )
     return detail

@@ -1,6 +1,12 @@
 import unittest
 
-from directory import build_catalogs, items_for_company, matches_filters, normalize_listing
+from directory import (
+    build_catalogs,
+    items_for_company,
+    matches_filters,
+    normalize_listing,
+    sort_companies,
+)
 
 
 SAMPLE = {
@@ -53,6 +59,16 @@ class DirectoryTests(unittest.TestCase):
         self.assertIn("BRAND#massey-ferguson", pks)
         catalogs = build_catalogs([normalize_listing(SAMPLE)])
         self.assertEqual(catalogs["brands"][0]["count"], 1)
+
+    def test_sort_by_name_and_date(self):
+        companies = [
+            {"name": "Beta", "created_at": "2024-01-01 00:00:00"},
+            {"name": "Álfa", "created_at": "2026-01-01 00:00:00"},
+        ]
+        sort_companies(companies, "nombre")
+        self.assertEqual([item["name"] for item in companies], ["Álfa", "Beta"])
+        sort_companies(companies, "fecha-desc")
+        self.assertEqual(companies[0]["name"], "Álfa")
 
 
 if __name__ == "__main__":

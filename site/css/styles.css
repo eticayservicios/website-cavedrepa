@@ -684,21 +684,42 @@ select {
   overflow: hidden;
 }
 
-.company-card img,
-.company-fallback {
+.company-media {
+  position: relative;
+  aspect-ratio: 640 / 360;
   width: 100%;
-  height: 160px;
-  object-fit: cover;
   background: var(--green-800);
+  overflow: hidden;
+}
+
+.company-media img,
+.detail-image-wrap img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .company-fallback {
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--yellow);
   font-size: 2.4rem;
   font-weight: 800;
+}
+
+.detail-image-wrap {
+  aspect-ratio: 640 / 360;
+  width: 100%;
+  background: var(--green-800);
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 16px;
 }
 
 .company-card-body,
@@ -767,12 +788,33 @@ select {
   cursor: pointer;
 }
 
-.detail-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 16px;
+.directory-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.directory-toolbar .directory-status {
+  margin-bottom: 0;
+}
+
+.sort-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.sort-field select {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: var(--white);
+  color: var(--ink);
 }
 
 .detail-list {
