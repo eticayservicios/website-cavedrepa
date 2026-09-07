@@ -9,6 +9,7 @@ const detail = document.getElementById("company-detail");
 const params = new URLSearchParams(window.location.search);
 let catalogs = { sectors: [], locations: [], brands: [] };
 let currentView = params.get("vista") || (params.get("empresa") ? "empresas" : "empresas");
+let currentPage = Number(params.get("page") || 1) || 1;
 
 const fillSelect = (select, items, selected, emptyLabel) => {
   if (!select) return;
@@ -44,7 +45,7 @@ const companyHref = (company) => {
 const cardHtml = (company) => {
   const initial = (company.name || "?").slice(0, 1);
   const image = company.image_url
-    ? `<img src="${company.image_url}" alt="" width="640" height="360" onerror="this.remove()">`
+    ? `<img src="${company.image_url}?v=2" alt="" width="640" height="360" onerror="this.remove()">`
     : "";
   return `
     <article class="company-card">
@@ -79,16 +80,42 @@ const browseHtml = (items, param) => {
   `;
 };
 
+const pagerHtml = (payload) => {
+  const page = payload.page || 1;
+  const pages = payload.pages || 1;
+  if (pages <= 1) return "";
+  const buttons = [];
+  buttons.push(
+    `<button type="button" class="page-btn" data-page="${page - 1}" ${page <= 1 ? "disabled" : ""}>Anterior</button>`
+  );
+  for (let index = 1; index <= pages; index += 1) {
+    buttons.push(
+      `<button type="button" class="page-btn ${index === page ? "is-active" : ""}" data-page="${index}">${index}</button>`
+    );
+  }
+  buttons.push(
+    `<button type="button" class="page-btn" data-page="${page + 1}" ${page >= pages ? "disabled" : ""}>Siguiente</button>`
+  );
+  return `<nav class="pager" aria-label="Paginación">${buttons.join("")}</nav>`;
+};
+
 const renderCompanies = (payload) => {
   const companies = payload.companies || [];
+  const total = payload.total || companies.length;
+  const page = payload.page || 1;
+  const pages = payload.pages || 1;
+  currentPage = page;
   setStatus(
-    companies.length
-      ? `${companies.length} empresa${companies.length === 1 ? "" : "s"} encontrada${companies.length === 1 ? "" : "s"}`
+    total
+      ? `${total} empresa${total === 1 ? "" : "s"} · página ${page} de ${pages}`
       : "No hay empresas con esos filtros."
   );
   results.innerHTML = companies.length
-    ? `<div class="companies-grid">${companies.map(cardHtml).join("")}</div>`
+    ? `<div class="companies-grid">${companies.map(cardHtml).join("")}</div>${pagerHtml(payload)}`
     : `<p class="empty-state">Prueba otro sector, ubicación o marca.</p>`;
+  results.querySelectorAll(".page-btn").forEach((button) => {
+    button.addEventListener("click", () => goToPage(Number(button.dataset.page)));
+  });
 };
 
 const line = (label, value, href) => {
@@ -106,7 +133,7 @@ const renderDetail = (company) => {
   detail.innerHTML = `
     ${
       company.image_url
-        ? `<div class="detail-image-wrap"><img src="${company.image_url}" alt="" width="640" height="360" onerror="this.remove()"></div>`
+        ? `<div class="detail-image-wrap"><img src="${company.image_url}?v=2" alt="" width="640" height="360" onerror="this.remove()"></div>`
         : ""
     }
     <p class="eyebrow">Ficha de afiliado</p>
@@ -156,6 +183,8 @@ const loadView = async () => {
     ubicacion: form?.ubicacion?.value || "",
     marca: form?.marca?.value || "",
     orden: sortSelect?.value || "nombre",
+    page: String(currentPage),
+    per_page: "20",
   };
 
   if (sortSelect) {
@@ -207,6 +236,18 @@ const hydrateForm = () => {
     "Todas las marcas"
   );
   if (sortSelect) sortSelect.value = params.get("orden") || "nombre";
+  currentPage = Number(params.get("page") || 1) || 1;
+};
+
+const goToPage = (page) => {
+  if (!page || page < 1) return;
+  currentPage = page;
+  const next = new URL(window.location.href);
+  if (page > 1) next.searchParams.set("page", String(page));
+  else next.searchParams.delete("page");
+  window.history.replaceState({}, "", next);
+  loadView();
+  window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
 const openFromQuery = async () => {
@@ -243,6 +284,8 @@ const applyQuery = () => {
   else next.searchParams.delete("orden");
   next.searchParams.set("vista", "empresas");
   next.searchParams.delete("empresa");
+  next.searchParams.delete("page");
+  currentPage = 1;
   window.history.replaceState({}, "", next);
   activateTab("empresas");
   loadView();

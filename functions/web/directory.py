@@ -9,6 +9,7 @@ from typing import Any
 
 SITE_ORIGIN = "https://cavedrepa.smartravelevents.com"
 PUBLIC_STATUSES = {"publish"}
+PAGE_SIZE = 20
 CARD_FIELDS = (
     "id",
     "slug",
@@ -250,6 +251,28 @@ def sort_companies(companies: list[dict[str, Any]], orden: str) -> None:
         companies.sort(key=lambda item: fold(item.get("name") or ""))
 
 
+def paginate(companies: list[dict[str, Any]], page: str | int | None, per_page: str | int | None):
+    try:
+        current = max(1, int(page or 1))
+    except (TypeError, ValueError):
+        current = 1
+    try:
+        size = min(50, max(1, int(per_page or PAGE_SIZE)))
+    except (TypeError, ValueError):
+        size = PAGE_SIZE
+    total = len(companies)
+    pages = max(1, (total + size - 1) // size) if total else 1
+    if current > pages:
+        current = pages
+    start = (current - 1) * size
+    return companies[start : start + size], {
+        "page": current,
+        "per_page": size,
+        "pages": pages,
+        "total": total,
+    }
+
+
 def public_card(item: dict[str, Any]) -> dict[str, Any]:
     return {field: item.get(field) for field in CARD_FIELDS if field in item or field in CARD_FIELDS}
 
@@ -281,9 +304,13 @@ def search_directory(table, filters: dict[str, str]) -> dict[str, Any]:
 
     orden = clean(filters.get("orden") or filters.get("sort")).lower() or "nombre"
     sort_companies(companies, orden)
+    page_items, paging = paginate(companies, filters.get("page"), filters.get("per_page"))
     return {
         "ok": True,
-        "total": len(companies),
+        "total": paging["total"],
+        "page": paging["page"],
+        "pages": paging["pages"],
+        "per_page": paging["per_page"],
         "filters": {
             "q": clean(filters.get("q")),
             "sector": sector,
@@ -291,7 +318,7 @@ def search_directory(table, filters: dict[str, str]) -> dict[str, Any]:
             "marca": brand,
             "orden": orden,
         },
-        "companies": companies,
+        "companies": page_items,
     }
 
 

@@ -5,6 +5,7 @@ from directory import (
     items_for_company,
     matches_filters,
     normalize_listing,
+    paginate,
     sort_companies,
 )
 
@@ -69,6 +70,16 @@ class DirectoryTests(unittest.TestCase):
         self.assertEqual([item["name"] for item in companies], ["Álfa", "Beta"])
         sort_companies(companies, "fecha-desc")
         self.assertEqual(companies[0]["name"], "Álfa")
+
+    def test_paginate_twenty_per_page(self):
+        rows = [{"name": str(index)} for index in range(81)]
+        page, meta = paginate(rows, 1, 20)
+        self.assertEqual(len(page), 20)
+        self.assertEqual(meta["pages"], 5)
+        self.assertEqual(meta["total"], 81)
+        last, last_meta = paginate(rows, 5, 20)
+        self.assertEqual(len(last), 1)
+        self.assertEqual(last_meta["page"], 5)
 
 
 if __name__ == "__main__":
