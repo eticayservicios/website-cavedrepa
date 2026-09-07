@@ -1,0 +1,126 @@
+{
+  "recent": [
+    {
+      "id": 3347,
+      "slug": "editorial-cavedrepa-mes-agosto-2026",
+      "title": "Editorial Cavedrepa MES AGOSTO 2026",
+      "date": "2026-08-10T10:11:19",
+      "image_url": "/images/blog/3347.jpg"
+    },
+    {
+      "id": 3328,
+      "slug": "editorial-cavedrepa-mes-julio-2026",
+      "title": "Editorial Cavedrepa MES JULIO 2026",
+      "date": "2026-07-03T12:07:18",
+      "image_url": "/images/blog/3328.jpg"
+    },
+    {
+      "id": 3315,
+      "slug": "editorial-cavedrepa-mes-junio-2026",
+      "title": "Editorial Cavedrepa MES JUNIO 2026",
+      "date": "2026-06-09T09:29:59",
+      "image_url": "/images/blog/3315.jpg"
+    },
+    {
+      "id": 3297,
+      "slug": "editorial-cavedrepa-mes-mayo-2026",
+      "title": "Editorial Cavedrepa MES MAYO 2026",
+      "date": "2026-05-12T09:40:13",
+      "image_url": "/images/blog/3297.jpg"
+    },
+    {
+      "id": 3249,
+      "slug": "editorial-cavedrepa-mes-abril-2026",
+      "title": "Editorial Cavedrepa MES ABRIL 2026",
+      "date": "2026-04-17T09:48:39",
+      "image_url": "/images/blog/3249.jpg"
+    }
+  ],
+  "categories": [
+    {
+      "name": "2026",
+      "slug": "2026",
+      "count": 8
+    },
+    {
+      "name": "2025",
+      "slug": "2025",
+      "count": 6
+    },
+    {
+      "name": "2024",
+      "slug": "2024",
+      "count": 10
+    },
+    {
+      "name": "2023",
+      "slug": "2023",
+      "count": 6
+    },
+    {
+      "name": "2022",
+      "slug": "2022",
+      "count": 12
+    },
+    {
+      "name": "2021",
+      "slug": "2021",
+      "count": 9
+    },
+    {
+      "name": "Agroindustria",
+      "slug": "agroindustria",
+      "count": 52
+    },
+    {
+      "name": "Agrícola",
+      "slug": "agro",
+      "count": 38
+    },
+    {
+      "name": "Construcción",
+      "slug": "construccion",
+      "count": 4
+    },
+    {
+      "name": "Editoriales",
+      "slug": "editoriales",
+      "count": 42
+    },
+    {
+      "name": "Entrevistas",
+      "slug": "entrevistas",
+      "count": 4
+    },
+    {
+      "name": "Estadísticas",
+      "slug": "estadisticas",
+      "count": 32
+    },
+    {
+      "name": "Eventos",
+      "slug": "eventos",
+      "count": 1
+    },
+    {
+      "name": "Institución",
+      "slug": "institucion",
+      "count": 4
+    },
+    {
+      "name": "Noticias",
+      "slug": "noticias",
+      "count": 172
+    },
+    {
+      "name": "Nuevos Afiliados",
+      "slug": "nuevos-afiliados",
+      "count": 30
+    },
+    {
+      "name": "Otros temas",
+      "slug": "otros-temas",
+      "count": 7
+    }
+  ]
+}

@@ -11,6 +11,7 @@ let currentPage = Number(params.get("page") || 1) || 1;
 let currentCategory = params.get("categoria") || "";
 let recentPosts = [];
 let categories = [];
+let sectors = [];
 
 const formatDate = (value) => {
   const stamp = String(value || "").slice(0, 10);
@@ -41,6 +42,12 @@ const catsLine = (items) =>
     .filter(Boolean)
     .join(" / ");
 
+const shortText = (value, max = 160) => {
+  const text = String(value || "").trim();
+  if (text.length <= max) return text;
+  return `${text.slice(0, max - 1).replace(/\s+\S*$/, "")}…`;
+};
+
 const rowHtml = (post) => {
   const image = post.image_url
     ? `<img src="${post.image_url}" alt="">`
@@ -51,7 +58,7 @@ const rowHtml = (post) => {
       <a class="blog-row-media" href="${postHref(post)}" data-entrada="${post.slug || post.id}">${image}</a>
       <div class="blog-row-body">
         <h2><a href="${postHref(post)}" data-entrada="${post.slug || post.id}">${post.title || "Entrada"}</a></h2>
-        <p>${post.excerpt || ""}</p>
+        <p class="blog-row-excerpt">${shortText(post.excerpt)}</p>
         <p class="blog-row-date">${formatDate(post.date)}</p>
       </div>
     </article>
@@ -61,9 +68,11 @@ const rowHtml = (post) => {
 const sideHtml = () => `
   <section class="blog-widget">
     <h3>Entradas recientes</h3>
-    ${recentPosts
-      .map(
-        (post) => `
+    ${
+      recentPosts.length
+        ? recentPosts
+            .map(
+              (post) => `
       <a class="blog-recent" href="${postHref(post)}" data-entrada="${post.slug || post.id}">
         ${post.image_url ? `<img src="${post.image_url}" alt="">` : `<span class="blog-row-fallback"></span>`}
         <span>
@@ -71,8 +80,10 @@ const sideHtml = () => `
           <em>${formatDate(post.date)}</em>
         </span>
       </a>`
-      )
-      .join("")}
+            )
+            .join("")
+        : `<p class="blog-side-empty">Sin entradas recientes.</p>`
+    }
   </section>
   <section class="blog-widget">
     <h3>Categorías principales</h3>
@@ -84,6 +95,19 @@ const sideHtml = () => `
             `<a href="${categoryHref(item.slug)}" data-categoria="${item.slug}" class="${
               currentCategory === item.slug ? "is-active" : ""
             }">${item.name}</a>`
+        )
+        .join("")}
+    </div>
+  </section>
+  <section class="blog-widget">
+    <h3>Directorio – Sectores</h3>
+    <div class="blog-cats">
+      ${sectors
+        .map(
+          (item) =>
+            `<a href="/directorio/?sector=${encodeURIComponent(item.slug)}">${item.name}${
+              item.count ? ` (${item.count})` : ""
+            }</a>`
         )
         .join("")}
     </div>
@@ -154,6 +178,40 @@ const renderArticle = (post) => {
   setStatus("");
   document.getElementById("blog-back")?.addEventListener("click", closeArticle);
   window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+const deriveCategories = (posts) => {
+  const buckets = {};
+  (posts || []).forEach((post) => {
+    (post.categories || []).forEach((item) => {
+      if (!item.slug) return;
+      buckets[item.slug] = buckets[item.slug] || { name: item.name || item.slug, slug: item.slug, count: 0 };
+      buckets[item.slug].count += 1;
+    });
+  });
+  return Object.values(buckets);
+};
+
+const loadSide = async () => {
+  try {
+    const [blog, catalogs, local] = await Promise.all([
+      window.CavedrepaApi.posts({ per_page: "50" }).catch(() => ({})),
+      window.CavedrepaApi.catalogs().catch(() => ({})),
+      fetch("/data/blog-side.json").then((response) => (response.ok ? response.json() : {})).catch(() => ({})),
+    ]);
+    recentPosts =
+      (blog.recent && blog.recent.length && blog.recent) ||
+      (local.recent && local.recent.length && local.recent) ||
+      (blog.posts || []).slice(0, 5);
+    categories =
+      (blog.categories && blog.categories.length && blog.categories) ||
+      (local.categories && local.categories.length && local.categories) ||
+      deriveCategories(blog.posts);
+    sectors = (catalogs.sectors || []).filter((item) => item.slug);
+    renderSide();
+  } catch (_error) {
+    renderSide();
+  }
 };
 
 const loadList = async () => {
@@ -242,7 +300,7 @@ window.addEventListener("popstate", () => {
 
 (async () => {
   const key = new URLSearchParams(window.location.search).get("entrada");
-  await loadList();
+  await Promise.all([loadList(), loadSide()]);
   if (key) await openPost(key, false);
 })();
 })();
