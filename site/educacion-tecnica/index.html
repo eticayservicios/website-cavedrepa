@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog — CAVEDREPA</title>
-  <meta name="description" content="Editoriales, noticias y estudios de CAVEDREPA.">
+  <title>Educación Técnica — CAVEDREPA</title>
+  <meta name="description" content="Formación técnica, cursos, foros y talleres para las empresas afiliadas a CAVEDREPA.">
   <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body class="blog-page">
+<body>
   <div class="topbar">
     <div class="wrap">
       <div class="topbar-contact">
@@ -35,9 +35,9 @@
         <a href="/institucion/">Institución</a>
         <a href="/directorio/">Directorio</a>
         <a href="/blog/?categoria=estadisticas">Estadísticas</a>
-        <a href="/educacion-tecnica/">Educación Técnica</a>
+        <a class="active" href="/educacion-tecnica/">Educación Técnica</a>
         <a href="/sitios-de-interes/">Sitios de Interés</a>
-        <a class="active" href="/blog/">Blog</a>
+        <a href="/blog/">Blog</a>
         <a href="/#contacto">Contacto</a>
       </nav>
       <a class="btn btn-yellow header-cta" href="/afiliate/">Afíliate →</a>
@@ -48,17 +48,26 @@
   </header>
 
   <main>
-    <section class="section blog-body">
+    <section class="section page-hero">
       <div class="wrap">
-        <h1 class="blog-page-title">Noticavedrepa: blog de noticias de la Cámara</h1>
-        <div class="blog-layout">
-          <div class="blog-main">
-            <div id="blog-status" class="directory-status"></div>
-            <div id="blog-results" class="directory-results"></div>
-            <article id="blog-article" class="blog-article" hidden></article>
-          </div>
-          <aside class="blog-side" id="blog-side"></aside>
-        </div>
+        <p class="eyebrow">Formación</p>
+        <h1>Educación Técnica</h1>
+        <p>La Cámara impulsa la capacitación integral de las empresas afiliadas: cursos, foros y talleres para el mejoramiento educativo del sector.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="wrap page-prose">
+        <h2>Qué ofrecemos</h2>
+        <p>Entre las herramientas de la Cámara está la formación continua de afiliados y de sus equipos de trabajo, para fortalecer la competitividad y el servicio posventa.</p>
+        <ul>
+          <li>Cursos, foros y talleres para el mejoramiento educativo integral.</li>
+          <li>Capacitación para empleados de las empresas afiliadas.</li>
+          <li>Información continua sobre leyes, decretos y resoluciones del sector.</li>
+        </ul>
+        <h2>¿Quieres participar?</h2>
+        <p>Si tu empresa está afiliada o desea sumarse a las actividades de formación, escríbenos y te indicamos las próximas convocatorias.</p>
+        <p><a class="btn btn-yellow" href="mailto:info@cavedrepa.org">Escribir a la Cámara</a></p>
       </div>
     </section>
   </main>
@@ -71,8 +80,6 @@
   </footer>
 
   <script src="/js/config.js"></script>
-  <script src="/js/api.js"></script>
   <script src="/js/main.js"></script>
-  <script src="/js/blog.js"></script>
 </body>
 </html>

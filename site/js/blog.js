@@ -24,6 +24,17 @@ const setStatus = (text) => {
   if (status) status.textContent = text || "";
 };
 
+const syncMenu = () => {
+  document.querySelectorAll("#site-nav a").forEach((link) => {
+    const href = link.getAttribute("href") || "";
+    if (href.includes("categoria=estadisticas")) {
+      link.classList.toggle("active", currentCategory === "estadisticas");
+    } else if (href === "/blog/") {
+      link.classList.toggle("active", currentCategory !== "estadisticas");
+    }
+  });
+};
+
 const postHref = (post) => {
   const next = new URL("/blog/", window.location.origin);
   next.searchParams.set("entrada", post.slug || post.id);
@@ -42,8 +53,18 @@ const catsLine = (items) =>
     .filter(Boolean)
     .join(" / ");
 
+const softenCaps = (value) => {
+  const text = String(value || "").replace(/\s*\[(?:&hellip;|…)\]\s*$/i, "…").trim();
+  const letters = text.replace(/[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/g, "");
+  if (!letters) return text;
+  const upper = (letters.match(/[A-ZÁÉÍÓÚÜÑ]/g) || []).length;
+  if (upper / letters.length < 0.65) return text;
+  const lower = text.toLocaleLowerCase("es");
+  return lower.charAt(0).toLocaleUpperCase("es") + lower.slice(1);
+};
+
 const shortText = (value, max = 160) => {
-  const text = String(value || "").trim();
+  const text = softenCaps(value);
   if (text.length <= max) return text;
   return `${text.slice(0, max - 1).replace(/\s+\S*$/, "")}…`;
 };
@@ -146,6 +167,7 @@ const showList = () => {
 };
 
 const renderList = (payload) => {
+  syncMenu();
   const posts = payload.posts || [];
   const page = payload.page || 1;
   const pages = payload.pages || 1;

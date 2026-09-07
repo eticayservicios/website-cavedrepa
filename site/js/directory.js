@@ -69,19 +69,30 @@ const cardHtml = (company) => {
   `;
 };
 
-const browseHtml = (items, param) => {
-  if (!items.length) return `<p class="empty-state">No hay datos para este listado.</p>`;
+const browseHtml = (items, param, withPhoto = false) => {
+  const rows = items.filter((item) => item.count > 0);
+  if (!rows.length) return `<p class="empty-state">No hay datos para este listado.</p>`;
   return `
-    <div class="browse-grid">
-      ${items
-        .filter((item) => item.count > 0)
-        .map(
-          (item) => `
+    <div class="browse-grid${withPhoto ? " location-grid" : ""}">
+      ${rows
+        .map((item) => {
+          const count = `${item.count} empresa${item.count === 1 ? "" : "s"}`;
+          if (!withPhoto) {
+            return `
         <a class="browse-card" href="/directorio/?${param}=${encodeURIComponent(item.slug)}">
           <strong>${item.name}</strong>
-          <span>${item.count} empresa${item.count === 1 ? "" : "s"}</span>
-        </a>`
-        )
+          <span>${count}</span>
+        </a>`;
+          }
+          return `
+        <a class="location-card" href="/directorio/?${param}=${encodeURIComponent(item.slug)}">
+          <img src="/images/ubicaciones/${item.slug}.jpg" alt="" width="960" height="540" onerror="this.remove()">
+          <div class="location-card-body">
+            <strong>${item.name}</strong>
+            <span>${count}</span>
+          </div>
+        </a>`;
+        })
         .join("")}
     </div>
   `;
@@ -248,7 +259,7 @@ const loadView = async () => {
   }
   if (currentView === "ubicaciones") {
     setStatus("Directorio por ubicación");
-    results.innerHTML = browseHtml(catalogs.locations, "ubicacion");
+    results.innerHTML = browseHtml(catalogs.locations, "ubicacion", true);
     return;
   }
   if (currentView === "marcas") {

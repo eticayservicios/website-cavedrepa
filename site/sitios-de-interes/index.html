@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog — CAVEDREPA</title>
-  <meta name="description" content="Editoriales, noticias y estudios de CAVEDREPA.">
+  <title>Sitios de Interés — CAVEDREPA</title>
+  <meta name="description" content="Enlaces a cámaras, ministerios, organismos públicos e instituciones relacionadas con el sector.">
   <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body class="blog-page">
+<body>
   <div class="topbar">
     <div class="wrap">
       <div class="topbar-contact">
@@ -36,8 +36,8 @@
         <a href="/directorio/">Directorio</a>
         <a href="/blog/?categoria=estadisticas">Estadísticas</a>
         <a href="/educacion-tecnica/">Educación Técnica</a>
-        <a href="/sitios-de-interes/">Sitios de Interés</a>
-        <a class="active" href="/blog/">Blog</a>
+        <a class="active" href="/sitios-de-interes/">Sitios de Interés</a>
+        <a href="/blog/">Blog</a>
         <a href="/#contacto">Contacto</a>
       </nav>
       <a class="btn btn-yellow header-cta" href="/afiliate/">Afíliate →</a>
@@ -48,17 +48,19 @@
   </header>
 
   <main>
-    <section class="section blog-body">
+    <section class="section page-hero">
       <div class="wrap">
-        <h1 class="blog-page-title">Noticavedrepa: blog de noticias de la Cámara</h1>
-        <div class="blog-layout">
-          <div class="blog-main">
-            <div id="blog-status" class="directory-status"></div>
-            <div id="blog-results" class="directory-results"></div>
-            <article id="blog-article" class="blog-article" hidden></article>
-          </div>
-          <aside class="blog-side" id="blog-side"></aside>
-        </div>
+        <p class="eyebrow">Enlaces</p>
+        <h1>Sitios de Interés</h1>
+        <p>Gremios, organismos públicos, ministerios e instituciones relacionadas con los sectores agrícola, construcción, minería, pesca y afines.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="directory-tabs page-tabs" id="sitios-tabs" role="tablist"></div>
+        <p class="sitios-lead" id="sitios-lead"></p>
+        <div class="links-grid" id="sitios-list"></div>
       </div>
     </section>
   </main>
@@ -71,8 +73,7 @@
   </footer>
 
   <script src="/js/config.js"></script>
-  <script src="/js/api.js"></script>
   <script src="/js/main.js"></script>
-  <script src="/js/blog.js"></script>
+  <script src="/js/sitios.js"></script>
 </body>
 </html>
