@@ -162,6 +162,17 @@ class BlogTests(unittest.TestCase):
         self.assertIn("SLUG#post#editorial-agosto-2026", pks)
         self.assertEqual(post["title"], "Editorial agosto 2026")
 
+    def test_categories_list_years_first(self):
+        from blog import blog_categories
+
+        cats = blog_categories(
+            [
+                {"categories": [{"name": "2024", "slug": "2024"}, {"name": "Editoriales", "slug": "editoriales"}]},
+                {"categories": [{"name": "2026", "slug": "2026"}]},
+            ]
+        )
+        self.assertEqual([item["slug"] for item in cats[:2]], ["2026", "2024"])
+
     def test_trashed_slug_is_not_public(self):
         from blog import items_for_post, normalize_post
 

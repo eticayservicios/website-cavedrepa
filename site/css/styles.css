@@ -1216,8 +1216,127 @@ body.drawer-open {
   font-weight: 600;
 }
 
+.blog-page .blog-body {
+  padding-top: 40px;
+}
+
+.blog-page-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--green-900);
+  letter-spacing: -0.03em;
+  margin-bottom: 28px;
+}
+
+.blog-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 48px;
+  align-items: start;
+}
+
+.blog-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 8px 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.blog-row-cats {
+  grid-column: 1 / -1;
+  color: var(--green-700);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.blog-row-media img,
+.blog-row-fallback {
+  width: 100%;
+  height: 128px;
+  object-fit: cover;
+  background: #e8eeea;
+  display: block;
+}
+
+.blog-row-body h2 {
+  font-size: 1.2rem;
+  line-height: 1.25;
+  margin-bottom: 8px;
+  color: var(--green-950);
+}
+
+.blog-row-body p {
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.blog-row-date {
+  margin-top: 12px;
+  text-align: right;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.blog-widget {
+  margin-bottom: 32px;
+}
+
+.blog-widget h3 {
+  border-left: 4px solid var(--green-700);
+  padding-left: 10px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: var(--green-900);
+}
+
+.blog-recent {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.blog-recent img,
+.blog-recent .blog-row-fallback {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+}
+
+.blog-recent strong {
+  display: block;
+  font-size: 0.86rem;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+.blog-recent em {
+  display: block;
+  margin-top: 4px;
+  font-style: normal;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.blog-cats a {
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.blog-cats a.is-active,
+.blog-cats a:hover {
+  color: var(--green-700);
+}
+
 .blog-article {
-  max-width: 760px;
+  max-width: none;
 }
 
 .blog-back {
@@ -1312,7 +1431,9 @@ body.drawer-open {
   .companies-grid,
   .browse-grid,
   .cta-band .wrap,
-  .apply-form fieldset {
+  .apply-form fieldset,
+  .blog-layout,
+  .blog-row {
     grid-template-columns: 1fr;
   }
 

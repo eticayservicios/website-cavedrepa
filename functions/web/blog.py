@@ -92,8 +92,28 @@ def items_for_post(post: dict[str, Any]) -> list[dict[str, Any]]:
     return [dynamodb_safe(item) for item in items]
 
 
+def blog_categories(posts: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    buckets: dict[str, dict[str, Any]] = {}
+    for post in posts:
+        for item in post.get("categories") or []:
+            slug = item.get("slug") or ""
+            if not slug:
+                continue
+            current = buckets.setdefault(slug, {"name": item.get("name") or slug, "slug": slug, "count": 0})
+            current["count"] += 1
+    return sorted(
+        buckets.values(),
+        key=lambda item: (
+            0 if str(item["slug"]).isdigit() else 1,
+            -int(item["slug"]) if str(item["slug"]).isdigit() else 0,
+            fold(item["name"]),
+        ),
+    )
+
+
 def search_blog(table, filters: dict[str, str]) -> dict[str, Any]:
     query = fold(filters.get("q"))
+    category = clean(filters.get("categoria") or filters.get("category")).lower()
     rows = query_pk(table, "BLOG#publish")
     posts = []
     for row in rows:
@@ -101,6 +121,14 @@ def search_blog(table, filters: dict[str, str]) -> dict[str, Any]:
             continue
         posts.append(card(row))
     posts.sort(key=lambda item: item.get("date") or "", reverse=True)
+    categories = blog_categories(posts)
+    recent = posts[:5]
+    if category:
+        posts = [
+            post
+            for post in posts
+            if category in {item.get("slug") for item in post.get("categories") or []}
+        ]
     page_items, paging = paginate(posts, filters.get("page"), filters.get("per_page") or PAGE_SIZE)
     return {
         "ok": True,
@@ -108,6 +136,9 @@ def search_blog(table, filters: dict[str, str]) -> dict[str, Any]:
         "page": paging["page"],
         "pages": paging["pages"],
         "per_page": paging["per_page"],
+        "categoria": category,
+        "recent": recent,
+        "categories": categories,
         "posts": page_items,
     }
 

@@ -2,30 +2,21 @@
 const results = document.getElementById("blog-results");
 const article = document.getElementById("blog-article");
 const status = document.getElementById("blog-status");
-const MONTHS = [
-  "enero",
-  "febrero",
-  "marzo",
-  "abril",
-  "mayo",
-  "junio",
-  "julio",
-  "agosto",
-  "septiembre",
-  "octubre",
-  "noviembre",
-  "diciembre",
-];
+const side = document.getElementById("blog-side");
 
 if (!results || !window.CavedrepaApi) return;
 
-let currentPage = Number(new URLSearchParams(window.location.search).get("page") || 1) || 1;
+const params = new URLSearchParams(window.location.search);
+let currentPage = Number(params.get("page") || 1) || 1;
+let currentCategory = params.get("categoria") || "";
+let recentPosts = [];
+let categories = [];
 
 const formatDate = (value) => {
   const stamp = String(value || "").slice(0, 10);
   const [year, month, day] = stamp.split("-");
   if (!year || !month || !day) return "";
-  return `${Number(day)} ${MONTHS[Number(month) - 1] || ""} ${year}`;
+  return `${day}/${month}/${year}`;
 };
 
 const setStatus = (text) => {
@@ -33,30 +24,71 @@ const setStatus = (text) => {
 };
 
 const postHref = (post) => {
-  const next = new URL(window.location.href);
+  const next = new URL("/blog/", window.location.origin);
   next.searchParams.set("entrada", post.slug || post.id);
-  next.searchParams.delete("page");
   return `${next.pathname}${next.search}`;
 };
 
-const cardHtml = (post) => {
+const categoryHref = (slug) => {
+  const next = new URL("/blog/", window.location.origin);
+  if (slug) next.searchParams.set("categoria", slug);
+  return `${next.pathname}${next.search}`;
+};
+
+const catsLine = (items) =>
+  (items || [])
+    .map((item) => item.name)
+    .filter(Boolean)
+    .join(" / ");
+
+const rowHtml = (post) => {
   const image = post.image_url
-    ? `<img src="${post.image_url}" alt="" width="960" height="540">`
-    : `<div class="news-fallback"></div>`;
+    ? `<img src="${post.image_url}" alt="">`
+    : `<div class="blog-row-fallback"></div>`;
   return `
-    <article class="news-card">
-      <a class="company-card-link" href="${postHref(post)}" data-entrada="${post.slug || post.id}">
-        ${image}
-        <div class="news-body">
-          <p class="news-date">${formatDate(post.date)}</p>
-          <h3>${post.title || "Entrada"}</h3>
-          <p>${post.excerpt || ""}</p>
-          <span class="read-more">Leer más →</span>
-        </div>
-      </a>
+    <article class="blog-row">
+      <p class="blog-row-cats">${catsLine(post.categories)}</p>
+      <a class="blog-row-media" href="${postHref(post)}" data-entrada="${post.slug || post.id}">${image}</a>
+      <div class="blog-row-body">
+        <h2><a href="${postHref(post)}" data-entrada="${post.slug || post.id}">${post.title || "Entrada"}</a></h2>
+        <p>${post.excerpt || ""}</p>
+        <p class="blog-row-date">${formatDate(post.date)}</p>
+      </div>
     </article>
   `;
 };
+
+const sideHtml = () => `
+  <section class="blog-widget">
+    <h3>Entradas recientes</h3>
+    ${recentPosts
+      .map(
+        (post) => `
+      <a class="blog-recent" href="${postHref(post)}" data-entrada="${post.slug || post.id}">
+        ${post.image_url ? `<img src="${post.image_url}" alt="">` : `<span class="blog-row-fallback"></span>`}
+        <span>
+          <strong>${post.title || "Entrada"}</strong>
+          <em>${formatDate(post.date)}</em>
+        </span>
+      </a>`
+      )
+      .join("")}
+  </section>
+  <section class="blog-widget">
+    <h3>Categorías principales</h3>
+    <div class="blog-cats">
+      <a href="/blog/" data-categoria="" class="${currentCategory ? "" : "is-active"}">Todas</a>
+      ${categories
+        .map(
+          (item) =>
+            `<a href="${categoryHref(item.slug)}" data-categoria="${item.slug}" class="${
+              currentCategory === item.slug ? "is-active" : ""
+            }">${item.name}</a>`
+        )
+        .join("")}
+    </div>
+  </section>
+`;
 
 const pagerHtml = (payload) => {
   const page = payload.page || 1;
@@ -77,6 +109,10 @@ const pagerHtml = (payload) => {
   return `<nav class="pager" aria-label="Paginación">${buttons.join("")}</nav>`;
 };
 
+const renderSide = () => {
+  if (side) side.innerHTML = sideHtml();
+};
+
 const showList = () => {
   if (article) {
     article.hidden = true;
@@ -90,13 +126,16 @@ const renderList = (payload) => {
   const page = payload.page || 1;
   const pages = payload.pages || 1;
   const total = payload.total || posts.length;
+  recentPosts = payload.recent || recentPosts;
+  categories = payload.categories || categories;
   setStatus(total ? `${total} entradas · página ${page} de ${pages}` : "Aún no hay entradas.");
   results.innerHTML = posts.length
-    ? `<div class="news-grid">${posts.map(cardHtml).join("")}</div>${pagerHtml(payload)}`
+    ? `${posts.map(rowHtml).join("")}${pagerHtml(payload)}`
     : `<p class="empty-state">No hay entradas para mostrar.</p>`;
   results.querySelectorAll(".page-btn").forEach((button) => {
     button.addEventListener("click", () => goToPage(Number(button.dataset.page)));
   });
+  renderSide();
   showList();
 };
 
@@ -104,8 +143,9 @@ const renderArticle = (post) => {
   const image = post.image_url ? `<img class="blog-hero-img" src="${post.image_url}" alt="">` : "";
   article.innerHTML = `
     <button type="button" class="blog-back" id="blog-back">← Volver al blog</button>
+    <p class="blog-row-cats">${catsLine(post.categories)}</p>
     ${image}
-    <p class="news-date">${formatDate(post.date)}</p>
+    <p class="blog-row-date">${formatDate(post.date)}</p>
     <h1>${post.title || ""}</h1>
     <div class="blog-content">${post.content || ""}</div>
   `;
@@ -119,7 +159,11 @@ const renderArticle = (post) => {
 const loadList = async () => {
   setStatus("Cargando el blog...");
   try {
-    const payload = await window.CavedrepaApi.posts({ page: String(currentPage), per_page: "12" });
+    const payload = await window.CavedrepaApi.posts({
+      page: String(currentPage),
+      per_page: "10",
+      categoria: currentCategory,
+    });
     renderList(payload);
   } catch (_error) {
     setStatus("No se pudo cargar el blog.");
@@ -151,7 +195,7 @@ const closeArticle = () => {
   next.searchParams.delete("entrada");
   window.history.pushState({}, "", next);
   showList();
-  if (!results.innerHTML) loadList();
+  if (!results.querySelector(".blog-row")) loadList();
 };
 
 const goToPage = (page) => {
@@ -165,7 +209,22 @@ const goToPage = (page) => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
-results.addEventListener("click", (event) => {
+const applyCategory = (slug) => {
+  currentCategory = slug || "";
+  currentPage = 1;
+  const next = new URL("/blog/", window.location.origin);
+  if (currentCategory) next.searchParams.set("categoria", currentCategory);
+  window.history.pushState({}, "", next);
+  loadList();
+};
+
+document.querySelector(".blog-layout")?.addEventListener("click", (event) => {
+  const category = event.target.closest("[data-categoria]");
+  if (category) {
+    event.preventDefault();
+    applyCategory(category.dataset.categoria);
+    return;
+  }
   const link = event.target.closest("[data-entrada]");
   if (!link) return;
   event.preventDefault();
@@ -173,12 +232,12 @@ results.addEventListener("click", (event) => {
 });
 
 window.addEventListener("popstate", () => {
-  const key = new URLSearchParams(window.location.search).get("entrada");
+  const next = new URLSearchParams(window.location.search);
+  const key = next.get("entrada");
+  currentCategory = next.get("categoria") || "";
+  currentPage = Number(next.get("page") || 1) || 1;
   if (key) openPost(key, false);
-  else {
-    showList();
-    if (!results.querySelector(".news-grid")) loadList();
-  }
+  else loadList();
 });
 
 (async () => {
