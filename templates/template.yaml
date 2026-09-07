@@ -1,8 +1,9 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >-
-  cavedrepa.org — static WordPress export hosting.
+  cavedrepa.org — static WordPress export hosting plus web API.
   Private S3 origin behind CloudFront with Origin Access Control.
+  REST API, Lambda stub and DynamoDB table (logic comes later).
 
 Parameters:
   ProjectName:
@@ -87,6 +88,14 @@ Conditions:
   CreateWwwDns: !And
     - !Condition HasCustomWww
     - !Condition HasHostedZone
+
+Globals:
+  Function:
+    Runtime: python3.13
+    Architectures:
+      - arm64
+    Timeout: 15
+    MemorySize: 256
 
 Resources:
   SiteCertificate:
@@ -346,6 +355,88 @@ Resources:
         HostedZoneId: Z2FDTNDATAQYW2
         EvaluateTargetHealth: false
 
+  WebCoreTable:
+    Type: AWS::DynamoDB::Table
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      TableName: !Sub '${SiteName}-web-core'
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: pk
+          AttributeType: S
+        - AttributeName: sk
+          AttributeType: S
+      KeySchema:
+        - AttributeName: pk
+          KeyType: HASH
+        - AttributeName: sk
+          KeyType: RANGE
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: true
+      Tags:
+        - Key: Project
+          Value: !Ref ProjectName
+        - Key: Site
+          Value: !Ref SiteName
+        - Key: Environment
+          Value: !Ref Environment
+
+  WebApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      Name: !Sub '${SiteName}-web-api'
+      StageName: v1
+      Description: API REST del portal web Cavedrepa.
+      EndpointConfiguration: REGIONAL
+      Cors:
+        AllowMethods: "'OPTIONS,GET,POST,PUT,PATCH,DELETE'"
+        AllowHeaders: "'Content-Type,Authorization'"
+        AllowOrigin: "'*'"
+      Tags:
+        Project: !Ref ProjectName
+        Site: !Ref SiteName
+        Environment: !Ref Environment
+
+  WebFunctionLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub '/aws/lambda/${SiteName}-web'
+      RetentionInDays: 30
+
+  WebFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub '${SiteName}-web'
+      Description: Lambda del portal web Cavedrepa. Stub hasta el siguiente paso.
+      CodeUri: ../functions/web/
+      Handler: app.lambda_handler
+      LoggingConfig:
+        LogGroup: !Ref WebFunctionLogGroup
+      Environment:
+        Variables:
+          TABLE_NAME: !Ref WebCoreTable
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref WebCoreTable
+      Events:
+        Root:
+          Type: Api
+          Properties:
+            RestApiId: !Ref WebApi
+            Path: /
+            Method: ANY
+        Proxy:
+          Type: Api
+          Properties:
+            RestApiId: !Ref WebApi
+            Path: /{proxy+}
+            Method: ANY
+      Tags:
+        Project: !Ref ProjectName
+        Site: !Ref SiteName
+        Environment: !Ref Environment
+
 Outputs:
   BucketName:
     Description: Private S3 bucket for the static export.
@@ -369,3 +460,19 @@ Outputs:
       - HasCustomDomain
       - !Sub 'https://${DomainName}'
       - !Sub 'https://${SiteDistribution.DomainName}'
+
+  ApiName:
+    Description: REST API Gateway name.
+    Value: !Sub '${SiteName}-web-api'
+
+  ApiUrl:
+    Description: Base URL of cavedrepa-web-api (stage v1).
+    Value: !Sub 'https://${WebApi}.execute-api.${AWS::Region}.amazonaws.com/v1'
+
+  WebFunctionName:
+    Description: Lambda function name.
+    Value: !Ref WebFunction
+
+  WebCoreTableName:
+    Description: DynamoDB table name.
+    Value: !Ref WebCoreTable

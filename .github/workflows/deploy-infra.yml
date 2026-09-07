@@ -1,6 +1,6 @@
 name: Deploy infrastructure
 
-# S3 + CloudFront for cavedrepa.org
+# S3 + CloudFront + API Gateway + Lambda + DynamoDB for cavedrepa.org
 # Requires GitHub secrets: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
 
 on:
@@ -10,6 +10,7 @@ on:
       - main
     paths:
       - 'templates/**'
+      - 'functions/**'
       - 'samconfig.toml'
       - '.github/workflows/deploy-infra.yml'
 
@@ -53,16 +54,24 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
       - name: Setup SAM CLI
         uses: aws-actions/setup-sam@v2
 
       - name: Validate template
         run: sam validate --lint -t ${{ env.TEMPLATE_FILE }} --region ${{ env.AWS_REGION }}
 
+      - name: Build
+        run: sam build -t ${{ env.TEMPLATE_FILE }} --region ${{ env.AWS_REGION }}
+
       - name: Deploy stack
         run: |
           sam deploy \
-            --template-file "${TEMPLATE_FILE}" \
+            --template-file .aws-sam/build/template.yaml \
             --stack-name "${STACK_NAME}" \
             --region "${AWS_REGION}" \
             --capabilities CAPABILITY_IAM \

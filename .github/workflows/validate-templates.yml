@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'templates/**'
+      - 'functions/**'
       - 'samconfig.toml'
       - '.github/workflows/**'
 
