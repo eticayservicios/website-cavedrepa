@@ -3,55 +3,273 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cavedrepa — Bienvenidos</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: Georgia, "Times New Roman", serif;
-      background: linear-gradient(160deg, #1a3a2f 0%, #2d5a47 45%, #4a7c59 100%);
-      color: #f5f0e8;
-      padding: 2rem;
-    }
-    main {
-      max-width: 36rem;
-      text-align: center;
-    }
-    h1 {
-      font-size: clamp(2rem, 6vw, 3rem);
-      font-weight: 400;
-      letter-spacing: 0.04em;
-      margin-bottom: 1rem;
-    }
-    p {
-      font-size: 1.15rem;
-      line-height: 1.7;
-      opacity: 0.92;
-    }
-    .domain {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.5rem 1.25rem;
-      border: 1px solid rgba(245, 240, 232, 0.35);
-      border-radius: 999px;
-      font-family: system-ui, sans-serif;
-      font-size: 0.9rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-  </style>
+  <title>CAVEDREPA — Cámara Venezolana de Distribuidores de Maquinaria</title>
+  <meta name="description" content="Representamos, conectamos y fortalecemos a distribuidores de maquinaria, equipos y repuestos en Venezuela.">
+  <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
+  <div class="topbar">
+    <div class="wrap">
+      <div class="topbar-contact">
+        <a href="tel:+582122634567">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.6 3.1 3.5 5 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.2 1.1L6.6 10.8z"/></svg>
+          +58 212 263 4567
+        </a>
+        <a href="mailto:info@cavedrepa.org">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>
+          <span class="hide-sm">info@cavedrepa.org</span>
+        </a>
+      </div>
+      <div class="topbar-social">
+        <span>Síguenos en:</span>
+        <div class="social-links">
+          <a href="https://www.linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M6.5 8.5A2 2 0 1 1 6.5 4.5a2 2 0 0 1 0 4zM4.8 20V9.7h3.4V20H4.8zM10.3 20V9.7h3.2v1.4h.1c.5-.9 1.6-1.8 3.3-1.8 3.5 0 4.1 2.3 4.1 5.3V20h-3.4v-4.7c0-1.1 0-2.6-1.6-2.6s-1.8 1.2-1.8 2.5V20h-3.9z"/></svg>
+          </a>
+          <a href="https://www.instagram.com" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 1.8A2 2 0 1 0 14 12a2 2 0 0 0-2-2zm4.8-2.6a.9.9 0 1 1-.9.9.9.9 0 0 1 .9-.9z"/></svg>
+          </a>
+          <a href="https://www.youtube.com" aria-label="YouTube" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M23 12.2s0-3.2-.4-4.6c-.2-.9-.9-1.6-1.8-1.8C19.2 5.4 12 5.4 12 5.4s-7.2 0-8.8.4c-.9.2-1.6.9-1.8 1.8C1 9 1 12.2 1 12.2s0 3.2.4 4.6c.2.9.9 1.6 1.8 1.8 1.6.4 8.8.4 8.8.4s7.2 0 8.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.4.4-4.6.4-4.6zM9.8 15.5v-6.6l6.3 3.3-6.3 3.3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#inicio">
+        <img src="/images/logo.svg" alt="">
+        <span>
+          <span class="brand-name">CAVEDREPA</span>
+          <span class="brand-tag">Cámara Venezolana de Distribuidores de Maquinaria, Equipos y Repuestos</span>
+        </span>
+      </a>
+      <nav class="nav" id="site-nav">
+        <a class="active" href="#inicio">Inicio</a>
+        <a href="#camara">La Cámara</a>
+        <a href="#afiliados">Afiliados</a>
+        <a href="#beneficios">Servicios y Beneficios</a>
+        <a href="#noticias">Noticias y Estudios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a class="btn btn-yellow header-cta" href="#contacto">Afíliate →</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
   <main>
-    <h1>Hola, bienvenido a Cavedrepa</h1>
-    <p>
-      Estamos preparando nuestro sitio web. Pronto encontrarás aquí
-      toda la información sobre nuestra organización.
-    </p>
-    <span class="domain">cavedrepa.org</span>
+    <section class="hero" id="inicio">
+      <div class="wrap">
+        <div>
+          <h1>Impulsamos a las empresas que mueven el <span>desarrollo de Venezuela</span></h1>
+          <p class="hero-lead">Representamos, conectamos y fortalecemos a distribuidores de maquinaria, equipos y repuestos.</p>
+          <div class="hero-actions">
+            <a class="btn btn-yellow" href="#contacto">Afiliar mi empresa →</a>
+            <a class="btn btn-ghost" href="#afiliados">Explorar directorio</a>
+          </div>
+          <p class="hero-proof">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" style="margin:0;width:22px;height:22px">
+              <circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><circle cx="12" cy="16" r="3"/>
+            </svg>
+            Desde 1986 representando al sector productivo
+          </p>
+        </div>
+        <aside class="hero-side" aria-hidden="true">
+          <div class="hero-words">
+            <span>Maquinaria</span>
+            <span>Personas</span>
+            <span>Oportunidades</span>
+            <span>Un país que avanza</span>
+          </div>
+          <p class="hero-caption">El sector productivo también construye un mejor mañana</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="camara">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Sectores que impulsamos</h2>
+          <a class="link-more" href="#afiliados">Ver todos los sectores →</a>
+        </div>
+        <div class="sectors-grid">
+          <article class="sector-card">
+            <img src="/images/sector-agricola.jpg" alt="Maquinaria agrícola en el campo">
+            <div class="sector-body">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3c2 4 2 6 0 9 2 0 5 1 7 4-3 4-7 6-11 5-4-6-2-13 4-18z"/></svg>
+              <h3>Agrícola</h3>
+              <p>Maquinaria, equipos y soluciones para el campo venezolano.</p>
+              <span class="card-arrow">→</span>
+            </div>
+          </article>
+          <article class="sector-card">
+            <img src="/images/sector-construccion.jpg" alt="Maquinaria de construcción">
+            <div class="sector-body">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 8h8l2 4H6l2-4z"/><path d="M4 20h16M7 12v8M17 12v8M12 4v4"/></svg>
+              <h3>Construcción</h3>
+              <p>Equipos para obras, infraestructura y movimiento de tierra.</p>
+              <span class="card-arrow">→</span>
+            </div>
+          </article>
+          <article class="sector-card">
+            <img src="/images/sector-industrial.jpg" alt="Planta industrial">
+            <div class="sector-body">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>
+              <h3>Industrial</h3>
+              <p>Tecnología, plantas y repuestos para la industria.</p>
+              <span class="card-arrow">→</span>
+            </div>
+          </article>
+          <article class="sector-card">
+            <img src="/images/sector-pesca.jpg" alt="Buque de carga y pesca">
+            <div class="sector-body">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12s4-6 9-6 9 6 9 6-4 6-9 6-9-6-9-6z"/><circle cx="12" cy="12" r="2"/></svg>
+              <h3>Pesca y acuícola</h3>
+              <p>Equipos y cadenas de valor del sector pesquero.</p>
+              <span class="card-arrow">→</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-band" id="afiliados">
+      <div class="wrap">
+        <h2>Encuentra empresas, marcas y soluciones</h2>
+        <p>Busca en el directorio de afiliados por producto, sector o ubicación.</p>
+        <form class="search-bar" id="directory-search">
+          <label class="search-field">
+            <span>¿Qué buscas?</span>
+            <input type="search" name="q" placeholder="Ej: repuestos, tractores, bombas...">
+          </label>
+          <label class="search-field">
+            <span>Sector</span>
+            <select name="sector">
+              <option value="">Todos los sectores</option>
+              <option>Agrícola</option>
+              <option>Construcción</option>
+              <option>Industrial</option>
+              <option>Pesca y acuícola</option>
+            </select>
+          </label>
+          <label class="search-field">
+            <span>Ubicación</span>
+            <select name="ubicacion">
+              <option value="">Todo el país</option>
+              <option>Distrito Capital</option>
+              <option>Carabobo</option>
+              <option>Lara</option>
+              <option>Zulia</option>
+              <option>Bolívar</option>
+            </select>
+          </label>
+          <button class="btn btn-yellow" type="submit">Buscar</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="beneficios">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Más respaldo para hacer crecer tu empresa</h2>
+          <a class="link-more" href="#contacto">Conoce todos los beneficios →</a>
+        </div>
+        <div class="benefits-grid">
+          <article class="benefit-card">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 11a3 3 0 1 0-3-3 3 3 0 0 0 3 3zm8 0a3 3 0 1 0-3-3 3 3 0 0 0 3 3z"/><path d="M3 20v-1a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v1M13 20v-1a4 4 0 0 1 4-4h2"/></svg>
+            <div>
+              <h3>Representación institucional</h3>
+              <p>Una voz común ante el Estado, aliados y organismos del sector productivo.</p>
+            </div>
+          </article>
+          <article class="benefit-card">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 12h8M7 8h2v8H7zM15 8h2v8h-2z"/><path d="M4 6h16v12H4z"/></svg>
+            <div>
+              <h3>Conexiones de valor</h3>
+              <p>Encuentros, ruedas de negocio y una red de empresas que mueve al país.</p>
+            </div>
+          </article>
+          <article class="benefit-card">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 19V5M4 19h16"/><path d="M8 15l4-5 3 3 5-7"/></svg>
+            <div>
+              <h3>Información y conocimiento</h3>
+              <p>Estudios, datos del mercado y herramientas para decidir con respaldo.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="noticias" style="background:var(--paper)">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Últimas noticias y estudios</h2>
+          <a class="link-more" href="#noticias">Ver todas las noticias →</a>
+        </div>
+        <div class="news-grid">
+          <article class="news-card">
+            <img src="/images/news-1.jpg" alt="Técnicos en planta industrial">
+            <div class="news-body">
+              <p class="news-date">12 agosto 2026</p>
+              <h3>El sector de maquinaria apuesta por la reposición de equipos</h3>
+              <p>Las empresas afiliadas reportan mayor demanda de repuestos y servicio técnico en el primer semestre.</p>
+              <a class="read-more" href="#noticias">Leer más →</a>
+            </div>
+          </article>
+          <article class="news-card">
+            <img src="/images/news-2.jpg" alt="Obra de infraestructura">
+            <div class="news-body">
+              <p class="news-date">28 julio 2026</p>
+              <h3>Infraestructura y construcción: oportunidades para distribuidores</h3>
+              <p>Un panorama de proyectos y la cadena de suministro que los hace posibles.</p>
+              <a class="read-more" href="#noticias">Leer más →</a>
+            </div>
+          </article>
+          <article class="news-card">
+            <img src="/images/news-3.jpg" alt="Actividad portuaria">
+            <div class="news-body">
+              <p class="news-date">9 julio 2026</p>
+              <h3>Estudio: logística y repuestos en el comercio exterior</h3>
+              <p>Cómo las empresas del gremio están acortando tiempos de importación y servicio.</p>
+              <a class="read-more" href="#noticias">Leer más →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" id="contacto">
+      <div class="wrap">
+        <div>
+          <h2>Sé parte de una cámara que construye futuro</h2>
+          <p>Únete a la red de empresas que representa, conecta y fortalece al sector de maquinaria en Venezuela.</p>
+          <a class="btn btn-yellow" href="mailto:info@cavedrepa.org">Afíliate ahora →</a>
+        </div>
+        <div class="cta-words" aria-hidden="true">
+          <span>Más empresas</span>
+          <span>Más oportunidades</span>
+          <span>Un Venezuela más fuerte</span>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 CAVEDREPA. Cámara Venezolana de Distribuidores de Maquinaria, Equipos y Repuestos.</p>
+      <p>info@cavedrepa.org · +58 212 263 4567</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status">El directorio se conectará en el siguiente paso.</div>
+  <script src="/js/main.js"></script>
 </body>
 </html>
