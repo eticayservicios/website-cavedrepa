@@ -236,6 +236,11 @@ drawer?.addEventListener("click", (event) => {
   if (event.target === drawer) closeDrawer();
 });
 
+if (drawer && !params.get("empresa")) {
+  drawer.hidden = true;
+  document.body.classList.remove("drawer-open");
+}
+
 (async () => {
   try {
     catalogs = await window.CavedrepaApi.catalogs();

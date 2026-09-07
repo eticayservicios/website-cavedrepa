@@ -737,8 +737,12 @@ select {
   inset: 0;
   background: rgba(7, 36, 31, 0.45);
   z-index: 60;
-  display: flex;
+  display: none;
   justify-content: flex-end;
+}
+
+.company-drawer:not([hidden]) {
+  display: flex;
 }
 
 .company-drawer-panel {
