@@ -124,3 +124,7 @@ jobs:
             --listings scripts/seed_published.json \
             --table cavedrepa-web-core \
             --region "${AWS_REGION}"
+          python3 scripts/import_blog.py \
+            --posts scripts/seed_blog.json \
+            --table cavedrepa-web-core \
+            --region "${AWS_REGION}"

@@ -15,6 +15,7 @@ SCRIPTS = [
     SITE / "js" / "main.js",
     SITE / "js" / "directory.js",
     SITE / "js" / "affiliate.js",
+    SITE / "js" / "blog.js",
 ]
 
 

@@ -11,6 +11,7 @@ from urllib.parse import unquote
 import boto3
 
 from applications import submit_application
+from blog import get_post, search_blog
 from directory import (
     SITE_ORIGIN,
     get_catalogs,
@@ -149,6 +150,16 @@ def lambda_handler(event, context):
             result = submit_application(table(), payload)
             status = 200 if result.get("ok") else 400
             return respond(event, status, result)
+
+        if method == "GET" and path == "/blog":
+            return respond(event, 200, search_blog(table(), query_params(event)))
+
+        if method == "GET" and path.startswith("/blog/"):
+            key = path.split("/blog/", 1)[1]
+            post = get_post(table(), key)
+            if not post:
+                return respond(event, 404, {"ok": False, "error": "Entrada no encontrada"})
+            return respond(event, 200, {"ok": True, "post": post})
     except Exception as exc:
         return respond(event, 500, {"ok": False, "error": "Error interno", "detail": str(exc)})
 

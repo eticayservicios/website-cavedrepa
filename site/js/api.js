@@ -80,4 +80,6 @@ window.CavedrepaApi = {
   search: (params) => apiGet("/directory", params),
   company: (key) => apiGet(`/directory/companies/${encodeURIComponent(key)}`),
   apply: (payload) => apiPost("/directory/applications", payload),
+  posts: (params) => apiGet("/blog", params),
+  post: (key) => apiGet(`/blog/${encodeURIComponent(key)}`),
 };

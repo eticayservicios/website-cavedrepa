@@ -139,5 +139,36 @@ class ApplicationTests(unittest.TestCase):
         self.assertIn("_honeypot", errors)
 
 
+class BlogTests(unittest.TestCase):
+    def test_published_post_is_indexed(self):
+        from blog import items_for_post, normalize_post
+
+        post = normalize_post(
+            {
+                "id": 3347,
+                "slug": "editorial-agosto-2026",
+                "status": "publish",
+                "date": "2026-08-10T10:00:00",
+                "title": "Editorial agosto 2026",
+                "excerpt": "Resumen",
+                "content": "<p>Texto de la editorial</p>",
+                "categories": [{"name": "Editoriales", "slug": "editoriales"}],
+                "image_url": "/images/blog/3347.jpg",
+            }
+        )
+        items = items_for_post(post)
+        pks = {item["pk"] for item in items}
+        self.assertIn("BLOG#publish", pks)
+        self.assertIn("SLUG#post#editorial-agosto-2026", pks)
+        self.assertEqual(post["title"], "Editorial agosto 2026")
+
+    def test_trashed_slug_is_not_public(self):
+        from blog import items_for_post, normalize_post
+
+        post = normalize_post({"id": 1633, "slug": "__trashed", "title": "X", "status": "publish"})
+        items = items_for_post(post)
+        self.assertEqual([item["pk"] for item in items], ["POST#1633"])
+
+
 if __name__ == "__main__":
     unittest.main()

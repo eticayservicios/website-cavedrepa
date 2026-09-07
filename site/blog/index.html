@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — CAVEDREPA</title>
+  <meta name="description" content="Editoriales, noticias y estudios de CAVEDREPA.">
+  <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="blog-page">
+  <div class="topbar">
+    <div class="wrap">
+      <div class="topbar-contact">
+        <a href="tel:+582122634567">+58 212 263 4567</a>
+        <a href="mailto:info@cavedrepa.org"><span class="hide-sm">info@cavedrepa.org</span></a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <img src="/images/logo.svg" alt="">
+        <span>
+          <span class="brand-name">CAVEDREPA</span>
+          <span class="brand-tag">Cámara Venezolana de Distribuidores de Maquinaria, Equipos y Repuestos</span>
+        </span>
+      </a>
+      <nav class="nav" id="site-nav">
+        <a href="/">Inicio</a>
+        <a href="/#camara">La Cámara</a>
+        <a href="/directorio/">Afiliados</a>
+        <a href="/#beneficios">Servicios y Beneficios</a>
+        <a class="active" href="/blog/">Blog</a>
+        <a href="/#contacto">Contacto</a>
+      </nav>
+      <a class="btn btn-yellow header-cta" href="/afiliate/">Afíliate →</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="search-band directory-hero">
+      <div class="wrap">
+        <p class="eyebrow">Blog</p>
+        <h1>Noticias, editoriales y estudios</h1>
+        <p>Todas las entradas de la Cámara, en un solo lugar.</p>
+      </div>
+    </section>
+
+    <section class="section blog-body">
+      <div class="wrap">
+        <div id="blog-status" class="directory-status"></div>
+        <div id="blog-results" class="directory-results"></div>
+        <article id="blog-article" class="blog-article" hidden></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 CAVEDREPA. Cámara Venezolana de Distribuidores de Maquinaria, Equipos y Repuestos.</p>
+      <p>info@cavedrepa.org · +58 212 263 4567</p>
+    </div>
+  </footer>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/blog.js"></script>
+</body>
+</html>
