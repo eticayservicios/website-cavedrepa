@@ -32,13 +32,24 @@ class SiteHandler(SimpleHTTPRequestHandler):
             return
         super().do_GET()
 
-    def proxy_api(self):
+    def do_POST(self):
+        if self.path.startswith("/api/") or self.path == "/api":
+            self.proxy_api(method="POST")
+            return
+        self.send_error(405, "Method Not Allowed")
+
+    def proxy_api(self, method="GET"):
         suffix = self.path[4:] or "/"
         if suffix.startswith("/"):
             target = f"{self.api_url}{suffix}"
         else:
             target = f"{self.api_url}/{suffix}"
-        request = Request(target, headers={"Accept": "application/json"})
+        length = int(self.headers.get("Content-Length") or 0)
+        body = self.rfile.read(length) if length and method != "GET" else None
+        headers = {"Accept": "application/json"}
+        if method != "GET":
+            headers["Content-Type"] = self.headers.get("Content-Type") or "application/json"
+        request = Request(target, data=body, headers=headers, method=method)
         try:
             with urlopen(request, timeout=20) as response:
                 body = response.read()

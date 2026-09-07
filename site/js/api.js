@@ -35,6 +35,37 @@ const apiGet = async (path, params) => {
   return payload;
 };
 
+const postUrl = (path) => {
+  const prod = (window.CAVEDREPA_API_URL || "").replace(/\/$/, "");
+  if (isLocalHost()) return `${window.location.origin}/api${path}`;
+  return `${prod}${path}`;
+};
+
+const apiPost = async (path, body) => {
+  const send = async (url) => {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: { Accept: "application/json", "Content-Type": "application/json" },
+      body: JSON.stringify(body || {}),
+    });
+    const payload = await response.json().catch(() => ({}));
+    if (!response.ok || payload.ok === false) {
+      throw new Error(payload.error || "API");
+    }
+    return payload;
+  };
+
+  try {
+    return await send(postUrl(path));
+  } catch (error) {
+    const prod = (window.CAVEDREPA_API_URL || "").replace(/\/$/, "");
+    if (isLocalHost() && prod) {
+      return send(`${prod}${path}`);
+    }
+    throw error;
+  }
+};
+
 window.CavedrepaApi = {
   catalogs: async () => {
     try {
@@ -48,4 +79,5 @@ window.CavedrepaApi = {
   },
   search: (params) => apiGet("/directory", params),
   company: (key) => apiGet(`/directory/companies/${encodeURIComponent(key)}`),
+  apply: (payload) => apiPost("/directory/applications", payload),
 };

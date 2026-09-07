@@ -82,5 +82,54 @@ class DirectoryTests(unittest.TestCase):
         self.assertEqual(last_meta["page"], 5)
 
 
+class ApplicationTests(unittest.TestCase):
+    def test_valid_application_stays_pending(self):
+        from applications import company_from_application, items_for_application, validate_application
+
+        data, errors = validate_application(
+            {
+                "name": "Speedway C.A.",
+                "rif": "J-12345678-9",
+                "legal_rep": "Ana Pérez",
+                "email": "ana@example.com",
+                "phone": "02121234567",
+                "sector": "agricola",
+                "location": "Valera - Trujillo",
+                "brands": "Honda, Stihl",
+            }
+        )
+        self.assertEqual(errors, {})
+        company = company_from_application(data)
+        self.assertEqual(company["status"], "pending")
+        self.assertEqual(company["source"], "application")
+        pks = {item["pk"] for item in items_for_application(company)}
+        self.assertIn("APPLICATION#pending", pks)
+        self.assertNotIn("STATUS#publish", pks)
+
+    def test_missing_required_fields(self):
+        from applications import validate_application
+
+        _data, errors = validate_application({"name": "X"})
+        self.assertIn("rif", errors)
+        self.assertIn("email", errors)
+        self.assertIn("sector", errors)
+
+    def test_honeypot_is_rejected_as_spam(self):
+        from applications import validate_application
+
+        _data, errors = validate_application(
+            {
+                "name": "Bot C.A.",
+                "rif": "J-1",
+                "legal_rep": "Bot",
+                "email": "bot@example.com",
+                "phone": "1",
+                "sector": "agricola",
+                "website_url": "http://spam.example",
+            }
+        )
+        self.assertIn("_honeypot", errors)
+
+
 if __name__ == "__main__":
     unittest.main()

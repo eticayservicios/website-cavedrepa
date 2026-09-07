@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitud de afiliación — CAVEDREPA</title>
+  <meta name="description" content="Solicita la afiliación de tu empresa a CAVEDREPA. La solicitud queda en revisión y no se publica hasta ser aprobada.">
+  <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="apply-page">
+  <div class="topbar">
+    <div class="wrap">
+      <div class="topbar-contact">
+        <a href="tel:+582122634567">+58 212 263 4567</a>
+        <a href="mailto:info@cavedrepa.org"><span class="hide-sm">info@cavedrepa.org</span></a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <img src="/images/logo.svg" alt="">
+        <span>
+          <span class="brand-name">CAVEDREPA</span>
+          <span class="brand-tag">Cámara Venezolana de Distribuidores de Maquinaria, Equipos y Repuestos</span>
+        </span>
+      </a>
+      <nav class="nav" id="site-nav">
+        <a href="/">Inicio</a>
+        <a href="/#camara">La Cámara</a>
+        <a href="/directorio/">Afiliados</a>
+        <a href="/#beneficios">Servicios y Beneficios</a>
+        <a href="/#noticias">Noticias y Estudios</a>
+        <a href="/#contacto">Contacto</a>
+      </nav>
+      <a class="btn btn-yellow header-cta" href="/afiliate/">Afíliate →</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="search-band directory-hero">
+      <div class="wrap">
+        <p class="eyebrow">Únete a la Cámara</p>
+        <h1>Solicitud de afiliación</h1>
+        <p>Completa los datos de tu empresa. La ficha queda en revisión y no aparece en el directorio hasta ser aprobada.</p>
+      </div>
+    </section>
+
+    <section class="section apply-body">
+      <div class="wrap">
+        <form class="apply-form" id="affiliate-form" novalidate>
+          <fieldset>
+            <legend>Empresa</legend>
+            <label class="apply-field apply-field-wide">
+              <span>Nombre de la empresa *</span>
+              <input type="text" name="name" required maxlength="180" autocomplete="organization">
+            </label>
+            <label class="apply-field">
+              <span>RIF *</span>
+              <input type="text" name="rif" required maxlength="32" placeholder="J-00000000-0">
+            </label>
+            <label class="apply-field">
+              <span>Representante legal *</span>
+              <input type="text" name="legal_rep" required maxlength="160" autocomplete="name">
+            </label>
+            <label class="apply-field">
+              <span>Sector *</span>
+              <select name="sector" required>
+                <option value="">Selecciona un sector</option>
+                <option value="agricola">Agrícola</option>
+                <option value="construccion">Construcción</option>
+                <option value="acuicola">Acuícola</option>
+              </select>
+            </label>
+            <label class="apply-field">
+              <span>Ubicación</span>
+              <input type="text" name="location" maxlength="120" placeholder="Ciudad - Estado">
+            </label>
+            <label class="apply-field apply-field-wide">
+              <span>Marcas que representa</span>
+              <input type="text" name="brands" maxlength="400" placeholder="Honda, Stihl, Massey Ferguson…">
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Contacto</legend>
+            <label class="apply-field">
+              <span>Teléfono *</span>
+              <input type="tel" name="phone" required maxlength="40" autocomplete="tel">
+            </label>
+            <label class="apply-field">
+              <span>Teléfono 2</span>
+              <input type="tel" name="phone2" maxlength="40">
+            </label>
+            <label class="apply-field">
+              <span>Email *</span>
+              <input type="email" name="email" required maxlength="160" autocomplete="email">
+            </label>
+            <label class="apply-field">
+              <span>Email 2</span>
+              <input type="email" name="email2" maxlength="160">
+            </label>
+            <label class="apply-field apply-field-wide">
+              <span>Sitio web</span>
+              <input type="text" name="website" maxlength="200" placeholder="https://">
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Perfil</legend>
+            <label class="apply-field apply-field-wide">
+              <span>Dirección</span>
+              <input type="text" name="address" maxlength="400" autocomplete="street-address">
+            </label>
+            <label class="apply-field apply-field-wide">
+              <span>Actividad o descripción</span>
+              <textarea name="description" rows="5" maxlength="4000" placeholder="Qué comercializa o qué servicios ofrece la empresa."></textarea>
+            </label>
+          </fieldset>
+
+          <label class="apply-honeypot" aria-hidden="true">
+            <span>Sitio corporativo</span>
+            <input type="text" name="website_url" tabindex="-1" autocomplete="off">
+          </label>
+
+          <p class="apply-note">Los campos con * son obligatorios. Te contactaremos al correo indicado.</p>
+          <p class="apply-error" id="affiliate-error" hidden></p>
+          <button class="btn btn-yellow" type="submit" id="affiliate-submit">Enviar solicitud →</button>
+        </form>
+
+        <div class="apply-success" id="affiliate-success" hidden>
+          <p class="eyebrow">Solicitud recibida</p>
+          <h2>Gracias. Ya está en revisión.</h2>
+          <p>Guardamos los datos de tu empresa como solicitud pendiente. No se publica en el directorio hasta que la Cámara la apruebe.</p>
+          <a class="btn btn-yellow" href="/directorio/">Ver el directorio</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 CAVEDREPA. Cámara Venezolana de Distribuidores de Maquinaria, Equipos y Repuestos.</p>
+      <p>info@cavedrepa.org · +58 212 263 4567</p>
+    </div>
+  </footer>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/affiliate.js"></script>
+</body>
+</html>

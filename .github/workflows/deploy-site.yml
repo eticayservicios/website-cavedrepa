@@ -74,7 +74,8 @@ jobs:
             --cache-control "public, max-age=3600" \
             --exclude "index.html" \
             --exclude "404.html" \
-            --exclude "directorio/index.html"
+            --exclude "directorio/index.html" \
+            --exclude "afiliate/index.html"
 
           aws s3 cp site/index.html "s3://${{ steps.stack.outputs.bucket }}/index.html" \
             --cache-control "no-cache, no-store, must-revalidate" \
@@ -85,6 +86,10 @@ jobs:
             --content-type "text/html; charset=utf-8"
 
           aws s3 cp site/directorio/index.html "s3://${{ steps.stack.outputs.bucket }}/directorio/index.html" \
+            --cache-control "no-cache, no-store, must-revalidate" \
+            --content-type "text/html; charset=utf-8"
+
+          aws s3 cp site/afiliate/index.html "s3://${{ steps.stack.outputs.bucket }}/afiliate/index.html" \
             --cache-control "no-cache, no-store, must-revalidate" \
             --content-type "text/html; charset=utf-8"
 

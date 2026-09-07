@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import base64
 import json
 import os
 from decimal import Decimal
@@ -9,6 +10,7 @@ from urllib.parse import unquote
 
 import boto3
 
+from applications import submit_application
 from directory import (
     SITE_ORIGIN,
     get_catalogs,
@@ -91,6 +93,19 @@ def query_params(event: dict) -> dict[str, str]:
     return {key: (value or "").strip() for key, value in params.items()}
 
 
+def request_body(event: dict) -> dict:
+    raw = event.get("body") or "{}"
+    if event.get("isBase64Encoded"):
+        raw = base64.b64decode(raw).decode("utf-8")
+    if isinstance(raw, dict):
+        return raw
+    try:
+        payload = json.loads(raw)
+    except json.JSONDecodeError as exc:
+        raise ValueError("JSON inválido") from exc
+    return payload if isinstance(payload, dict) else {}
+
+
 def lambda_handler(event, context):
     method = (event.get("httpMethod") or "GET").upper()
     path = request_path(event)
@@ -125,6 +140,15 @@ def lambda_handler(event, context):
             if not company:
                 return respond(event, 404, {"ok": False, "error": "Empresa no encontrada"})
             return respond(event, 200, {"ok": True, "company": company})
+
+        if method == "POST" and path == "/directory/applications":
+            try:
+                payload = request_body(event)
+            except ValueError:
+                return respond(event, 400, {"ok": False, "error": "JSON inválido"})
+            result = submit_application(table(), payload)
+            status = 200 if result.get("ok") else 400
+            return respond(event, status, result)
     except Exception as exc:
         return respond(event, 500, {"ok": False, "error": "Error interno", "detail": str(exc)})
 
