@@ -2,10 +2,14 @@
 
 from __future__ import annotations
 
+import base64
+import os
 import re
 import time
 from datetime import datetime, timezone
 from typing import Any
+
+import boto3
 
 from directory import dynamodb_safe, fold, items_for_company, search_blob
 
@@ -15,22 +19,28 @@ SECTORS = {
     "acuicola": "Sector Acuícola",
 }
 
+SOCIAL_KEYS = ("facebook", "instagram", "linkedin", "youtube", "twitter")
+
 LIMITS = {
     "name": 180,
     "rif": 32,
     "legal_rep": 160,
     "phone": 40,
     "phone2": 40,
+    "fax": 40,
     "email": 160,
     "email2": 160,
     "website": 200,
     "address": 400,
     "location": 120,
-    "brands": 400,
+    "location_name": 120,
+    "brands": 800,
     "description": 4000,
 }
 
 EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+DATA_URL_RE = re.compile(r"^data:image/(jpeg|jpg|png|webp);base64,([A-Za-z0-9+/=\s]+)$", re.I)
+MAX_LOGO_BYTES = 700_000
 
 
 def clean_text(value: Any, limit: int) -> str:
@@ -57,8 +67,42 @@ def terms_from_text(value: str) -> list[dict[str, str]]:
     return items
 
 
-def validate_application(payload: dict[str, Any]) -> tuple[dict[str, str], dict[str, str]]:
-    data = {key: clean_text(payload.get(key), limit) for key, limit in LIMITS.items()}
+def terms_from_value(value: Any) -> list[dict[str, str]]:
+    if isinstance(value, list):
+        return terms_from_text(", ".join(str(item) for item in value if item))
+    if isinstance(value, dict):
+        name = clean_text(value.get("name"), 80)
+        slug = clean_text(value.get("slug"), 80).lower() or slugify(name)
+        return [{"name": name, "slug": slug}] if name and slug else []
+    return terms_from_text(str(value or ""))
+
+
+def clean_social(payload: dict[str, Any]) -> dict[str, str]:
+    raw = payload.get("social")
+    if not isinstance(raw, dict):
+        raw = {key: payload.get(key) for key in SOCIAL_KEYS}
+    social = {}
+    for key in SOCIAL_KEYS:
+        value = clean_text(raw.get(key), 200)
+        if value:
+            social[key] = value
+    return social
+
+
+def parse_location(payload: dict[str, Any], data: dict[str, str]) -> list[dict[str, str]]:
+    slug = clean_text(payload.get("location") or data.get("location"), 80).lower()
+    name = clean_text(payload.get("location_name") or data.get("location_name"), 120)
+    if not slug and name:
+        slug = slugify(name)
+    if slug and not name:
+        name = slug.replace("-", " ").title()
+    if not slug:
+        return []
+    return [{"name": name, "slug": slug}]
+
+
+def validate_application(payload: dict[str, Any]) -> tuple[dict[str, Any], dict[str, str]]:
+    data: dict[str, Any] = {key: clean_text(payload.get(key), limit) for key, limit in LIMITS.items()}
     errors: dict[str, str] = {}
 
     if not data["name"]:
@@ -73,6 +117,8 @@ def validate_application(payload: dict[str, Any]) -> tuple[dict[str, str], dict[
         errors["email2"] = "El segundo correo no es válido."
     if not data["phone"]:
         errors["phone"] = "Indica un teléfono."
+    if not data["address"]:
+        errors["address"] = "Indica la dirección de la empresa."
 
     sector = clean_text(payload.get("sector"), 40).lower()
     if sector not in SECTORS:
@@ -80,18 +126,43 @@ def validate_application(payload: dict[str, Any]) -> tuple[dict[str, str], dict[
     else:
         data["sector"] = sector
 
+    data["locations"] = parse_location(payload, data)
+    if not data["locations"]:
+        errors["location"] = "Elige una ubicación."
+
+    data["brands"] = terms_from_value(payload.get("brands"))
+    data["social"] = clean_social(payload)
+    data["logo"] = str(payload.get("logo") or "")
+
     if payload.get("website_url"):
         errors["_honeypot"] = "spam"
 
     return data, errors
 
 
-def company_from_application(data: dict[str, str]) -> dict[str, Any]:
+def save_logo(company_id: int, data_url: str) -> str:
+    bucket = os.environ.get("BUCKET_NAME") or ""
+    match = DATA_URL_RE.match((data_url or "").strip())
+    if not bucket or not match:
+        return ""
+    raw = base64.b64decode(re.sub(r"\s+", "", match.group(2)))
+    if not raw or len(raw) > MAX_LOGO_BYTES:
+        return ""
+    key = f"images/afiliados/{company_id}.jpg"
+    boto3.client("s3").put_object(
+        Bucket=bucket,
+        Key=key,
+        Body=raw,
+        ContentType="image/jpeg",
+        CacheControl="public, max-age=86400",
+    )
+    return f"/{key}"
+
+
+def company_from_application(data: dict[str, Any]) -> dict[str, Any]:
     company_id = int(time.time() * 1000)
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
     sector_slug = data["sector"]
-    location = terms_from_text(data["location"])
-    brands = terms_from_text(data["brands"])
     company = {
         "id": company_id,
         "slug": f"{slugify(data['name'])}-{str(company_id)[-6:]}",
@@ -102,7 +173,7 @@ def company_from_application(data: dict[str, str]) -> dict[str, Any]:
         "tagline": "",
         "phone": data["phone"],
         "phone2": data["phone2"],
-        "fax": "",
+        "fax": data.get("fax") or "",
         "email": data["email"],
         "email2": data["email2"],
         "website": data["website"],
@@ -115,9 +186,10 @@ def company_from_application(data: dict[str, str]) -> dict[str, Any]:
         "video_url": "",
         "featured": False,
         "image_url": "",
+        "social": data.get("social") or {},
         "sectors": [{"name": SECTORS[sector_slug], "slug": sector_slug}],
-        "locations": location,
-        "brands": brands,
+        "locations": data.get("locations") or [],
+        "brands": data.get("brands") if isinstance(data.get("brands"), list) else terms_from_text(str(data.get("brands") or "")),
         "created_at": now,
         "updated_at": now,
         "source": "application",
@@ -156,6 +228,9 @@ def submit_application(table, payload: dict[str, Any]) -> dict[str, Any]:
         return {"ok": False, "error": "Revisa los datos del formulario.", "fields": errors}
 
     company = company_from_application(data)
+    logo_url = save_logo(company["id"], str(data.get("logo") or ""))
+    if logo_url:
+        company["image_url"] = logo_url
     with table.batch_writer() as batch:
         for item in items_for_application(company):
             batch.put_item(Item=item)

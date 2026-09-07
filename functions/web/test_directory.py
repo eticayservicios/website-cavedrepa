@@ -94,14 +94,20 @@ class ApplicationTests(unittest.TestCase):
                 "email": "ana@example.com",
                 "phone": "02121234567",
                 "sector": "agricola",
-                "location": "Valera - Trujillo",
-                "brands": "Honda, Stihl",
+                "location": "valera-trujillo",
+                "location_name": "Valera - Trujillo",
+                "address": "Av. Bolívar, Valera",
+                "brands": ["Honda", "Stihl"],
+                "social": {"instagram": "https://instagram.com/speedway"},
             }
         )
         self.assertEqual(errors, {})
         company = company_from_application(data)
         self.assertEqual(company["status"], "pending")
         self.assertEqual(company["source"], "application")
+        self.assertEqual(company["locations"][0]["slug"], "valera-trujillo")
+        self.assertEqual(company["brands"][0]["name"], "Honda")
+        self.assertEqual(company["social"]["instagram"], "https://instagram.com/speedway")
         pks = {item["pk"] for item in items_for_application(company)}
         self.assertIn("APPLICATION#pending", pks)
         self.assertNotIn("STATUS#publish", pks)
@@ -113,6 +119,8 @@ class ApplicationTests(unittest.TestCase):
         self.assertIn("rif", errors)
         self.assertIn("email", errors)
         self.assertIn("sector", errors)
+        self.assertIn("address", errors)
+        self.assertIn("location", errors)
 
     def test_honeypot_is_rejected_as_spam(self):
         from applications import validate_application

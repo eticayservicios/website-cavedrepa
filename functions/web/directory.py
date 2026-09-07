@@ -359,6 +359,8 @@ def get_company(table, key: str) -> dict[str, Any] | None:
             "lng": item.get("lng") or "",
             "video_url": item.get("video_url") or "",
             "created_at": item.get("created_at") or "",
+            "social": item.get("social") or {},
+            "fax": item.get("fax") or "",
         }
     )
     return detail

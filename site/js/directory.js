@@ -162,7 +162,12 @@ const renderDetail = (company) => {
       ${line("Email", company.email, company.email ? `mailto:${company.email}` : "")}
       ${line("Email 2", company.email2, company.email2 ? `mailto:${company.email2}` : "")}
       ${line("Web", company.website, website)}
+      ${line("Fax", company.fax)}
       ${line("Dirección", [company.address, company.zip].filter(Boolean).join(" "))}
+      ${line("Facebook", company.social?.facebook, company.social?.facebook)}
+      ${line("Instagram", company.social?.instagram, company.social?.instagram)}
+      ${line("LinkedIn", company.social?.linkedin, company.social?.linkedin)}
+      ${line("YouTube", company.social?.youtube, company.social?.youtube)}
     </dl>
     ${
       company.brands?.length

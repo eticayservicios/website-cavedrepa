@@ -417,9 +417,15 @@ Resources:
       Environment:
         Variables:
           TABLE_NAME: !Ref WebCoreTable
+          BUCKET_NAME: !Ref SiteBucket
       Policies:
         - DynamoDBCrudPolicy:
             TableName: !Ref WebCoreTable
+        - Statement:
+            - Effect: Allow
+              Action:
+                - s3:PutObject
+              Resource: !Sub '${SiteBucket.Arn}/images/afiliados/*'
       Events:
         Root:
           Type: Api

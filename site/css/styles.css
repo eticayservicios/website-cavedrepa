@@ -1095,6 +1095,121 @@ body.drawer-open {
   margin-bottom: 22px;
 }
 
+.combo {
+  position: relative;
+}
+
+.combo-input {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 11px 12px;
+  font: inherit;
+  color: var(--ink);
+  background: var(--white);
+  width: 100%;
+}
+
+.combo-input:focus {
+  outline: 2px solid var(--green-700);
+  outline-offset: 1px;
+}
+
+.combo-list {
+  position: absolute;
+  z-index: 8;
+  left: 0;
+  right: 0;
+  top: calc(100% + 4px);
+  max-height: 240px;
+  overflow: auto;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.combo-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  padding: 10px 12px;
+  font: inherit;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.combo-option:hover {
+  background: #f3f7f5;
+}
+
+.combo-empty {
+  padding: 12px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.combo-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+  min-height: 0;
+}
+
+.combo-tag {
+  border: 0;
+  background: var(--paper);
+  color: var(--green-800);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.combo-tag span {
+  margin-left: 6px;
+  color: var(--muted);
+}
+
+.logo-drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 180px;
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  background: #fff;
+  padding: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.logo-drop.is-over,
+.logo-drop.has-file {
+  border-color: var(--green-700);
+}
+
+.logo-drop img {
+  width: min(100%, 320px);
+  height: auto;
+  aspect-ratio: 640 / 360;
+  object-fit: contain;
+  background: #fff;
+}
+
+.logo-drop span {
+  color: var(--muted);
+  font-size: 0.88rem;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+
 @media (max-width: 980px) {
   .nav {
     display: none;

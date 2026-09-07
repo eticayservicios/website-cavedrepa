@@ -80,24 +80,32 @@
                 <option value="acuicola">Acuícola</option>
               </select>
             </label>
-            <label class="apply-field">
-              <span>Ubicación</span>
-              <input type="text" name="location" maxlength="120" placeholder="Ciudad - Estado">
+            <div class="apply-field">
+              <span>Ubicación *</span>
+              <div class="combo" id="location-combo" data-empty="Buscar ciudad o estado..."></div>
+            </div>
+            <div class="apply-field apply-field-wide">
+              <span>Marcas</span>
+              <div class="combo combo-tags" id="brands-combo" data-empty="Buscar y agregar marcas..."></div>
+            </div>
+            <label class="apply-field apply-field-wide">
+              <span>Dirección de la empresa *</span>
+              <input type="text" name="address" required maxlength="400" autocomplete="street-address" placeholder="Calle, local, urbanización, ciudad">
             </label>
             <label class="apply-field apply-field-wide">
-              <span>Marcas que representa</span>
-              <input type="text" name="brands" maxlength="400" placeholder="Honda, Stihl, Massey Ferguson…">
+              <span>Productos que comercializa</span>
+              <textarea name="description" rows="5" maxlength="4000" placeholder="Qué comercializa o qué servicios ofrece la empresa."></textarea>
             </label>
           </fieldset>
 
           <fieldset>
-            <legend>Contacto</legend>
+            <legend>Información de contacto</legend>
             <label class="apply-field">
               <span>Teléfono *</span>
               <input type="tel" name="phone" required maxlength="40" autocomplete="tel">
             </label>
             <label class="apply-field">
-              <span>Teléfono 2</span>
+              <span>Móvil</span>
               <input type="tel" name="phone2" maxlength="40">
             </label>
             <label class="apply-field">
@@ -108,22 +116,46 @@
               <span>Email 2</span>
               <input type="email" name="email2" maxlength="160">
             </label>
-            <label class="apply-field apply-field-wide">
+            <label class="apply-field">
+              <span>Fax</span>
+              <input type="text" name="fax" maxlength="40">
+            </label>
+            <label class="apply-field">
               <span>Sitio web</span>
               <input type="text" name="website" maxlength="200" placeholder="https://">
             </label>
           </fieldset>
 
           <fieldset>
-            <legend>Perfil</legend>
-            <label class="apply-field apply-field-wide">
-              <span>Dirección</span>
-              <input type="text" name="address" maxlength="400" autocomplete="street-address">
+            <legend>Información social</legend>
+            <label class="apply-field">
+              <span>Facebook</span>
+              <input type="text" name="facebook" maxlength="200" placeholder="https://">
             </label>
-            <label class="apply-field apply-field-wide">
-              <span>Actividad o descripción</span>
-              <textarea name="description" rows="5" maxlength="4000" placeholder="Qué comercializa o qué servicios ofrece la empresa."></textarea>
+            <label class="apply-field">
+              <span>Instagram</span>
+              <input type="text" name="instagram" maxlength="200" placeholder="https://">
             </label>
+            <label class="apply-field">
+              <span>LinkedIn</span>
+              <input type="text" name="linkedin" maxlength="200" placeholder="https://">
+            </label>
+            <label class="apply-field">
+              <span>YouTube</span>
+              <input type="text" name="youtube" maxlength="200" placeholder="https://">
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Logo</legend>
+            <div class="apply-field apply-field-wide">
+              <span>Logo de la empresa</span>
+              <label class="logo-drop" id="logo-drop">
+                <input type="file" id="logo-file" accept="image/jpeg,image/png,image/webp" hidden>
+                <img id="logo-preview" alt="" hidden>
+                <span id="logo-hint">Arrastra el logo o haz clic para subir. Se ajusta a 640×360 sin recortar.</span>
+              </label>
+            </div>
           </fieldset>
 
           <label class="apply-honeypot" aria-hidden="true">
