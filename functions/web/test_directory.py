@@ -98,7 +98,7 @@ class ApplicationTests(unittest.TestCase):
                 "location_name": "Valera - Trujillo",
                 "address": "Av. Bolívar, Valera",
                 "brands": ["Honda", "Stihl"],
-                "social": {"instagram": "https://instagram.com/speedway"},
+                "social": {"instagram": "@speedway"},
             }
         )
         self.assertEqual(errors, {})
@@ -107,7 +107,7 @@ class ApplicationTests(unittest.TestCase):
         self.assertEqual(company["source"], "application")
         self.assertEqual(company["locations"][0]["slug"], "valera-trujillo")
         self.assertEqual(company["brands"][0]["name"], "Honda")
-        self.assertEqual(company["social"]["instagram"], "https://instagram.com/speedway")
+        self.assertEqual(company["social"]["instagram"], "speedway")
         pks = {item["pk"] for item in items_for_application(company)}
         self.assertIn("APPLICATION#pending", pks)
         self.assertNotIn("STATUS#publish", pks)

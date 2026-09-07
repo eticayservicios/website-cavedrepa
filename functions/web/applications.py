@@ -77,15 +77,39 @@ def terms_from_value(value: Any) -> list[dict[str, str]]:
     return terms_from_text(str(value or ""))
 
 
+SOCIAL_PATH = {
+    "facebook": re.compile(r"(?:https?://)?(?:www\.)?(?:facebook|fb)\.com/(.+)", re.I),
+    "instagram": re.compile(r"(?:https?://)?(?:www\.)?instagram\.com/(.+)", re.I),
+    "linkedin": re.compile(r"(?:https?://)?(?:www\.)?linkedin\.com/(?:in|company)/(.+)", re.I),
+    "youtube": re.compile(r"(?:https?://)?(?:www\.)?(?:youtube\.com/(?:@|channel/|c/)|youtu\.be/)(.+)", re.I),
+    "twitter": re.compile(r"(?:https?://)?(?:www\.)?(?:twitter|x)\.com/(.+)", re.I),
+}
+
+
+def social_handle(key: str, value: Any) -> str:
+    text = clean_text(value, 200)
+    if not text:
+        return ""
+    pattern = SOCIAL_PATH.get(key)
+    if pattern:
+        match = pattern.match(text)
+        if match:
+            text = match.group(1)
+    text = text.split("?")[0].split("#")[0].strip("/")
+    if "/" in text:
+        text = text.split("/")[-1]
+    return text.lstrip("@")[:80]
+
+
 def clean_social(payload: dict[str, Any]) -> dict[str, str]:
     raw = payload.get("social")
     if not isinstance(raw, dict):
         raw = {key: payload.get(key) for key in SOCIAL_KEYS}
     social = {}
     for key in SOCIAL_KEYS:
-        value = clean_text(raw.get(key), 200)
-        if value:
-            social[key] = value
+        handle = social_handle(key, raw.get(key))
+        if handle:
+            social[key] = handle
     return social
 
 

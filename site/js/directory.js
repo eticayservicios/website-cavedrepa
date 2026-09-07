@@ -136,6 +136,26 @@ const line = (label, value, href) => {
   return `<div><dt>${label}</dt><dd>${content}</dd></div>`;
 };
 
+const socialHref = (network, value) => {
+  if (!value) return "";
+  if (/^https?:\/\//i.test(value)) return value;
+  const handle = String(value).replace(/^@/, "");
+  const homes = {
+    facebook: `https://www.facebook.com/${handle}`,
+    instagram: `https://www.instagram.com/${handle}`,
+    linkedin: `https://www.linkedin.com/in/${handle}`,
+    youtube: `https://www.youtube.com/@${handle}`,
+    twitter: `https://x.com/${handle}`,
+  };
+  return homes[network] || value;
+};
+
+const socialLine = (label, network, value) => {
+  if (!value) return "";
+  const handle = /^https?:\/\//i.test(value) ? value : `@${String(value).replace(/^@/, "")}`;
+  return line(label, handle, socialHref(network, value));
+};
+
 const renderDetail = (company) => {
   const website = company.website
     ? company.website.startsWith("http")
@@ -164,10 +184,10 @@ const renderDetail = (company) => {
       ${line("Web", company.website, website)}
       ${line("Fax", company.fax)}
       ${line("Dirección", [company.address, company.zip].filter(Boolean).join(" "))}
-      ${line("Facebook", company.social?.facebook, company.social?.facebook)}
-      ${line("Instagram", company.social?.instagram, company.social?.instagram)}
-      ${line("LinkedIn", company.social?.linkedin, company.social?.linkedin)}
-      ${line("YouTube", company.social?.youtube, company.social?.youtube)}
+      ${socialLine("Facebook", "facebook", company.social?.facebook)}
+      ${socialLine("Instagram", "instagram", company.social?.instagram)}
+      ${socialLine("LinkedIn", "linkedin", company.social?.linkedin)}
+      ${socialLine("YouTube", "youtube", company.social?.youtube)}
     </dl>
     ${
       company.brands?.length
@@ -242,10 +262,9 @@ const loadView = async () => {
   try {
     const payload = await window.CavedrepaApi.search(filters);
     renderCompanies(payload);
-  } catch (error) {
-    const detail = error && error.message ? ` (${error.message})` : "";
-    setStatus("No se pudo consultar el API del directorio.");
-    results.innerHTML = `<p class="empty-state">Fallo al pedir empresas${detail}. En local usa <code>python3 scripts/serve_site.py</code> para proxear el API.</p>`;
+  } catch (_error) {
+    setStatus("No se pudo consultar el directorio.");
+    results.innerHTML = `<p class="empty-state">Intenta de nuevo en unos minutos.</p>`;
   } finally {
     setLoading(false);
   }

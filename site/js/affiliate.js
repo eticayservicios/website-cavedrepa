@@ -178,10 +178,10 @@ const setLogo = async (file) => {
       logoPreview.src = logoData;
       logoPreview.hidden = false;
     }
-    if (logoHint) logoHint.textContent = "Logo listo. Puedes cambiarlo si quieres.";
+    if (logoHint) logoHint.textContent = "Logo cargado. Puedes cambiarlo si quieres.";
     logoDrop?.classList.add("has-file");
   } catch (_error) {
-    showError("No se pudo leer el logo. Usa JPG, PNG o WEBP.");
+    showError("No se pudo cargar el logo. Prueba con otra imagen.");
   }
 };
 
