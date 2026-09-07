@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Directorio de afiliados — CAVEDREPA</title>
+  <meta name="description" content="Directorio de empresas afiliadas a CAVEDREPA por sector, ubicación y marcas.">
+  <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="directory-page">
+  <div class="topbar">
+    <div class="wrap">
+      <div class="topbar-contact">
+        <a href="tel:+582122634567">+58 212 263 4567</a>
+        <a href="mailto:info@cavedrepa.org"><span class="hide-sm">info@cavedrepa.org</span></a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <img src="/images/logo.svg" alt="">
+        <span>
+          <span class="brand-name">CAVEDREPA</span>
+          <span class="brand-tag">Cámara Venezolana de Distribuidores de Maquinaria, Equipos y Repuestos</span>
+        </span>
+      </a>
+      <nav class="nav" id="site-nav">
+        <a href="/">Inicio</a>
+        <a href="/#camara">La Cámara</a>
+        <a class="active" href="/directorio/">Afiliados</a>
+        <a href="/#beneficios">Servicios y Beneficios</a>
+        <a href="/#noticias">Noticias y Estudios</a>
+        <a href="/#contacto">Contacto</a>
+      </nav>
+      <a class="btn btn-yellow header-cta" href="/#contacto">Afíliate →</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="search-band directory-hero">
+      <div class="wrap">
+        <p class="eyebrow">Directorio de afiliados</p>
+        <h1>Encuentra empresas, marcas y soluciones</h1>
+        <p>Filtra por sector, ubicación o marca representada. La ficha trae el mismo dato que tenía Directorist.</p>
+        <form class="search-bar" id="directory-search">
+          <label class="search-field">
+            <span>¿Qué buscas?</span>
+            <input type="search" name="q" placeholder="Empresa, producto o marca...">
+          </label>
+          <label class="search-field">
+            <span>Sector</span>
+            <select name="sector">
+              <option value="">Todos los sectores</option>
+            </select>
+          </label>
+          <label class="search-field">
+            <span>Ubicación</span>
+            <select name="ubicacion">
+              <option value="">Todo el país</option>
+            </select>
+          </label>
+          <label class="search-field">
+            <span>Marca</span>
+            <select name="marca">
+              <option value="">Todas las marcas</option>
+            </select>
+          </label>
+          <button class="btn btn-yellow" type="submit">Buscar</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section directory-body">
+      <div class="wrap">
+        <div class="directory-tabs" role="tablist">
+          <button type="button" class="is-active" data-view="empresas">Empresas</button>
+          <button type="button" data-view="sectores">Por sector</button>
+          <button type="button" data-view="ubicaciones">Por ubicación</button>
+          <button type="button" data-view="marcas">Por marcas</button>
+        </div>
+
+        <div id="directory-status" class="directory-status"></div>
+        <div id="directory-results" class="directory-results"></div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="company-drawer" id="company-drawer" hidden>
+    <div class="company-drawer-panel" role="dialog" aria-modal="true" aria-labelledby="company-title">
+      <button class="drawer-close" type="button" id="drawer-close" aria-label="Cerrar">×</button>
+      <div id="company-detail"></div>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 CAVEDREPA. Cámara Venezolana de Distribuidores de Maquinaria, Equipos y Repuestos.</p>
+      <p>info@cavedrepa.org · +58 212 263 4567</p>
+    </div>
+  </footer>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/directory.js"></script>
+</body>
+</html>

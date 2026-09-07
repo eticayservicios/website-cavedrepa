@@ -1,0 +1,1 @@
+window.CAVEDREPA_API_URL = window.CAVEDREPA_API_URL || "";

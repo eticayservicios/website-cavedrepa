@@ -3,7 +3,7 @@ Transform: AWS::Serverless-2016-10-31
 Description: >-
   cavedrepa.smartravelevents.com — static hosting plus web API.
   Private S3 origin behind CloudFront with Origin Access Control.
-  REST API, Lambda stub and DynamoDB table (logic comes later).
+  REST API, Lambda del directorio y DynamoDB table.
 
 Parameters:
   ProjectName:
@@ -393,7 +393,7 @@ Resources:
       Cors:
         AllowMethods: "'OPTIONS,GET,POST,PUT,PATCH,DELETE'"
         AllowHeaders: "'Content-Type,Authorization'"
-        AllowOrigin: "'*'"
+        AllowOrigin: "'https://cavedrepa.smartravelevents.com'"
       Tags:
         Project: !Ref ProjectName
         Site: !Ref SiteName
@@ -409,7 +409,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: !Sub '${SiteName}-web'
-      Description: Lambda del portal web Cavedrepa. Stub hasta el siguiente paso.
+      Description: Lambda del portal web Cavedrepa. Directorio de afiliados.
       CodeUri: ../functions/web/
       Handler: app.lambda_handler
       LoggingConfig:

@@ -1,7 +1,7 @@
 const nav = document.getElementById("site-nav");
 const toggle = document.getElementById("menu-toggle");
-const toast = document.getElementById("toast");
 const search = document.getElementById("directory-search");
+const isDirectoryPage = document.body.classList.contains("directory-page");
 
 if (toggle && nav) {
   toggle.addEventListener("click", () => {
@@ -34,11 +34,39 @@ const markActive = () => {
 
 window.addEventListener("scroll", markActive, { passive: true });
 
-if (search) {
-  search.addEventListener("submit", (event) => {
-    event.preventDefault();
-    if (!toast) return;
-    toast.classList.add("show");
-    window.setTimeout(() => toast.classList.remove("show"), 2800);
+const fillSelect = (select, items, emptyLabel) => {
+  if (!select) return;
+  const selected = select.value;
+  select.innerHTML = "";
+  const blank = document.createElement("option");
+  blank.value = "";
+  blank.textContent = emptyLabel;
+  select.appendChild(blank);
+  items.forEach((item) => {
+    const option = document.createElement("option");
+    option.value = item.slug;
+    option.textContent = item.name;
+    select.appendChild(option);
   });
+  if ([...select.options].some((option) => option.value === selected)) {
+    select.value = selected;
+  }
+};
+
+if (!isDirectoryPage && window.CavedrepaApi) {
+  window.CavedrepaApi.catalogs()
+    .then((catalogs) => {
+      fillSelect(search?.sector, catalogs.sectors || [], "Todos los sectores");
+      fillSelect(
+        search?.ubicacion,
+        (catalogs.locations || []).filter((item) => item.count > 0),
+        "Todo el país"
+      );
+    })
+    .catch(() => {});
+}
+
+if (search && !isDirectoryPage) {
+  search.setAttribute("action", "/directorio/");
+  search.setAttribute("method", "get");
 }

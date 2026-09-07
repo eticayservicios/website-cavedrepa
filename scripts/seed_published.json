@@ -1,0 +1,5841 @@
+[
+  {
+    "id": 297,
+    "date": "2019-11-16 19:05:48",
+    "modified": "2023-04-26 08:19:39",
+    "status": "publish",
+    "title": "Agritrader, S.A.",
+    "slug": "agritrader",
+    "content": "Empresa de servicios fundada en el año 1996, con la finalidad de mercadear, distribuir y comercializar implementos agrícolas a nivel nacional, bajo la filosofía de “presentar Soluciones tecnológicas” al productor agropecuario Venezolano.\r\n<h3><span class=\"itemExtraFieldsLabel\">Areas de presencia:</span></h3>\r\n<span class=\"itemExtraFieldsValue\">Toda Venezuela. Oficinas Estado Portuguesa: Guanare y Acarigua. Estado Barinas: Socopo y Sabaneta. Estado Guárico: Valle de La Pascua</span>\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nPulverizadores, equipos para preparación de suelos, sembradoras, distribuidores de abonos, ensiladoras, cosechadoras de forrajes, embutidoras de forrajes, rotativas, repuestos, etc.\r\n<h4 class=\"spField\">Productos que comercializa y marcas relacionadas</h4>\r\n<strong>Bambozzi:</strong> Transí. Soldadora NM250 AC Turbo 110/220V., 60 Hz, Monofásica; Transí. Soldadora NM300A Turbo 220V., 60 Hz, Monofásica; Transí. Soldadora Bambina TIG 300 220/380V., 60 Hz, Monofásica; Transí. Soldadora TRR 425 DC 220/380/440V., 60 Hz, Trifásica; Transí. Soldadora TRR 2600, DC 220/380/440V., 60 HZ, Trifásica; Moto Soldadora Mod. \"O\" Perkins, Cab. Semi Cerrada., 60HZ.; Polipasto 4 movimentos 220v. 1000 Kgs; Polipasto 2 movimentos 220v. 1000 Kgs.; Conjunto generador Base 12,5 KVA220V. con base y panel, trifásico; Implemento para Energía Móvil, Agribam 30 Kva, Monofásico; Implemento para Energía Móvil, Agribam 30 Kva, Trifásico; Transí. Soldadora MDC305 ED Electrónica AC/DC 220V., 60Hz.; Transí. Soldadora MAC 255 ED Electrónica turbo, AC 220V., 60Hz.; Transí. Soldadora TDC 445 ED Electrónica, DC 220/380/440V., 60Hz.; Soldadora Mega Plus 250, MIG, DC 220/380/440V., 60HZ, cabezal interno, trifásica; Soldadora Mega Plus 350, MIG, DC 220/380/440V., 60HZ, cabezal interno, trifásica.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "_never_expire": "1",
+      "_featured": "",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Carretera Nacional salida hacia Barinas, Local Bomba Italven, Guanare - Estado Portuguesa",
+      "_phone": "(0257) 251.5938 / 251.57.05",
+      "_phone2": "(0414) 574.07.04",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://www.agritrader.net.ve",
+      "_zip": "",
+      "_social": "",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"880\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "",
+      "_expiry_date": "2024-04-25 08:19:40",
+      "_wp_old_slug": "agritrader-s-a",
+      "_edit_lock": "1682513265:1",
+      "874": "J- 30386506-2",
+      "875": "Paolo Dalvano",
+      "876": "agritradersa@cantv.net",
+      "877": "carolina.import@agritrader.net.ve",
+      "_atbdp_post_views_count": "1391",
+      "_directory_type": "314",
+      "_877": "carolina.import@agritrader.net.ve",
+      "_876": "agritradersa@cantv.net",
+      "_875": "Paolo Dalvano",
+      "_874": "J- 30386506-2",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": ""
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Baldan",
+          "slug": "baldan"
+        },
+        {
+          "name": "Jacto",
+          "slug": "jacto"
+        },
+        {
+          "name": "Bambozzi",
+          "slug": "bambozzi"
+        },
+        {
+          "name": "JF",
+          "slug": "jf"
+        },
+        {
+          "name": "M&amp;S",
+          "slug": "ms"
+        },
+        {
+          "name": "Stara",
+          "slug": "stara"
+        },
+        {
+          "name": "Inroda",
+          "slug": "inroda"
+        },
+        {
+          "name": "Husqvarna",
+          "slug": "husqvarna"
+        },
+        {
+          "name": "Unipac",
+          "slug": "unipac"
+        },
+        {
+          "name": "Vania",
+          "slug": "vania"
+        },
+        {
+          "name": "Ipesasilo",
+          "slug": "ipesasilo"
+        },
+        {
+          "name": "Agromdo",
+          "slug": "agromdo"
+        },
+        {
+          "name": "Storti",
+          "slug": "storti"
+        },
+        {
+          "name": "Ingersol",
+          "slug": "ingersol"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 314,
+    "date": "2019-11-16 21:18:24",
+    "modified": "2020-02-04 21:38:03",
+    "status": "publish",
+    "title": "Agrícola de Venezuela, C.A.",
+    "slug": "agricola-de-venezuela",
+    "content": "Distribuidores al mayor de productos para el sector agrícola.  Importación directa de nuestros productos del productor y fabricante.  <span class=\"itemExtraFieldsValue\">Equipos o maquinarias y sus respectivos repuestos, (Pulverizadores, asperjadoras, manuales o con motor, plantas electricas, desmalezadoras, motosierras, motores a gasolina; diesel y electricos, motobombas y bombas, Atomizadores).  Equipos de riego  (aspersores, mangueras y sus respectivas conexiones).</span>\r\nSomos distribuidores exclusivos para Venezuela de las afamada marca<a href=\"http://www.equiposramm.com\" target=\"_blank\" rel=\"noopener noreferrer\"> RAMM Equipos y Maquinarias.</a>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-30875621-0",
+      "306": "Ramón Alfredo Moreno Montilla",
+      "312": "agricoladevenezuela@gmail.com",
+      "313": "agricoladevenezuela01@gmail.com",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Avenida 9, Galpón Nº 100, Sector El Bolo, Mercedes Diaz, Diagonal al Mercado Municipal, Valera, Edo. Trujillo, Venezuela",
+      "_phone": "+58 271 2213955",
+      "_phone2": "",
+      "_fax": "+58.2712213955",
+      "_email": "ventas@agricoladevenezuela.com",
+      "_website": "http://www.agricoladevenezuela.com",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"879\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2021-02-03 21:38:13",
+      "_edit_lock": "1580866726:1",
+      "874": "J-30875621-0",
+      "875": "Ramón Alfredo Moreno",
+      "876": "agricoladevenezuela@gmail.com",
+      "877": "agricoladevenezuela01@gmail.com",
+      "_wp_old_slug": "agricola-de-venezuela-c-a",
+      "_atbdp_post_views_count": "2418",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Valera - Trujillo",
+          "slug": "valera-trujillo"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Briggs &amp; Stratton",
+          "slug": "briggs-stratton"
+        },
+        {
+          "name": "Honda",
+          "slug": "honda"
+        },
+        {
+          "name": "RAM",
+          "slug": "ram"
+        },
+        {
+          "name": "Stihl",
+          "slug": "stihl"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 416,
+    "date": "2019-11-16 22:20:53",
+    "modified": "2024-07-17 17:54:22",
+    "status": "publish",
+    "title": "Agro Industrias J.B., C.A.",
+    "slug": "agro-industrias-j-b",
+    "content": "<h3>Productos comercializados:</h3>\r\nMaquinaria y equipos metálicos para el sector agrícola.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-31151798-7",
+      "306": "Yoselin Rivas",
+      "312": "",
+      "313": "",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Carretera Nacional Cagua, C.C. Don Antonio, Local N° 1-A, Sector La Encrucijada, La Encrucijada - Estado Aragua",
+      "_phone": "(0244) 395.74.65",
+      "_phone2": "(0244) 395.7746 / 395.7465",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://Actualmentenodisponedesitioweb",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"882\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2021-02-03 21:46:03",
+      "_edit_lock": "1580867159:1",
+      "874": "J- 31151798-7",
+      "875": "Bladimir Montenegro",
+      "876": "agroindustriasjb@hotmail.com",
+      "877": "",
+      "_wp_old_slug": "agro-industrias-j-b-c-a",
+      "_atbdp_post_views_count": "896",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Maracay - Aragua",
+          "slug": "maracay-aragua"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": ""
+  },
+  {
+    "id": 418,
+    "date": "2019-11-16 22:48:45",
+    "modified": "2020-02-04 21:52:45",
+    "status": "publish",
+    "title": "Agronegocios Latinos, C.A.",
+    "slug": "agronegocios-latinos",
+    "content": "Empresa dedicada a la comercialización y distribución de equipos de uso agrícola y pecuario, a su vez herramientas de jardinería y plantas eléctricas; impulsados por el objetivo de satisfacer la demanda nacional.\r\n\r\nCuenta con una amplia selección de equipos para el mantenimiento de cultivos y ganado, diseñados con los más estrictos estándares de comodidad y funcionalidad, que garantizan la mayor resistencia, solidez y ergonomía.\r\n\r\nSembradoras, rastras de discos, arados y subsoladores, son algunos de los productos que ponemos a la disposición del mercado venezolano, con el respaldo que solo pueden ofrecer las mejores marcas y una empresa comprometida con el desarrollo de nuestro país.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-30794600-8",
+      "306": "Roberto J. Abreu Cárdenas",
+      "312": "ventas@agronegocioslatino.com",
+      "313": "",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "AV. Prolongación de la Av. Los Leones, Edif: Torre Milenium, piso 4, Ofic: 4-1 y 4-2 , Zona Este de Barquisimeto",
+      "_phone": "(0251) 418.7028",
+      "_phone2": "(0251) 935.0175 / 935.0301",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://www.agronegocioslatino.com",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"883\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2021-02-03 21:52:46",
+      "_edit_lock": "1580867577:1",
+      "874": "J-30794600-8",
+      "875": "Roberto J. Abreu Cárdenas",
+      "876": "ventas@agronegocioslatino.com",
+      "877": "agronegocioslatinos12@gmail.com",
+      "_wp_old_slug": "agronegocios-latinos-c-a",
+      "_atbdp_post_views_count": "1638",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Barquisimeto - Lara",
+          "slug": "barquisimeto-lara"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": ""
+  },
+  {
+    "id": 422,
+    "date": "2016-08-16 23:12:13",
+    "modified": "2024-07-17 17:51:37",
+    "status": "publish",
+    "title": "Agrorepuesto M.M., C.A.",
+    "slug": "agrorepuesto-m-m",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nCosechadoras Agrícolas, Tractores, Reductores, Motores Estacionarios, Plantas Eléctricas, Repuestos marca Laverda, Repuestos marca Fiatagri, Repuestos Massey Ferguson.\r\n\r\n&nbsp;",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-06000658-9",
+      "306": "Michele Rotunno Oteiza",
+      "312": "",
+      "313": "",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Av. 01, Galpón S/N, Urbanización Centro Administrativo, Calabozo - Estado Guárico",
+      "_phone": "(0246) 871.54.56 / (0246) 871.56.40",
+      "_phone2": "(0246) 871.63.54",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://www.consorciomm.com",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"887\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2016-11-15 23:06:00",
+      "_edit_lock": "1584755307:1",
+      "874": "J-06000658-9",
+      "875": "Michel Oteiza",
+      "876": "agrorepuestosmm@gmail.com",
+      "877": "miguelrotunno@cantv.net",
+      "_wp_old_slug": "agrorepuesto-m-m-c-a",
+      "_atbdp_post_views_count": "710",
+      "_wp_old_date": "2019-11-16",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "San Juan de los Morros - Guárico",
+          "slug": "san-juan-de-los-morros-guarico"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Fiatagri",
+          "slug": "fiatagri"
+        },
+        {
+          "name": "Laverda",
+          "slug": "laverda"
+        },
+        {
+          "name": "Massey Ferguson",
+          "slug": "massey-ferguson"
+        },
+        {
+          "name": "Same",
+          "slug": "same"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 424,
+    "date": "2019-11-16 23:31:30",
+    "modified": "2024-07-17 17:43:25",
+    "status": "publish",
+    "title": "Autana Turén, C.A.",
+    "slug": "autana-turen",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nRepuestos Landini, rodamientos agrícolas FAC, repuestos Gaspardo, implementos Jacto, implementos Baldan, implementos Tatu, repuestos de motor Perking, asientos de tractor, cigueñales, repuestos agrícolas China, repuestos Massey Ferguson.\r\n\r\n&nbsp;",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-29739151-7",
+      "306": "Fausto Chiussi",
+      "312": "autanaturen@yahoo.es",
+      "313": "",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Carretera Vía La Colonia, Edificio Dalan, Planta Baja, Oficina No 1, Zona Industrial, Turén - Estado Portuguesa",
+      "_phone": "(0255) 557.93.89",
+      "_phone2": "",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://Actualmentenodisponedesitioweb",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"891\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2020-11-15 23:20:00",
+      "_edit_lock": "1721252605:1",
+      "874": "J-29739151-7",
+      "875": "Fausto Chiussi",
+      "876": "autanaturen@yahoo.es",
+      "877": "",
+      "_wp_old_slug": "autana-turen-c-a",
+      "_atbdp_post_views_count": "794",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Baldan",
+          "slug": "baldan"
+        },
+        {
+          "name": "China",
+          "slug": "china"
+        },
+        {
+          "name": "FAC",
+          "slug": "fac"
+        },
+        {
+          "name": "Gaspardo",
+          "slug": "gaspardo"
+        },
+        {
+          "name": "Landini",
+          "slug": "landini"
+        },
+        {
+          "name": "Massey Ferguson",
+          "slug": "massey-ferguson"
+        },
+        {
+          "name": "Perkins",
+          "slug": "perkins"
+        },
+        {
+          "name": "Tatu",
+          "slug": "tatu"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 425,
+    "date": "2019-11-16 23:37:21",
+    "modified": "2024-07-15 10:35:31",
+    "status": "publish",
+    "title": "Autocarga Lara, C.A.",
+    "slug": "autocarga-lara",
+    "content": "<span class=\"itemExtraFieldsValue\">Carrocerías Automotrices, Ventas de maquinarias e implementos agrícolas (Actualmente en trámite de negociación de marca).</span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-29610716-5",
+      "306": "Ramón Romero",
+      "312": "analistacont.autocarga@eltunal.com",
+      "313": "",
+      "_never_expire": "1",
+      "_featured": "",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Av. Vía Barquisimeto - Quibor, Km. 17, S/N, Sector Buenos Aires, Barquisimeto - Estado Lara",
+      "_phone": "(0253) 491.10.01 / (0244) 355.13.16",
+      "_phone2": "(0416) 601.44.16",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://www.eltunal.com",
+      "_zip": "",
+      "_social": "",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "",
+      "_listing_prv_img": "2879",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "",
+      "_expiry_date": "2025-07-15 10:35:31",
+      "_edit_lock": "1721054282:1",
+      "874": "J-29610716-5",
+      "875": "Alejo Hernández",
+      "876": "karla.carrera@eltunal.com",
+      "877": "ramon.romero@eltunal.com",
+      "_wp_old_slug": "autocarga-lara-c-a",
+      "_atbdp_post_views_count": "971",
+      "_directory_type": "314",
+      "_877": "ramon.romero@eltunal.com",
+      "_875": "Alejo Hernández",
+      "_874": "J-29610716-5",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_thumbnail_id": "2879"
+    },
+    "tax": {
+      "category": [],
+      "location": [
+        {
+          "name": "Barquisimeto - Lara",
+          "slug": "barquisimeto-lara"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/IMG-20240715-WA0004.jpg"
+  },
+  {
+    "id": 429,
+    "date": "2019-11-17 00:27:56",
+    "modified": "2020-02-03 18:44:02",
+    "status": "publish",
+    "title": "Agropack, C.A.",
+    "slug": "agropack",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Areas de presencia:</span></h3>\r\n<span class=\"itemExtraFieldsValue\">Sector agroindustrial</span>\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nRepuestos agroindustriales, tractores, cosaechadoras.\r\n\r\n&nbsp;",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-31521784-8",
+      "306": "Leonides Elena Arcia Rojas",
+      "312": "e.arcia@nfgrupo.com",
+      "313": "z.fuhrman@nfgrupo.com",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Fiscal: Urb. Filas de Mariche, Sector La Hacienda, Local S/N, Carretera Petare - Santa Lucía, Estado Miranda Administrativa: Av. Francisco de MIranda, Torre Dozsa, piso 9, Oficina PT-9, Urb. El Rosal, Chacao",
+      "_phone": "(0212) 952.5975 / 95.6751",
+      "_phone2": "",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://Actualmentenodisponedesitioweb",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"884\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2021-02-02 18:44:12",
+      "_edit_lock": "1580867459:1",
+      "874": "J-31521784-8",
+      "875": "Leonides Elena Arcia Rojas",
+      "876": "e.arcia@nfgrupo.com",
+      "877": "z.fuhrman@nfgrupo.com",
+      "_wp_old_slug": "agropack-c-a",
+      "_atbdp_post_views_count": "1087",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Caracas - Distrito Capital",
+          "slug": "caracas-distrito-capital"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Massey Ferguson",
+          "slug": "massey-ferguson"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 431,
+    "date": "2019-11-17 00:46:59",
+    "modified": "2023-10-10 09:53:11",
+    "status": "publish",
+    "title": "Belcat, C.A",
+    "slug": "belcat",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nRepuestos para maquinarias agrícolas.\r\n\r\n&nbsp;",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-31305371-6 Dirección:",
+      "306": "Gregorio Rafael Gómez Lea",
+      "312": "venagrica@gmail.com",
+      "313": "belcat.ca@gmail.com",
+      "_never_expire": "1",
+      "_featured": "",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Centro Comercial San Luís, Local N° 1, Sector La Ceiba, Quibor - Estado Lara",
+      "_phone": "(0253) 491.38.55 / (0253) 514.59.56 / (0253) 491.21.74",
+      "_phone2": "(0416) 650.04.94",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://belcat.mercadoshops.com.ve",
+      "_zip": "",
+      "_social": "",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"894\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "",
+      "_expiry_date": "2024-10-09 09:53:11",
+      "_edit_lock": "1696945998:1",
+      "874": "J-29989247-5",
+      "875": "Gregorio Gómez",
+      "876": "belcat.ca@gmail.com",
+      "877": "darlesthef@gmail.com",
+      "_wp_old_slug": "belcat-c-a",
+      "_atbdp_post_views_count": "512",
+      "_directory_type": "314",
+      "_877": "darlesthef@gmail.com",
+      "_875": "Gregorio Gómez",
+      "_874": "J-29989247-5",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": ""
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Construcción",
+          "slug": "construccion"
+        }
+      ],
+      "location": [
+        {
+          "name": "Quibor - Lara",
+          "slug": "quibor-lara"
+        }
+      ],
+      "tags": [
+        {
+          "name": "john Deere",
+          "slug": "john-deere"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 436,
+    "date": "2019-11-17 01:17:00",
+    "modified": "2020-02-03 21:36:50",
+    "status": "publish",
+    "title": "Comercial Italven, S.A.",
+    "slug": "comercial-italven",
+    "content": "",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-08512954-6",
+      "306": "Paolo D´Alvano Rivero",
+      "312": "comercialitalven1982@gmail.com",
+      "313": "",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Carretera Nacional Vía Barinas, edificio Italven, Piso 1, Local 1, Sector Colinas de Italven, Guanare - Estado Portuguesa",
+      "_phone": "(0257) 251.59.75 / 251.57.05",
+      "_phone2": "",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://Actualmentenodisponedesitioweb",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"913\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2021-02-02 21:36:51",
+      "_edit_lock": "1580780087:1",
+      "874": "J-08512954-6",
+      "875": "Paolo D' Alvano Rivero",
+      "876": "comercialitalven1982@gmail.com",
+      "877": "administracion@italven.net.ve",
+      "_wp_old_slug": "comercial-italven-s-a",
+      "_atbdp_post_views_count": "1546",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": ""
+  },
+  {
+    "id": 824,
+    "date": "2019-11-17 01:01:32",
+    "modified": "2024-07-17 17:44:22",
+    "status": "publish",
+    "title": "Corporación Luiros, C.A.",
+    "slug": "corporacion-luiros",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nRepuestos agrícolas en general.\r\n\r\n&nbsp;",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-30281619-0",
+      "306": "Luis Suniaga",
+      "312": "corpluiros@cantv.net",
+      "313": "corpluiros@gmail.com",
+      "_never_expire": "1",
+      "_featured": "",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Avenida 5 de diciembre, Edf. Karima, Local 1, 2 y 3, Araure - Estado Portuguesa",
+      "_phone": "(0255) 621.17.33 / (0255) 623.54.25",
+      "_phone2": "",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://Actualmentenodisponedesitioweb",
+      "_zip": "",
+      "_social": "",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "",
+      "_listing_prv_img": "2885",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "",
+      "_expiry_date": "2025-07-16 11:05:00",
+      "_edit_lock": "1721142162:1",
+      "874": "J-30281619-0",
+      "875": "Luís Suniaga",
+      "876": "lilianavicario@hotmail.com",
+      "877": "corpluiros@cantv.net",
+      "_wp_old_slug": "corporacion-luiros-c-a",
+      "_atbdp_post_views_count": "997",
+      "_directory_type": "314",
+      "_877": "corpluiros@cantv.net",
+      "_875": "Luís Suniaga",
+      "_874": "J-30281619-0",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_thumbnail_id": "2885"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Ford Tractor",
+          "slug": "ford-tractor"
+        },
+        {
+          "name": "Landini",
+          "slug": "landini"
+        },
+        {
+          "name": "Massey Ferguson",
+          "slug": "massey-ferguson"
+        },
+        {
+          "name": "Perkins",
+          "slug": "perkins"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/logos-cavedrepas-marcas_20240716_105755_0001.jpg"
+  },
+  {
+    "id": 827,
+    "date": "2019-11-17 13:37:10",
+    "modified": "2024-07-17 17:45:33",
+    "status": "publish",
+    "title": "Corporación Vanlui, C.A.",
+    "slug": "corporacion-vanlui",
+    "content": "<h3>Productos comercializados:</h3>\r\nVenta y Distribución de Repuestos, Partes y Piezas para maquinarias agrícolas y respuestos automotrices.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-30802547-0",
+      "306": "Luis Alberto Suniaga",
+      "312": "",
+      "313": "",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Calle 31 entre Av. 40 y 41, N° 31-48, Sector El Palito, Acarigua - Estado Portuguesa",
+      "_phone": "(0255) 615.00.36 / (0255) 621.96.31",
+      "_phone2": "",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://www.corporacionvanlui.com",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:0:{}",
+      "_listing_prv_img": "1186",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2021-02-03 12:53:31",
+      "_edit_lock": "1580835091:1",
+      "874": "J-30802547-0",
+      "875": "Luís Suniaga",
+      "876": "corpvanlui@gmail.com",
+      "877": "lilianavicario@hotmail.com",
+      "_wp_old_slug": "corporacion-vanlui-c-a",
+      "_atbdp_post_views_count": "639",
+      "_thumbnail_id": "1186",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Bepco",
+          "slug": "bepco"
+        },
+        {
+          "name": "Emmark",
+          "slug": "emmark"
+        },
+        {
+          "name": "Ford",
+          "slug": "ford"
+        },
+        {
+          "name": "Landini",
+          "slug": "landini"
+        },
+        {
+          "name": "Massey Ferguson",
+          "slug": "massey-ferguson"
+        },
+        {
+          "name": "Maxiforce",
+          "slug": "maxiforce"
+        },
+        {
+          "name": "Metal Leve",
+          "slug": "metal-leve"
+        },
+        {
+          "name": "New Holland",
+          "slug": "new-holland"
+        },
+        {
+          "name": "Sparex",
+          "slug": "sparex"
+        },
+        {
+          "name": "VW",
+          "slug": "vw"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/corporacion-vanlui.jpg"
+  },
+  {
+    "id": 830,
+    "date": "2019-11-17 13:53:22",
+    "modified": "2024-07-17 17:44:22",
+    "status": "publish",
+    "title": "DILAN, C.A.",
+    "slug": "dilan",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nRepuestos y maquinarias agrícolas.\r\n\r\n&nbsp;",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-08519317-0",
+      "306": "Lucía Corelli",
+      "312": "",
+      "313": "",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Av. Los Pioneros, salida a Guanare, Edif. Dilan, Araure - Estado Portuguesa",
+      "_phone": "(0255) 622.5886",
+      "_phone2": "",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://Actualmentenodisponedesitioweb",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"923\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2021-02-03 12:59:34",
+      "_edit_lock": "1580835620:1",
+      "874": "J-08519317-0",
+      "875": "Erico Gorely",
+      "876": "administracion@dilan.com.ve",
+      "877": "keyla@dilan.com.ve",
+      "_wp_old_slug": "dilan-c-a",
+      "_atbdp_post_views_count": "910",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Landini",
+          "slug": "landini"
+        },
+        {
+          "name": "Massey Ferguson",
+          "slug": "massey-ferguson"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 832,
+    "date": "2019-11-17 13:59:33",
+    "modified": "2020-02-04 13:15:40",
+    "status": "publish",
+    "title": "Distribuidora Venemotos C.A.",
+    "slug": "distribuidora-venemotos",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Areas de presencia:</span></h3>\r\n<span class=\"itemExtraFieldsValue\">Actividades agrícolas, pecuarias, forestales y pesqueras.</span>\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nMotores fuera de borda, generadores eléctricos, motosierras, motobombas, desmalezadoras, cortagramas, nebulizadores, asperjadores.\r\n\r\n&nbsp;\r\n\r\n&nbsp;",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-00011576-1",
+      "306": "Moisés Serfaty",
+      "312": "",
+      "313": "",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Av. El Paseo, N° 7, Urb. Los Rosales, Caracas - Distrito Capital",
+      "_phone": "(0212) 632.91.33",
+      "_phone2": "(0212) 632.53.54 / (0212) 632.99.76",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://www.venemotosyamaha.com",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"928\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2021-02-03 13:15:40",
+      "_edit_lock": "1580836581:1",
+      "874": "J-00011576-1",
+      "875": "Claudio Ipolito",
+      "876": "ippolitoc@venemotos.com.ve",
+      "877": "zambranom@venemotos.com.ve",
+      "_wp_old_slug": "distribuidora-venemotos-c-a",
+      "_atbdp_post_views_count": "1439",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Caracas - Distrito Capital",
+          "slug": "caracas-distrito-capital"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Yamaha",
+          "slug": "yamaha"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 833,
+    "date": "2019-11-17 14:02:53",
+    "modified": "2020-02-04 13:31:06",
+    "status": "publish",
+    "title": "Distribuidora Venepesca, C.A.",
+    "slug": "distribuidora-venepesca",
+    "content": "<div class=\"itemFullText\">\r\n\r\nEs una compañíaa privada que se ubica dentro de las empresas venezolanas especializadas en motores de combustión interna. Fue fundada en el año 2008.\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nMotores fuera de borda y productos de poder Yamaha. Motosierras, desbrozadoras, motobombas, fumigadoras, motores multiuso, y toda la gama agrícola de la marca italiana Oleo Mac.\r\n\r\n&nbsp;\r\n\r\n</div>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-29692751-0",
+      "306": "Claudio Ippolito",
+      "312": "",
+      "313": "",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Avenida El Paseo, Galpón N° 7, Urb. Los Rosales, Caracas - Distrito Capital",
+      "_phone": "(0212) 632.95.15 / (0212) 263.17.63",
+      "_phone2": "(0412) 226.03.51",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://Actualmentenodisponedesitioweb",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"929\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2021-02-03 13:31:10",
+      "_edit_lock": "1580837764:1",
+      "874": "J-29692751-0",
+      "875": "",
+      "876": "ippolitoc@venemotos.com.ve",
+      "877": "zambranom@venemotos.com.ve",
+      "_wp_old_slug": "distribuidora-venepesca-c-a",
+      "_atbdp_post_views_count": "1591",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Acuícola",
+          "slug": "acuicola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Caracas - Distrito Capital",
+          "slug": "caracas-distrito-capital"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Oleo Mac",
+          "slug": "oleo-mac"
+        },
+        {
+          "name": "Yamaha",
+          "slug": "yamaha"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 834,
+    "date": "2019-11-17 14:08:14",
+    "modified": "2020-02-04 13:39:53",
+    "status": "publish",
+    "title": "DOMOSA",
+    "slug": "domosa",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nMezcladores de concreto, Carretones, Desmalezadores, Andamios y Motosierras, Vibradores de concreto. Motores eléctricos, diesel y a gasolina. Desgranadoras, Molinos y Picapastos. Fumigadoras. Cortagramas, Biotrituradoras y Tractores cortagrama.\r\n\r\n&nbsp;",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-30120814-5",
+      "306": "José Chávez",
+      "312": "",
+      "313": "",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Carretera Nacional Vía Guanare. Los Guasimitos a 300 Mts., Barinas - Estado Barinas",
+      "_phone": "(0273) 530.96.02",
+      "_phone2": "(0273) 546.55.32",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://www.domosa.com",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"930\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2021-02-03 13:39:54",
+      "_edit_lock": "1580837892:1",
+      "874": "J-30120814-5",
+      "875": "",
+      "876": "info@domosa.com",
+      "877": "ventas@domosa.com",
+      "_atbdp_post_views_count": "1182",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        },
+        {
+          "name": "Sector Construcción",
+          "slug": "construccion"
+        }
+      ],
+      "location": [
+        {
+          "name": "Barinas - Barinas",
+          "slug": "barinas-barinas"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Briggs&amp;Stratton",
+          "slug": "briggsstratton"
+        },
+        {
+          "name": "Condor",
+          "slug": "condor"
+        },
+        {
+          "name": "Dolmar",
+          "slug": "dolmar"
+        },
+        {
+          "name": "Domosa",
+          "slug": "domosa"
+        },
+        {
+          "name": "Honda",
+          "slug": "honda"
+        },
+        {
+          "name": "Lombardini",
+          "slug": "lombardini"
+        },
+        {
+          "name": "MTD",
+          "slug": "mtd"
+        },
+        {
+          "name": "Penagos",
+          "slug": "penagos"
+        },
+        {
+          "name": "Royal",
+          "slug": "royal"
+        },
+        {
+          "name": "Ryobi",
+          "slug": "ryobi"
+        },
+        {
+          "name": "Siveti",
+          "slug": "siveti"
+        },
+        {
+          "name": "Yardmachines",
+          "slug": "yardmachines"
+        },
+        {
+          "name": "Yardman",
+          "slug": "yardman"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 837,
+    "date": "2019-11-17 14:20:25",
+    "modified": "2023-10-09 17:09:17",
+    "status": "publish",
+    "title": "Distribuidora Mototap, C.A.",
+    "slug": "distribuidora-mototap",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Areas de presencia:</span></h3>\r\n<span class=\"itemExtraFieldsValue\">A nivel nacional</span>\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nDesmalezadoras, motosierras, motobombas, motores estacionarios, nylon desmalezadoras, motores fuera de borda, ordeñadoras, ahoyadoras, plantas eléctricas diesel y de gasolina, fumigadoras, aspersores.  Partes y piezas para equipos agrícolas.\r\n\r\n&nbsp;",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-31486382-7",
+      "306": "Manuel Correa",
+      "312": "mototap@distribuidoramototap.com",
+      "313": "contab@distribuidoramototap.com",
+      "_never_expire": "1",
+      "_featured": "",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "A. Rómulo Gallegos, Edif. LE, PB, Local 3, Mezzanina 1 y 2, Urb. El Marqués, Caracas - Distrito Capital",
+      "_phone": "(0212) 232.69.87 / 238.04.51",
+      "_phone2": "",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://Actualmentenodisponedesitioweb",
+      "_zip": "",
+      "_social": "",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"926\";}",
+      "_listing_prv_img": "2350",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "",
+      "_expiry_date": "2024-10-08 17:09:17",
+      "_edit_lock": "1696886034:1",
+      "874": "J-31486382-7",
+      "875": "Manuel Correa",
+      "876": "",
+      "877": "",
+      "_wp_old_slug": "distribuidora-mototap-c-a",
+      "_atbdp_post_views_count": "1257",
+      "_directory_type": "314",
+      "_877": "",
+      "_876": "",
+      "_875": "Manuel Correa",
+      "_874": "J-31486382-7",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_thumbnail_id": "2350"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Acuícola",
+          "slug": "acuicola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Caracas - Distrito Capital",
+          "slug": "caracas-distrito-capital"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/distribuidora-mototap.png"
+  },
+  {
+    "id": 840,
+    "date": "2019-11-17 14:35:16",
+    "modified": "2020-02-04 18:32:20",
+    "status": "publish",
+    "title": "Inversiones Resansil C.A.",
+    "slug": "inversiones-resansil",
+    "content": "<h3>Area de presencia:</h3>\r\nPresencia en todo el territorio nacional.\r\n<h3>Productos comercializados:</h3>\r\n<div>\r\n\r\nEquipos para pavimentación con asfalto y concreto, plantas de asfalto y concreto, fresadoras, recicladoras de asfalto, pavimentadoras de asfalto y concreto, bombas de concreto, compactadores de suelos y asfalto, mezcladores de concreto, trituradoras.\r\n\r\n<strong>Wirtgen:</strong> Fresadora en frío para pavimento; Recicladora estabilizadora de suelo; Equipo de encofrado deslizante (brocales, aceras, carpetas concreto, defensas); Minadora de superficie.\r\n\r\n<strong>Hamm:</strong> Compactador de asfalto; Compactador de suelos; Compactador de neumáticos para asfalto.\r\n\r\n<strong>Vogele:</strong> Pavimentadora de orugas; Pavimentadora de ruedas.\r\n\r\n<strong>Kleemann:</strong> Trituradora de mandíbula; Trituradora de cono; Trituradora de impacto; Criba.\r\n\r\n<strong>Broce Broom:</strong> Barredora autopropulsada para asfalto.\r\n\r\n<strong>Menzi Muck:</strong> Excavadoras multifuncionales.\r\n\r\n<strong>Odisa:</strong> Plantas de concreto.\r\n\r\n<strong>Sennebogen:</strong> Grúas telescópicas.\r\n\r\n<strong>Etnyre:</strong> Distribuidores de asfalto\r\n\r\n<strong>Rosenbauer:</strong> Camiones bomberos; Equipamiento contra incendios.\r\n\r\n<strong>Vacali:</strong> Equipos limpieza sumideros, sépticos, Residuos industriales.\r\n\r\n</div>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-30118658-3",
+      "306": "Manfred Baumgartner",
+      "312": "m.baumgartner@resansil.com",
+      "313": "j.espinoza@resansil.com",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "4ta. Transversal de Montecristo, Edf. Bancaracas, piso 2, ofic.2, Caracas - Distrito Capital",
+      "_phone": "(0212) 237.7094 / 8094 / 8238 / 9515",
+      "_phone2": "(0412) 021.1429 / (0424) 179.0106",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://www.resansil.com",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"944\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2021-02-03 18:32:20",
+      "_edit_lock": "1580855409:1",
+      "874": "J-30118658-3",
+      "875": "Manfred Baumgartner",
+      "876": "m.baumgartner@resansil.com",
+      "877": "v.ladines@resansil.com",
+      "_wp_old_slug": "inversiones-resansil-c-a",
+      "_atbdp_post_views_count": "937",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Construcción",
+          "slug": "construccion"
+        }
+      ],
+      "location": [
+        {
+          "name": "Caracas - Distrito Capital",
+          "slug": "caracas-distrito-capital"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Broce Broom",
+          "slug": "broce-broom"
+        },
+        {
+          "name": "Etnyre",
+          "slug": "etnyre"
+        },
+        {
+          "name": "Hamm",
+          "slug": "hamm"
+        },
+        {
+          "name": "Kleemann",
+          "slug": "kleemann"
+        },
+        {
+          "name": "Menzi Muck",
+          "slug": "menzi-muck"
+        },
+        {
+          "name": "Odisa",
+          "slug": "odisa"
+        },
+        {
+          "name": "Rosenbauer",
+          "slug": "rosenbauer"
+        },
+        {
+          "name": "Sennebogen",
+          "slug": "sennebogen"
+        },
+        {
+          "name": "Vacali",
+          "slug": "vacali"
+        },
+        {
+          "name": "Vogele",
+          "slug": "vogele"
+        },
+        {
+          "name": "Wirtgen",
+          "slug": "wirtgen"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 841,
+    "date": "2019-11-17 14:40:32",
+    "modified": "2024-08-13 17:24:34",
+    "status": "publish",
+    "title": "Impexpar C.A. Maquinarias y Equipos",
+    "slug": "impexpar",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Areas de presencia:</span></h3>\r\n<span class=\"itemExtraFieldsValue\">Sectores Agrícola, Construcción, Petrolero, Ferroviario, Civil.</span>\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nMotores Diesel multiuso, motobombas (lic. Hatz Motores diesel y Gasolina, Bombas de agua con motores Diesel y gasolina.  Maquinaria liviana para la construcción.  (Trompos - Mezcladores.  Ranas compactadoras, cortadores de asfalto) Plantas eléctricas.\r\n\r\n&nbsp;",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-30568831-1",
+      "306": "Gabriel Parisi",
+      "312": "rafael.parisi@impexpar.com",
+      "313": "administracion@impexpar.com - compras@impexpar.com",
+      "_never_expire": "1",
+      "_featured": "",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Calle Bella Vista, con Av. Sur, La Lagunita, C.C. Paseo El Hatillo, P9, Ofc. 20 y 22, Municipio El Hatillo, Caracas - Distrito Capital",
+      "_phone": "(0212) 961.93.46 / 961.93.55 / 93.92 / 961.94.50",
+      "_phone2": "(0412) 241.81.01",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://www.impexpar.com",
+      "_zip": "",
+      "_social": "",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"937\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "",
+      "_expiry_date": "2025-08-13 17:24:34",
+      "_edit_lock": "1723584141:1",
+      "874": "J-30568831-1",
+      "875": "Rafael Parisi",
+      "876": "rafael.parisi@impexpar.com",
+      "877": "administracion@impexpar.com",
+      "_wp_old_slug": "impexpar-c-a-maquinarias-y-equipos",
+      "_atbdp_post_views_count": "1569",
+      "_directory_type": "314",
+      "_877": "administracion@impexpar.com",
+      "_875": "Rafael Parisi",
+      "_874": "J-30568831-1",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": ""
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        },
+        {
+          "name": "Sector Construcción",
+          "slug": "construccion"
+        }
+      ],
+      "location": [
+        {
+          "name": "Caracas - Distrito Capital",
+          "slug": "caracas-distrito-capital"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Blue Bird",
+          "slug": "blue-bird"
+        },
+        {
+          "name": "Comet",
+          "slug": "comet"
+        },
+        {
+          "name": "Dynapac",
+          "slug": "dynapac"
+        },
+        {
+          "name": "Fieldmarshall",
+          "slug": "fieldmarshall"
+        },
+        {
+          "name": "Genpar",
+          "slug": "genpar"
+        },
+        {
+          "name": "Greaves",
+          "slug": "greaves"
+        },
+        {
+          "name": "Impexpar",
+          "slug": "impexpar"
+        },
+        {
+          "name": "Iveco",
+          "slug": "iveco"
+        },
+        {
+          "name": "Komatsu",
+          "slug": "komatsu"
+        },
+        {
+          "name": "LTD",
+          "slug": "ltd"
+        },
+        {
+          "name": "Power",
+          "slug": "power"
+        },
+        {
+          "name": "Technoflex",
+          "slug": "technoflex"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 848,
+    "date": "2019-11-17 15:10:35",
+    "modified": "2024-07-17 17:45:33",
+    "status": "publish",
+    "title": "INSABAR, C.A.",
+    "slug": "insabar",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Areas de presencia:</span></h3>\r\n<span class=\"itemExtraFieldsValue\">Oficina y almacén</span>\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nRepuestos agrícolas.\r\n\r\n&nbsp;",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-40226368-6",
+      "306": "",
+      "312": "insabarca@hotmail.com",
+      "313": "geovanny-g@hotmail.com",
+      "_never_expire": "1",
+      "_featured": "",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Calle 31 entre Avenidas 40 y 41, Sector El Palito, Piso 01, Ofic. 02, Municipio Paez, Acarigua - Estado Portuguesa",
+      "_phone": "(0255) 664.35.37",
+      "_phone2": "",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://Actualmentenodisponedesitioweb",
+      "_zip": "",
+      "_social": "",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "",
+      "_listing_prv_img": "2880",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "",
+      "_expiry_date": "2025-07-15 10:57:28",
+      "_edit_lock": "1721055449:1",
+      "874": "J-40226368-6",
+      "875": "Geovanny José Guevara",
+      "876": "insabarca@hotmail.com",
+      "877": "geovanny-g@hotmail.com",
+      "_wp_old_slug": "insabar-c-a",
+      "_atbdp_post_views_count": "852",
+      "_directory_type": "314",
+      "_877": "geovanny-g@hotmail.com",
+      "_875": "Geovanny José Guevara",
+      "_874": "J-40226368-6",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_thumbnail_id": "2880"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Ford",
+          "slug": "ford"
+        },
+        {
+          "name": "john Deere",
+          "slug": "john-deere"
+        },
+        {
+          "name": "Landini",
+          "slug": "landini"
+        },
+        {
+          "name": "Massey Ferguson",
+          "slug": "massey-ferguson"
+        },
+        {
+          "name": "MWM",
+          "slug": "mwm"
+        },
+        {
+          "name": "Perkins",
+          "slug": "perkins"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/logos-cavedrepas-marcas_20240715_105641_0000.jpg"
+  },
+  {
+    "id": 850,
+    "date": "2019-11-17 17:13:50",
+    "modified": "2023-10-09 15:10:25",
+    "status": "publish",
+    "title": "Logic Elevadores, C.A.",
+    "slug": "logic-elevadores",
+    "content": "Empresa especializada en la venta de maquinaria pesada para la industria de la construcción, así como una amplia gama de productos relacionados.\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\n<div>\r\n\r\nMaquinaria pesada, excavadoras, cargadores, minicargadores, montacargas.\r\n\r\n<strong>Hyundai:</strong> Excavadoras sobre orrugas; Excavadoras sobre ruedas; Cargadores frontales; Minicargadores; Retroexcavadoras; Compactadores de suelo; Compactadores de asfalto; Martillos hidraulicos; Montacargas combustion interna diesel; Montacargas combustion interna a gas; Montacargas electricos.\r\n\r\n<strong>Everdigm</strong>: Generadores electricos; Bombeadores de concreto sobre camion.\r\n\r\n<strong>Astra:</strong>Camiones articulados para mineria; Camiones roqueros para mineria.\r\n\r\n<strong>Sigma:</strong> Equipos de transporte vertical (ascensores); Escaleras mecanicas.\r\n\r\n</div>\r\n&nbsp;",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-30557672-6",
+      "306": "Miguel E. Martínez",
+      "312": "logiccompras@sinabrosa.com",
+      "313": "logic@sinabrosa.com",
+      "_never_expire": "1",
+      "_featured": "",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "1era. Avenida de Buena Vista con calle San Antonio, Edif. Befca, piso 1, Ofic. 7 Urb. Buena Vista, Caracas - Distrito Capital",
+      "_phone": "(0212) 213.9100 / 271.7386",
+      "_phone2": "",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://www.logicelevadores.com.ve",
+      "_zip": "",
+      "_social": "",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "",
+      "_listing_prv_img": "2352",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "",
+      "_expiry_date": "2024-10-08 15:10:25",
+      "_edit_lock": "1696878620:1",
+      "874": "J-30557672-6",
+      "875": "Miguel Martínez",
+      "876": "lic.salazar@gmail.com",
+      "877": "juanmo83@gmail.com",
+      "_wp_old_slug": "logic-elevadores-c-a",
+      "_atbdp_post_views_count": "1183",
+      "_directory_type": "314",
+      "_877": "juanmo83@gmail.com",
+      "_875": "Miguel Martínez",
+      "_874": "J-30557672-6",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_thumbnail_id": "2352"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Construcción",
+          "slug": "construccion"
+        }
+      ],
+      "location": [
+        {
+          "name": "Caracas - Distrito Capital",
+          "slug": "caracas-distrito-capital"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Astra",
+          "slug": "astra"
+        },
+        {
+          "name": "Everdigm",
+          "slug": "everdigm"
+        },
+        {
+          "name": "Hyundai",
+          "slug": "hyundai"
+        },
+        {
+          "name": "Sigma",
+          "slug": "sigma"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/logic-elevadores.png"
+  },
+  {
+    "id": 851,
+    "date": "2019-11-17 17:18:24",
+    "modified": "2024-07-17 17:45:33",
+    "status": "publish",
+    "title": "Las Plumas y Asociados, C.A.",
+    "slug": "las-plumas-y-asociados",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nSembradoras Vence tudo, implementos Jan, Molinos Pinheiros, Henificadores Vermeer, Romanas Iconix, cercas eléctricas  Pel, Asperjadoras Jacto, tractores y cosechadoras Massey Ferguson.\r\n\r\n&nbsp;",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-30024861-5",
+      "306": "Alvaro Otayza",
+      "312": "rgomez@grupoplumas.com - nellycaballero1231@hotmail.com",
+      "313": "mmoreno@grupoplumas.com - importacioneslasplumas@gmail.com",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Av. 13 de junio con calle 40C y 40D, N° 36B-75, Acarigua - Estado Portuguesa",
+      "_phone": "(0255) 622.23.48 / 621.09.44 / (0255) 621.57.44 / 664.16.41 ext 1 / (0255) 621.34.04",
+      "_phone2": "(0414) 559.33.23",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://www.grupoplumas.com",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"947\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2021-02-03 18:39:27",
+      "_edit_lock": "1580856037:1",
+      "874": "J-30024861-5",
+      "875": "Alvaro Otaiza",
+      "876": "rgomez@grupoplumas.com",
+      "877": "jmedina@grupoplumas.com",
+      "_atbdp_post_views_count": "1197",
+      "_wp_old_slug": "las-plumas-y-asociados-c-a",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Iconix",
+          "slug": "iconix"
+        },
+        {
+          "name": "Jacto",
+          "slug": "jacto"
+        },
+        {
+          "name": "Jan",
+          "slug": "jan"
+        },
+        {
+          "name": "Massey Ferguson",
+          "slug": "massey-ferguson"
+        },
+        {
+          "name": "Pel",
+          "slug": "pel"
+        },
+        {
+          "name": "Pinheiros",
+          "slug": "pinheiros"
+        },
+        {
+          "name": "Vence Tudo",
+          "slug": "vence-tudo"
+        },
+        {
+          "name": "Vermeer",
+          "slug": "vermeer"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 853,
+    "date": "2019-11-17 17:26:19",
+    "modified": "2020-02-04 18:49:19",
+    "status": "publish",
+    "title": "Maquinarias Domo S.A.",
+    "slug": "maquinarias-domo",
+    "content": "<h3>Productos comercializados y marcas relacionadas:</h3>\r\n<div>\r\n\r\nMaquinarias, Equipos, Equipos de Potencia, Venta al Mayor de Maquinarias, Equipos Agrícolas, Suministros Agrícolas\r\n\r\n<strong>Dolmar:</strong> Tronzadora dolmar 61cc/disco 14\".\r\n\r\n<strong>Siveti:</strong> Mezcladora de concreto 360 lts con motor gasolina; Mezcladora de concreto 360 lts con motor diesel; Mezcladora de concreto 360 lts con motor electrico; Balde para elevador de caballete; Juego Caballete y viga para winches; Andamios tubular. Cuerpo 2ml.; Carreton bugui de 2 ruedas.\r\n\r\n<strong>Domopower:</strong> Compactadora 80 kg motor gasolina; Compactadora 120 kg motor gasolina; Compactadora 180 kg motor diesel; Cortadora de concreto movil disco 18\" motor gasolina; Alisador de cemento 90cm motor; gasolina; Martillo demoledor con motor 2t.; Apisonador 80 kg con motor gasolina; Vibrador de hormigon electrico 220v motor 1,5hp.; Vibrador de hormigon motor gasolina 6mts-38mm.\r\n\r\n<strong>L'Europea:</strong> Winche elevador motor electrico.\r\n\r\n<strong>Domosa:</strong> Soldadora portatil con motor gasolina; Soldadora portatil con motor diesel; Plantas electricas tipo portatil motor gasolina; Plantas electricas tipo portatil motor diesel.\r\n\r\n</div>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "",
+      "306": "",
+      "312": "",
+      "313": "",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Carretera Nacional Vía Guanare, Edif. Cadelma, PB (a 300 Mts. de Los Guasimitos), Los Guasimitos, Barinas",
+      "_phone": "(0273) 530.9600",
+      "_phone2": "",
+      "_fax": "(0273) 546.1810",
+      "_email": "",
+      "_website": "",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"950\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2021-02-03 18:49:19",
+      "_edit_lock": "1580856657:1",
+      "874": "J-30120814-5",
+      "875": "José Chaves",
+      "876": "jose.chaves@domosa.com",
+      "877": "marbelys.flores@domosa.com",
+      "_wp_old_slug": "maquinarias-domo-s-a",
+      "_atbdp_post_views_count": "1064",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Barinas - Barinas",
+          "slug": "barinas-barinas"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Dolmar",
+          "slug": "dolmar"
+        },
+        {
+          "name": "Domopower",
+          "slug": "domopower"
+        },
+        {
+          "name": "Domosa",
+          "slug": "domosa"
+        },
+        {
+          "name": "LEuropea",
+          "slug": "leuropea"
+        },
+        {
+          "name": "Siveti",
+          "slug": "siveti"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 858,
+    "date": "2019-11-17 17:53:18",
+    "modified": "2024-07-17 17:45:33",
+    "status": "publish",
+    "title": "Mercantil Puma C.A.",
+    "slug": "mercantil-puma",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Areas de presencia:</span></h3>\r\n<span class=\"itemExtraFieldsValue\">En los estados Guárico, Barinas y Portuguesa.</span>\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nLubricantes y correas\r\n\r\n&nbsp;",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-08502185-0",
+      "306": "Oracio Puma",
+      "312": "opuma@merpuca.com - mgonzalez@merpuca.com",
+      "313": "bfiallo@merpuca.com",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Av. 42, edif. Merpuca Acarigua, piso 1, local 01, Sector El Palito. Acarigua - Estado Portuguesa",
+      "_phone": "(0255) 621.11.09 / 621.58.65",
+      "_phone2": "(0424) 597.96.32",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://Actualmentenodisponedesitioweb",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"953\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2021-02-03 19:02:15",
+      "_edit_lock": "1580857235:1",
+      "874": "J-08502185-0",
+      "875": "Orazio Puma",
+      "876": "opuma@merpuca.com",
+      "877": "zjuarez@grupopuma.com.ve",
+      "_wp_old_slug": "mercantil-puma-c-a",
+      "_atbdp_post_views_count": "1621",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Carlile",
+          "slug": "carlile"
+        },
+        {
+          "name": "Venoco",
+          "slug": "venoco"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 859,
+    "date": "2015-11-17 17:55:30",
+    "modified": "2024-07-17 17:44:22",
+    "status": "publish",
+    "title": "Orval, S.A.",
+    "slug": "orval",
+    "content": "ORVAL, S.A. es una empresa venezolana líder en el mercado de maquinaria agrícola, fundada en 1983 por Jorge Orlando Valenzuela, en Acarigua Estado Portuguesa, y es hoy Distribuidor Autorizado de la exclusiva Marca JOHN DEERE, la empresa líder en fabricación y comercialización de maquinaria agrícola a nivel mundial.\r\n<h3><span class=\"itemExtraFieldsLabel\">Areas de presencia:</span></h3>\r\n<span class=\"itemExtraFieldsValue\">Area agrícola, forestal, construcción, de compactación.</span>\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\n<p class=\"spField\">Maquinarias agrícolas, de construcción, forestal, de compactación y asfalto, implementos, servicio técnico y repuestos.</p>\r\n<strong>John Deere:</strong> Máquinas de construcción: Tractores de oruga; Excavadoras; Cargadores frontales; Motoniveladoras; Retroexcavadoras; Minicargadores; Camiones articulados.\r\n\r\n<strong>Bomag:</strong> Manejo de compactación y asfalto: Vibrocompactadores; Asfaltadoras; Compactadoras; Recicladoras; Vibroapisonadoras.\r\n\r\n&nbsp;",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-30738783-1",
+      "306": "José María Valenzuela",
+      "312": "semaria@gmail.com",
+      "313": "primeralisbeth@gmail.com",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Final Av. Los Pioneros. Complejo Ind. Los Samanes. Galpon #1 Araure - Estado Portuguesa",
+      "_phone": "(0241) 871.7496 / 871.4669 / 7251",
+      "_phone2": "(0424) 527.5929 / (0424) 414.8145",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://www.orval.com.ve",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"955\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2021-03-20 21:49:11",
+      "_edit_lock": "1584755359:1",
+      "874": "J-30738783-1",
+      "875": "José María Valenzuela",
+      "876": "valenzuelajosemaria@gmail.com",
+      "877": "primeralisbeth@gmail.com",
+      "_wp_old_slug": "orval-s-a",
+      "_atbdp_post_views_count": "1059",
+      "_wp_old_date": "2019-11-17",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Construcción",
+          "slug": "construccion"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Bomag",
+          "slug": "bomag"
+        },
+        {
+          "name": "john Deere",
+          "slug": "john-deere"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 860,
+    "date": "2019-11-17 18:02:49",
+    "modified": "2024-07-17 17:51:37",
+    "status": "publish",
+    "title": "Prosemillas, C.A.",
+    "slug": "prosemillas",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nRepuestos para cosechadoras y tractores agrícolas, secadoras agrícolas, rodillos, descascaradores.\r\n\r\n&nbsp;",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-31372849-7",
+      "306": "Michele Rotunno Oteiza I",
+      "312": "construmaquinasaraure@gmail.com",
+      "313": "",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Carretera Nacional Vía San Fernando de Apure, Zona Industrial San Marcos, Parcelas 28 y 29, Calabozo - Estado Guárico",
+      "_phone": "(0246) 872.31.77",
+      "_phone2": "",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://Actualmentenodisponedesitioweb",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"956\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2021-02-03 19:17:55",
+      "_edit_lock": "1580858220:1",
+      "874": "J-31662135-9",
+      "875": "",
+      "876": "prosemillasca@gmail.com",
+      "877": "",
+      "_wp_old_slug": "prosemillas-c-a",
+      "_atbdp_post_views_count": "1010",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "San Juan de los Morros - Guárico",
+          "slug": "san-juan-de-los-morros-guarico"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Fiat",
+          "slug": "fiat"
+        },
+        {
+          "name": "Laverda",
+          "slug": "laverda"
+        },
+        {
+          "name": "Massey Ferguson",
+          "slug": "massey-ferguson"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 861,
+    "date": "2019-11-17 18:06:33",
+    "modified": "2024-07-17 17:54:22",
+    "status": "publish",
+    "title": "REAGRINCA",
+    "slug": "reagrinca",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nRepuestos para maquinaria agrícola pesada.\r\n\r\n&nbsp;",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_last": "1",
+      "305": "J-07547682-4",
+      "306": "Isaac Rodríguez",
+      "312": "reagrinca@cantv.net",
+      "313": "",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Carretera Nacional Cagua, La Villa al lado Bomba Samán, Cagua - Estado Aragua",
+      "_phone": "(0244) 447.51.62",
+      "_phone2": "(0244) 447.96.12 / 395.77.32",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://Actualmentenodisponedesitioweb",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"957\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2021-02-03 19:25:05",
+      "_edit_lock": "1580858583:1",
+      "874": "J-07547682-4",
+      "875": "Isaaz Rodríguez",
+      "876": "reagrinca@cantv.net",
+      "877": "nellyacosta2@gmail.com",
+      "_atbdp_post_views_count": "772",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Maracay - Aragua",
+          "slug": "maracay-aragua"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": ""
+  },
+  {
+    "id": 969,
+    "date": "2019-12-04 00:59:39",
+    "modified": "2020-02-04 20:10:42",
+    "status": "publish",
+    "title": "VENEQUIRCA",
+    "slug": "venequirca",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Areas de presencia:</span></h3>\r\n<span class=\"itemExtraFieldsValue\">Todo el territorio nacional.</span>\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nMaquinaria y equipos en los ramos agrícola, pecuaria, pesquera y forestal; así como sus repuestos originales y no originales.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1580861329:1",
+      "_edit_last": "1",
+      "874": "J-30356406-2",
+      "875": "Luís E. Slato P",
+      "876": "krodriguez.agroamerica@gmail.com",
+      "877": "krodriguez@venequirca.net - tramitaciones@venequirca.net",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Av. Presidente Medina, entre Calles Minerva y Guayana, Quinta Tina, N° 60, Urb. Las Acacias, Caracas - Distrito Capital",
+      "_phone": "(0212) 630.90.00 / 630.90.01 / 235.23.59",
+      "_phone2": "(0414) 322.75.03",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://Actualmentenodisponedesitioweb",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"970\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2021-02-03 20:10:42",
+      "_atbdp_post_views_count": "891",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Caracas - Distrito Capital",
+          "slug": "caracas-distrito-capital"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Bertolini",
+          "slug": "bertolini"
+        },
+        {
+          "name": "Branco",
+          "slug": "branco"
+        },
+        {
+          "name": "Carlton",
+          "slug": "carlton"
+        },
+        {
+          "name": "Efco",
+          "slug": "efco"
+        },
+        {
+          "name": "Guarany",
+          "slug": "guarany"
+        },
+        {
+          "name": "Launtop",
+          "slug": "launtop"
+        },
+        {
+          "name": "Mazzaferro",
+          "slug": "mazzaferro"
+        },
+        {
+          "name": "Peon",
+          "slug": "peon"
+        },
+        {
+          "name": "Surgente",
+          "slug": "surgente"
+        },
+        {
+          "name": "Tecnosac",
+          "slug": "tecnosac"
+        },
+        {
+          "name": "Tohatsu",
+          "slug": "tohatsu"
+        },
+        {
+          "name": "Vencedora Maqtron",
+          "slug": "vencedora-maqtron"
+        },
+        {
+          "name": "ZM bombas",
+          "slug": "zm-bombas"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 971,
+    "date": "2019-12-04 01:02:31",
+    "modified": "2024-07-15 14:17:12",
+    "status": "publish",
+    "title": "Deel Agro, C.A.",
+    "slug": "deel-agro",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Areas de presencia:</span></h3>\r\n<span class=\"itemExtraFieldsValue\">Todo el territorio nacional.</span>\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nProductos New Holland, maquinaria, implementos y repuestos.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1721067734:1",
+      "_edit_last": "1",
+      "874": "J-30437474-7",
+      "875": "Saúl Jímenez",
+      "876": "aeljuri@venequipagro.com",
+      "877": "ybarrios@venequipagro.com",
+      "_never_expire": "1",
+      "_featured": "",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Zona Industrial, calle 33 con carrera 3, edif. Venequip Agro, Barquisimeto - Estado Lara",
+      "_phone": "(0251) 237.05.43 / 237.68.78 / (0241) 813.96.96 / (0251) 237.42.75",
+      "_phone2": "(0416) 446.24.75",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://www.venequipagro.com",
+      "_zip": "",
+      "_social": "",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "",
+      "_listing_prv_img": "2871",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "",
+      "_expiry_date": "2025-07-15 14:17:13",
+      "_wp_old_slug": "deel-agro-c-a",
+      "_atbdp_post_views_count": "1082",
+      "_directory_type": "314",
+      "_877": "ybarrios@venequipagro.com",
+      "_875": "Saúl Jímenez",
+      "_874": "J-30437474-7",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_thumbnail_id": "2871"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Barquisimeto - Lara",
+          "slug": "barquisimeto-lara"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Austoft",
+          "slug": "austoft"
+        },
+        {
+          "name": "Case IH",
+          "slug": "case-ih"
+        },
+        {
+          "name": "New Holland",
+          "slug": "new-holland"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/serla-1.jpg"
+  },
+  {
+    "id": 975,
+    "date": "2019-12-04 01:16:24",
+    "modified": "2024-07-17 17:54:22",
+    "status": "publish",
+    "title": "Turbo Center C.A.",
+    "slug": "turbo-center",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nComercialización de máquinas y repuestos para maquinarias agrícolas. Turbos y repuestos.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1580861283:1",
+      "_edit_last": "1",
+      "874": "J-30631355-9",
+      "875": "Isaac Rodríguez",
+      "876": "tcreagrinca@hotmail.com",
+      "877": "nellyacosta2@gmail.com",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Carretera Nacional, Edf. Rectificadora Aragua, Cagua - Estado Aragua",
+      "_phone": "0244) 395.81.76",
+      "_phone2": "(0244) 395.84.52 / (0244) 395.77.32",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://Actualmentenodisponedesitioweb",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"976\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2021-02-03 20:07:37",
+      "_atbdp_post_views_count": "881",
+      "_wp_old_slug": "turbo-center-c-a",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Maracay - Aragua",
+          "slug": "maracay-aragua"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Garrett",
+          "slug": "garrett"
+        },
+        {
+          "name": "Holset",
+          "slug": "holset"
+        },
+        {
+          "name": "IHI",
+          "slug": "ihi"
+        },
+        {
+          "name": "KKK",
+          "slug": "kkk"
+        },
+        {
+          "name": "Mitsubishi",
+          "slug": "mitsubishi"
+        },
+        {
+          "name": "Schwitzer",
+          "slug": "schwitzer"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 981,
+    "date": "2019-12-04 01:31:01",
+    "modified": "2024-07-17 17:48:33",
+    "status": "publish",
+    "title": "Soloson Import, C.A.",
+    "slug": "soloson-import",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nPlantas eléctricas: con ruedas, con ruedas y control remoto, insonoras , y soldador, digital, automática, con ruedas y automática, bombas de agua, trilladoras, motor estacionarios desmalezadoras, sierras marca SOLPOWER.\r\n\r\n&nbsp;",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1721252913:1",
+      "_edit_last": "1",
+      "874": "J-30079374-5",
+      "875": "Valentino Zolli / Adolfo Sanjuanelo",
+      "876": "importaciones@solosonimport.com",
+      "877": "importaciones3@solosonimport.com - proyectos@solosonimport.com",
+      "_never_expire": "1",
+      "_featured": "",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "AV.PPAL ZONA INDUSTRIAL EL MARQUEZ EDIF.SOLOSON IMPORT EL MARQUEZ GUATIRE EDO.MIRANDA",
+      "_phone": "(0212) 6551600",
+      "_phone2": "(0414) 237.37.91",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://www.solosonimport.com",
+      "_zip": "",
+      "_social": "",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"982\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "",
+      "_expiry_date": "2024-04-24 15:51:07",
+      "_wp_old_slug": "soloson-import-c-a",
+      "_atbdp_post_views_count": "1541",
+      "_directory_type": "314",
+      "_877": "importaciones3@solosonimport.com - proyectos@solosonimport.com",
+      "_876": "importaciones@solosonimport.com",
+      "_875": "Valentino Zolli / Adolfo Sanjuanelo",
+      "_874": "J-30079374-5",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": ""
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Los Teques - Miranda",
+          "slug": "los-teques-miranda"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Solpower",
+          "slug": "solpower"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 985,
+    "date": "2019-12-04 01:39:40",
+    "modified": "2024-07-08 15:50:10",
+    "status": "publish",
+    "title": "Seijiro Yasawa Iwai",
+    "slug": "seijiro-yasawa-iwai",
+    "content": "<h3>Productos comercializados:</h3>\r\n<div>\r\n\r\nRepresentantes por marcas: Liebherr, Bell y Furukuma: Guido Villamil <span id=\"cloak6e997d112be8114ecb36ef67f06fa7c7\"><a href=\"mailto:guido.villamil@gmail.com\">guido.villamil@gmail.com</a></span> 04122317926 Jungheinrich: Yenny Contreras <span id=\"cloak2c83a6be7c25437d0e0b4f524a9f341b\"><a href=\"mailto:yenny.contreras@seijiroyazawaiwai.com\">yenny.contreras@seijiroyazawaiwai.com</a></span> 04265164110 SMDO y Denyo: Joan Benitez <span id=\"cloak934acb171dbabbe7269cb64e0558c5cf\"><a href=\"mailto:joan.benitez@seijiroyazawaiwai.com\">joan.benitez@seijiroyazawaiwai.com</a></span> 04166083873\r\n\r\n<strong>Liebherr:</strong> Excavadoras hidráulicas sobre orugas cuyo peso operativo estan de 14t a 800 t.; Excavadoras hidráulicas sobre cauchos cuyo peso operativo estan de 14t a 800 t.; Camiones mineros rigidos de capacidad de carga de 240 tons y 400 tons.; Cargadores frontales sobre ruedas capacidad de carga entre 0,80 m3 y 11 m3.; Cargadores frontales sobre orugas capacidad de carga entre 1,20 m3 y 3,0 m3.; Buldocér sobre orugas cuya potencia estan entre 120 hp hasta 422 hp.; Grúas telescopica sobre camión de capacidad de 35 a 1200 t.; Grúas telescopica sobre orugas de capacidad de 100 a 3000 t.; Equipos para el manejo de materiales a granel; Grúas y equipos para el manejo de contenedores en puertos.\r\n\r\n<strong>Kawasaki:</strong> Cargadores frontales sobre ruedas capacidad de carga entre 6m3y 14 m3.\r\n\r\n<strong>Bell:</strong> Camiones articulados de capacidad de carga de 18 a 50t.\r\n\r\n<strong>Furukawa:</strong> Martillos hidraulicos para excavadoras hidraulicas de 20ta80t de peso operativo; Carros perforadores para la realización de barrenos de 2 1/2 a 9 7/8 de pulgada de diametro.\r\n\r\n<strong>Jungheinrich:</strong> Montacarga de combustión interna (diesel ó gas) capacidad de 1,6 a 9 t.; Montacarga electrico. Capacidad de 1,0 a 5 t.;  Transpaleta manual. Capacidad de 2,2 a 3,0 t.; Transpaleta electrica. Capacidad de 1,2 a 3,5 t.; Apilador electrico capacidad de 1.0 a 2,0 t.; Carretillas recogepedidos y trilaterales. Capacidad de 1.0 a 1,5 t.\r\n\r\n<strong>IHC:</strong> Dragas de cortador \"beaver\" capacidad desde 6 hasta 18m de profundidad; Dragas de cortador \"beagle\" capacidad desde 15 a23m de profundidad.\r\n\r\n<strong>SDMO:</strong> Grupos electrógenos, torres de iluminación.\r\n\r\n<strong>ASCO:</strong> Transferencias Automáticas.\r\n\r\n<strong>DENYO:</strong> Grupos electrogenos, transferencias automaticas, motosoldadoras.\r\n\r\n<strong>Toshiba:</strong> UPS.\r\n\r\n</div>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1721053905:1",
+      "_edit_last": "1",
+      "874": "J-00071718-4",
+      "875": "Kumeyi Torres",
+      "876": "info@seijiroyazawaiwai.com",
+      "877": "guido.villamil@seijiroyazawaiwai.com",
+      "_never_expire": "1",
+      "_featured": "",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Calle París, entre Calle Mucuchíes y La Trinidad, Edif. Seijiro Yazawa Iwai, Urb. Las Mercedes, Municipio Baruta, Caracas - Distrito Capital",
+      "_phone": "0212) 991.9112 / 8082",
+      "_phone2": "(0412) 231.7926",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://www.seijiroyazawaiwai.com/",
+      "_zip": "",
+      "_social": "",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "",
+      "_listing_prv_img": "2877",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "",
+      "_expiry_date": "2025-07-08 15:50:10",
+      "_atbdp_post_views_count": "671",
+      "_directory_type": "314",
+      "_877": "guido.villamil@seijiroyazawaiwai.com",
+      "_875": "Kumeyi Torres",
+      "_874": "J-00071718-4",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_thumbnail_id": "2877"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Construcción",
+          "slug": "construccion"
+        }
+      ],
+      "location": [
+        {
+          "name": "Caracas - Distrito Capital",
+          "slug": "caracas-distrito-capital"
+        }
+      ],
+      "tags": [
+        {
+          "name": "ASCO",
+          "slug": "asco"
+        },
+        {
+          "name": "BELL",
+          "slug": "bell"
+        },
+        {
+          "name": "Denyo",
+          "slug": "denyo"
+        },
+        {
+          "name": "Furukawa",
+          "slug": "furukawa"
+        },
+        {
+          "name": "IHC",
+          "slug": "ihc"
+        },
+        {
+          "name": "Jungheinrich",
+          "slug": "jungheinrich"
+        },
+        {
+          "name": "Kawasaki",
+          "slug": "kawasaki"
+        },
+        {
+          "name": "Liebherr",
+          "slug": "liebherr"
+        },
+        {
+          "name": "SDMO",
+          "slug": "sdmo"
+        },
+        {
+          "name": "Toshiba",
+          "slug": "toshiba"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/seiiro.jpg"
+  },
+  {
+    "id": 987,
+    "date": "2019-12-04 01:43:36",
+    "modified": "2024-07-17 17:56:39",
+    "status": "publish",
+    "title": "SIVETI, C.A.",
+    "slug": "siveti",
+    "content": "<h3>Productos comercializados:</h3>\r\n<div>\r\n\r\nBiotrituradores, Bombas, Compactadoras, Compresores de aire, Cortacetos, Cortadores De Grama, Desbrozadoras, Desmalezadoras, Equipos agrícolas, Generadores, Herramientas eléctricas, Hidrolimpiadoras, Mezcladoras de concreto, Motores de combustión, Motores eléctricos, Motosierras, Tractores Cortagrama, Tronzadora Concreto / Asfalto, Vibradores, Winches / Elevadores.\r\n\r\n<strong>Siveti:</strong> Andamios tubular. Cuerpo 2ml.; Balde para elevador de caballete; Carreton bugui de 2 ruedas; Compactadora 120 kg motor gasolina; Compactadora 180 kg motor diesel; Compactadora 80 kg motor gasolina; Cortadora d/concreto; Móvil disco 18\" motor gasolina; Juego Caballete y viga para winches; Mezcladora de concreto 360 lts con motor diesel; Mezcladora de concreto 360 lts con motor eléctrico; Mezcladora de concreto 360 lts. con motor a gasolina; Plantas electricas tipo portatil motor diesel; Plantas electricas tipo portatil motor gasolina; Soldadora portatil con motor diesel; Soldadora portatil con motor gasolina; Vibrador de hormigón eléctrico 220v motor 1,5Hp; Vibrador de hormigon motor gasolina 6mts-38mm; Andamios tubular. Cuerpo 2ml.; Balde para elevador de caballete; Carreton bugui de 2 ruedas; Compactadora 120 kg motor gasolina; Compactadora 180 kg motor diesel.\r\n\r\n</div>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1721253399:1",
+      "_edit_last": "1",
+      "874": "J-09008972-1",
+      "875": "José Chávez",
+      "876": "belkis.aguirre@domosa.com",
+      "877": "leidimar.heredia@domosa.com",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Carretera Nacional Vía Guanare, Sector Los Guasimitos, Municipio Obispos, Obispos - Estado Barinas",
+      "_phone": "(0273) 530.9600 / 9602",
+      "_phone2": "",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://www.domosa.com",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"988\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2021-02-03 19:57:49",
+      "_wp_old_slug": "siveti-c-a",
+      "_atbdp_post_views_count": "1023",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Construcción",
+          "slug": "construccion"
+        }
+      ],
+      "location": [
+        {
+          "name": "Barinas - Barinas",
+          "slug": "barinas-barinas"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Siveti",
+          "slug": "siveti"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 989,
+    "date": "2019-12-04 01:46:29",
+    "modified": "2024-07-04 11:45:11",
+    "status": "publish",
+    "title": "Savake, C.A.",
+    "slug": "savake",
+    "content": "Empresa importadora y distribuidora de herramientas manuales y eléctricas, equipos a combustión, plomería y artículos ferreteros, líder en Venezuela, con un arraigo resultado de más de 65 años en el país y con visión de permanencia hacia el futuro.\r\n<h3><span class=\"itemExtraFieldsLabel\">Areas de presencia:</span></h3>\r\n<span class=\"itemExtraFieldsValue\">Todo el territorio nacional.</span>\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\n<p class=\"spField\">Cadenas y accesorios de corte para motosierras, desmalezadoras, Generadores y motobombas, Fumigadoras manuales, Motofumigadoras, Herramientas eléctricas, Herramientas manuales, Griferías, Valvulería, Piezas sanitarias, Conexiones galvanizadas, herramientas.</p>\r\n<strong>Toyama: </strong>Apisonador con motor a gasolina; Alisador con motor a gasolina; Compactador de cemento con motor a gasolina; Compactadora de cemnto con motor diesel; Vibrador de concreto con motor a gasolina; Mangueras para vibrador de concreto.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1720107967:1",
+      "_edit_last": "1",
+      "874": "J-00033788-8",
+      "875": "Alejandro Kevi Jesurum",
+      "876": "savake@savake.com",
+      "877": "rvalecillos@savake.com",
+      "_never_expire": "1",
+      "_featured": "",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Calle Tiuna, Edif. Ferretotal, N° 5, Planta alta, Final Av. Boleita Norte, Caracas - Distrito Capital",
+      "_phone": "0212) 203.1361 / 1384 / 1363 / 1383",
+      "_phone2": "",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://www.savake.com",
+      "_zip": "",
+      "_social": "",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "",
+      "_listing_prv_img": "990",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "",
+      "_expiry_date": "2025-07-04 11:45:11",
+      "_wp_old_slug": "savake-c-a",
+      "_atbdp_post_views_count": "2529",
+      "_directory_type": "314",
+      "_877": "rvalecillos@savake.com",
+      "_875": "Alejandro Kevi Jesurum",
+      "_874": "J-00033788-8",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_thumbnail_id": "990"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Construcción",
+          "slug": "construccion"
+        }
+      ],
+      "location": [
+        {
+          "name": "Caracas - Distrito Capital",
+          "slug": "caracas-distrito-capital"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Lobster",
+          "slug": "lobster"
+        },
+        {
+          "name": "Takima",
+          "slug": "takima"
+        },
+        {
+          "name": "Toyama",
+          "slug": "toyama"
+        },
+        {
+          "name": "Webstone",
+          "slug": "webstone"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/savake.jpg"
+  },
+  {
+    "id": 991,
+    "date": "2019-12-04 01:49:53",
+    "modified": "2020-02-04 19:34:47",
+    "status": "publish",
+    "title": "REPSER Agri, C.A. - Repuestos y Servicios Agrícolas",
+    "slug": "repser-agri",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nRepuestos para maquinaria pesada del sector agrícola.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1692728241:1",
+      "_edit_last": "1",
+      "874": "J-29541694-6",
+      "875": "Nelson Reyes",
+      "876": "repseradm.01@gmail.com",
+      "877": "valtra.01@gmail.com",
+      "_never_expire": "1",
+      "_featured": "0",
+      "_price": "",
+      "_price_range": "",
+      "_atbd_listing_pricing": "",
+      "_videourl": "",
+      "_listing_status": "post_status",
+      "_tagline": "",
+      "_excerpt": "",
+      "_address": "Av. Simón Bolívar con Av. Unda, C.C. E/S Los Caminos, Nivel PB, Local S/N, Barrio Maturín, Guanare, Estado Portuguesa",
+      "_phone": "(0257) 253.1040",
+      "_phone2": "(0414) 557.5650 / (0414) 952.6373",
+      "_fax": "",
+      "_email": "",
+      "_website": "http://Actualmentenodisponedesitioweb",
+      "_zip": "",
+      "_social": "a:0:{}",
+      "_faqs": "a:0:{}",
+      "_enable247hour": "",
+      "_disable_bz_hour_listing": "",
+      "_bdbh": "a:0:{}",
+      "_manual_lat": "",
+      "_manual_lng": "",
+      "_hide_map": "",
+      "_listing_img": "a:1:{i:0;s:3:\"992\";}",
+      "_listing_prv_img": "",
+      "_hide_contact_info": "0",
+      "_hide_contact_owner": "0",
+      "_expiry_date": "2021-02-03 19:34:48",
+      "_atbdp_post_views_count": "1237",
+      "_wp_old_slug": "repser-agri-c-a-repuestos-y-servicios-agricolas",
+      "_directory_type": "314"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Valtra",
+          "slug": "valtra"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 1945,
+    "date": "2023-04-25 11:05:27",
+    "modified": "2023-04-25 13:26:00",
+    "status": "publish",
+    "title": "GUERRAMOTORS C.A",
+    "slug": "guerramotors-c-a",
+    "content": "MAQUINARIAS Y EQUIPOS AGRÍCOLAS. REPUESTOS Y ACCESORIOS",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1682442509:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "650",
+      "_877": "inremaguebarinas@gmail.com",
+      "_876": "guerramotors.ca@gmail.com",
+      "_875": "MARCOS TULIO GUERRA BUSTAMANTE",
+      "_874": "J-402597010",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_zip": "",
+      "_phone": "04141593193",
+      "_phone2": "04143739897",
+      "_fax": "",
+      "_email": "guerramotors.ca@gmail.com",
+      "_website": "",
+      "_social": "",
+      "_address": "AV INTERCOMUNAL RAFAEL ROCHA, CASA GALPON S/N SECTOR SANTA CLARA",
+      "_listing_img": "",
+      "_listing_prv_img": "1947",
+      "_videourl": "",
+      "_directory_type": "314",
+      "_featured": "",
+      "_never_expire": "1",
+      "_expiry_date": "2024-04-24 13:26:00",
+      "_listing_status": "post_status",
+      "_thumbnail_id": "1947"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Barinas - Barinas",
+          "slug": "barinas-barinas"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/3.png"
+  },
+  {
+    "id": 1986,
+    "date": "2023-08-04 10:45:43",
+    "modified": "2024-07-17 17:45:32",
+    "status": "publish",
+    "title": "MPAGRO, C.A.",
+    "slug": "mpagro-c-a",
+    "content": "<span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Semilla de maiz, fertilizantes NPK, urea, agroquimicos (herbicidas, insecticidas y fungicidas), implementos y equipos agricolas. &quot;}\" data-sheets-userformat=\"{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}\">Semilla de maiz, fertilizantes NPK, urea, agroquimicos (herbicidas, insecticidas y fungicidas), implementos y equipos agricolas. </span>\r\n\r\nMarcas que representa: <span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Bayer-Monsanto (semilla y agroquimicos). Importamos y comercializamos productos de las marcas BALDAN y STARA (implementos agricolas). Tambien tenemos nuestra propia marca de insumos agricolas, actualmente con 17 productos registrados; algunos de ellos son: MP FERTILIZANTES NPK, MP AMINA 720 (2,4D), AZOTE 747 WG (glifosato), FLAVON EC 400 (pendimetalin), ALPHA EC 10, DELTARIN EC 2,5 y RAFAGA PS 90 (insecticidas). &quot;}\" data-sheets-userformat=\"{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}\">Bayer-Monsanto (semilla y agroquimicos). Importamos y comercializamos productos de las marcas BALDAN y STARA (implementos agricolas). Tambien tenemos nuestra propia marca de insumos agricolas, actualmente con 17 productos registrados; algunos de ellos son: MP FERTILIZANTES NPK, MP AMINA 720 (2,4D), AZOTE 747 WG (glifosato), FLAVON EC 400 (pendimetalin), ALPHA EC 10, DELTARIN EC 2,5 y RAFAGA PS 90 (insecticidas). </span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1704716954:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "1153",
+      "_877": "peter.petschner@mpagro.net ",
+      "_876": "carlos.munoz@mpagro.co",
+      "_875": "Carlos Munoz ",
+      "_874": "J-40744949-4",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_zip": "0255-6218897 ",
+      "_phone": "0255-6218897 ",
+      "_phone2": "0424-5692028",
+      "_fax": "",
+      "_email": "carlos.munoz@mpagro.co",
+      "_website": "www.mpagro.co ",
+      "_social": "",
+      "_address": "Portuguesa, Acarigua - Municipio Paez, Av. 13 de junio, Edif. Residencias Grano de Oro, planta baja, sector centro",
+      "_listing_img": "",
+      "_listing_prv_img": "1991",
+      "_videourl": "",
+      "_directory_type": "314",
+      "_featured": "",
+      "_never_expire": "1",
+      "_expiry_date": "2024-10-08 17:36:09",
+      "_listing_status": "post_status",
+      "_thumbnail_id": "1991"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Baldan",
+          "slug": "baldan"
+        },
+        {
+          "name": "Stara",
+          "slug": "stara"
+        },
+        {
+          "name": "Bayer-Monsanto",
+          "slug": "bayer-monsanto"
+        },
+        {
+          "name": "RAFAGA PS 90",
+          "slug": "rafaga-ps-90"
+        },
+        {
+          "name": "DELTARIN EC",
+          "slug": "deltarin-ec"
+        },
+        {
+          "name": "ALPHA EC",
+          "slug": "alpha-ec"
+        },
+        {
+          "name": "FLAVON EC 400",
+          "slug": "flavon-ec-400"
+        },
+        {
+          "name": "FERTILIZANTES NPK",
+          "slug": "fertilizantes-npk"
+        },
+        {
+          "name": "MP AMINA 720",
+          "slug": "mp-amina-720"
+        },
+        {
+          "name": "AZOTE 747 WG",
+          "slug": "azote-747-wg"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/logos-cavedrepas-marcas1.png"
+  },
+  {
+    "id": 1992,
+    "date": "2023-08-04 11:38:19",
+    "modified": "2024-07-17 18:03:06",
+    "status": "publish",
+    "title": "PROYECTOS D&R, C.A",
+    "slug": "proyectos-dr-c-a",
+    "content": "<span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Maquinaria agrícola, desmalezadoras, motosierras, generadores, motores, fumigadoras, fuera de borda, tronzadoras, cortagramas, Motobombas, y sus respectivos repuestos. &quot;}\" data-sheets-userformat=\"{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}\">Maquinaria agrícola, desmalezadoras, motosierras, generadores, motores, fumigadoras, fuera de borda, tronzadoras, cortagramas, Motobombas, y sus respectivos repuestos. </span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1721253786:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "643",
+      "_877": "",
+      "_876": "PROYECTOSDRCA@GMAIL.COM",
+      "_875": "EDGAR ARENALES CARDENAS",
+      "_874": "J315584719",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_zip": "",
+      "_phone": "04147388092",
+      "_phone2": "04147388092",
+      "_fax": "",
+      "_email": "PROYECTOSDRCA@GMAIL.COM",
+      "_website": "",
+      "_social": "",
+      "_address": "AV GUMILLA SECTOR FRANCISCO DE MIRANDA LOCALES 1 Y 2",
+      "_listing_img": "",
+      "_listing_prv_img": "2868",
+      "_videourl": "",
+      "_directory_type": "314",
+      "_featured": "",
+      "_never_expire": "1",
+      "_expiry_date": "2025-07-04 16:24:14",
+      "_listing_status": "post_status",
+      "_thumbnail_id": "2868"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Ciudad Bolívar - Bolívar",
+          "slug": "ciudad-bolivar-bolivar"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Domosa",
+          "slug": "domosa"
+        },
+        {
+          "name": "Motul",
+          "slug": "motul"
+        },
+        {
+          "name": "Yamaha",
+          "slug": "yamaha"
+        },
+        {
+          "name": "OLEOMAC",
+          "slug": "oleomac"
+        },
+        {
+          "name": "STLP",
+          "slug": "stlp"
+        },
+        {
+          "name": "HQVP",
+          "slug": "hqvp"
+        },
+        {
+          "name": "POWER PRO",
+          "slug": "power-pro"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/dyr.jpg"
+  },
+  {
+    "id": 1993,
+    "date": "2023-08-04 11:55:05",
+    "modified": "2023-10-09 17:02:30",
+    "status": "publish",
+    "title": "AGROPARTES ZAIRE F.P AGRÍCOLA",
+    "slug": "agropartes-zaire-f-p",
+    "content": "<span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;repuestos para tractores e implementos agricolas&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}\">repuestos para tractores e implementos agricolas</span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1719846825:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "515",
+      "_877": "yrwin.2402@gmail.com",
+      "_876": "agroparteszaire@gmail.com",
+      "_875": "ZAIRE CAROLINA SANTOS",
+      "_874": "V-21179256-2",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_zip": "",
+      "_phone": "0424-7538599",
+      "_phone2": "0424-7728220",
+      "_fax": "",
+      "_email": "agroparteszaire@gmail.com",
+      "_website": "",
+      "_social": "a:1:{i:0;a:2:{s:2:\"id\";s:9:\"instagram\";s:3:\"url\";s:41:\"https://www.instagram.com/agroparteszaire\";}}",
+      "_address": "ESTACION DE SERVICIOS LA MACHIRI LOCAL NRO 15 SAN CRISTOBAL",
+      "_listing_img": "",
+      "_listing_prv_img": "2348",
+      "_videourl": "",
+      "_directory_type": "314",
+      "_featured": "",
+      "_never_expire": "1",
+      "_expiry_date": "2024-10-08 13:58:53",
+      "_listing_status": "post_status",
+      "_thumbnail_id": "2348"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "San Cristóbal - Táchira",
+          "slug": "san-cristobal-tachira"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Ford",
+          "slug": "ford"
+        },
+        {
+          "name": "New Holland",
+          "slug": "new-holland"
+        },
+        {
+          "name": "Valtra",
+          "slug": "valtra"
+        },
+        {
+          "name": "massey fergsuson",
+          "slug": "massey-fergsuson"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/agropartes-zaire.png"
+  },
+  {
+    "id": 1995,
+    "date": "2023-08-04 12:13:55",
+    "modified": "2023-10-09 17:09:21",
+    "status": "publish",
+    "title": "AGRIEQUIP TECHNOLOGY 2000 C.A",
+    "slug": "agriequip-technology-2000-ca",
+    "content": "<span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;TRACTORES AGRICOLAS&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}\">TRACTORES AGRICOLAS</span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1696886048:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "603",
+      "_877": "Luisamila.24@gmail.com",
+      "_876": "RAIMUNDO.BLANCO@GMAIL.COM",
+      "_875": "RAIMUNDO BLANCO",
+      "_874": "J503880090",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_zip": "",
+      "_phone": "02559350359",
+      "_phone2": "04145560359",
+      "_fax": "",
+      "_email": "agriequiptechnology2000@gmail.com",
+      "_website": "",
+      "_social": "",
+      "_address": "AV SAN JOSE DE TARBES EDIF TORRE BOD PISO 9 OF 9-1 VALENCIA ESTADO CARABOBO",
+      "_listing_img": "",
+      "_listing_prv_img": "2349",
+      "_videourl": "",
+      "_directory_type": "314",
+      "_featured": "",
+      "_never_expire": "1",
+      "_expiry_date": "2024-10-08 17:09:21",
+      "_listing_status": "post_status",
+      "_thumbnail_id": "2349"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Valencia - Carabobo",
+          "slug": "valencia-carabobo"
+        }
+      ],
+      "tags": [
+        {
+          "name": "LS TRACTOR",
+          "slug": "ls-tractor"
+        },
+        {
+          "name": "KIOTI",
+          "slug": "kioti"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/agriequip.png"
+  },
+  {
+    "id": 2090,
+    "date": "2023-08-23 09:25:10",
+    "modified": "2024-07-17 17:48:08",
+    "status": "publish",
+    "title": "General Distribuidora, S.A GEDISA",
+    "slug": "general-distribuidora-s-a-gedisa",
+    "content": "<span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Lubricantes, Filtros, Partes de Motor, Herramientas de Corte, Tren de rodaje&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}\">Lubricantes, Filtros, Partes de Motor, Herramientas de Corte, Tren de rodaje</span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_875": "Luca Mascetti",
+      "_874": "J000468494",
+      "_phone": "+58 212 239 8011",
+      "_phone2": "+58 424-1995691",
+      "_email": "gedisa@gedisa.com.ve",
+      "_social": "a:1:{i:0;a:2:{s:2:\"id\";s:7:\"twitter\";s:3:\"url\";s:27:\"https://twitter.com/gedisa/\";}}",
+      "_address": "Av Principal Boleita Norte, c/c Sanatorio del Ávila, Edif Cari, PH. Caracas, Venezuela (Casa Matriz)",
+      "_directory_type": "314",
+      "_expiry_date": "2024-08-22 09:22:00",
+      "_featured": "",
+      "_listing_status": "post_status",
+      "_admin_category_select": "a:1:{i:0;i:206;}",
+      "_atbdp_listing_images": "2091",
+      "_listing_prv_img": "2091",
+      "_thumbnail_id": "2091",
+      "_listing_img": "",
+      "_edit_lock": "1721252888:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "726",
+      "_877": "",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_zip": "",
+      "_fax": "",
+      "_website": "",
+      "_never_expire": "1"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Construcción",
+          "slug": "construccion"
+        }
+      ],
+      "location": [
+        {
+          "name": "Los Teques - Miranda",
+          "slug": "los-teques-miranda"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Donaldson",
+          "slug": "donaldson"
+        },
+        {
+          "name": "CAT",
+          "slug": "cat"
+        },
+        {
+          "name": "PNEUS",
+          "slug": "pneus"
+        },
+        {
+          "name": "gediPOWER",
+          "slug": "gedipower"
+        },
+        {
+          "name": "Interstate Mcbee",
+          "slug": "interstate-mcbee"
+        },
+        {
+          "name": "Hyundai Xtee",
+          "slug": "hyundai-xtee"
+        },
+        {
+          "name": "Berco",
+          "slug": "berco"
+        },
+        {
+          "name": "Garret…",
+          "slug": "garret"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/19.png"
+  },
+  {
+    "id": 2093,
+    "date": "2023-08-23 09:31:34",
+    "modified": "2024-07-17 17:48:48",
+    "status": "publish",
+    "title": "Fundicion Pacifico, C.A",
+    "slug": "fundicion-pacifico-c-a",
+    "content": "<span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Griferias, valvulas, accesorios y bombas de agua marca pedrollo&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}\">Griferias, valvulas, accesorios y bombas de agua marca pedrollo</span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_877": "bdasilva@fundicionpacifico.com",
+      "_875": "Alexander Becks",
+      "_874": "J-00084677-4",
+      "_phone": "0212 718 68 00",
+      "_phone2": "0424 233.57.15",
+      "_email": "bdasilva@fundicvionpacifico.com",
+      "_address": "carretera Petare Santa Lucia, Km 12, calle el Desvio Galpon FP, Filas de Mariche",
+      "_directory_type": "314",
+      "_expiry_date": "2024-10-08 17:23:56",
+      "_featured": "",
+      "_listing_status": "post_status",
+      "_admin_category_select": "a:1:{i:0;i:206;}",
+      "_atbdp_listing_images": "2094",
+      "_listing_prv_img": "2094",
+      "_thumbnail_id": "2094",
+      "_listing_img": "",
+      "_edit_lock": "1721252928:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "671",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_zip": "",
+      "_fax": "",
+      "_website": "",
+      "_social": "",
+      "_never_expire": "1"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Los Teques - Miranda",
+          "slug": "los-teques-miranda"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Pedrollo",
+          "slug": "pedrollo"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/18.png"
+  },
+  {
+    "id": 2488,
+    "date": "2023-10-16 14:02:33",
+    "modified": "2024-07-17 17:59:10",
+    "status": "publish",
+    "title": "AGRO-FRONT, C.A.",
+    "slug": "agro-front-c-a",
+    "content": "<span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Maquinaria agrícola y sus respectivos repuestos. Guadañas, motosierras, fumigadoras, Nylon, Motobombas a diésel-gasolina, motores estacionarios, motores eléctricos, caladoras, troqueladoras, Electrobombas periféricas, autocebantes, Electrobombas sumergibles.\\nAbonos, fertilizantes e insumos agrícolas. Generadores eléctricos bifásicos, monofásicos, trifásicos. Aceites, lubricantes.\\nRepuestos fuera de borda, Motores fuera de borda, lanchas, embarcaciones de diferentes calados.Productos de ferretería, entre otros...&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}\">Maquinaria agrícola y sus respectivos repuestos. Guadañas, motosierras, fumigadoras, Nylon, Motobombas a diésel-gasolina, motores estacionarios, motores eléctricos, caladoras, troqueladoras, Electrobombas periféricas, autocebantes, Electrobombas sumergibles.\r\nAbonos, fertilizantes e insumos agrícolas. Generadores eléctricos bifásicos, monofásicos, trifásicos. Aceites, lubricantes.\r\nRepuestos fuera de borda, Motores fuera de borda, lanchas, embarcaciones de diferentes calados.Productos de ferretería, entre otros...</span><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Yamaha, Shimge, Stihl, Toyama, Oregon, Agroboss, entre otras.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}\">Yamaha, Shimge, Stihl, Toyama, Oregon, Agroboss, entre otras.</span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1721253550:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "665",
+      "_877": "",
+      "_875": "Nemesio Perez Martinez ",
+      "_874": "J-40545169-6",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_phone": "0276-771.1810",
+      "_phone2": "0424-749.5700",
+      "_fax": "",
+      "_email": "agrofrontvenezuela@gmail.com",
+      "_website": "",
+      "_social": "",
+      "_address": "Carrera #6. Barrio Lagunitas Edif.Luzmar Nro 4-26. Planta baja.",
+      "_listing_img": "",
+      "_listing_prv_img": "2489",
+      "_directory_type": "314",
+      "_featured": "",
+      "_never_expire": "1",
+      "_expiry_date": "2024-10-15 13:58:00",
+      "_thumbnail_id": "2489",
+      "_listing_status": "post_status"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Acuícola",
+          "slug": "acuicola"
+        },
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        },
+        {
+          "name": "Sector Construcción",
+          "slug": "construccion"
+        }
+      ],
+      "location": [
+        {
+          "name": "San Cristóbal - Táchira",
+          "slug": "san-cristobal-tachira"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/agrofont.png"
+  },
+  {
+    "id": 2491,
+    "date": "2023-10-17 11:24:42",
+    "modified": "2024-07-17 17:51:37",
+    "status": "publish",
+    "title": "AGRODALIAN, C.A",
+    "slug": "agrodalian-c-a",
+    "content": "<span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Maquinarias agrícolas&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}\">Maquinarias agrícolas</span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1702569241:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "517",
+      "_877": "",
+      "_875": "KATIUSKA ACEVEDO",
+      "_874": "J-50362955-0",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_phone": "0246-8715592",
+      "_phone2": "04122040374",
+      "_fax": "",
+      "_email": "agrodalian052023@gmail.com",
+      "_website": "",
+      "_social": "",
+      "_address": "GUARICO\tCALABOZO MUNICIPIO MIRANDA \t",
+      "_listing_img": "",
+      "_listing_prv_img": "2495",
+      "_directory_type": "314",
+      "_featured": "",
+      "_never_expire": "1",
+      "_expiry_date": "2024-12-13 11:46:36",
+      "_listing_status": "post_status",
+      "_thumbnail_id": "2495"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "San Juan de los Morros - Guárico",
+          "slug": "san-juan-de-los-morros-guarico"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Dalian Grain Full Agriculture Development Co.",
+          "slug": "dalian-grain-full-agriculture-development-co"
+        },
+        {
+          "name": "LTD CHINA",
+          "slug": "ltd-china"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/agrodalian.png"
+  },
+  {
+    "id": 2492,
+    "date": "2023-10-17 11:21:27",
+    "modified": "2023-10-17 11:21:27",
+    "status": "publish",
+    "title": "INVERSIONES CAXIAS C.A.",
+    "slug": "inversiones-caxias-c-a",
+    "content": "<span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;MAQUINARIAS DE CONTRUCCION, TRACTORES AGRICOLAS SEMIREMOLQUE, MONTACARGAS, VEHICULOS, AUTOBUSES, CAMIONES, GENERADORES Y REPUESTOS &quot;}\" data-sheets-userformat=\"{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}\">MAQUINARIAS DE CONTRUCCION, TRACTORES AGRICOLAS SEMIREMOLQUE, MONTACARGAS, VEHICULOS, AUTOBUSES, CAMIONES, GENERADORES Y REPUESTOS </span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1723666077:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "661",
+      "_877": "inversionescaxiasca@gmail.com",
+      "_875": "SALVATORE PROVENZANO ",
+      "_874": "J313862045",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_phone": "0276-3562434",
+      "_phone2": "0414-3764678",
+      "_fax": "",
+      "_email": "importacioncax@gmail.com",
+      "_website": "",
+      "_social": "",
+      "_address": "CALLE ZONA INDUSTRIAL DE PARAMILLO CALLE C  CC COMPLEJO FABILOSA NIVEL GALPON N 1-A LOCAL",
+      "_listing_img": "",
+      "_listing_prv_img": "2494",
+      "_directory_type": "314",
+      "_featured": "",
+      "_never_expire": "1",
+      "_expiry_date": "2024-10-15 18:32:00",
+      "_listing_status": "post_status",
+      "_thumbnail_id": "2494"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        },
+        {
+          "name": "Sector Construcción",
+          "slug": "construccion"
+        }
+      ],
+      "location": [
+        {
+          "name": "San Cristóbal - Táchira",
+          "slug": "san-cristobal-tachira"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/caxias.png"
+  },
+  {
+    "id": 2669,
+    "date": "2023-12-27 11:36:02",
+    "modified": "2023-12-27 11:36:02",
+    "status": "publish",
+    "title": "Corporación Neptuno, C.A.",
+    "slug": "corporacion-neptuno-c-a",
+    "content": "Merluza, Mero, Robalo, Moluscos, entre otros",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_publish_date": "2023-12-27 10:24:42",
+      "_875": "Vicente M. Reboll S.",
+      "_874": "J303426700",
+      "_phone": "4248507307",
+      "_phone2": "4248493903",
+      "_email": "corpneptunovnzla@gmail.com",
+      "_address": "AV. LAS PALOMAS, EL DIQUE, SECTOR PUERTO PESQUERO, CUMANÁ – SUCRE.",
+      "_expiry_date": "2024-12-26 11:34:00",
+      "_featured": "",
+      "_listing_status": "post_status",
+      "_directory_type": "314",
+      "_edit_lock": "1703691373:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "611",
+      "_877": "",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_fax": "",
+      "_website": "",
+      "_social": "",
+      "_listing_img": "",
+      "_listing_prv_img": "2671",
+      "_never_expire": "1",
+      "_thumbnail_id": "2671"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Acuícola",
+          "slug": "acuicola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Sucre – Cumaná",
+          "slug": "sucre-cumana"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Neptuno Mares",
+          "slug": "neptuno-mares"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/agrodalian-1.png"
+  },
+  {
+    "id": 2674,
+    "date": "2023-12-27 11:52:24",
+    "modified": "2023-12-27 11:53:48",
+    "status": "publish",
+    "title": "FEBECA C.A.",
+    "slug": "febeca-c-a",
+    "content": "",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_877": "vconde@mayoreo.biz",
+      "_874": "J000033927",
+      "_address": "av fundo la union parcela l 13 - l19 zona industrial Castillito",
+      "_phone": "0241 856 7214",
+      "_phone2": "0412 7532508",
+      "_directory_type": "314",
+      "_expiry_date": "2024-12-26 11:52:00",
+      "_featured": "",
+      "_listing_status": "post_status",
+      "_edit_lock": "1703699632:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "824",
+      "_875": "",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_fax": "",
+      "_email": "",
+      "_website": "",
+      "_social": "",
+      "_listing_img": "",
+      "_listing_prv_img": "2675",
+      "_never_expire": "1",
+      "_thumbnail_id": "2675"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "San Diego - Carabobo",
+          "slug": "san-diego-carabobo"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/febeca.png"
+  },
+  {
+    "id": 2678,
+    "date": "2024-01-05 11:28:23",
+    "modified": "2024-07-17 17:51:48",
+    "status": "publish",
+    "title": "Agropecuaria Falcón Paraguana c.a.",
+    "slug": "agropecuaria-falcon-paraguana-c-a",
+    "content": "",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_email": "abednadia5823@gmail.com",
+      "_877": "ahmadrajab808@gmail.com",
+      "_874": "J299013927",
+      "_address": "ctra carrterera nacional el sombrero casa hacienda carrizal grande sector el sombrero el sombrero guarico zona postal 2319",
+      "_phone": "0414-2619989",
+      "_directory_type": "314",
+      "_expiry_date": "2025-07-04 11:48:13",
+      "_featured": "",
+      "_listing_status": "post_status",
+      "_atbdp_post_views_count": "755",
+      "_edit_lock": "1721253108:1",
+      "_edit_last": "1",
+      "_875": "",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_phone2": "",
+      "_fax": "",
+      "_website": "",
+      "_social": "",
+      "_listing_img": "",
+      "_listing_prv_img": "2850",
+      "_never_expire": "1",
+      "_thumbnail_id": "2850"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "San Juan de los Morros - Guárico",
+          "slug": "san-juan-de-los-morros-guarico"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/3-2.jpg"
+  },
+  {
+    "id": 2715,
+    "date": "2024-02-01 09:41:02",
+    "modified": "2024-07-17 17:48:19",
+    "status": "publish",
+    "title": "DISTRIBUIDORA SANIFER, C.A.",
+    "slug": "distribuidora-sanifer-c-a",
+    "content": "",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_email": "sanifer1@gmail.com",
+      "_877": "saniferb2b@gmail.com",
+      "_875": "EDWIN RAYMOND ESSES TOUSSOUN",
+      "_874": "J-308749923",
+      "_address": "AVENIDA II MANZANA 1 LOCAL NRO 03 URB ZONA IND DEL ESTE PARCELAS I-4 Y I-5 LOTE 3 GUARENAS",
+      "_phone": "0212-2329163",
+      "_phone2": "0412-8183339",
+      "_directory_type": "314",
+      "_expiry_date": "2025-01-31 09:41:00",
+      "_featured": "",
+      "_listing_status": "post_status",
+      "_edit_lock": "1721252899:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "704",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_fax": "",
+      "_website": "",
+      "_social": "",
+      "_listing_img": "",
+      "_listing_prv_img": "2718",
+      "_never_expire": "1",
+      "_thumbnail_id": "2718"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        },
+        {
+          "name": "Sector Construcción",
+          "slug": "construccion"
+        }
+      ],
+      "location": [
+        {
+          "name": "Los Teques - Miranda",
+          "slug": "los-teques-miranda"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/sanifer.png"
+  },
+  {
+    "id": 2716,
+    "date": "2024-02-01 09:43:14",
+    "modified": "2024-07-17 17:49:05",
+    "status": "publish",
+    "title": "Agrotécnica Anzoátegui,C.A.",
+    "slug": "agrotecnica-anzoateguic-a",
+    "content": "",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_email": "Jmodremang@hotmail.com",
+      "_875": "JOSE MIGUEL ODREMAN",
+      "_874": "J404124985",
+      "_address": "AV. PASEO LOS ANDES. C.C.LA COLINA. NIVEL C4 LOCAL NºC4-59. URB RESIDENCIAL LAS MINAS. SAN ANTONIO DE LOS ALTOS, MIRANDA",
+      "_phone": "02127934358",
+      "_phone2": "04241789232",
+      "_directory_type": "314",
+      "_expiry_date": "2025-01-31 09:43:00",
+      "_featured": "",
+      "_listing_status": "post_status",
+      "_edit_lock": "1721252945:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "411",
+      "_877": "",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_fax": "",
+      "_website": "",
+      "_social": "",
+      "_listing_img": "",
+      "_listing_prv_img": "2717",
+      "_never_expire": "1",
+      "_thumbnail_id": "2717"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Los Teques - Miranda",
+          "slug": "los-teques-miranda"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/agrotecnia.png"
+  },
+  {
+    "id": 2788,
+    "date": "2024-06-27 12:29:57",
+    "modified": "2024-07-17 17:54:22",
+    "status": "publish",
+    "title": "MOTTUR SPECIALIST, C.A.",
+    "slug": "mottur-specialist-c-a",
+    "content": "<span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;TURBOS EQUIPOS DE CONSTRUCCIÓN Y AGRÍCOLAS&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}\">TURBOS EQUIPOS DE CONSTRUCCIÓN Y AGRÍCOLAS</span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1720113562:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "236",
+      "_877": "mjalvarezortega@gmail.com",
+      "_875": "JOSE LUIS ALVAREZ",
+      "_874": "J502929118",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_phone": "04143439769",
+      "_phone2": "04143592513",
+      "_fax": "",
+      "_email": "motturspecialist@gmail.com",
+      "_website": "",
+      "_social": "",
+      "_address": "AV. VICTOR ACOSTA MARTINEZ, CRUCE CON PASAJE 23 DE ENERO, LOCAL 05-03, SECTOR SABANA LARGA, CAGUA, EDO ARAGUA - VZLA",
+      "_listing_img": "",
+      "_listing_prv_img": "2856",
+      "_directory_type": "314",
+      "_featured": "",
+      "_never_expire": "1",
+      "_expiry_date": "2025-07-04 13:16:41",
+      "_listing_status": "post_status",
+      "_thumbnail_id": "2856"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Maracay - Aragua",
+          "slug": "maracay-aragua"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/mottur.jpg"
+  },
+  {
+    "id": 2790,
+    "date": "2024-06-27 12:34:06",
+    "modified": "2024-06-27 12:43:59",
+    "status": "publish",
+    "title": "Taller y Construcciones Bimoto Imperio II, C.A.",
+    "slug": "taller-y-construcciones-bimoto-imperio-ii-c-a",
+    "content": "<span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Desmalezadoras, Fumigadoras, Motosierras, Motobombas, Generadores Eléctricos Solares y de Combustible, Motores Fuera de Borda, Agroquímicos, Medicina Veterinaria, Materiales de y Herramientas para la Construcción, Redes de Pesca, Nylon de tejer, entre otros.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}\" data-sheets-note=\"La persona que ha respondido ha actualizado este valor.\">Desmalezadoras, Fumigadoras, Motosierras, Motobombas, Generadores Eléctricos Solares y de Combustible, Motores Fuera de Borda, Agroquímicos, Medicina Veterinaria, Materiales de y Herramientas para la Construcción, Redes de Pesca, Nylon de tejer, entre otros.</span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1719506649:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "635",
+      "_877": "italodadamo40@gmail.com",
+      "_875": "Italo Enrique D'Adamo Rondón",
+      "_874": "J401814859",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_phone": "02473412643",
+      "_phone2": "02473411471",
+      "_fax": "",
+      "_email": "imperiodevzla@gmail.com",
+      "_website": "",
+      "_social": "",
+      "_address": "Av. Intercomunal San Fernando - Biruaca, sector Casa de Zinc, Edif. Imperio, PB. San Fernando de Apure",
+      "_listing_img": "",
+      "_listing_prv_img": "2793",
+      "_directory_type": "314",
+      "_featured": "",
+      "_never_expire": "1",
+      "_expiry_date": "2025-06-27 12:43:59",
+      "_listing_status": "post_status",
+      "_thumbnail_id": "2793"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Acuícola",
+          "slug": "acuicola"
+        },
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        },
+        {
+          "name": "Sector Construcción",
+          "slug": "construccion"
+        }
+      ],
+      "location": [
+        {
+          "name": "San Fernando de Apure - Apure",
+          "slug": "san-fernando-de-apure-apure"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/agrodalian.jpg"
+  },
+  {
+    "id": 2804,
+    "date": "2024-06-27 13:14:44",
+    "modified": "2024-07-17 17:43:47",
+    "status": "publish",
+    "title": "DISTRIBUIDORA AGRÍCOLA LANDINI C.A",
+    "slug": "distribuidora-agricola-landini-c-a",
+    "content": "",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1721252627:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "794",
+      "_877": "landinituren@gmail.com",
+      "_875": "",
+      "_874": "J085000950",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_phone": "04149523899",
+      "_phone2": "",
+      "_fax": "",
+      "_email": "DALANLANDINI2018@GMAIL.COM",
+      "_website": "",
+      "_social": "",
+      "_address": "CTRA B VIA LA COLONIA DIF DALAN, C.A PISO PB LOCAL SIN NRO ZONA INDUSTRIAL VILLA BRUZUAL PORTUGUESA",
+      "_listing_img": "",
+      "_listing_prv_img": "2882",
+      "_directory_type": "314",
+      "_featured": "",
+      "_never_expire": "1",
+      "_expiry_date": "2025-07-15 16:45:53",
+      "_listing_status": "post_status",
+      "_thumbnail_id": "2882"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/logos-cavedrepas-marcas_20240715_164351_0000.jpg"
+  },
+  {
+    "id": 2805,
+    "date": "2024-06-27 13:18:45",
+    "modified": "2024-07-16 11:05:46",
+    "status": "publish",
+    "title": "DISTRIBUIDORA COSECHAGRI C.A.",
+    "slug": "distribuidora-cosechagri-c-a",
+    "content": "IMPORTACIÓN, COMPRA Y VENTA DE REPUESTOS Y MAQUINARIAS AGRÍCOLAS\r\n\r\nEQUIPOS QUE COMERCIALIZAMOS: REPUESTOS, TRACTORES Y COSECHADORAS.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1721142239:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "451",
+      "_877": "",
+      "_875": "",
+      "_874": "J301359674",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_phone": "04162425220",
+      "_phone2": "04122701559",
+      "_fax": "",
+      "_email": "distribuidoracosechagri@gmail.com",
+      "_website": "",
+      "_social": "",
+      "_address": "Carretera nacional via San Fernando de Apure ",
+      "_listing_img": "",
+      "_listing_prv_img": "2886",
+      "_directory_type": "314",
+      "_featured": "",
+      "_never_expire": "1",
+      "_expiry_date": "2025-07-16 11:05:46",
+      "_listing_status": "post_status",
+      "_thumbnail_id": "2886"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "San Fernando de Apure - Apure",
+          "slug": "san-fernando-de-apure-apure"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/logos-cavedrepas-marcas_20240716_105755_0000.jpg"
+  },
+  {
+    "id": 2806,
+    "date": "2024-06-27 13:21:31",
+    "modified": "2024-08-05 10:36:22",
+    "status": "publish",
+    "title": "MACOL IMPORT C.A",
+    "slug": "macol-import-c-a",
+    "content": "Productos que comercializa: Neumáticos y repuestos del sector industrial y agrícola",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1722868463:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "541",
+      "_877": "",
+      "_875": "Manuel Herman Colmenares",
+      "_874": "J-314907646",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_phone": "02418642777",
+      "_phone2": "02418325498",
+      "_fax": "",
+      "_email": "macolimport@gmail.com",
+      "_website": "",
+      "_social": "",
+      "_address": "Av Ppal Empresarial Este Oeste Galpón nro 7 Urb Industrial Norte, segunda etapa, Conjunto Comercial Industrial. Valencia, Carabobo",
+      "_listing_img": "",
+      "_listing_prv_img": "2892",
+      "_directory_type": "314",
+      "_featured": "",
+      "_never_expire": "1",
+      "_expiry_date": "2025-08-05 10:36:22",
+      "_listing_status": "post_status",
+      "_thumbnail_id": "2892"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Valencia - Carabobo",
+          "slug": "valencia-carabobo"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/macol.jpg"
+  },
+  {
+    "id": 2807,
+    "date": "2024-06-27 13:25:29",
+    "modified": "2024-07-17 17:44:22",
+    "status": "publish",
+    "title": "SERVI REPUESTOS LATINO C.A (SERLA C.A.)",
+    "slug": "servi-repuestos-latino-c-a-serla-c-a",
+    "content": "",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1720115997:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "431",
+      "_877": "",
+      "_875": "Giulio Mazza",
+      "_874": "J-085100601",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_phone": "04145576003",
+      "_phone2": "04145560230",
+      "_fax": "",
+      "_email": "serlacnh@gmail.com",
+      "_website": "",
+      "_social": "",
+      "_address": "Av Rómulo Gallegos con calle 26 local SERLA sector Campo Lindo Ararure. Portuguesa",
+      "_listing_img": "",
+      "_listing_prv_img": "2860",
+      "_directory_type": "314",
+      "_featured": "",
+      "_never_expire": "1",
+      "_expiry_date": "2025-07-04 14:02:16",
+      "_listing_status": "post_status",
+      "_thumbnail_id": "2860"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/serla.jpg"
+  },
+  {
+    "id": 2815,
+    "date": "2024-06-27 16:20:32",
+    "modified": "2024-06-27 16:20:49",
+    "status": "publish",
+    "title": "REDEQUIP GROUP,CA",
+    "slug": "redequip-groupca",
+    "content": "<span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;REPUESTOS PARA TRACTORES E IMPLEMENTOS AGRICOLAS&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}\">REPUESTOS PARA TRACTORES E IMPLEMENTOS AGRICOLAS</span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1719519653:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "402",
+      "_877": "",
+      "_875": "JORGE LUIS CARRASCO RODRIGUEZ",
+      "_874": "J-503400358",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_phone": "04127893862",
+      "_phone2": "",
+      "_fax": "",
+      "_email": "redequipgroup@gmail.com",
+      "_website": "",
+      "_social": "",
+      "_address": "AV SANTA TERESA MACHIQUES, Zulia",
+      "_listing_img": "",
+      "_listing_prv_img": "2816",
+      "_directory_type": "314",
+      "_featured": "",
+      "_never_expire": "1",
+      "_expiry_date": "2025-06-27 16:20:49",
+      "_thumbnail_id": "2816",
+      "_listing_status": "post_status"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Maracaibo - Zulia",
+          "slug": "maracaibo-zulia"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/logos-cavedrepas-marcas-1.jpg"
+  },
+  {
+    "id": 2831,
+    "date": "2024-06-28 12:38:23",
+    "modified": "2024-07-04 14:26:52",
+    "status": "publish",
+    "title": "TRACTOCAMIONES C.A",
+    "slug": "tractocamiones-c-a",
+    "content": "",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1720117471:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "460",
+      "_877": "",
+      "_875": "Jerson García ",
+      "_874": "J-402277180",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_phone": "02514470414",
+      "_phone2": "04140561220",
+      "_fax": "",
+      "_email": "tractocamionesca@gmail.com",
+      "_website": "",
+      "_social": "",
+      "_address": "carrera 19 esquina calle 44 edif tractocamiones, barquisimeto",
+      "_listing_img": "",
+      "_listing_prv_img": "2864",
+      "_directory_type": "314",
+      "_featured": "",
+      "_never_expire": "1",
+      "_expiry_date": "2025-07-04 14:26:52",
+      "_listing_status": "post_status",
+      "_thumbnail_id": "2864"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Barquisimeto - Lara",
+          "slug": "barquisimeto-lara"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/tratocamiones.jpg"
+  },
+  {
+    "id": 2832,
+    "date": "2024-06-28 12:42:53",
+    "modified": "2024-07-04 14:27:06",
+    "status": "publish",
+    "title": "LC LANDINI C.A",
+    "slug": "lc-landini-c-a",
+    "content": "",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1720117484:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "483",
+      "_877": "",
+      "_875": "Lisandro Castillo",
+      "_874": "",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_phone": "02735321566",
+      "_phone2": "04145674650",
+      "_fax": "",
+      "_email": "",
+      "_website": "",
+      "_social": "",
+      "_address": "Av. Agustín Codazzi CC Sermaca nivel planta baja local #5, sector 23 de enero frente a los hangares del aeropuerto del estado Barinas",
+      "_listing_img": "",
+      "_listing_prv_img": "2865",
+      "_directory_type": "314",
+      "_featured": "",
+      "_never_expire": "1",
+      "_expiry_date": "2025-07-04 14:27:06",
+      "_listing_status": "post_status",
+      "_thumbnail_id": "2865"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Barinas - Barinas",
+          "slug": "barinas-barinas"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/lc-landini.jpg"
+  },
+  {
+    "id": 2833,
+    "date": "2024-06-28 12:44:40",
+    "modified": "2024-08-13 17:24:07",
+    "status": "publish",
+    "title": "HIDEA DE VENEZUELA C.A",
+    "slug": "hidea-de-venezuela-c-a",
+    "content": "",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1723584111:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "380",
+      "_877": "",
+      "_875": "JESUS ADOLFO RODRIGUEZ",
+      "_874": "J501401624",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_phone": "2934313851",
+      "_phone2": "04147605775",
+      "_fax": "",
+      "_email": "",
+      "_website": "",
+      "_social": "",
+      "_address": "AV BERMUDEZ LOCAL NRO 201 .. SECTOR CUMANÁ",
+      "_listing_img": "",
+      "_listing_prv_img": "2861",
+      "_directory_type": "314",
+      "_featured": "",
+      "_never_expire": "1",
+      "_expiry_date": "2025-08-13 17:24:07",
+      "_listing_status": "post_status",
+      "_thumbnail_id": "2861"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Acuícola",
+          "slug": "acuicola"
+        },
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Sucre – Cumaná",
+          "slug": "sucre-cumana"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/hidea.jpg"
+  },
+  {
+    "id": 2835,
+    "date": "2024-06-28 12:50:50",
+    "modified": "2024-07-04 14:27:29",
+    "status": "publish",
+    "title": "CAUCHOS DEL SUR C.A",
+    "slug": "cauchos-del-sur-c-a",
+    "content": "",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1720117512:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "343",
+      "_877": "",
+      "_875": "ABEL DE FREITAS FERNANDES",
+      "_874": "J000587949",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_phone": "02126615441",
+      "_phone2": "",
+      "_fax": "",
+      "_email": "cauchoabel@gmail.com",
+      "_website": "",
+      "_social": "",
+      "_address": "av las ciencias con calle vargas. edif cande, local B, planta baja, Caracas",
+      "_listing_img": "",
+      "_listing_prv_img": "2866",
+      "_directory_type": "314",
+      "_featured": "",
+      "_never_expire": "1",
+      "_expiry_date": "2025-07-04 14:27:29",
+      "_listing_status": "post_status",
+      "_thumbnail_id": "2866"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Caracas - Distrito Capital",
+          "slug": "caracas-distrito-capital"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/cauchos-del-sur.jpg"
+  },
+  {
+    "id": 2836,
+    "date": "2024-06-28 12:52:46",
+    "modified": "2024-07-17 17:52:09",
+    "status": "publish",
+    "title": "CONTINENTAL DEL AGRO C.A.",
+    "slug": "continental-del-agro-c-a",
+    "content": "",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1721253129:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "332",
+      "_877": "",
+      "_875": "",
+      "_874": "J298060557",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_phone": "02353420229",
+      "_phone2": "",
+      "_fax": "",
+      "_email": "contiagro@gmail.com",
+      "_website": "",
+      "_social": "",
+      "_address": "CALLE LA VIGIA C/C ATASCOSA, EDIF CONTINENTAL PB 1 VALLE DE LA PASCUA, EDO GUÁRICO",
+      "_listing_img": "",
+      "_listing_prv_img": "2881",
+      "_directory_type": "314",
+      "_featured": "",
+      "_never_expire": "1",
+      "_expiry_date": "2025-07-15 14:25:28",
+      "_listing_status": "post_status",
+      "_thumbnail_id": "2881"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "San Juan de los Morros - Guárico",
+          "slug": "san-juan-de-los-morros-guarico"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/logos-cavedrepas-marcas_20240715_142347_0000.jpg"
+  },
+  {
+    "id": 2890,
+    "date": "2024-08-05 10:24:08",
+    "modified": "2024-08-05 10:24:08",
+    "status": "publish",
+    "title": "Avalon Maquinarias & Agro C.A",
+    "slug": "avalon-maquinarias-agro-c-a",
+    "content": "<span data-sheets-root=\"1\">GENERADORES ELÉCTRICOS, MOTOSIERRAS, DESMALEZADORAS, BOMBAS DE AGUA, MONTACARGAS</span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1722868020:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "526",
+      "_877": "ydiaz@wulkanagro.com",
+      "_875": "Andreina Barboza",
+      "_874": "J505216457",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_phone": "04146260708",
+      "_phone2": "",
+      "_fax": "",
+      "_email": "contacto@avalonmaq.com",
+      "_website": "wulkan.ve",
+      "_social": "",
+      "_address": "ZONA INDUSTRIAL LOS PINOS, AV. PRINCIPAL, LOCAL N° 4, MANZANA N° 11, CIUDAD GUAYANA ESTADO BOLIVAR",
+      "_listing_img": "",
+      "_listing_prv_img": "2891",
+      "_directory_type": "314",
+      "_featured": "",
+      "_never_expire": "1",
+      "_expiry_date": "2025-08-05 10:18:00",
+      "_thumbnail_id": "2891",
+      "_listing_status": "post_status"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Maracaibo - Zulia",
+          "slug": "maracaibo-zulia"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/wulkan.jpg"
+  },
+  {
+    "id": 3060,
+    "date": "2025-09-08 08:46:23",
+    "modified": "2025-09-08 08:46:23",
+    "status": "publish",
+    "title": "Servi_repuestosven",
+    "slug": "servi_repuestosven",
+    "content": "<span data-sheets-root=\"1\">REPUESTO PARA MAQUINARIA AGRICOLA Y TRANSPORTE DE CARGA</span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1757335454:1",
+      "_edit_last": "1",
+      "_email": "servi.repuestosven@gmail.com",
+      "_877": "servirepuestosvenca@gmail.com",
+      "_875": "Luz Marina Gonzalez",
+      "_874": "J500403941",
+      "_address": "BARINAS",
+      "_phone": "04145692256",
+      "_phone2": "04120553225",
+      "_listing_prv_img": "3061",
+      "_directory_type": "314",
+      "_featured": "",
+      "_expiry_date": "2026-09-08 08:44:00",
+      "_thumbnail_id": "3061",
+      "_atbdp_post_views_count": "107"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Barinas - Barinas",
+          "slug": "barinas-barinas"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Belarus",
+          "slug": "belarus"
+        },
+        {
+          "name": "Mazven",
+          "slug": "mazven"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/LOGO-SERVI-REPUESTO-SERVI-REPUESTOS.jpg"
+  },
+  {
+    "id": 3079,
+    "date": "2025-09-24 13:53:59",
+    "modified": "2025-09-24 13:53:59",
+    "status": "publish",
+    "title": "ISONIC. C.A.",
+    "slug": "isonic-c-a",
+    "content": "",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1758736302:1",
+      "_edit_last": "1",
+      "_email": "comprasisonic@gmail.com",
+      "_877": "gebransamir@gmail.com",
+      "_875": "SAMIR GEBRAN",
+      "_874": "J294351514",
+      "_address": "AV PPAL CASA HACIENDA EL ENCANTADO NRO GALPON 17 SECTOR LA GUAIRITA EL HATILLO CARACAS",
+      "_phone": "02122272086",
+      "_phone2": "04126202766",
+      "_social": "a:1:{i:0;a:2:{s:2:\"id\";s:9:\"instagram\";s:3:\"url\";s:36:\"https://www.instagram.com/isonicvlza\";}}",
+      "_listing_prv_img": "3080",
+      "_directory_type": "314",
+      "_featured": "",
+      "_expiry_date": "2026-09-24 13:53:00",
+      "_thumbnail_id": "3080",
+      "_atbdp_post_views_count": "476"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        },
+        {
+          "name": "Sector Construcción",
+          "slug": "construccion"
+        }
+      ],
+      "location": [
+        {
+          "name": "Los Teques - Miranda",
+          "slug": "los-teques-miranda"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/ISOIC-Gerencia-Compras.png"
+  },
+  {
+    "id": 3081,
+    "date": "2025-09-24 13:56:07",
+    "modified": "2026-03-25 15:45:18",
+    "status": "publish",
+    "title": "MAXCAM, C.A",
+    "slug": "maxcam-c-a",
+    "content": "<span data-sheets-root=\"1\">Presencia Nacional: La empresa tiene una red de distribución que le permite llegar a clientes en todo el país. Esto requiere una logística y una infraestructura de almacenes y transporte mucho más robustas.Ferreterías Minoristas: El canal de distribución tradicional, donde se provee a tiendas locales y cadenas más grandes. Empresas Agrícolas: Graneros, cooperativas, tiendas de insumos agrícolas y fincas grandes que necesitan herramientas.Canal Online/E-commerce: Una presencia digital que permite a clientes de todo tipo hacer pedidos a través de una plataforma web, ampliando su alcance más allá de su territorio físico.</span>\r\n\r\n<span data-sheets-root=\"1\">Productos del ramo de ferretería, hogar y agrícolas</span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1774474926:1",
+      "_edit_last": "1",
+      "_email": "gerencia@maxcam.com",
+      "_877": "gerencia.general@maxcam.com",
+      "_875": "JESUS SALVADOR CAMPOS",
+      "_874": "J-40250279-6",
+      "_address": "AV. PRINCIPAL EL PLACER COMPLEJO INDUSTRIAL EL PLACER GALPON 4, CABUDARE ESTADO LARA",
+      "_phone": "0251-2540582",
+      "_phone2": "04124508013",
+      "_listing_prv_img": "3082",
+      "_directory_type": "314",
+      "_featured": "",
+      "_expiry_date": "2026-09-24 13:54:00",
+      "_thumbnail_id": "3082",
+      "_atbdp_post_views_count": "765"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Barquisimeto - Lara",
+          "slug": "barquisimeto-lara"
+        }
+      ],
+      "tags": [
+        {
+          "name": "BELLOTA",
+          "slug": "bellota"
+        },
+        {
+          "name": "Covo",
+          "slug": "covo"
+        },
+        {
+          "name": "Griven",
+          "slug": "griven"
+        },
+        {
+          "name": "Angel light",
+          "slug": "angel-light"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/Maxcam-Original-Maria-Vargas.png"
+  },
+  {
+    "id": 3083,
+    "date": "2025-10-13 09:52:31",
+    "modified": "2025-10-13 09:52:31",
+    "status": "publish",
+    "title": "AGRICOLA EL PALMAR, C.A",
+    "slug": "agricola-el-palmar-c-a",
+    "content": "Caña  de azucar",
+    "excerpt": "",
+    "author": 7,
+    "meta": {
+      "_email": "aepseniat@gmail.com",
+      "_877": "dpto.fiscal.legal@gmail.com",
+      "_875": "EVERTH MATOS",
+      "_874": "J075135806",
+      "_address": "L CTRA NACIONAL LA ENCRUCIJADA EDIF CENTRAL EL PALMAR PISO S/N OF S/N SECTOR SAN MATEO EDO. ARAGUA",
+      "_hide_contact_owner": "on",
+      "_phone": "02443901227",
+      "_phone2": "04123137400",
+      "_directory_type": "314",
+      "_expiry_date": "2026-10-06 17:47:00",
+      "_featured": "",
+      "_listing_status": "post_status",
+      "_listing_prv_img": "3084",
+      "_thumbnail_id": "3084",
+      "_edit_lock": "1760363414:1",
+      "_edit_last": "1",
+      "_wp_old_date": "2025-10-06",
+      "_atbdp_post_views_count": "362"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Maracay - Aragua",
+          "slug": "maracay-aragua"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/logo-aep-1.png"
+  },
+  {
+    "id": 3085,
+    "date": "2025-10-13 09:53:29",
+    "modified": "2025-10-13 09:53:29",
+    "status": "publish",
+    "title": "C.A AGRICOLA EL LAGO",
+    "slug": "c-a-agricola-el-lago",
+    "content": "Empresa Cañicultora, dedicada a la siembra y cultivo de la caña de azucar.",
+    "excerpt": "",
+    "author": 7,
+    "meta": {
+      "_email": "aelseniat@gmail.com",
+      "_877": "Dpto.fiscal.legal@gmail.com",
+      "_875": "EVERTH MATOS",
+      "_874": "J000006148",
+      "_address": "L CTRA NACIONAL LA ENCRUCIJADA EDIF CENTRAL EL PALMAR PISO S/N OF S/N SECTOR SAN MATEO EDO. ARAGUA",
+      "_hide_contact_owner": "1",
+      "_phone": "02443901227",
+      "_phone2": "04123137400",
+      "_directory_type": "314",
+      "_expiry_date": "2026-10-06 18:01:48",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_listing_prv_img": "3086",
+      "_thumbnail_id": "3086",
+      "_wp_old_date": "2025-10-06",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "193"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Maracay - Aragua",
+          "slug": "maracay-aragua"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/logo-ael.png"
+  },
+  {
+    "id": 3087,
+    "date": "2025-10-13 09:53:26",
+    "modified": "2025-10-13 09:53:26",
+    "status": "publish",
+    "title": "C.A AGRICOLA TUCUPIDO",
+    "slug": "c-a-agricola-tucupido",
+    "content": "Empresa cañicultora, dedicada a la siembra y cultivo de caña de azucar.",
+    "excerpt": "",
+    "author": 7,
+    "meta": {
+      "_email": "tucupidoseniat@gmail.com",
+      "_877": "Dpto.fiscal.legal@gmail.com",
+      "_875": "EVERTH MATOS",
+      "_874": "J075320077",
+      "_address": "L CTRA NACIONAL LA ENCRUCIJADA EDIF CENTRAL EL PALMAR PISO S/N OF S/N SECTOR SAN MATEO EDO. ARAGUA",
+      "_hide_contact_owner": "1",
+      "_phone": "02443901227",
+      "_phone2": "04123137400",
+      "_directory_type": "314",
+      "_expiry_date": "2026-10-06 18:14:07",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_listing_prv_img": "3088",
+      "_thumbnail_id": "3088",
+      "_wp_old_date": "2025-10-06",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "102"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Maracay - Aragua",
+          "slug": "maracay-aragua"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/logo-tuc.png"
+  },
+  {
+    "id": 3089,
+    "date": "2025-10-13 09:53:23",
+    "modified": "2025-10-13 09:53:23",
+    "status": "publish",
+    "title": "AGRICOLA KALAHARI C.A.",
+    "slug": "agricola-kalahari-c-a",
+    "content": "Empresa cañicultora, dedicada a la siembra y cultivo de caña de azucar.",
+    "excerpt": "",
+    "author": 7,
+    "meta": {
+      "_email": "agricolakalahari@gmail.com",
+      "_877": "Dpto.fiscal.legal@gmail.com",
+      "_875": "JESUS MENDOZA",
+      "_874": "J305392200",
+      "_address": "CTRA VIA PAPELON CASA FINCA AGRICHU CASERIO CAÑO DELGADITO CAÑO DELGADITO PORTUGUESA",
+      "_phone": "02443901227",
+      "_phone2": "04123137400",
+      "_directory_type": "314",
+      "_expiry_date": "2026-10-06 19:03:24",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_listing_prv_img": "3090",
+      "_thumbnail_id": "3090",
+      "_wp_old_date": "2025-10-06",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "194"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/AKA_con_rif-sin-fondo.png"
+  },
+  {
+    "id": 3091,
+    "date": "2025-10-13 09:53:20",
+    "modified": "2025-10-13 09:53:20",
+    "status": "publish",
+    "title": "AGRICOLA SERENGETI CA",
+    "slug": "agricola-serengeti-ca",
+    "content": "Empresa cañicultora, dedicada a la siembra y cultivo de caña de azucar.",
+    "excerpt": "",
+    "author": 7,
+    "meta": {
+      "_email": "agricolaserengetica@gmail.com",
+      "_877": "Dpto.fiscal.legal@gmail.com",
+      "_875": "JESUS MENDOZA",
+      "_874": "J305391831",
+      "_address": "CTRA VIA PAPELON CASA FINCA CAÑO MARACA CASERIO CAÑO DELGADITO CAÑO DELGADITO PORTUGUESA",
+      "_phone": "02443901227",
+      "_phone2": "04123137400",
+      "_directory_type": "314",
+      "_expiry_date": "2026-10-06 19:28:00",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_listing_prv_img": "3092",
+      "_thumbnail_id": "3092",
+      "_wp_old_date": "2025-10-06",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "128"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/ASE_con_rif-sin-fondo-1.png"
+  },
+  {
+    "id": 3093,
+    "date": "2025-10-13 09:53:17",
+    "modified": "2025-10-13 09:53:17",
+    "status": "publish",
+    "title": "AGRICOLA LAS VEGAS, S.A.",
+    "slug": "agricola-las-vegas-s-a",
+    "content": "Empresa cañicultora, dedicada a la siembra y cultivo de caña de azucar.",
+    "excerpt": "",
+    "author": 7,
+    "meta": {
+      "_email": "agrilasvegas@gmail.com",
+      "_877": "Dpto.fiscal.legal@gmail.com",
+      "_875": "JESUS MENDOZA",
+      "_874": "J302180686",
+      "_address": "L CTRA VIA PAPELON CASA FINCA CUMAREPO CASERIO CAÑO DELGADITO CAÑO DELGADITO PORTUGUESA",
+      "_phone": "02443901227",
+      "_phone2": "04123137400",
+      "_directory_type": "314",
+      "_expiry_date": "2026-10-06 19:37:30",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_listing_prv_img": "3094",
+      "_thumbnail_id": "3094",
+      "_wp_old_date": "2025-10-06",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "187"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/ALV_con_rif-sin-fondo-1.png"
+  },
+  {
+    "id": 3110,
+    "date": "2025-12-10 11:40:30",
+    "modified": "2025-12-10 11:40:30",
+    "status": "publish",
+    "title": "AGROVALERO ,c.a",
+    "slug": "agrovalero-c-a",
+    "content": "<ol>\r\n \t<li>MAGUERAS</li>\r\n \t<li>BOMBAS DE AGUA</li>\r\n \t<li>REPUESTOS PARA  EQUIPOS Y MAQUINARIAS AGRICOLA</li>\r\n \t<li>FUMIGADORAS MANUALAES Y A GASOLINA</li>\r\n \t<li>MOTOR A GASOLINA PARA EQUIPOS AGRICOLA</li>\r\n \t<li>MINI CULTIVADORA</li>\r\n \t<li>EQUIPOS AGRICOLA Y REPUESTOS EN GENERAL</li>\r\n \t<li>FERTILIZANTES GRANULADO Y LIQUIDOS</li>\r\n \t<li>DESMALEZADORA Y MOTO SIERRAS</li>\r\n \t<li>REPUESTOS Y ACCESORIOS PARA DEMALEZADORA</li>\r\n \t<li>SEMBRADORA MANUAL</li>\r\n \t<li>COMPRESORES</li>\r\n \t<li>REPUESTOS Y ACCESORIOS PARA MOTOSIERRA</li>\r\n</ol>",
+    "excerpt": "",
+    "author": 12,
+    "meta": {
+      "_email": "Agrovaleroca2018@gmail.com",
+      "_877": "jorgevalero.n@gmail.com",
+      "_875": "Valero Matheus Jorge luis",
+      "_874": "J406402540",
+      "_address": "AV MOYETONES CON CALLE 2 LOCAL NRO S-S ZONA INDUSTRIAL III BARQUISIMETO LARA ZONA POSTAL 3001",
+      "_hide_contact_owner": "on",
+      "_phone": "0412-312-2157",
+      "_phone2": "0424-506-4447",
+      "_directory_type": "314",
+      "_expiry_date": "2026-10-22 13:14:00",
+      "_featured": "",
+      "_listing_status": "post_status",
+      "_listing_prv_img": "3111",
+      "_thumbnail_id": "3111",
+      "_edit_lock": "1765381094:1",
+      "_edit_last": "1",
+      "_wp_old_date": "2025-10-22",
+      "_atbdp_post_views_count": "217"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Barquisimeto - Lara",
+          "slug": "barquisimeto-lara"
+        }
+      ],
+      "tags": [
+        {
+          "name": "V-AGRO",
+          "slug": "v-agro"
+        },
+        {
+          "name": "V-FERTIL",
+          "slug": "v-fertil"
+        },
+        {
+          "name": "V-RIEGO",
+          "slug": "v-riego"
+        },
+        {
+          "name": "IRRIPLAST",
+          "slug": "irriplast"
+        },
+        {
+          "name": "LUSQI",
+          "slug": "lusqi"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/LOGO-AGROVALERO-1.jpg"
+  },
+  {
+    "id": 3118,
+    "date": "2025-12-10 11:38:58",
+    "modified": "2025-12-10 11:38:58",
+    "status": "publish",
+    "title": "Agrofortuna, C.A,",
+    "slug": "agrofortuna-c-a",
+    "content": "Plásticos agrícolas, mallas agrícolas, herramientas agrícolas, asperjadoras, tijeras, bandejas de germinacion, guayas entre otros",
+    "excerpt": "",
+    "author": 15,
+    "meta": {
+      "_email": "administracion@agrofortuna.com.ve",
+      "_877": "dmendoza@agrofortuna.com.ve",
+      "_875": "Daniel Mendoza",
+      "_874": "J404315470",
+      "_address": "AVENIDA VENEZUELA ESQUINA CALLE 38",
+      "_phone": "0251 4468661",
+      "_phone2": "0424 5501667",
+      "_website": "https://www.agrofortuna.com.ve/",
+      "_directory_type": "314",
+      "_expiry_date": "2026-11-10 14:38:00",
+      "_featured": "",
+      "_listing_status": "post_status",
+      "_listing_prv_img": "3119",
+      "_thumbnail_id": "3119",
+      "_edit_lock": "1765381000:1",
+      "_edit_last": "1",
+      "_wp_old_date": "2025-11-10",
+      "_atbdp_post_views_count": "138"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Barquisimeto - Lara",
+          "slug": "barquisimeto-lara"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Jacto",
+          "slug": "jacto"
+        },
+        {
+          "name": "AGF",
+          "slug": "agf"
+        },
+        {
+          "name": "PQA",
+          "slug": "pqa"
+        },
+        {
+          "name": "AGROFORTUNA",
+          "slug": "agrofortuna"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/Imagen-de-WhatsApp-2024-07-09-a-las-15.52.23_bece57dd.jpg"
+  },
+  {
+    "id": 3120,
+    "date": "2026-02-17 14:52:57",
+    "modified": "2026-02-17 14:52:57",
+    "status": "publish",
+    "title": "EURO MAK,C.A.",
+    "slug": "euro-makc-a",
+    "content": "<ol>\r\n \t<li>Motores Fuera de Borda Europower</li>\r\n \t<li>Bombas de Agua Loncin</li>\r\n \t<li>Motores Agrícolas LONCIN</li>\r\n \t<li>Motores Agrícolas EUROPOWER</li>\r\n \t<li>Motores Agrícolas CHANGCHAI</li>\r\n \t<li>Motocultores CHANGCHAI</li>\r\n \t<li>Motosierras Europower</li>\r\n \t<li>Desmalezadoras Europower</li>\r\n</ol>",
+    "excerpt": "",
+    "author": 16,
+    "meta": {
+      "_email": "euromakpzo@gmail.com",
+      "_877": "fabiodramisino@gmail.com",
+      "_875": "FABIO DRAMISINO",
+      "_874": "J-41103003-1",
+      "_address": "Calle la Urbana, edificio Araguaney, piso PB, local 3, sector Puerto Ordaz, estado Bolívar",
+      "_hide_contact_owner": "1",
+      "_phone": "0286-9231880",
+      "_phone2": "04148985744",
+      "_social": "a:1:{i:0;a:2:{s:2:\"id\";s:9:\"instagram\";s:3:\"url\";s:42:\"https://www.instagram.com/euromakca/?hl=es\";}}",
+      "_directory_type": "314",
+      "_expiry_date": "2026-11-11 15:08:28",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_listing_prv_img": "3121",
+      "_thumbnail_id": "3121",
+      "_wp_old_date": "2025-11-11",
+      "_atbdp_post_views_count": "167"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "CIUDAD GUAYANA - EDO. BOLIVAR",
+          "slug": "ciudad-guayana-edo-bolivar"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Loncin",
+          "slug": "loncin"
+        },
+        {
+          "name": "EUROPOWER",
+          "slug": "europower"
+        },
+        {
+          "name": "CHANGCHAY",
+          "slug": "changchay"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/LOGO-EURO-MAKC.A.jpg"
+  },
+  {
+    "id": 3122,
+    "date": "2025-12-10 11:38:41",
+    "modified": "2025-12-10 11:38:41",
+    "status": "publish",
+    "title": "PALMAVEN PEG, C.A.",
+    "slug": "palmaven-peg-c-a",
+    "content": "<h4 data-start=\"367\" data-end=\"409\">🌴 <strong data-start=\"375\" data-end=\"409\">Derivados de la palma aceitera</strong></h4>\r\n<ul data-start=\"410\" data-end=\"655\">\r\n \t<li data-start=\"410\" data-end=\"435\">\r\n<p data-start=\"412\" data-end=\"435\">Aceite crudo de palma</p>\r\n</li>\r\n \t<li data-start=\"436\" data-end=\"464\">\r\n<p data-start=\"438\" data-end=\"464\">Aceite refinado de palma</p>\r\n</li>\r\n \t<li data-start=\"465\" data-end=\"497\">\r\n<p data-start=\"467\" data-end=\"497\">Palmiste</p>\r\n</li>\r\n \t<li data-start=\"498\" data-end=\"520\">\r\n<p data-start=\"500\" data-end=\"520\">Aceite de palmiste</p>\r\n</li>\r\n \t<li data-start=\"567\" data-end=\"586\">\r\n<p data-start=\"569\" data-end=\"586\">Manteca vegetal</p>\r\n</li>\r\n</ul>\r\n<h4 data-start=\"657\" data-end=\"698\">🥥 <strong data-start=\"665\" data-end=\"698\">Derivados de la palma de coco</strong></h4>\r\n<ul data-start=\"699\" data-end=\"893\">\r\n \t<li data-start=\"699\" data-end=\"723\">\r\n<p data-start=\"701\" data-end=\"723\">Aceite crudo de coco</p>\r\n</li>\r\n \t<li data-start=\"724\" data-end=\"751\">\r\n<p data-start=\"726\" data-end=\"751\">Aceite refinado de coco</p>\r\n</li>\r\n \t<li data-start=\"779\" data-end=\"808\">\r\n<p data-start=\"781\" data-end=\"808\">Agua de coco pasteurizada</p>\r\n</li>\r\n \t<li data-start=\"855\" data-end=\"893\">\r\n<p data-start=\"857\" data-end=\"893\">Carbón activado de cáscara de coco</p>\r\n</li>\r\n</ul>\r\n<h4 data-start=\"895\" data-end=\"937\">🌰 <strong data-start=\"903\" data-end=\"937\">Derivados del maní (cacahuate)</strong></h4>\r\n<ul data-start=\"938\" data-end=\"1094\">\r\n \t<li data-start=\"938\" data-end=\"970\">\r\n<p data-start=\"940\" data-end=\"970\">Grano de maní seco y tostado</p>\r\n</li>\r\n \t<li data-start=\"990\" data-end=\"1021\">\r\n<p data-start=\"992\" data-end=\"1021\">Pasta y mantequilla de maní</p>\r\n</li>\r\n \t<li data-start=\"1022\" data-end=\"1049\">\r\n<p data-start=\"1024\" data-end=\"1049\">Harina proteica de maní</p>\r\n</li>\r\n</ul>\r\n<h4 data-start=\"1096\" data-end=\"1127\">🐄 <strong data-start=\"1104\" data-end=\"1127\">Productos pecuarios</strong></h4>\r\n<ul data-start=\"1128\" data-end=\"1346\">\r\n \t<li data-start=\"1128\" data-end=\"1171\">\r\n<p data-start=\"1130\" data-end=\"1171\">Ganado bovino, porcino, caprino y ovino</p>\r\n</li>\r\n \t<li data-start=\"1172\" data-end=\"1202\">\r\n<p data-start=\"1174\" data-end=\"1202\">Leche cruda y pasteurizada</p>\r\n</li>\r\n \t<li data-start=\"1203\" data-end=\"1227\">\r\n<p data-start=\"1205\" data-end=\"1227\">Quesos y mantequilla</p>\r\n</li>\r\n \t<li data-start=\"1275\" data-end=\"1306\">\r\n<p data-start=\"1277\" data-end=\"1306\">Huevos y productos avícolas</p>\r\n</li>\r\n \t<li data-start=\"1307\" data-end=\"1346\">\r\n<p data-start=\"1309\" data-end=\"1346\">Alimentos balanceados para animales</p>\r\n</li>\r\n \t<li data-start=\"1307\" data-end=\"1346\">Leche en polvo completa</li>\r\n</ul>",
+    "excerpt": "",
+    "author": 17,
+    "meta": {
+      "_email": "palmavenpegca@gmail.com",
+      "_877": "omarchaya@lacharlotteve.com",
+      "_875": "Omar Chaya Amer",
+      "_874": "J-506832925",
+      "_address": "Carretera Troncal 19, vía Moitaco, cruce con carretera Canaguapana, Local Nro. Parcela LC, Sector Canaguapana, Canaguapana, Estado Bolívar, Zona Postal 8001.",
+      "_phone": "+1 5166611162",
+      "_phone2": "+58 4122582544",
+      "_directory_type": "314",
+      "_expiry_date": "2026-11-12 13:41:00",
+      "_featured": "",
+      "_listing_status": "post_status",
+      "_listing_prv_img": "3123",
+      "_thumbnail_id": "3123",
+      "_edit_lock": "1765380983:1",
+      "_edit_last": "1",
+      "_wp_old_date": "2025-11-12",
+      "_atbdp_post_views_count": "107"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        },
+        {
+          "name": "Sector Construcción",
+          "slug": "construccion"
+        }
+      ],
+      "location": [
+        {
+          "name": "Ciudad Bolívar - Bolívar",
+          "slug": "ciudad-bolivar-bolivar"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/Logo-PalmaVen.png"
+  },
+  {
+    "id": 3124,
+    "date": "2025-12-10 11:39:32",
+    "modified": "2025-12-10 11:39:39",
+    "status": "publish",
+    "title": "LA CASA DEL PALMERO VANEGAS C.A",
+    "slug": "la-casa-del-palmero-vabegas-c-a",
+    "content": "Hoz de cosecha SamLee\r\n\r\nCincel de cosecha SamLee\r\n\r\nJuego de mangos para hoz\r\n\r\nMango para hoz de palma aceitera\r\n\r\nAbrazadera de aluminio\r\n\r\nMachete SamLee\r\n\r\nCuchillo Golok Sam Lee\r\n\r\n&nbsp;",
+    "excerpt": "",
+    "author": 18,
+    "meta": {
+      "_email": "jesusvanegas2505@gmail.com",
+      "_877": "carolinaasprilla@ascarga.com",
+      "_875": "Jesus Vanegas",
+      "_874": "J503550368",
+      "_address": "CALLE CAMPO LATA LOCAL EDIFICIO VANEGAS NRO S/N SECTOR CAMPO LATA CASIGUA EL CUBI ZULIA ZONA POSTAL 5068",
+      "_phone": "04124721025",
+      "_phone2": "04124721025",
+      "_directory_type": "314",
+      "_expiry_date": "2026-11-18 10:04:00",
+      "_featured": "",
+      "_listing_status": "post_status",
+      "_listing_prv_img": "3125",
+      "_thumbnail_id": "3125",
+      "_edit_lock": "1765381043:1",
+      "_edit_last": "1",
+      "_wp_old_date": "2025-11-18",
+      "_atbdp_post_views_count": "85"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Maracaibo - Zulia",
+          "slug": "maracaibo-zulia"
+        }
+      ],
+      "tags": [
+        {
+          "name": "sam lee",
+          "slug": "sam-lee"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/af4b0465-bb69-4147-84f6-8bd39b615a82-1.jpg"
+  },
+  {
+    "id": 3141,
+    "date": "2025-12-10 11:39:59",
+    "modified": "2025-12-10 11:39:59",
+    "status": "publish",
+    "title": "AGRO VIVAR, C.A",
+    "slug": "agro-vivar-c-a",
+    "content": "REPUESTOS AGRICOLAS, MANGUERAS ,BOMBAS DE AGUA, MOTORES DE RIEGO, PODADORAS , FERTILIZANTES, MANOFACTURA AGRICOLA  ETC.",
+    "excerpt": "",
+    "author": 21,
+    "meta": {
+      "_email": "GERENCIA.AGROVIVAR@GMAIL.COM",
+      "_875": "JESUS CAÑIZO APARICIO",
+      "_874": "J-40880663-0",
+      "_address": "AV VENEZUELA ENTRE AV. LOS LEONES Y AV ARGIMIRO BRACAMONTE EDIF TORRE FINANCIERA DE LARA ZONA POSTAL 3001",
+      "_phone": "0414-3500687",
+      "_phone2": "0414-3500687",
+      "_directory_type": "314",
+      "_expiry_date": "2026-12-05 12:37:19",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_listing_prv_img": "3142",
+      "_thumbnail_id": "3142",
+      "_wp_old_date": "2025-12-05",
+      "_atbdp_post_views_count": "201"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Barquisimeto - Lara",
+          "slug": "barquisimeto-lara"
+        }
+      ],
+      "tags": [
+        {
+          "name": "LYN CITRUS SEED",
+          "slug": "lyn-citrus-seed"
+        },
+        {
+          "name": "SOUTHERN CITRUS NURSERIES",
+          "slug": "southern-citrus-nurseries"
+        },
+        {
+          "name": "STUEWE Y SONS,INC",
+          "slug": "stuewe-y-sonsinc"
+        },
+        {
+          "name": "KLASSMAN-DEILMANN AMERICAS INC",
+          "slug": "klassman-deilmann-americas-inc"
+        },
+        {
+          "name": "AMERICAN DISTRIBUTION Y MANUFACTURING",
+          "slug": "american-distribution-y-manufacturing"
+        },
+        {
+          "name": "STAAL Y PLAST USA INC",
+          "slug": "staal-y-plast-usa-inc"
+        },
+        {
+          "name": "STAL Y PLAST A/S",
+          "slug": "stal-y-plast-a-s"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/IMG-20251205-WA0068.jpg"
+  },
+  {
+    "id": 3145,
+    "date": "2025-12-10 11:54:59",
+    "modified": "2025-12-10 11:54:59",
+    "status": "publish",
+    "title": "IMPERIO DE VENEZUELA C.A.",
+    "slug": "imperio-de-venezuela-c-a",
+    "content": ".",
+    "excerpt": "",
+    "author": 22,
+    "meta": {
+      "_email": "imperiodevzla@gmail.com",
+      "_877": "italodadamo40@gmail.com",
+      "_875": "Italo Enrique D'Adamo Rondón",
+      "_874": "J-501095639",
+      "_address": "Av. Intercomunal San Fernando - Biruaca. Edif Minicentro Comercial Imperio. San Fernando de Apure, edo Apure. Zona postal 7001",
+      "_phone": "02473411471",
+      "_phone2": "04144749231",
+      "_directory_type": "314",
+      "_expiry_date": "2026-12-10 11:55:14",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_listing_prv_img": "3146",
+      "_thumbnail_id": "3146",
+      "_atbdp_post_views_count": "155"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "San Fernando de Apure - Apure",
+          "slug": "san-fernando-de-apure-apure"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Imperio",
+          "slug": "imperio"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/imperio-1.png"
+  },
+  {
+    "id": 3214,
+    "date": "2026-02-17 14:53:07",
+    "modified": "2026-02-17 14:53:07",
+    "status": "publish",
+    "title": "Agroplus Venezuela C.A.",
+    "slug": "agroplus-venezuela-c-a",
+    "content": "<ul>\r\n \t<li>Implemento agrícolas</li>\r\n \t<li>Agroquímicos</li>\r\n \t<li>Fertilizante</li>\r\n \t<li>Semillas</li>\r\n \t<li>Medicina animal</li>\r\n \t<li>Alimento animal</li>\r\n \t<li>Ferreteria</li>\r\n</ul>",
+    "excerpt": "",
+    "author": 28,
+    "meta": {
+      "_email": "agroplusvenezuelaca@gmail.com",
+      "_877": "bencomo.guillermo@gmail.com",
+      "_875": "Guillermo Bencomo",
+      "_874": "J-500441037",
+      "_address": "SERVICIO AUTOPISTA CENTRO OCCIDENTAL ESQUINA CALLE 18 YATITAGUA EDO. YARACUY",
+      "_phone": "04122627605",
+      "_phone2": "04149731245",
+      "_social": "a:1:{i:0;a:2:{s:2:\"id\";s:9:\"instagram\";s:3:\"url\";s:37:\"https://www.instagram.com/agroplusve/\";}}",
+      "_directory_type": "314",
+      "_expiry_date": "2027-01-30 16:54:28",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_listing_prv_img": "3215",
+      "_thumbnail_id": "3215",
+      "_wp_old_date": "2026-01-30",
+      "_atbdp_post_views_count": "192"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Barquisimeto - Lara",
+          "slug": "barquisimeto-lara"
+        }
+      ],
+      "tags": [
+        {
+          "name": "China",
+          "slug": "china"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/Logotipo.jpg"
+  },
+  {
+    "id": 3234,
+    "date": "2026-02-18 08:55:25",
+    "modified": "2026-02-18 08:55:41",
+    "status": "publish",
+    "title": "GENPAR REPRESENTACIONES C.A.",
+    "slug": "genpar-representaciones-c-a",
+    "content": "GENERADORES ELECTRICOS\r\nMOTORES A GASOLINA Y DIESEL\r\nMOTOBOMBAS DE AGUA\r\nBOMBAS DE AGUA\r\nDESMALEZADORAS\r\nMOTOSIERRAS\r\nMOTORES ELECTRICOS\r\nVIBRADORES DE CONCRETO\r\nFUMIGADORAS\r\nPULVERIZADORES\r\nTERMONEBULIZADORES\r\nMAQUINARIAS",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1771419236:1",
+      "_edit_last": "1",
+      "_email": "representacionesgenpar@gmail.com",
+      "_875": "Rafael Parisi",
+      "_874": "J-305688311",
+      "_address": "CTRA  NACIONAL GUARENAS GUATIRE LOCAL INRROMACA BETA NORTE S30 NIA SECTOR CARRETERA NACIONAL DE GUARENAS GUATIRE GUATIRE MIRANDA ZONA POSTAL 1221 I",
+      "_phone": "+584122418101",
+      "_phone2": "+584122358603",
+      "_website": "https://www.genpar.com.ve/",
+      "_listing_prv_img": "3235",
+      "_directory_type": "314",
+      "_featured": "",
+      "_expiry_date": "2027-02-18 08:36:00",
+      "_thumbnail_id": "3235",
+      "_atbdp_post_views_count": "171"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        },
+        {
+          "name": "Sector Construcción",
+          "slug": "construccion"
+        }
+      ],
+      "location": [],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/LOGO-GENPAR-SOLO-TIPOGRAFIA-150x60-1.webp"
+  }
+]

@@ -355,6 +355,11 @@ select {
   gap: 20px;
 }
 
+.sector-card {
+  display: block;
+  color: inherit;
+}
+
 .sector-card,
 .news-card,
 .benefit-card {
@@ -594,6 +599,226 @@ select {
   transform: translateX(-50%) translateY(0);
 }
 
+.directory-shortcuts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 22px;
+  font-weight: 700;
+}
+
+.directory-shortcuts a {
+  color: var(--yellow);
+}
+
+.directory-shortcuts a:hover {
+  color: var(--white);
+}
+
+.directory-hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  letter-spacing: -0.03em;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--yellow);
+}
+
+.directory-page .search-bar {
+  grid-template-columns: 1.3fr 1fr 1fr 1fr auto;
+}
+
+.directory-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.directory-tabs button {
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--green-800);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.directory-tabs button.is-active {
+  background: var(--green-800);
+  color: var(--white);
+  border-color: var(--green-800);
+}
+
+.directory-status {
+  color: var(--muted);
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.companies-grid,
+.browse-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.company-card-link {
+  display: block;
+  color: inherit;
+}
+
+.company-card,
+.browse-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.company-card img,
+.company-fallback {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  background: var(--green-800);
+}
+
+.company-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--yellow);
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+
+.company-card-body,
+.browse-card {
+  padding: 16px 18px 18px;
+}
+
+.browse-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 110px;
+}
+
+.browse-card span,
+.company-meta,
+.company-brands {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.company-brands {
+  margin-top: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.empty-state {
+  color: var(--muted);
+}
+
+.company-drawer {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 36, 31, 0.45);
+  z-index: 60;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.company-drawer-panel {
+  width: min(520px, 100%);
+  height: 100%;
+  background: var(--white);
+  overflow: auto;
+  padding: 28px 28px 40px;
+  position: relative;
+}
+
+.drawer-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background: var(--paper);
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.detail-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.detail-list {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.detail-list dt {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.detail-list a {
+  color: var(--green-700);
+  font-weight: 700;
+}
+
+.brand-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 20px;
+}
+
+.brand-chips a {
+  background: var(--paper);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--green-800);
+}
+
+.detail-copy {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.detail-copy p {
+  margin-bottom: 10px;
+}
+
+body.drawer-open {
+  overflow: hidden;
+}
+
 @media (max-width: 980px) {
   .nav {
     display: none;
@@ -630,6 +855,9 @@ select {
   .benefits-grid,
   .news-grid,
   .search-bar,
+  .directory-page .search-bar,
+  .companies-grid,
+  .browse-grid,
   .cta-band .wrap {
     grid-template-columns: 1fr;
   }

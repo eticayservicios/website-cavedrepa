@@ -44,6 +44,7 @@ jobs:
 
           bucket=$(echo "$outputs" | jq -r '.[] | select(.OutputKey=="BucketName") | .OutputValue')
           distribution=$(echo "$outputs" | jq -r '.[] | select(.OutputKey=="CloudFrontDistributionId") | .OutputValue')
+          api=$(echo "$outputs" | jq -r '.[] | select(.OutputKey=="ApiUrl") | .OutputValue')
 
           if [ -z "$bucket" ] || [ "$bucket" = "null" ]; then
             echo "::error::No se encontró el stack ${STACK_NAME}. Ejecuta primero Deploy infrastructure."
@@ -52,6 +53,16 @@ jobs:
 
           echo "bucket=$bucket" >> "$GITHUB_OUTPUT"
           echo "distribution=$distribution" >> "$GITHUB_OUTPUT"
+          echo "api=$api" >> "$GITHUB_OUTPUT"
+
+      - name: Write API URL
+        run: |
+          api="${{ steps.stack.outputs.api }}"
+          if [ -z "$api" ] || [ "$api" = "null" ]; then
+            echo "::error::No se encontró ApiUrl en el stack."
+            exit 1
+          fi
+          printf 'window.CAVEDREPA_API_URL = "%s";\n' "$api" > site/js/config.js
 
       - name: Upload site to S3
         run: |
@@ -59,13 +70,18 @@ jobs:
             --delete \
             --cache-control "public, max-age=3600" \
             --exclude "index.html" \
-            --exclude "404.html"
+            --exclude "404.html" \
+            --exclude "directorio/index.html"
 
           aws s3 cp site/index.html "s3://${{ steps.stack.outputs.bucket }}/index.html" \
             --cache-control "no-cache, no-store, must-revalidate" \
             --content-type "text/html; charset=utf-8"
 
           aws s3 cp site/404.html "s3://${{ steps.stack.outputs.bucket }}/404.html" \
+            --cache-control "no-cache, no-store, must-revalidate" \
+            --content-type "text/html; charset=utf-8"
+
+          aws s3 cp site/directorio/index.html "s3://${{ steps.stack.outputs.bucket }}/directorio/index.html" \
             --cache-control "no-cache, no-store, must-revalidate" \
             --content-type "text/html; charset=utf-8"
 

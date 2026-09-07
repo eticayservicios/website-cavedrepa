@@ -1,0 +1,1313 @@
+{
+  "sectors": [
+    {
+      "name": "Sector Agrícola",
+      "slug": "agricola",
+      "count": 69
+    },
+    {
+      "name": "Sector Construcción",
+      "slug": "construccion",
+      "count": 17
+    },
+    {
+      "name": "Sector Acuícola",
+      "slug": "acuicola",
+      "count": 6
+    }
+  ],
+  "locations": [
+    {
+      "name": "Guanare - Portuguesa",
+      "slug": "guanare-portuguesa",
+      "count": 17
+    },
+    {
+      "name": "Caracas - Distrito Capital",
+      "slug": "caracas-distrito-capital",
+      "count": 11
+    },
+    {
+      "name": "Barquisimeto - Lara",
+      "slug": "barquisimeto-lara",
+      "count": 9
+    },
+    {
+      "name": "Maracay - Aragua",
+      "slug": "maracay-aragua",
+      "count": 7
+    },
+    {
+      "name": "Barinas - Barinas",
+      "slug": "barinas-barinas",
+      "count": 6
+    },
+    {
+      "name": "Los Teques - Miranda",
+      "slug": "los-teques-miranda",
+      "count": 6
+    },
+    {
+      "name": "San Juan de los Morros - Guárico",
+      "slug": "san-juan-de-los-morros-guarico",
+      "count": 5
+    },
+    {
+      "name": "Maracaibo - Zulia",
+      "slug": "maracaibo-zulia",
+      "count": 3
+    },
+    {
+      "name": "San Cristóbal - Táchira",
+      "slug": "san-cristobal-tachira",
+      "count": 3
+    },
+    {
+      "name": "San Fernando de Apure - Apure",
+      "slug": "san-fernando-de-apure-apure",
+      "count": 3
+    },
+    {
+      "name": "Ciudad Bolívar - Bolívar",
+      "slug": "ciudad-bolivar-bolivar",
+      "count": 2
+    },
+    {
+      "name": "Sucre – Cumaná",
+      "slug": "sucre-cumana",
+      "count": 2
+    },
+    {
+      "name": "Valencia - Carabobo",
+      "slug": "valencia-carabobo",
+      "count": 2
+    },
+    {
+      "name": "CIUDAD GUAYANA - EDO. BOLIVAR",
+      "slug": "ciudad-guayana-edo-bolivar",
+      "count": 1
+    },
+    {
+      "name": "Quibor - Lara",
+      "slug": "quibor-lara",
+      "count": 1
+    },
+    {
+      "name": "San Diego - Carabobo",
+      "slug": "san-diego-carabobo",
+      "count": 1
+    },
+    {
+      "name": "Valera - Trujillo",
+      "slug": "valera-trujillo",
+      "count": 1
+    },
+    {
+      "name": "Araure - Edo. Portuguesa",
+      "slug": "araure-edo-portuguesa",
+      "count": 0
+    },
+    {
+      "name": "El Tigre - Anzoátegui",
+      "slug": "el-tigre-anzoategui",
+      "count": 0
+    },
+    {
+      "name": "El Vigía - Mérida",
+      "slug": "el-vigia-merida",
+      "count": 0
+    },
+    {
+      "name": "GUARICO",
+      "slug": "guarico",
+      "count": 0
+    },
+    {
+      "name": "Maiquetía - La Guaira",
+      "slug": "maiquetia-guaira",
+      "count": 0
+    },
+    {
+      "name": "Monagas - Maturín",
+      "slug": "monagas-maturin",
+      "count": 0
+    },
+    {
+      "name": "Montalban - Carabobo",
+      "slug": "montalban-carabobo",
+      "count": 0
+    },
+    {
+      "name": "Nueva Esparta - La Asunción",
+      "slug": "nueva-esparta-la-asuncion",
+      "count": 0
+    },
+    {
+      "name": "SOCOPO",
+      "slug": "socopo",
+      "count": 0
+    },
+    {
+      "name": "TUREN - PORTUGUESA",
+      "slug": "turen-portuguesa",
+      "count": 0
+    },
+    {
+      "name": "YARACUY",
+      "slug": "yaracuy",
+      "count": 0
+    }
+  ],
+  "brands": [
+    {
+      "name": "Massey Ferguson",
+      "slug": "massey-ferguson",
+      "count": 9
+    },
+    {
+      "name": "Landini",
+      "slug": "landini",
+      "count": 5
+    },
+    {
+      "name": "Baldan",
+      "slug": "baldan",
+      "count": 3
+    },
+    {
+      "name": "Domosa",
+      "slug": "domosa",
+      "count": 3
+    },
+    {
+      "name": "Ford",
+      "slug": "ford",
+      "count": 3
+    },
+    {
+      "name": "Jacto",
+      "slug": "jacto",
+      "count": 3
+    },
+    {
+      "name": "john Deere",
+      "slug": "john-deere",
+      "count": 3
+    },
+    {
+      "name": "New Holland",
+      "slug": "new-holland",
+      "count": 3
+    },
+    {
+      "name": "Perkins",
+      "slug": "perkins",
+      "count": 3
+    },
+    {
+      "name": "Siveti",
+      "slug": "siveti",
+      "count": 3
+    },
+    {
+      "name": "Yamaha",
+      "slug": "yamaha",
+      "count": 3
+    },
+    {
+      "name": "China",
+      "slug": "china",
+      "count": 2
+    },
+    {
+      "name": "Dolmar",
+      "slug": "dolmar",
+      "count": 2
+    },
+    {
+      "name": "Honda",
+      "slug": "honda",
+      "count": 2
+    },
+    {
+      "name": "Laverda",
+      "slug": "laverda",
+      "count": 2
+    },
+    {
+      "name": "Stara",
+      "slug": "stara",
+      "count": 2
+    },
+    {
+      "name": "Valtra",
+      "slug": "valtra",
+      "count": 2
+    },
+    {
+      "name": "AGF",
+      "slug": "agf",
+      "count": 1
+    },
+    {
+      "name": "AGROFORTUNA",
+      "slug": "agrofortuna",
+      "count": 1
+    },
+    {
+      "name": "Agromdo",
+      "slug": "agromdo",
+      "count": 1
+    },
+    {
+      "name": "ALPHA EC",
+      "slug": "alpha-ec",
+      "count": 1
+    },
+    {
+      "name": "AMERICAN DISTRIBUTION Y MANUFACTURING",
+      "slug": "american-distribution-y-manufacturing",
+      "count": 1
+    },
+    {
+      "name": "Angel light",
+      "slug": "angel-light",
+      "count": 1
+    },
+    {
+      "name": "ASCO",
+      "slug": "asco",
+      "count": 1
+    },
+    {
+      "name": "Astra",
+      "slug": "astra",
+      "count": 1
+    },
+    {
+      "name": "Austoft",
+      "slug": "austoft",
+      "count": 1
+    },
+    {
+      "name": "AZOTE 747 WG",
+      "slug": "azote-747-wg",
+      "count": 1
+    },
+    {
+      "name": "Bambozzi",
+      "slug": "bambozzi",
+      "count": 1
+    },
+    {
+      "name": "Bayer-Monsanto",
+      "slug": "bayer-monsanto",
+      "count": 1
+    },
+    {
+      "name": "Belarus",
+      "slug": "belarus",
+      "count": 1
+    },
+    {
+      "name": "BELL",
+      "slug": "bell",
+      "count": 1
+    },
+    {
+      "name": "BELLOTA",
+      "slug": "bellota",
+      "count": 1
+    },
+    {
+      "name": "Bepco",
+      "slug": "bepco",
+      "count": 1
+    },
+    {
+      "name": "Berco",
+      "slug": "berco",
+      "count": 1
+    },
+    {
+      "name": "Bertolini",
+      "slug": "bertolini",
+      "count": 1
+    },
+    {
+      "name": "Blue Bird",
+      "slug": "blue-bird",
+      "count": 1
+    },
+    {
+      "name": "Bomag",
+      "slug": "bomag",
+      "count": 1
+    },
+    {
+      "name": "Branco",
+      "slug": "branco",
+      "count": 1
+    },
+    {
+      "name": "Briggs & Stratton",
+      "slug": "briggs-stratton",
+      "count": 1
+    },
+    {
+      "name": "Briggs&Stratton",
+      "slug": "briggsstratton",
+      "count": 1
+    },
+    {
+      "name": "Broce Broom",
+      "slug": "broce-broom",
+      "count": 1
+    },
+    {
+      "name": "Carlile",
+      "slug": "carlile",
+      "count": 1
+    },
+    {
+      "name": "Carlton",
+      "slug": "carlton",
+      "count": 1
+    },
+    {
+      "name": "Case IH",
+      "slug": "case-ih",
+      "count": 1
+    },
+    {
+      "name": "CAT",
+      "slug": "cat",
+      "count": 1
+    },
+    {
+      "name": "CHANGCHAY",
+      "slug": "changchay",
+      "count": 1
+    },
+    {
+      "name": "Comet",
+      "slug": "comet",
+      "count": 1
+    },
+    {
+      "name": "Condor",
+      "slug": "condor",
+      "count": 1
+    },
+    {
+      "name": "Covo",
+      "slug": "covo",
+      "count": 1
+    },
+    {
+      "name": "Dalian Grain Full Agriculture Development Co.",
+      "slug": "dalian-grain-full-agriculture-development-co",
+      "count": 1
+    },
+    {
+      "name": "DELTARIN EC",
+      "slug": "deltarin-ec",
+      "count": 1
+    },
+    {
+      "name": "Denyo",
+      "slug": "denyo",
+      "count": 1
+    },
+    {
+      "name": "Domopower",
+      "slug": "domopower",
+      "count": 1
+    },
+    {
+      "name": "Donaldson",
+      "slug": "donaldson",
+      "count": 1
+    },
+    {
+      "name": "Dynapac",
+      "slug": "dynapac",
+      "count": 1
+    },
+    {
+      "name": "Efco",
+      "slug": "efco",
+      "count": 1
+    },
+    {
+      "name": "Emmark",
+      "slug": "emmark",
+      "count": 1
+    },
+    {
+      "name": "Etnyre",
+      "slug": "etnyre",
+      "count": 1
+    },
+    {
+      "name": "EUROPOWER",
+      "slug": "europower",
+      "count": 1
+    },
+    {
+      "name": "Everdigm",
+      "slug": "everdigm",
+      "count": 1
+    },
+    {
+      "name": "FAC",
+      "slug": "fac",
+      "count": 1
+    },
+    {
+      "name": "FERTILIZANTES NPK",
+      "slug": "fertilizantes-npk",
+      "count": 1
+    },
+    {
+      "name": "Fiat",
+      "slug": "fiat",
+      "count": 1
+    },
+    {
+      "name": "Fiatagri",
+      "slug": "fiatagri",
+      "count": 1
+    },
+    {
+      "name": "Fieldmarshall",
+      "slug": "fieldmarshall",
+      "count": 1
+    },
+    {
+      "name": "FLAVON EC 400",
+      "slug": "flavon-ec-400",
+      "count": 1
+    },
+    {
+      "name": "Ford Tractor",
+      "slug": "ford-tractor",
+      "count": 1
+    },
+    {
+      "name": "Furukawa",
+      "slug": "furukawa",
+      "count": 1
+    },
+    {
+      "name": "Garrett",
+      "slug": "garrett",
+      "count": 1
+    },
+    {
+      "name": "Garret…",
+      "slug": "garret",
+      "count": 1
+    },
+    {
+      "name": "Gaspardo",
+      "slug": "gaspardo",
+      "count": 1
+    },
+    {
+      "name": "gediPOWER",
+      "slug": "gedipower",
+      "count": 1
+    },
+    {
+      "name": "Genpar",
+      "slug": "genpar",
+      "count": 1
+    },
+    {
+      "name": "Greaves",
+      "slug": "greaves",
+      "count": 1
+    },
+    {
+      "name": "Griven",
+      "slug": "griven",
+      "count": 1
+    },
+    {
+      "name": "Guarany",
+      "slug": "guarany",
+      "count": 1
+    },
+    {
+      "name": "Hamm",
+      "slug": "hamm",
+      "count": 1
+    },
+    {
+      "name": "Holset",
+      "slug": "holset",
+      "count": 1
+    },
+    {
+      "name": "HQVP",
+      "slug": "hqvp",
+      "count": 1
+    },
+    {
+      "name": "Husqvarna",
+      "slug": "husqvarna",
+      "count": 1
+    },
+    {
+      "name": "Hyundai",
+      "slug": "hyundai",
+      "count": 1
+    },
+    {
+      "name": "Hyundai Xtee",
+      "slug": "hyundai-xtee",
+      "count": 1
+    },
+    {
+      "name": "Iconix",
+      "slug": "iconix",
+      "count": 1
+    },
+    {
+      "name": "IHC",
+      "slug": "ihc",
+      "count": 1
+    },
+    {
+      "name": "IHI",
+      "slug": "ihi",
+      "count": 1
+    },
+    {
+      "name": "Imperio",
+      "slug": "imperio",
+      "count": 1
+    },
+    {
+      "name": "Impexpar",
+      "slug": "impexpar",
+      "count": 1
+    },
+    {
+      "name": "Ingersol",
+      "slug": "ingersol",
+      "count": 1
+    },
+    {
+      "name": "Inroda",
+      "slug": "inroda",
+      "count": 1
+    },
+    {
+      "name": "Interstate Mcbee",
+      "slug": "interstate-mcbee",
+      "count": 1
+    },
+    {
+      "name": "Ipesasilo",
+      "slug": "ipesasilo",
+      "count": 1
+    },
+    {
+      "name": "IRRIPLAST",
+      "slug": "irriplast",
+      "count": 1
+    },
+    {
+      "name": "Iveco",
+      "slug": "iveco",
+      "count": 1
+    },
+    {
+      "name": "Jan",
+      "slug": "jan",
+      "count": 1
+    },
+    {
+      "name": "JF",
+      "slug": "jf",
+      "count": 1
+    },
+    {
+      "name": "Jungheinrich",
+      "slug": "jungheinrich",
+      "count": 1
+    },
+    {
+      "name": "Kawasaki",
+      "slug": "kawasaki",
+      "count": 1
+    },
+    {
+      "name": "KIOTI",
+      "slug": "kioti",
+      "count": 1
+    },
+    {
+      "name": "KKK",
+      "slug": "kkk",
+      "count": 1
+    },
+    {
+      "name": "KLASSMAN-DEILMANN AMERICAS INC",
+      "slug": "klassman-deilmann-americas-inc",
+      "count": 1
+    },
+    {
+      "name": "Kleemann",
+      "slug": "kleemann",
+      "count": 1
+    },
+    {
+      "name": "Komatsu",
+      "slug": "komatsu",
+      "count": 1
+    },
+    {
+      "name": "Launtop",
+      "slug": "launtop",
+      "count": 1
+    },
+    {
+      "name": "LEuropea",
+      "slug": "leuropea",
+      "count": 1
+    },
+    {
+      "name": "Liebherr",
+      "slug": "liebherr",
+      "count": 1
+    },
+    {
+      "name": "Lobster",
+      "slug": "lobster",
+      "count": 1
+    },
+    {
+      "name": "Lombardini",
+      "slug": "lombardini",
+      "count": 1
+    },
+    {
+      "name": "Loncin",
+      "slug": "loncin",
+      "count": 1
+    },
+    {
+      "name": "LS TRACTOR",
+      "slug": "ls-tractor",
+      "count": 1
+    },
+    {
+      "name": "LTD",
+      "slug": "ltd",
+      "count": 1
+    },
+    {
+      "name": "LTD CHINA",
+      "slug": "ltd-china",
+      "count": 1
+    },
+    {
+      "name": "LUSQI",
+      "slug": "lusqi",
+      "count": 1
+    },
+    {
+      "name": "LYN CITRUS SEED",
+      "slug": "lyn-citrus-seed",
+      "count": 1
+    },
+    {
+      "name": "M&S",
+      "slug": "ms",
+      "count": 1
+    },
+    {
+      "name": "massey fergsuson",
+      "slug": "massey-fergsuson",
+      "count": 1
+    },
+    {
+      "name": "Maxiforce",
+      "slug": "maxiforce",
+      "count": 1
+    },
+    {
+      "name": "Mazven",
+      "slug": "mazven",
+      "count": 1
+    },
+    {
+      "name": "Mazzaferro",
+      "slug": "mazzaferro",
+      "count": 1
+    },
+    {
+      "name": "Menzi Muck",
+      "slug": "menzi-muck",
+      "count": 1
+    },
+    {
+      "name": "Metal Leve",
+      "slug": "metal-leve",
+      "count": 1
+    },
+    {
+      "name": "Mitsubishi",
+      "slug": "mitsubishi",
+      "count": 1
+    },
+    {
+      "name": "Motul",
+      "slug": "motul",
+      "count": 1
+    },
+    {
+      "name": "MP AMINA 720",
+      "slug": "mp-amina-720",
+      "count": 1
+    },
+    {
+      "name": "MTD",
+      "slug": "mtd",
+      "count": 1
+    },
+    {
+      "name": "MWM",
+      "slug": "mwm",
+      "count": 1
+    },
+    {
+      "name": "Neptuno Mares",
+      "slug": "neptuno-mares",
+      "count": 1
+    },
+    {
+      "name": "Odisa",
+      "slug": "odisa",
+      "count": 1
+    },
+    {
+      "name": "Oleo Mac",
+      "slug": "oleo-mac",
+      "count": 1
+    },
+    {
+      "name": "OLEOMAC",
+      "slug": "oleomac",
+      "count": 1
+    },
+    {
+      "name": "Pedrollo",
+      "slug": "pedrollo",
+      "count": 1
+    },
+    {
+      "name": "Pel",
+      "slug": "pel",
+      "count": 1
+    },
+    {
+      "name": "Penagos",
+      "slug": "penagos",
+      "count": 1
+    },
+    {
+      "name": "Peon",
+      "slug": "peon",
+      "count": 1
+    },
+    {
+      "name": "Pinheiros",
+      "slug": "pinheiros",
+      "count": 1
+    },
+    {
+      "name": "PNEUS",
+      "slug": "pneus",
+      "count": 1
+    },
+    {
+      "name": "Power",
+      "slug": "power",
+      "count": 1
+    },
+    {
+      "name": "POWER PRO",
+      "slug": "power-pro",
+      "count": 1
+    },
+    {
+      "name": "PQA",
+      "slug": "pqa",
+      "count": 1
+    },
+    {
+      "name": "RAFAGA PS 90",
+      "slug": "rafaga-ps-90",
+      "count": 1
+    },
+    {
+      "name": "RAM",
+      "slug": "ram",
+      "count": 1
+    },
+    {
+      "name": "Rosenbauer",
+      "slug": "rosenbauer",
+      "count": 1
+    },
+    {
+      "name": "Royal",
+      "slug": "royal",
+      "count": 1
+    },
+    {
+      "name": "Ryobi",
+      "slug": "ryobi",
+      "count": 1
+    },
+    {
+      "name": "sam lee",
+      "slug": "sam-lee",
+      "count": 1
+    },
+    {
+      "name": "Same",
+      "slug": "same",
+      "count": 1
+    },
+    {
+      "name": "Schwitzer",
+      "slug": "schwitzer",
+      "count": 1
+    },
+    {
+      "name": "SDMO",
+      "slug": "sdmo",
+      "count": 1
+    },
+    {
+      "name": "Sennebogen",
+      "slug": "sennebogen",
+      "count": 1
+    },
+    {
+      "name": "Sigma",
+      "slug": "sigma",
+      "count": 1
+    },
+    {
+      "name": "Solpower",
+      "slug": "solpower",
+      "count": 1
+    },
+    {
+      "name": "SOUTHERN CITRUS NURSERIES",
+      "slug": "southern-citrus-nurseries",
+      "count": 1
+    },
+    {
+      "name": "Sparex",
+      "slug": "sparex",
+      "count": 1
+    },
+    {
+      "name": "STAAL Y PLAST USA INC",
+      "slug": "staal-y-plast-usa-inc",
+      "count": 1
+    },
+    {
+      "name": "STAL Y PLAST A/S",
+      "slug": "stal-y-plast-a-s",
+      "count": 1
+    },
+    {
+      "name": "Stihl",
+      "slug": "stihl",
+      "count": 1
+    },
+    {
+      "name": "STLP",
+      "slug": "stlp",
+      "count": 1
+    },
+    {
+      "name": "Storti",
+      "slug": "storti",
+      "count": 1
+    },
+    {
+      "name": "STUEWE Y SONS,INC",
+      "slug": "stuewe-y-sonsinc",
+      "count": 1
+    },
+    {
+      "name": "Surgente",
+      "slug": "surgente",
+      "count": 1
+    },
+    {
+      "name": "Takima",
+      "slug": "takima",
+      "count": 1
+    },
+    {
+      "name": "Tatu",
+      "slug": "tatu",
+      "count": 1
+    },
+    {
+      "name": "Technoflex",
+      "slug": "technoflex",
+      "count": 1
+    },
+    {
+      "name": "Tecnosac",
+      "slug": "tecnosac",
+      "count": 1
+    },
+    {
+      "name": "Tohatsu",
+      "slug": "tohatsu",
+      "count": 1
+    },
+    {
+      "name": "Toshiba",
+      "slug": "toshiba",
+      "count": 1
+    },
+    {
+      "name": "Toyama",
+      "slug": "toyama",
+      "count": 1
+    },
+    {
+      "name": "Unipac",
+      "slug": "unipac",
+      "count": 1
+    },
+    {
+      "name": "V-AGRO",
+      "slug": "v-agro",
+      "count": 1
+    },
+    {
+      "name": "V-FERTIL",
+      "slug": "v-fertil",
+      "count": 1
+    },
+    {
+      "name": "V-RIEGO",
+      "slug": "v-riego",
+      "count": 1
+    },
+    {
+      "name": "Vacali",
+      "slug": "vacali",
+      "count": 1
+    },
+    {
+      "name": "Vania",
+      "slug": "vania",
+      "count": 1
+    },
+    {
+      "name": "Vence Tudo",
+      "slug": "vence-tudo",
+      "count": 1
+    },
+    {
+      "name": "Vencedora Maqtron",
+      "slug": "vencedora-maqtron",
+      "count": 1
+    },
+    {
+      "name": "Venoco",
+      "slug": "venoco",
+      "count": 1
+    },
+    {
+      "name": "Vermeer",
+      "slug": "vermeer",
+      "count": 1
+    },
+    {
+      "name": "Vogele",
+      "slug": "vogele",
+      "count": 1
+    },
+    {
+      "name": "VW",
+      "slug": "vw",
+      "count": 1
+    },
+    {
+      "name": "Webstone",
+      "slug": "webstone",
+      "count": 1
+    },
+    {
+      "name": "Wirtgen",
+      "slug": "wirtgen",
+      "count": 1
+    },
+    {
+      "name": "Yardmachines",
+      "slug": "yardmachines",
+      "count": 1
+    },
+    {
+      "name": "Yardman",
+      "slug": "yardman",
+      "count": 1
+    },
+    {
+      "name": "ZM bombas",
+      "slug": "zm-bombas",
+      "count": 1
+    },
+    {
+      "name": "AGCO",
+      "slug": "agco",
+      "count": 0
+    },
+    {
+      "name": "AGROPACA",
+      "slug": "agropaca",
+      "count": 0
+    },
+    {
+      "name": "APROCA",
+      "slug": "aproca",
+      "count": 0
+    },
+    {
+      "name": "BELLOTA, TAURO, METROX, ARGOS, PIRAMIDE, SOLIMAX",
+      "slug": "bellota-tauro-metrox-argos-piramide-solimax",
+      "count": 0
+    },
+    {
+      "name": "BIG HERDSMAN",
+      "slug": "big-herdsman",
+      "count": 0
+    },
+    {
+      "name": "BKT/ROADGUIDER/FORREUNNER/ANNAITE/ROYAL BLACK/HAOHUA/NEXEN/LTH/ECOROAD",
+      "slug": "bkt-roadguider-forreunner-annaite-royal-black-haohua-nexen-lth-ecoroad",
+      "count": 0
+    },
+    {
+      "name": "Bosch",
+      "slug": "bosch",
+      "count": 0
+    },
+    {
+      "name": "Caterpillar",
+      "slug": "caterpillar",
+      "count": 0
+    },
+    {
+      "name": "CHANGAN",
+      "slug": "changan",
+      "count": 0
+    },
+    {
+      "name": "CHN INDUSTRIAL",
+      "slug": "chn-industrial",
+      "count": 0
+    },
+    {
+      "name": "chn industril",
+      "slug": "chn-industril",
+      "count": 0
+    },
+    {
+      "name": "CLASS KGAA MBH",
+      "slug": "class-kgaa-mbh",
+      "count": 0
+    },
+    {
+      "name": "CO LTD",
+      "slug": "co-ltd",
+      "count": 0
+    },
+    {
+      "name": "Comil, Brock, SuperBrix, Selgron, Gaviagro, Solagro, Tapco, Tracsa, Nitta y Altinbilek.",
+      "slug": "comil-brock-superbrix-selgron-gaviagro-solagro-tapco-tracsa-nitta-y-altinbilek",
+      "count": 0
+    },
+    {
+      "name": "CORPORACIÓN BEL",
+      "slug": "corporacion-bel",
+      "count": 0
+    },
+    {
+      "name": "DAFNG",
+      "slug": "dafng",
+      "count": 0
+    },
+    {
+      "name": "Deutz",
+      "slug": "deutz",
+      "count": 0
+    },
+    {
+      "name": "DEUTZ FAHR",
+      "slug": "deutz-fahr",
+      "count": 0
+    },
+    {
+      "name": "Diesel",
+      "slug": "diesel",
+      "count": 0
+    },
+    {
+      "name": "DONGFENG",
+      "slug": "dongfeng",
+      "count": 0
+    },
+    {
+      "name": "DOÑA ALICIA",
+      "slug": "dona-alicia",
+      "count": 0
+    },
+    {
+      "name": "dremel",
+      "slug": "dremel",
+      "count": 0
+    },
+    {
+      "name": "fahr",
+      "slug": "fahr",
+      "count": 0
+    },
+    {
+      "name": "FENDT",
+      "slug": "fendt",
+      "count": 0
+    },
+    {
+      "name": "FM WORLD",
+      "slug": "fm-world",
+      "count": 0
+    },
+    {
+      "name": "FMWORDL",
+      "slug": "fmwordl",
+      "count": 0
+    },
+    {
+      "name": "HIDROPUMP",
+      "slug": "hidropump",
+      "count": 0
+    },
+    {
+      "name": "Inco",
+      "slug": "inco",
+      "count": 0
+    },
+    {
+      "name": "ITR",
+      "slug": "itr",
+      "count": 0
+    },
+    {
+      "name": "JAC",
+      "slug": "jac",
+      "count": 0
+    },
+    {
+      "name": "JONH DEERE",
+      "slug": "jonh-deere",
+      "count": 0
+    },
+    {
+      "name": "KUBOTA",
+      "slug": "kubota",
+      "count": 0
+    },
+    {
+      "name": "LOVOL",
+      "slug": "lovol",
+      "count": 0
+    },
+    {
+      "name": "MACHINERY",
+      "slug": "machinery",
+      "count": 0
+    },
+    {
+      "name": "mahindra",
+      "slug": "mahindra",
+      "count": 0
+    },
+    {
+      "name": "Pentax",
+      "slug": "pentax",
+      "count": 0
+    },
+    {
+      "name": "qubota",
+      "slug": "qubota",
+      "count": 0
+    },
+    {
+      "name": "Resinca",
+      "slug": "resinca",
+      "count": 0
+    },
+    {
+      "name": "sdf",
+      "slug": "sdf",
+      "count": 0
+    },
+    {
+      "name": "SHANDONG",
+      "slug": "shandong",
+      "count": 0
+    },
+    {
+      "name": "SINOTRUK",
+      "slug": "sinotruk",
+      "count": 0
+    },
+    {
+      "name": "Veniram",
+      "slug": "veniram",
+      "count": 0
+    },
+    {
+      "name": "VENIRAN. PERKINS",
+      "slug": "veniran-perkins",
+      "count": 0
+    },
+    {
+      "name": "WEIFANG",
+      "slug": "weifang",
+      "count": 0
+    },
+    {
+      "name": "WONWAY",
+      "slug": "wonway",
+      "count": 0
+    },
+    {
+      "name": "YAMARINE",
+      "slug": "yamarine",
+      "count": 0
+    },
+    {
+      "name": "zooliom",
+      "slug": "zooliom",
+      "count": 0
+    }
+  ]
+}

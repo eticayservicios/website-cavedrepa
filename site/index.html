@@ -53,7 +53,7 @@
       <nav class="nav" id="site-nav">
         <a class="active" href="#inicio">Inicio</a>
         <a href="#camara">La Cámara</a>
-        <a href="#afiliados">Afiliados</a>
+        <a href="/directorio/">Afiliados</a>
         <a href="#beneficios">Servicios y Beneficios</a>
         <a href="#noticias">Noticias y Estudios</a>
         <a href="#contacto">Contacto</a>
@@ -73,7 +73,7 @@
           <p class="hero-lead">Representamos, conectamos y fortalecemos a distribuidores de maquinaria, equipos y repuestos.</p>
           <div class="hero-actions">
             <a class="btn btn-yellow" href="#contacto">Afiliar mi empresa →</a>
-            <a class="btn btn-ghost" href="#afiliados">Explorar directorio</a>
+            <a class="btn btn-ghost" href="/directorio/">Explorar directorio</a>
           </div>
           <p class="hero-proof">
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" style="margin:0;width:22px;height:22px">
@@ -98,10 +98,10 @@
       <div class="wrap">
         <div class="section-head">
           <h2>Sectores que impulsamos</h2>
-          <a class="link-more" href="#afiliados">Ver todos los sectores →</a>
+          <a class="link-more" href="/directorio/?vista=sectores">Ver todos los sectores →</a>
         </div>
         <div class="sectors-grid">
-          <article class="sector-card">
+          <a class="sector-card" href="/directorio/?sector=agricola">
             <img src="/images/sector-agricola.jpg" alt="Maquinaria agrícola en el campo">
             <div class="sector-body">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3c2 4 2 6 0 9 2 0 5 1 7 4-3 4-7 6-11 5-4-6-2-13 4-18z"/></svg>
@@ -109,8 +109,8 @@
               <p>Maquinaria, equipos y soluciones para el campo venezolano.</p>
               <span class="card-arrow">→</span>
             </div>
-          </article>
-          <article class="sector-card">
+          </a>
+          <a class="sector-card" href="/directorio/?sector=construccion">
             <img src="/images/sector-construccion.jpg" alt="Maquinaria de construcción">
             <div class="sector-body">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 8h8l2 4H6l2-4z"/><path d="M4 20h16M7 12v8M17 12v8M12 4v4"/></svg>
@@ -118,8 +118,8 @@
               <p>Equipos para obras, infraestructura y movimiento de tierra.</p>
               <span class="card-arrow">→</span>
             </div>
-          </article>
-          <article class="sector-card">
+          </a>
+          <a class="sector-card" href="/directorio/?q=industrial">
             <img src="/images/sector-industrial.jpg" alt="Planta industrial">
             <div class="sector-body">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>
@@ -127,8 +127,8 @@
               <p>Tecnología, plantas y repuestos para la industria.</p>
               <span class="card-arrow">→</span>
             </div>
-          </article>
-          <article class="sector-card">
+          </a>
+          <a class="sector-card" href="/directorio/?sector=acuicola">
             <img src="/images/sector-pesca.jpg" alt="Buque de carga y pesca">
             <div class="sector-body">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12s4-6 9-6 9 6 9 6-4 6-9 6-9-6-9-6z"/><circle cx="12" cy="12" r="2"/></svg>
@@ -136,7 +136,7 @@
               <p>Equipos y cadenas de valor del sector pesquero.</p>
               <span class="card-arrow">→</span>
             </div>
-          </article>
+          </a>
         </div>
       </div>
     </section>
@@ -145,7 +145,7 @@
       <div class="wrap">
         <h2>Encuentra empresas, marcas y soluciones</h2>
         <p>Busca en el directorio de afiliados por producto, sector o ubicación.</p>
-        <form class="search-bar" id="directory-search">
+        <form class="search-bar" id="directory-search" action="/directorio/" method="get">
           <label class="search-field">
             <span>¿Qué buscas?</span>
             <input type="search" name="q" placeholder="Ej: repuestos, tractores, bombas...">
@@ -154,25 +154,24 @@
             <span>Sector</span>
             <select name="sector">
               <option value="">Todos los sectores</option>
-              <option>Agrícola</option>
-              <option>Construcción</option>
-              <option>Industrial</option>
-              <option>Pesca y acuícola</option>
+              <option value="agricola">Agrícola</option>
+              <option value="construccion">Construcción</option>
+              <option value="acuicola">Pesca y acuícola</option>
             </select>
           </label>
           <label class="search-field">
             <span>Ubicación</span>
             <select name="ubicacion">
               <option value="">Todo el país</option>
-              <option>Distrito Capital</option>
-              <option>Carabobo</option>
-              <option>Lara</option>
-              <option>Zulia</option>
-              <option>Bolívar</option>
             </select>
           </label>
           <button class="btn btn-yellow" type="submit">Buscar</button>
         </form>
+        <div class="directory-shortcuts">
+          <a href="/directorio/?vista=sectores">Por sector</a>
+          <a href="/directorio/?vista=ubicaciones">Por ubicación</a>
+          <a href="/directorio/?vista=marcas">Por marcas</a>
+        </div>
       </div>
     </section>
 
@@ -269,7 +268,8 @@
     </div>
   </footer>
 
-  <div class="toast" id="toast" role="status">El directorio se conectará en el siguiente paso.</div>
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
   <script src="/js/main.js"></script>
 </body>
 </html>
