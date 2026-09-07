@@ -19,10 +19,6 @@ from directory import (
 TABLE_NAME = os.environ.get("TABLE_NAME", "")
 ALLOWED_ORIGINS = {
     SITE_ORIGIN,
-    "http://127.0.0.1:4173",
-    "http://localhost:4173",
-    "http://127.0.0.1:5500",
-    "http://localhost:5500",
 }
 
 _table = None
@@ -44,6 +40,10 @@ def table():
     return _table
 
 
+def is_local_origin(origin: str) -> bool:
+    return origin.startswith("http://127.0.0.1:") or origin.startswith("http://localhost:")
+
+
 def origin_for(event: dict) -> str:
     headers = event.get("headers") or {}
     incoming = ""
@@ -51,7 +51,7 @@ def origin_for(event: dict) -> str:
         if key.lower() == "origin":
             incoming = value or ""
             break
-    if incoming in ALLOWED_ORIGINS:
+    if incoming in ALLOWED_ORIGINS or is_local_origin(incoming):
         return incoming
     return SITE_ORIGIN
 

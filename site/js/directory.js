@@ -172,8 +172,9 @@ const loadView = async () => {
     const payload = await window.CavedrepaApi.search(filters);
     renderCompanies(payload);
   } catch (error) {
-    setStatus("El directorio todavía no responde. Revisa que la Lambda esté desplegada y los datos importados.");
-    results.innerHTML = `<p class="empty-state">No se pudo consultar el API. Los catálogos locales sí están disponibles en las pestañas Por sector, Por ubicación y Por marcas.</p>`;
+    const detail = error && error.message ? ` (${error.message})` : "";
+    setStatus("No se pudo consultar el API del directorio.");
+    results.innerHTML = `<p class="empty-state">Fallo al pedir empresas${detail}. En local usa <code>python3 scripts/serve_site.py</code> para proxear el API.</p>`;
   }
 };
 

@@ -4,7 +4,17 @@ const fallbackCatalogs = () =>
     return response.json();
   });
 
-const apiUrl = () => (window.CAVEDREPA_API_URL || "").replace(/\/$/, "");
+const isLocalHost = () => {
+  const host = window.location.hostname;
+  return host === "127.0.0.1" || host === "localhost";
+};
+
+const apiUrl = () => {
+  if (isLocalHost()) {
+    return `${window.location.origin}/api`;
+  }
+  return (window.CAVEDREPA_API_URL || "").replace(/\/$/, "");
+};
 
 const apiGet = async (path, params) => {
   const base = apiUrl();
