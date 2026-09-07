@@ -3,6 +3,7 @@ const form = document.getElementById("directory-search");
 const results = document.getElementById("directory-results");
 const status = document.getElementById("directory-status");
 const sortSelect = document.getElementById("directory-sort");
+const toolbar = document.getElementById("directory-toolbar");
 const tabs = document.querySelectorAll(".directory-tabs button");
 const drawer = document.getElementById("company-drawer");
 const detail = document.getElementById("company-detail");
@@ -35,6 +36,12 @@ const setStatus = (text) => {
   if (status) status.textContent = text || "";
 };
 
+const setLoading = (on) => {
+  toolbar?.classList.toggle("is-loading", on);
+  results?.classList.toggle("is-loading", on);
+  if (sortSelect) sortSelect.disabled = on;
+};
+
 const companyHref = (company) => {
   const next = new URL(window.location.href);
   next.searchParams.set("empresa", company.slug || company.id);
@@ -45,11 +52,11 @@ const companyHref = (company) => {
 const cardHtml = (company) => {
   const initial = (company.name || "?").slice(0, 1);
   const image = company.image_url
-    ? `<img src="${company.image_url}?v=2" alt="" width="640" height="360" onerror="this.remove()">`
+    ? `<img src="${company.image_url}?v=3" alt="" width="640" height="360" onerror="this.remove()">`
     : "";
   return `
     <article class="company-card">
-      <a class="company-card-link" href="${companyHref(company)}">
+      <a class="company-card-link" href="${companyHref(company)}" data-empresa="${company.slug || company.id}">
         <div class="company-media">${image}<div class="company-fallback">${initial}</div></div>
         <div class="company-card-body">
           <h3>${company.name || "Empresa"}</h3>
@@ -100,11 +107,16 @@ const pagerHtml = (payload) => {
 };
 
 const renderCompanies = (payload) => {
-  const companies = payload.companies || [];
-  const total = payload.total || companies.length;
-  const page = payload.page || 1;
-  const pages = payload.pages || 1;
-  currentPage = page;
+  let companies = payload.companies || [];
+  let total = payload.total || companies.length;
+  let page = payload.page || 1;
+  let pages = payload.pages || 1;
+  if (pages <= 1 && companies.length > 20) {
+    total = companies.length;
+    pages = Math.ceil(total / 20);
+    page = Math.min(currentPage, pages);
+    companies = companies.slice((page - 1) * 20, page * 20);
+  }
   setStatus(
     total
       ? `${total} empresa${total === 1 ? "" : "s"} · página ${page} de ${pages}`
@@ -133,7 +145,7 @@ const renderDetail = (company) => {
   detail.innerHTML = `
     ${
       company.image_url
-        ? `<div class="detail-image-wrap"><img src="${company.image_url}?v=2" alt="" width="640" height="360" onerror="this.remove()"></div>`
+        ? `<div class="detail-image-wrap"><img src="${company.image_url}?v=3" alt="" width="640" height="360" onerror="this.remove()"></div>`
         : ""
     }
     <p class="eyebrow">Ficha de afiliado</p>
@@ -208,6 +220,7 @@ const loadView = async () => {
     return;
   }
 
+  setLoading(true);
   setStatus("Buscando en el directorio...");
   try {
     const payload = await window.CavedrepaApi.search(filters);
@@ -216,6 +229,8 @@ const loadView = async () => {
     const detail = error && error.message ? ` (${error.message})` : "";
     setStatus("No se pudo consultar el API del directorio.");
     results.innerHTML = `<p class="empty-state">Fallo al pedir empresas${detail}. En local usa <code>python3 scripts/serve_site.py</code> para proxear el API.</p>`;
+  } finally {
+    setLoading(false);
   }
 };
 
@@ -250,15 +265,27 @@ const goToPage = (page) => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
-const openFromQuery = async () => {
-  const key = params.get("empresa");
+const openCompany = async (key, push = true) => {
   if (!key) return;
+  setLoading(true);
   try {
     const payload = await window.CavedrepaApi.company(key);
     renderDetail(payload.company);
+    if (push) {
+      const next = new URL(window.location.href);
+      next.searchParams.set("empresa", key);
+      window.history.pushState({}, "", next);
+    }
   } catch (_error) {
     setStatus("No se encontró esa ficha de empresa.");
+  } finally {
+    setLoading(false);
   }
+};
+
+const openFromQuery = async () => {
+  const key = new URLSearchParams(window.location.search).get("empresa");
+  if (key) await openCompany(key, false);
 };
 
 tabs.forEach((tab) => {
@@ -297,6 +324,19 @@ form?.addEventListener("submit", (event) => {
 });
 
 sortSelect?.addEventListener("change", applyQuery);
+
+results?.addEventListener("click", (event) => {
+  const link = event.target.closest("[data-empresa]");
+  if (!link) return;
+  event.preventDefault();
+  openCompany(link.dataset.empresa);
+});
+
+window.addEventListener("popstate", () => {
+  const key = new URLSearchParams(window.location.search).get("empresa");
+  if (key) openCompany(key, false);
+  else closeDrawer();
+});
 
 document.getElementById("drawer-close")?.addEventListener("click", closeDrawer);
 drawer?.addEventListener("click", (event) => {

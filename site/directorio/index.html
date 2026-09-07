@@ -88,17 +88,20 @@
           <button type="button" data-view="marcas">Por marcas</button>
         </div>
 
-        <div class="directory-toolbar">
+        <div class="directory-toolbar" id="directory-toolbar">
           <div id="directory-status" class="directory-status"></div>
-          <label class="sort-field">
-            <span>Ordenar</span>
-            <select id="directory-sort" name="orden">
-              <option value="nombre">Alfabético A-Z</option>
-              <option value="nombre-desc">Alfabético Z-A</option>
-              <option value="fecha-desc">Más recientes</option>
-              <option value="fecha">Más antiguas</option>
-            </select>
-          </label>
+          <div class="sort-wrap">
+            <span class="directory-spinner" aria-hidden="true"></span>
+            <label class="sort-field">
+              <span>Ordenar</span>
+              <select id="directory-sort" name="orden">
+                <option value="nombre">Alfabético A-Z</option>
+                <option value="nombre-desc">Alfabético Z-A</option>
+                <option value="fecha-desc">Más recientes</option>
+                <option value="fecha">Más antiguas</option>
+              </select>
+            </label>
+          </div>
         </div>
         <div id="directory-results" class="directory-results"></div>
       </div>

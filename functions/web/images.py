@@ -7,13 +7,16 @@ from io import BytesIO
 from PIL import Image, ImageOps
 
 SIZE = (640, 360)
-CANVAS = (17, 64, 52)
+CANVAS = (247, 251, 246)
+PAD_X = 64
+PAD_Y = 52
 
 
 def fit_listing_image(data: bytes) -> bytes:
     image = Image.open(BytesIO(data))
     image = image.convert("RGB")
-    contained = ImageOps.contain(image, SIZE, method=Image.Resampling.LANCZOS)
+    inner = (SIZE[0] - PAD_X * 2, SIZE[1] - PAD_Y * 2)
+    contained = ImageOps.contain(image, inner, method=Image.Resampling.LANCZOS)
     canvas = Image.new("RGB", SIZE, CANVAS)
     left = (SIZE[0] - contained.width) // 2
     top = (SIZE[1] - contained.height) // 2
