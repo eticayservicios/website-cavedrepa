@@ -76,7 +76,12 @@ jobs:
             --exclude "404.html" \
             --exclude "directorio/index.html" \
             --exclude "afiliate/index.html" \
-            --exclude "blog/index.html"
+            --exclude "blog/index.html" \
+            --exclude "institucion/index.html" \
+            --exclude "educacion-tecnica/index.html" \
+            --exclude "sitios-de-interes/index.html" \
+            --exclude "contacto/index.html" \
+            --exclude "admin/index.html"
 
           aws s3 cp site/index.html "s3://${{ steps.stack.outputs.bucket }}/index.html" \
             --cache-control "no-cache, no-store, must-revalidate" \
@@ -95,6 +100,26 @@ jobs:
             --content-type "text/html; charset=utf-8"
 
           aws s3 cp site/blog/index.html "s3://${{ steps.stack.outputs.bucket }}/blog/index.html" \
+            --cache-control "no-cache, no-store, must-revalidate" \
+            --content-type "text/html; charset=utf-8"
+
+          aws s3 cp site/institucion/index.html "s3://${{ steps.stack.outputs.bucket }}/institucion/index.html" \
+            --cache-control "no-cache, no-store, must-revalidate" \
+            --content-type "text/html; charset=utf-8"
+
+          aws s3 cp site/educacion-tecnica/index.html "s3://${{ steps.stack.outputs.bucket }}/educacion-tecnica/index.html" \
+            --cache-control "no-cache, no-store, must-revalidate" \
+            --content-type "text/html; charset=utf-8"
+
+          aws s3 cp site/sitios-de-interes/index.html "s3://${{ steps.stack.outputs.bucket }}/sitios-de-interes/index.html" \
+            --cache-control "no-cache, no-store, must-revalidate" \
+            --content-type "text/html; charset=utf-8"
+
+          aws s3 cp site/contacto/index.html "s3://${{ steps.stack.outputs.bucket }}/contacto/index.html" \
+            --cache-control "no-cache, no-store, must-revalidate" \
+            --content-type "text/html; charset=utf-8"
+
+          aws s3 cp site/admin/index.html "s3://${{ steps.stack.outputs.bucket }}/admin/index.html" \
             --cache-control "no-cache, no-store, must-revalidate" \
             --content-type "text/html; charset=utf-8"
 

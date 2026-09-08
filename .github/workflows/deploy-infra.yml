@@ -117,6 +117,20 @@ jobs:
             --query 'Stacks[0].Outputs' \
             --output table
 
+      - name: Update admin password
+        env:
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+        run: |
+          if [ -z "${ADMIN_PASSWORD}" ]; then
+            echo "Sin secret ADMIN_PASSWORD: se mantiene la clave generada en Secrets Manager (cavedrepa/admin)."
+            exit 0
+          fi
+          payload=$(python3 -c 'import json,os; print(json.dumps({"username":"cavedrepa","password":os.environ["ADMIN_PASSWORD"]}))')
+          aws secretsmanager put-secret-value \
+            --secret-id cavedrepa/admin \
+            --secret-string "${payload}"
+          echo "Contraseña del panel actualizada."
+
       - name: Import published directory
         run: |
           pip install boto3

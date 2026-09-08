@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Educación Técnica — CAVEDREPA</title>
   <meta name="description" content="Formación técnica, cursos, foros y talleres para las empresas afiliadas a CAVEDREPA.">
-  <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="/images/logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body>
+<body class="edu-page">
   <div class="topbar">
     <div class="wrap">
       <div class="topbar-contact">
@@ -24,7 +24,7 @@
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="/">
-        <img src="/images/logo.svg" alt="">
+        <img src="/images/logo.png?v=5" alt="CAVEDREPA">
         <span>
           <span class="brand-name">CAVEDREPA</span>
           <span class="brand-tag">Cámara Venezolana de Distribuidores de Maquinaria, Equipos y Repuestos</span>
@@ -32,13 +32,45 @@
       </a>
       <nav class="nav" id="site-nav">
         <a href="/">Inicio</a>
-        <a href="/institucion/">Institución</a>
-        <a href="/directorio/">Directorio</a>
+        <div class="has-sub">
+          <a href="/institucion/">Institución <span class="nav-caret" aria-hidden="true"></span></a>
+          <div class="nav-sub">
+            <a href="/institucion/#quienes-somos">Quiénes somos</a>
+            <a href="/institucion/#mision">Misión, Visión y Objetivo</a>
+            <a href="/institucion/#beneficios">Beneficios de la Cámara</a>
+            <a href="/institucion/#incentivos">Incentivos de la Cámara</a>
+            <a href="/files/plan-de-negocios-cavedrepa.pdf" target="_blank" rel="noopener">Plan de negocios CAVEDREPA</a>
+          </div>
+        </div>
+        <div class="has-sub">
+          <a href="/directorio/">Directorio <span class="nav-caret" aria-hidden="true"></span></a>
+          <div class="nav-sub">
+            <a href="/directorio/">Empresas afiliadas a la Cámara</a>
+            <a href="/directorio/?vista=ubicaciones">Empresas afiliadas por ubicación geográfica</a>
+            <a href="/directorio/?sector=construccion">Empresas afiliadas – Sector Construcción</a>
+            <a href="/directorio/?sector=agricola">Empresas afiliadas – Sector Agrícola</a>
+            <a href="/directorio/?sector=acuicola">Empresas afiliadas – Sector Pesca y Acuícola</a>
+            <a href="/directorio/?vista=marcas">Marcas representadas por Afiliados</a>
+            <a href="/afiliate/">Solicitud de afiliación a la Cámara</a>
+          </div>
+        </div>
         <a href="/blog/?categoria=estadisticas">Estadísticas</a>
-        <a class="active" href="/educacion-tecnica/">Educación Técnica</a>
-        <a href="/sitios-de-interes/">Sitios de Interés</a>
+        <a href="/educacion-tecnica/">Educación Técnica</a>
+        <div class="has-sub">
+          <a href="/sitios-de-interes/">Sitios de Interés <span class="nav-caret" aria-hidden="true"></span></a>
+          <div class="nav-sub">
+            <a href="/sitios-de-interes/#camaras">Cámaras y asociaciones</a>
+            <a href="/sitios-de-interes/#internacionales">Cámaras y asociaciones internacionales</a>
+            <a href="/sitios-de-interes/#agricolas">Sitios agrícolas</a>
+            <a href="/sitios-de-interes/#institutos">Institutos autónomos</a>
+            <a href="/sitios-de-interes/#empresas">Empresas internacionales</a>
+            <a href="/sitios-de-interes/#ministerios">Ministerios</a>
+            <a href="/sitios-de-interes/#organismos">Organismos públicos</a>
+          </div>
+        </div>
         <a href="/blog/">Blog</a>
-        <a href="/#contacto">Contacto</a>
+        <a href="/contacto/">Contacto</a>
+        <a class="nav-mobile-cta" href="/afiliate/">Afíliate →</a>
       </nav>
       <a class="btn btn-yellow header-cta" href="/afiliate/">Afíliate →</a>
       <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
@@ -48,26 +80,67 @@
   </header>
 
   <main>
-    <section class="section page-hero">
+    <section class="inst-hero">
       <div class="wrap">
         <p class="eyebrow">Formación</p>
         <h1>Educación Técnica</h1>
-        <p>La Cámara impulsa la capacitación integral de las empresas afiliadas: cursos, foros y talleres para el mejoramiento educativo del sector.</p>
+        <p class="inst-lead">La Cámara impulsa la capacitación de las empresas afiliadas: cursos, foros y talleres para fortalecer al sector.</p>
+        <div class="inst-jumps">
+          <a href="#oferta">Qué ofrecemos</a>
+          <a href="#aem">Cursos de AEM</a>
+          <a href="mailto:info@cavedrepa.org">Escribir a la Cámara</a>
+        </div>
       </div>
     </section>
 
-    <section class="section" style="padding-top:0">
-      <div class="wrap page-prose">
-        <h2>Qué ofrecemos</h2>
-        <p>Entre las herramientas de la Cámara está la formación continua de afiliados y de sus equipos de trabajo, para fortalecer la competitividad y el servicio posventa.</p>
-        <ul>
-          <li>Cursos, foros y talleres para el mejoramiento educativo integral.</li>
-          <li>Capacitación para empleados de las empresas afiliadas.</li>
-          <li>Información continua sobre leyes, decretos y resoluciones del sector.</li>
-        </ul>
-        <h2>¿Quieres participar?</h2>
-        <p>Si tu empresa está afiliada o desea sumarse a las actividades de formación, escríbenos y te indicamos las próximas convocatorias.</p>
-        <p><a class="btn btn-yellow" href="mailto:info@cavedrepa.org">Escribir a la Cámara</a></p>
+    <section class="section inst-body">
+      <div class="wrap page-with-sidebar">
+        <div class="inst-main">
+          <div class="inst-block" id="oferta">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Herramientas de la Cámara</p>
+                <h2>Qué ofrecemos</h2>
+                <p>Formación continua para afiliados y sus equipos, con foco en competitividad y servicio posventa.</p>
+              </div>
+            </div>
+            <div class="inst-intro-grid">
+              <article class="inst-card">
+                <p class="inst-kicker">Cursos</p>
+                <h2>Foros y talleres</h2>
+                <p>Actividades para el mejoramiento educativo integral de las empresas afiliadas y de quienes trabajan en ellas.</p>
+              </article>
+              <article class="inst-card">
+                <p class="inst-kicker">Equipos</p>
+                <h2>Capacitación en planta</h2>
+                <p>Espacios de formación para empleados de las empresas afiliadas, alineados con la operación diaria.</p>
+              </article>
+              <article class="inst-card">
+                <p class="inst-kicker">Normativa</p>
+                <h2>Leyes y resoluciones</h2>
+                <p>Información continua sobre leyes, decretos y resoluciones que afectan al sector.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="inst-block inst-incentives" id="aem">
+            <div>
+              <p class="eyebrow">Aliado internacional</p>
+              <h2>Formación con AEM</h2>
+              <p>La Association of Equipment Manufacturers ofrece cursos técnicos para el sector de maquinaria. Es un aliado de la Cámara y puedes revisar su oferta en línea.</p>
+              <div class="edu-actions">
+                <a class="btn btn-yellow" href="https://shop.aem.org/" target="_blank" rel="noopener">Ver cursos de AEM →</a>
+                <a class="btn btn-ghost-ink" href="mailto:info@cavedrepa.org">Escribir a la Cámara</a>
+              </div>
+            </div>
+            <ul>
+              <li>Cursos prácticos de operación, mantenimiento y seguridad.</li>
+              <li>Material actualizado para distribuidores de equipos y repuestos.</li>
+              <li>Una puerta de entrada a la red internacional de AEM.</li>
+            </ul>
+          </div>
+        </div>
+        <aside class="site-sidebar" data-site-sidebar></aside>
       </div>
     </section>
   </main>
@@ -81,5 +154,6 @@
 
   <script src="/js/config.js"></script>
   <script src="/js/main.js"></script>
+  <script src="/js/sidebar.js"></script>
 </body>
 </html>

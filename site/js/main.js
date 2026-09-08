@@ -3,37 +3,117 @@ const nav = document.getElementById("site-nav");
 const toggle = document.getElementById("menu-toggle");
 const search = document.getElementById("directory-search");
 const isDirectoryPage = document.body.classList.contains("directory-page");
+const isHome = location.pathname === "/" || location.pathname === "/index.html";
+const isNarrow = () => window.matchMedia("(max-width: 1400px)").matches;
+
+const closeMenu = () => {
+  if (!nav || !toggle) return;
+  nav.classList.remove("is-open");
+  toggle.setAttribute("aria-expanded", "false");
+  document.body.classList.remove("menu-open");
+  nav.querySelectorAll(".has-sub.is-open").forEach((item) => item.classList.remove("is-open"));
+};
 
 if (toggle && nav) {
   toggle.addEventListener("click", () => {
     const open = nav.classList.toggle("is-open");
     toggle.setAttribute("aria-expanded", String(open));
+    document.body.classList.toggle("menu-open", open);
+    if (!open) {
+      nav.querySelectorAll(".has-sub.is-open").forEach((item) => item.classList.remove("is-open"));
+    }
+  });
+
+  nav.querySelectorAll(".has-sub > a").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      if (!isNarrow()) return;
+      event.preventDefault();
+      const parent = link.parentElement;
+      const wasOpen = parent.classList.contains("is-open");
+      nav.querySelectorAll(".has-sub.is-open").forEach((item) => {
+        if (item !== parent) item.classList.remove("is-open");
+      });
+      parent.classList.toggle("is-open", !wasOpen);
+    });
   });
 
   nav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-      nav.classList.remove("is-open");
-      toggle.setAttribute("aria-expanded", "false");
+      if (isNarrow() && link.parentElement?.classList.contains("has-sub") && link.parentElement.firstElementChild === link) {
+        return;
+      }
+      closeMenu();
     });
   });
 }
 
+window.addEventListener("resize", () => {
+  if (!isNarrow()) closeMenu();
+});
+
+const topLinks = document.querySelectorAll(".nav > a, .nav > .has-sub > a");
+
+const pathOf = (href) => {
+  try {
+    return new URL(href, location.origin);
+  } catch (_error) {
+    return null;
+  }
+};
+
+const markCurrentNav = () => {
+  const here = location.pathname.replace(/\/+$/, "") || "/";
+  const stats = new URLSearchParams(location.search).get("categoria") === "estadisticas";
+  topLinks.forEach((link) => {
+    const href = link.getAttribute("href") || "";
+    if (href.startsWith("http")) {
+      link.classList.remove("active");
+      return;
+    }
+    let match = false;
+    if (href === "#inicio" || href === "/") {
+      match = isHome;
+    } else {
+      const url = pathOf(href);
+      if (!url) return;
+      const path = url.pathname.replace(/\/+$/, "") || "/";
+      if (path === "/blog" && url.searchParams.get("categoria") === "estadisticas") {
+        match = here === "/blog" && stats;
+      } else if (path === "/blog") {
+        match = here === "/blog" && !stats;
+      } else if (path === "/directorio") {
+        match = here === "/directorio" || here === "/afiliate";
+      } else {
+        match = here === path || here.startsWith(`${path}/`);
+      }
+    }
+    link.classList.toggle("active", match);
+  });
+};
+
 const sections = document.querySelectorAll("main section[id]");
-const navLinks = document.querySelectorAll(".nav a");
 
 const markActive = () => {
+  if (!isHome) {
+    markCurrentNav();
+    return;
+  }
   let current = "inicio";
   sections.forEach((section) => {
     if (window.scrollY >= section.offsetTop - 140) {
       current = section.id;
     }
   });
-  navLinks.forEach((link) => {
-    link.classList.toggle("active", link.getAttribute("href") === `#${current}`);
+  const hashId = current === "contacto" ? "contacto" : "inicio";
+  topLinks.forEach((link) => {
+    const href = link.getAttribute("href") || "";
+    link.classList.toggle("active", href === `#${hashId}`);
   });
 };
 
+markCurrentNav();
 window.addEventListener("scroll", markActive, { passive: true });
+window.addEventListener("hashchange", markCurrentNav);
 
 const fillSelect = (select, items, emptyLabel) => {
   if (!select) return;
@@ -94,13 +174,6 @@ if (homeNews && window.CavedrepaApi) {
     if (!year || !month || !day) return "";
     return `${Number(day)} ${months[Number(month) - 1] || ""} ${year}`;
   };
-  const monthLabel = (value) => {
-    const stamp = String(value || "").slice(0, 10);
-    const [year, month] = stamp.split("-");
-    if (!year || !month) return "";
-    const name = months[Number(month) - 1] || "";
-    return `${name.charAt(0).toUpperCase()}${name.slice(1)} ${year}`;
-  };
   const softenCaps = (value) => {
     const text = String(value || "").replace(/\s*\[(?:&hellip;|…)\]\s*$/i, "…").trim();
     const letters = text.replace(/[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/g, "");
@@ -120,12 +193,7 @@ if (homeNews && window.CavedrepaApi) {
       const posts = payload.posts || [];
       homeNews.innerHTML = posts
         .map((post) => {
-          const editorial = /editorial/i.test(post.title || "");
-          const media = editorial
-            ? `<div class="news-kicker"><span>Editorial</span><strong>${monthLabel(post.date)}</strong></div>`
-            : post.image_url
-              ? `<img src="${post.image_url}" alt="" width="960" height="540">`
-              : `<div class="news-fallback"></div>`;
+          const media = `<img src="/images/blog/editorial.jpg" alt="Editorial CAVEDREPA">`;
           return `
             <article class="news-card">
               <a class="company-card-link" href="/blog/?entrada=${encodeURIComponent(post.slug || post.id)}">
@@ -145,4 +213,22 @@ if (homeNews && window.CavedrepaApi) {
       homeNews.innerHTML = `<p class="empty-state">Las entradas aparecerán aquí en breve.</p>`;
     });
 }
+
+const backToTop = document.createElement("button");
+backToTop.type = "button";
+backToTop.className = "back-to-top";
+backToTop.setAttribute("aria-label", "Volver arriba");
+backToTop.innerHTML = "<span aria-hidden=\"true\">↑</span>";
+document.body.appendChild(backToTop);
+
+const syncBackToTop = () => {
+  backToTop.classList.toggle("is-visible", window.scrollY > 360);
+};
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+syncBackToTop();
+window.addEventListener("scroll", syncBackToTop, { passive: true });
 })();

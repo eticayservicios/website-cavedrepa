@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Institución — CAVEDREPA</title>
   <meta name="description" content="Qué es CAVEDREPA, quiénes la integran, misión, visión y objetivos de la Cámara.">
-  <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="/images/logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body>
+<body class="inst-page">
   <div class="topbar">
     <div class="wrap">
       <div class="topbar-contact">
@@ -24,7 +24,7 @@
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="/">
-        <img src="/images/logo.svg" alt="">
+        <img src="/images/logo.png?v=5" alt="CAVEDREPA">
         <span>
           <span class="brand-name">CAVEDREPA</span>
           <span class="brand-tag">Cámara Venezolana de Distribuidores de Maquinaria, Equipos y Repuestos</span>
@@ -32,13 +32,45 @@
       </a>
       <nav class="nav" id="site-nav">
         <a href="/">Inicio</a>
-        <a class="active" href="/institucion/">Institución</a>
-        <a href="/directorio/">Directorio</a>
+        <div class="has-sub">
+          <a href="/institucion/">Institución <span class="nav-caret" aria-hidden="true"></span></a>
+          <div class="nav-sub">
+            <a href="/institucion/#quienes-somos">Quiénes somos</a>
+            <a href="/institucion/#mision">Misión, Visión y Objetivo</a>
+            <a href="/institucion/#beneficios">Beneficios de la Cámara</a>
+            <a href="/institucion/#incentivos">Incentivos de la Cámara</a>
+            <a href="/files/plan-de-negocios-cavedrepa.pdf" target="_blank" rel="noopener">Plan de negocios CAVEDREPA</a>
+          </div>
+        </div>
+        <div class="has-sub">
+          <a href="/directorio/">Directorio <span class="nav-caret" aria-hidden="true"></span></a>
+          <div class="nav-sub">
+            <a href="/directorio/">Empresas afiliadas a la Cámara</a>
+            <a href="/directorio/?vista=ubicaciones">Empresas afiliadas por ubicación geográfica</a>
+            <a href="/directorio/?sector=construccion">Empresas afiliadas – Sector Construcción</a>
+            <a href="/directorio/?sector=agricola">Empresas afiliadas – Sector Agrícola</a>
+            <a href="/directorio/?sector=acuicola">Empresas afiliadas – Sector Pesca y Acuícola</a>
+            <a href="/directorio/?vista=marcas">Marcas representadas por Afiliados</a>
+            <a href="/afiliate/">Solicitud de afiliación a la Cámara</a>
+          </div>
+        </div>
         <a href="/blog/?categoria=estadisticas">Estadísticas</a>
         <a href="/educacion-tecnica/">Educación Técnica</a>
-        <a href="/sitios-de-interes/">Sitios de Interés</a>
+        <div class="has-sub">
+          <a href="/sitios-de-interes/">Sitios de Interés <span class="nav-caret" aria-hidden="true"></span></a>
+          <div class="nav-sub">
+            <a href="/sitios-de-interes/#camaras">Cámaras y asociaciones</a>
+            <a href="/sitios-de-interes/#internacionales">Cámaras y asociaciones internacionales</a>
+            <a href="/sitios-de-interes/#agricolas">Sitios agrícolas</a>
+            <a href="/sitios-de-interes/#institutos">Institutos autónomos</a>
+            <a href="/sitios-de-interes/#empresas">Empresas internacionales</a>
+            <a href="/sitios-de-interes/#ministerios">Ministerios</a>
+            <a href="/sitios-de-interes/#organismos">Organismos públicos</a>
+          </div>
+        </div>
         <a href="/blog/">Blog</a>
-        <a href="/#contacto">Contacto</a>
+        <a href="/contacto/">Contacto</a>
+        <a class="nav-mobile-cta" href="/afiliate/">Afíliate →</a>
       </nav>
       <a class="btn btn-yellow header-cta" href="/afiliate/">Afíliate →</a>
       <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
@@ -48,57 +80,195 @@
   </header>
 
   <main>
-    <section class="section page-hero">
+    <section class="inst-hero" id="quienes-somos">
       <div class="wrap">
         <p class="eyebrow">La Cámara</p>
-        <h1>Institución</h1>
-        <p>CAVEDREPA es la Cámara Venezolana de Distribuidores de Repuestos, Equipos Pesados y Agrícolas. Fue fundada el 1 de octubre de 1986. Está afiliada a Consecomercio y Fedecámaras, y tiene un representante en el Consejo Consultivo de Consecomercio.</p>
+        <h1>Quiénes somos</h1>
+        <p class="inst-lead">CAVEDREPA es la Cámara Venezolana de Distribuidores de Repuestos, Equipos Pesados y Agrícolas. Representamos a las empresas que mueven el campo, la obra y la industria en todo el país.</p>
+        <div class="inst-facts">
+          <div>
+            <strong>1986</strong>
+            <span>Fundada el 1 de octubre</span>
+          </div>
+          <div>
+            <strong>Nacional</strong>
+            <span>Afiliados en todo el territorio</span>
+          </div>
+          <div>
+            <strong>Gremio</strong>
+            <span>Consecomercio y Fedecámaras</span>
+          </div>
+        </div>
+        <div class="inst-jumps">
+          <a href="#mision">Misión y visión</a>
+          <a href="#oferta">Qué comercializan</a>
+          <a href="#beneficios">Beneficios</a>
+          <a href="#incentivos">Incentivos</a>
+          <a href="/files/plan-de-negocios-cavedrepa.pdf" target="_blank" rel="noopener">Plan de negocios</a>
+        </div>
       </div>
     </section>
 
-    <section class="section" style="padding-top:0">
-      <div class="wrap page-faq">
-        <article>
-          <h2>¿Quiénes integran CAVEDREPA?</h2>
-          <p>Importadores y distribuidores de equipos, maquinaria pesada, agrícola y repuestos para la construcción, minería, pesca, industria petrolera, forestal y sectores afines.</p>
-        </article>
-        <article>
-          <h2>¿Dónde se encuentran nuestros afiliados?</h2>
-          <p>Nuestros afiliados se encuentran distribuidos en todo el territorio del país.</p>
-        </article>
-        <article>
-          <h2>¿Qué comercializan los afiliados?</h2>
-          <ul>
-            <li><strong>Maquinarias y equipos pesados:</strong> grúas, tractores de oruga, cargadores frontales, motoniveladoras, excavadoras, retroexcavadoras, montacargas, compactadoras, compresores, máquinas para soldar y equipos afines.</li>
-            <li><strong>Maquinarias y equipos agrícolas:</strong> tractores agrícolas, cosechadoras, trilladoras, sembradoras neumáticas, secadoras de grano, rotocultores, empacadoras de forraje, abonadoras, fumigadoras y trituradoras.</li>
-            <li><strong>Motores diésel:</strong> industriales, marinos para vehículos pesados, plantas generadoras y transmisiones automáticas.</li>
-            <li><strong>Eléctrica:</strong> interruptores, contactores, relés térmicos, tableros eléctricos, canales portacables, materiales a prueba de explosiones y arrancadores.</li>
-            <li><strong>Petrolero:</strong> equipos a prueba de explosión, bombas de lodo y centrífugas, válvulas Kelly, malacates y afines.</li>
-            <li><strong>Repuestos y servicios:</strong> para todos los bienes anteriores, incluido el servicio posventa.</li>
-          </ul>
-        </article>
-        <article>
-          <h2>¿Cuáles son los objetivos de la Cámara?</h2>
-          <p>Agregar valor a los negocios de los afiliados y prestar un buen servicio a los clientes.</p>
-        </article>
-        <article>
-          <h2>Misión</h2>
-          <p>Aplicar el concepto de la excelencia en todas las actividades que realiza la Cámara, participando de forma proactiva con los agremiados para agregar valor a los negocios de todos los afiliados y cumplir con la responsabilidad social del sector.</p>
-        </article>
-        <article>
-          <h2>Visión</h2>
-          <p>Ser la Cámara líder a nivel nacional a través de un plan de acción ajustado en el tiempo, con un método de análisis específico y utilizando las herramientas adecuadas.</p>
-        </article>
-        <article>
-          <h2>Plan de acción</h2>
-          <ul>
-            <li>Servicio integral al afiliado y cooperación entre las empresas.</li>
-            <li>Énfasis en la competitividad y nuevas modalidades de financiamiento, nacional e internacional.</li>
-            <li>Acuerdos de infraestructura social para empleados y trabajadores de las empresas afiliadas.</li>
-            <li>Mantener una base de datos con estadísticas confiables del sector.</li>
-            <li>Participación activa en Consecomercio y Fedecámaras.</li>
-          </ul>
-        </article>
+    <section class="section inst-body">
+      <div class="wrap page-with-sidebar">
+        <div class="inst-main">
+          <div class="inst-intro-grid">
+            <article class="inst-card">
+              <p class="inst-kicker">Integrantes</p>
+              <h2>¿Quiénes forman la Cámara?</h2>
+              <p>Importadores y distribuidores de equipos, maquinaria pesada, agrícola y repuestos para la construcción, minería, pesca, industria petrolera, forestal y sectores afines.</p>
+            </article>
+            <article class="inst-card">
+              <p class="inst-kicker">Presencia</p>
+              <h2>¿Dónde están los afiliados?</h2>
+              <p>Nuestros afiliados se encuentran distribuidos en todo el territorio nacional, con cobertura de costa a costa.</p>
+            </article>
+            <article class="inst-card">
+              <p class="inst-kicker">Propósito</p>
+              <h2>¿Cuál es el objetivo?</h2>
+              <p>Agregar valor a los negocios de los afiliados y prestar un buen servicio a sus clientes.</p>
+            </article>
+          </div>
+
+          <div class="inst-block" id="oferta">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">La oferta del gremio</p>
+                <h2>Qué comercializan los afiliados</h2>
+              </div>
+              <a class="link-more" href="/directorio/">Ver el directorio →</a>
+            </div>
+            <div class="inst-offer-grid">
+              <article class="inst-offer">
+                <img src="/images/sector-construccion.jpg" alt="">
+                <div>
+                  <h3>Maquinaria pesada</h3>
+                  <p>Grúas, tractores de oruga, cargadores, motoniveladoras, excavadoras, retroexcavadoras, montacargas, compactadoras, compresores y equipos de soldar.</p>
+                </div>
+              </article>
+              <article class="inst-offer">
+                <img src="/images/sector-agricola.jpg" alt="">
+                <div>
+                  <h3>Maquinaria agrícola</h3>
+                  <p>Tractores, cosechadoras, trilladoras, sembradoras, secadoras de grano, rotocultores, empacadoras, abonadoras, fumigadoras y trituradoras.</p>
+                </div>
+              </article>
+              <article class="inst-offer">
+                <img src="/images/sector-pesca.jpg" alt="">
+                <div>
+                  <h3>Pesca, motores y energía</h3>
+                  <p>Motores diésel industriales y marinos, plantas generadoras, transmisiones y equipos para la cadena pesquera y acuícola.</p>
+                </div>
+              </article>
+              <article class="inst-offer">
+                <img src="/images/sector-industrial.jpg" alt="">
+                <div>
+                  <h3>Industria, eléctrica y petróleo</h3>
+                  <p>Tableros, contactores, materiales a prueba de explosión, bombas de lodo, válvulas y el servicio posventa de todos estos bienes.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="inst-block" id="mision">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Rumbo de la Cámara</p>
+                <h2>Misión, visión y objetivo</h2>
+              </div>
+            </div>
+            <div class="inst-mvo">
+              <article>
+                <span>01</span>
+                <h3>Misión</h3>
+                <p>Aplicar la excelencia en todas las actividades de la Cámara, participar con los agremiados y agregar valor a los negocios de los afiliados, con responsabilidad social del sector.</p>
+              </article>
+              <article>
+                <span>02</span>
+                <h3>Visión</h3>
+                <p>Ser la Cámara líder a nivel nacional, con un plan de acción ajustado en el tiempo, un método de análisis claro y las herramientas adecuadas.</p>
+              </article>
+              <article>
+                <span>03</span>
+                <h3>Objetivo</h3>
+                <p>Agregar valor a los negocios de las empresas afiliadas y prestar un buen servicio a los clientes de todo el gremio.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="inst-block">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Cómo lo hacemos</p>
+                <h2>Plan de acción</h2>
+              </div>
+              <a class="link-more" href="/files/plan-de-negocios-cavedrepa.pdf" target="_blank" rel="noopener">Ver el plan de negocios →</a>
+            </div>
+            <ol class="inst-steps">
+              <li>
+                <strong>Servicio al afiliado</strong>
+                <span>Atención integral y cooperación entre las empresas de la Cámara.</span>
+              </li>
+              <li>
+                <strong>Competitividad</strong>
+                <span>Nuevas formas de financiamiento, nacional e internacional.</span>
+              </li>
+              <li>
+                <strong>Bienestar</strong>
+                <span>Acuerdos de infraestructura social para los equipos de las empresas afiliadas.</span>
+              </li>
+              <li>
+                <strong>Información</strong>
+                <span>Una base de datos con estadísticas confiables del sector.</span>
+              </li>
+              <li>
+                <strong>Representación</strong>
+                <span>Participación activa en Consecomercio y Fedecámaras.</span>
+              </li>
+            </ol>
+          </div>
+
+          <div class="inst-block" id="beneficios">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Para tu empresa</p>
+                <h2>Beneficios de la Cámara</h2>
+                <p>Pertenecer a CAVEDREPA es sumarse a una cámara activa en los negocios de los afiliados.</p>
+              </div>
+              <a class="btn btn-yellow" href="/afiliate/">Afíliate →</a>
+            </div>
+            <div class="inst-list-grid">
+              <article>Subastas de maquinarias, equipos y repuestos a través de internet.</article>
+              <article>Convenios comerciales con cámaras homólogas en el exterior.</article>
+              <article>Participación en asociaciones internacionales y ruedas de negocios.</article>
+              <article>Trabajo conjunto con cámaras sectoriales y organismos públicos y privados.</article>
+              <article>Base de datos del sector y capacitación para los equipos de las empresas.</article>
+              <article>Asesoría en beneficios fiscales, exoneraciones y exención del IVA agrícola.</article>
+              <article>Información continua sobre leyes, decretos y resoluciones del sector.</article>
+              <article>Presencia en la web de CAVEDREPA, foros, ferias y eventos del gremio.</article>
+              <article>Asesoría aduanal, de contrataciones públicas y de valoraciones según la OMC.</article>
+              <article>Acuerdos de financiamiento y de infraestructura social para los trabajadores.</article>
+            </div>
+          </div>
+
+          <div class="inst-block inst-incentives" id="incentivos">
+            <div>
+              <p class="eyebrow">Marco legal</p>
+              <h2>Incentivos de la Cámara</h2>
+              <p>Orientamos a importadores y distribuidores de maquinaria, equipos y repuestos en agrícola, construcción, forestal, minería, pesca y acuicultura.</p>
+              <a class="btn btn-ghost-ink" href="mailto:info@cavedrepa.org">Escribir a la Cámara</a>
+            </div>
+            <ul>
+              <li>Trato igualitario a la inversión nacional y extranjera, según la Constitución.</li>
+              <li>Exenciones y recuperación de créditos fiscales del IVA, cuando la ley lo prevé.</li>
+              <li>Exoneraciones de ISLR para actividades agrícolas, forestales, pecuarias y acuícolas.</li>
+              <li>Destino de beneficios fiscales a investigación, productividad o bienes de capital.</li>
+              <li>Régimen de importaciones productivas y tratamientos arancelarios especiales.</li>
+              <li>Exención de IVA en equipos para proyectos mineros, según el valor declarado en aduana.</li>
+            </ul>
+          </div>
+        </div>
+        <aside class="site-sidebar" data-site-sidebar></aside>
       </div>
     </section>
   </main>
@@ -112,5 +282,6 @@
 
   <script src="/js/config.js"></script>
   <script src="/js/main.js"></script>
+  <script src="/js/sidebar.js"></script>
 </body>
 </html>

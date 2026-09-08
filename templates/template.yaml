@@ -62,6 +62,11 @@ Parameters:
       - PriceClass_All
     Description: CloudFront price class.
 
+  AdminUser:
+    Type: String
+    Default: cavedrepa
+    Description: Usuario del panel /admin/.
+
 Conditions:
   HasDomainName: !Not [!Equals [!Ref DomainName, '']]
   HasWwwDomain: !And
@@ -383,6 +388,22 @@ Resources:
         - Key: Environment
           Value: !Ref Environment
 
+  AdminSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: !Sub '${SiteName}/admin'
+      Description: Usuario y contraseña del panel interno CAVEDREPA.
+      GenerateSecretString:
+        SecretStringTemplate: !Sub '{"username":"${AdminUser}"}'
+        GenerateStringKey: password
+        PasswordLength: 20
+        ExcludeCharacters: '"@/\\'
+      Tags:
+        - Key: Project
+          Value: !Ref ProjectName
+        - Key: Site
+          Value: !Ref SiteName
+
   WebApi:
     Type: AWS::Serverless::Api
     Properties:
@@ -418,6 +439,7 @@ Resources:
         Variables:
           TABLE_NAME: !Ref WebCoreTable
           BUCKET_NAME: !Ref SiteBucket
+          ADMIN_SECRET_ARN: !Ref AdminSecret
       Policies:
         - DynamoDBCrudPolicy:
             TableName: !Ref WebCoreTable
@@ -426,6 +448,10 @@ Resources:
               Action:
                 - s3:PutObject
               Resource: !Sub '${SiteBucket.Arn}/images/afiliados/*'
+            - Effect: Allow
+              Action:
+                - secretsmanager:GetSecretValue
+              Resource: !Ref AdminSecret
       Events:
         Root:
           Type: Api
@@ -483,3 +509,7 @@ Outputs:
   WebCoreTableName:
     Description: DynamoDB table name.
     Value: !Ref WebCoreTable
+
+  AdminSecretName:
+    Description: Secrets Manager secret with admin username and password.
+    Value: !Sub '${SiteName}/admin'

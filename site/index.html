@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CAVEDREPA — Cámara Venezolana de Distribuidores de Maquinaria</title>
   <meta name="description" content="Representamos, conectamos y fortalecemos a distribuidores de maquinaria, equipos y repuestos en Venezuela.">
-  <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="/images/logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -44,21 +44,53 @@
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="#inicio">
-        <img src="/images/logo.svg" alt="">
+        <img src="/images/logo.png?v=5" alt="CAVEDREPA">
         <span>
           <span class="brand-name">CAVEDREPA</span>
           <span class="brand-tag">Cámara Venezolana de Distribuidores de Maquinaria, Equipos y Repuestos</span>
         </span>
       </a>
       <nav class="nav" id="site-nav">
-        <a class="active" href="#inicio">Inicio</a>
-        <a href="/institucion/">Institución</a>
-        <a href="/directorio/">Directorio</a>
+        <a href="#inicio">Inicio</a>
+        <div class="has-sub">
+          <a href="/institucion/">Institución <span class="nav-caret" aria-hidden="true"></span></a>
+          <div class="nav-sub">
+            <a href="/institucion/#quienes-somos">Quiénes somos</a>
+            <a href="/institucion/#mision">Misión, Visión y Objetivo</a>
+            <a href="/institucion/#beneficios">Beneficios de la Cámara</a>
+            <a href="/institucion/#incentivos">Incentivos de la Cámara</a>
+            <a href="/files/plan-de-negocios-cavedrepa.pdf" target="_blank" rel="noopener">Plan de negocios CAVEDREPA</a>
+          </div>
+        </div>
+        <div class="has-sub">
+          <a href="/directorio/">Directorio <span class="nav-caret" aria-hidden="true"></span></a>
+          <div class="nav-sub">
+            <a href="/directorio/">Empresas afiliadas a la Cámara</a>
+            <a href="/directorio/?vista=ubicaciones">Empresas afiliadas por ubicación geográfica</a>
+            <a href="/directorio/?sector=construccion">Empresas afiliadas – Sector Construcción</a>
+            <a href="/directorio/?sector=agricola">Empresas afiliadas – Sector Agrícola</a>
+            <a href="/directorio/?sector=acuicola">Empresas afiliadas – Sector Pesca y Acuícola</a>
+            <a href="/directorio/?vista=marcas">Marcas representadas por Afiliados</a>
+            <a href="/afiliate/">Solicitud de afiliación a la Cámara</a>
+          </div>
+        </div>
         <a href="/blog/?categoria=estadisticas">Estadísticas</a>
         <a href="/educacion-tecnica/">Educación Técnica</a>
-        <a href="/sitios-de-interes/">Sitios de Interés</a>
+        <div class="has-sub">
+          <a href="/sitios-de-interes/">Sitios de Interés <span class="nav-caret" aria-hidden="true"></span></a>
+          <div class="nav-sub">
+            <a href="/sitios-de-interes/#camaras">Cámaras y asociaciones</a>
+            <a href="/sitios-de-interes/#internacionales">Cámaras y asociaciones internacionales</a>
+            <a href="/sitios-de-interes/#agricolas">Sitios agrícolas</a>
+            <a href="/sitios-de-interes/#institutos">Institutos autónomos</a>
+            <a href="/sitios-de-interes/#empresas">Empresas internacionales</a>
+            <a href="/sitios-de-interes/#ministerios">Ministerios</a>
+            <a href="/sitios-de-interes/#organismos">Organismos públicos</a>
+          </div>
+        </div>
         <a href="/blog/">Blog</a>
-        <a href="#contacto">Contacto</a>
+        <a href="/contacto/">Contacto</a>
+        <a class="nav-mobile-cta" href="/afiliate/">Afíliate →</a>
       </nav>
       <a class="btn btn-yellow header-cta" href="/afiliate/">Afíliate →</a>
       <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
@@ -216,6 +248,22 @@
           <a class="link-more" href="/blog/">Ver todas las entradas →</a>
         </div>
         <div class="news-grid" id="home-news"></div>
+      </div>
+    </section>
+
+    <section class="ads-band" aria-label="Publicidad">
+      <div class="wrap">
+        <div class="ads-grid">
+          <a href="https://www.mastersaws.com/" target="_blank" rel="noopener">
+            <img src="/images/ads/masters-aws.png" alt="Masters AWS: correo, dominio, hosting e inteligencia artificial">
+          </a>
+          <a href="https://www.tecprem.com/" target="_blank" rel="noopener">
+            <img src="/images/ads/tecprem.png" alt="Tecprem: cursos para emprendedores">
+          </a>
+          <a href="https://soyvipmarketing.com/" target="_blank" rel="noopener">
+            <img src="/images/ads/soy-vip.png" alt="Soy VIP Marketing: marketing digital">
+          </a>
+        </div>
       </div>
     </section>
 

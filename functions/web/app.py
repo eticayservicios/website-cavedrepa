@@ -10,8 +10,20 @@ from urllib.parse import unquote
 
 import boto3
 
+from admin import (
+    approve_application,
+    create_user,
+    delete_user,
+    get_application,
+    list_applications,
+    list_users,
+    login as admin_login,
+    reject_application,
+    require_admin,
+)
 from applications import submit_application
 from blog import get_post, search_blog
+from contact import list_messages, submit_message
 from directory import (
     SITE_ORIGIN,
     get_catalogs,
@@ -63,7 +75,7 @@ def cors_headers(event: dict) -> dict[str, str]:
     return {
         "Content-Type": "application/json; charset=utf-8",
         "Access-Control-Allow-Origin": origin_for(event),
-        "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+        "Access-Control-Allow-Methods": "GET,POST,PUT,PATCH,DELETE,OPTIONS",
         "Access-Control-Allow-Headers": "Content-Type,Authorization",
         "Vary": "Origin",
     }
@@ -151,6 +163,15 @@ def lambda_handler(event, context):
             status = 200 if result.get("ok") else 400
             return respond(event, status, result)
 
+        if method == "POST" and path == "/contact":
+            try:
+                payload = request_body(event)
+            except ValueError:
+                return respond(event, 400, {"ok": False, "error": "JSON inválido"})
+            result = submit_message(table(), payload)
+            status = 200 if result.get("ok") else 400
+            return respond(event, status, result)
+
         if method == "GET" and path == "/blog":
             return respond(event, 200, search_blog(table(), query_params(event)))
 
@@ -160,6 +181,65 @@ def lambda_handler(event, context):
             if not post:
                 return respond(event, 404, {"ok": False, "error": "Entrada no encontrada"})
             return respond(event, 200, {"ok": True, "post": post})
+
+        if method == "POST" and path == "/admin/login":
+            try:
+                payload = request_body(event)
+            except ValueError:
+                return respond(event, 400, {"ok": False, "error": "JSON inválido"})
+            result = admin_login(table(), payload)
+            return respond(event, 200 if result.get("ok") else 401, result)
+
+        if path.startswith("/admin/"):
+            session = require_admin(event)
+            if not session.get("ok"):
+                return respond(event, 401, session)
+
+            if method == "GET" and path == "/admin/applications":
+                return respond(event, 200, list_applications(table()))
+
+            if method == "GET" and path == "/admin/messages":
+                return respond(event, 200, list_messages(table()))
+
+            if method == "GET" and path.startswith("/admin/applications/"):
+                rest = path.split("/admin/applications/", 1)[1]
+                if "/" not in rest:
+                    company = get_application(table(), rest)
+                    if not company:
+                        return respond(event, 404, {"ok": False, "error": "Solicitud no encontrada"})
+                    return respond(event, 200, {"ok": True, "company": company})
+
+            if method == "POST" and path.startswith("/admin/applications/") and path.endswith("/approve"):
+                key = path.split("/admin/applications/", 1)[1].rsplit("/approve", 1)[0]
+                result = approve_application(table(), key, session.get("user") or "")
+                return respond(event, 200 if result.get("ok") else 404, result)
+
+            if method == "POST" and path.startswith("/admin/applications/") and path.endswith("/reject"):
+                key = path.split("/admin/applications/", 1)[1].rsplit("/reject", 1)[0]
+                try:
+                    payload = request_body(event)
+                except ValueError:
+                    payload = {}
+                result = reject_application(
+                    table(), key, str(payload.get("reason") or ""), session.get("user") or ""
+                )
+                return respond(event, 200 if result.get("ok") else 404, result)
+
+            if method == "GET" and path == "/admin/users":
+                return respond(event, 200, list_users(table()))
+
+            if method == "POST" and path == "/admin/users":
+                try:
+                    payload = request_body(event)
+                except ValueError:
+                    return respond(event, 400, {"ok": False, "error": "JSON inválido"})
+                result = create_user(table(), payload)
+                return respond(event, 200 if result.get("ok") else 400, result)
+
+            if method == "POST" and path.startswith("/admin/users/") and path.endswith("/delete"):
+                username = path.split("/admin/users/", 1)[1].rsplit("/delete", 1)[0]
+                result = delete_user(table(), username, session.get("user") or "")
+                return respond(event, 200 if result.get("ok") else 400, result)
     except Exception as exc:
         return respond(event, 500, {"ok": False, "error": "Error interno", "detail": str(exc)})
 

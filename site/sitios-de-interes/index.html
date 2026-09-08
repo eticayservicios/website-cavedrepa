@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sitios de Interés — CAVEDREPA</title>
   <meta name="description" content="Enlaces a cámaras, ministerios, organismos públicos e instituciones relacionadas con el sector.">
-  <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="/images/logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body>
+<body class="sitios-page">
   <div class="topbar">
     <div class="wrap">
       <div class="topbar-contact">
@@ -24,7 +24,7 @@
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="/">
-        <img src="/images/logo.svg" alt="">
+        <img src="/images/logo.png?v=5" alt="CAVEDREPA">
         <span>
           <span class="brand-name">CAVEDREPA</span>
           <span class="brand-tag">Cámara Venezolana de Distribuidores de Maquinaria, Equipos y Repuestos</span>
@@ -32,13 +32,45 @@
       </a>
       <nav class="nav" id="site-nav">
         <a href="/">Inicio</a>
-        <a href="/institucion/">Institución</a>
-        <a href="/directorio/">Directorio</a>
+        <div class="has-sub">
+          <a href="/institucion/">Institución <span class="nav-caret" aria-hidden="true"></span></a>
+          <div class="nav-sub">
+            <a href="/institucion/#quienes-somos">Quiénes somos</a>
+            <a href="/institucion/#mision">Misión, Visión y Objetivo</a>
+            <a href="/institucion/#beneficios">Beneficios de la Cámara</a>
+            <a href="/institucion/#incentivos">Incentivos de la Cámara</a>
+            <a href="/files/plan-de-negocios-cavedrepa.pdf" target="_blank" rel="noopener">Plan de negocios CAVEDREPA</a>
+          </div>
+        </div>
+        <div class="has-sub">
+          <a href="/directorio/">Directorio <span class="nav-caret" aria-hidden="true"></span></a>
+          <div class="nav-sub">
+            <a href="/directorio/">Empresas afiliadas a la Cámara</a>
+            <a href="/directorio/?vista=ubicaciones">Empresas afiliadas por ubicación geográfica</a>
+            <a href="/directorio/?sector=construccion">Empresas afiliadas – Sector Construcción</a>
+            <a href="/directorio/?sector=agricola">Empresas afiliadas – Sector Agrícola</a>
+            <a href="/directorio/?sector=acuicola">Empresas afiliadas – Sector Pesca y Acuícola</a>
+            <a href="/directorio/?vista=marcas">Marcas representadas por Afiliados</a>
+            <a href="/afiliate/">Solicitud de afiliación a la Cámara</a>
+          </div>
+        </div>
         <a href="/blog/?categoria=estadisticas">Estadísticas</a>
         <a href="/educacion-tecnica/">Educación Técnica</a>
-        <a class="active" href="/sitios-de-interes/">Sitios de Interés</a>
+        <div class="has-sub">
+          <a href="/sitios-de-interes/">Sitios de Interés <span class="nav-caret" aria-hidden="true"></span></a>
+          <div class="nav-sub">
+            <a href="/sitios-de-interes/#camaras">Cámaras y asociaciones</a>
+            <a href="/sitios-de-interes/#internacionales">Cámaras y asociaciones internacionales</a>
+            <a href="/sitios-de-interes/#agricolas">Sitios agrícolas</a>
+            <a href="/sitios-de-interes/#institutos">Institutos autónomos</a>
+            <a href="/sitios-de-interes/#empresas">Empresas internacionales</a>
+            <a href="/sitios-de-interes/#ministerios">Ministerios</a>
+            <a href="/sitios-de-interes/#organismos">Organismos públicos</a>
+          </div>
+        </div>
         <a href="/blog/">Blog</a>
-        <a href="/#contacto">Contacto</a>
+        <a href="/contacto/">Contacto</a>
+        <a class="nav-mobile-cta" href="/afiliate/">Afíliate →</a>
       </nav>
       <a class="btn btn-yellow header-cta" href="/afiliate/">Afíliate →</a>
       <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
@@ -48,19 +80,34 @@
   </header>
 
   <main>
-    <section class="section page-hero">
+    <section class="inst-hero">
       <div class="wrap">
         <p class="eyebrow">Enlaces</p>
         <h1>Sitios de Interés</h1>
-        <p>Gremios, organismos públicos, ministerios e instituciones relacionadas con los sectores agrícola, construcción, minería, pesca y afines.</p>
+        <p class="inst-lead">Gremios, ministerios, organismos e instituciones relacionadas con agrícola, construcción, minería, pesca y afines.</p>
+        <div class="inst-jumps">
+          <a href="#camaras">Cámaras y asociaciones</a>
+          <a href="#internacionales">Internacionales</a>
+          <a href="#agricolas">Agrícolas</a>
+          <a href="#institutos">Institutos</a>
+          <a href="#empresas">Empresas</a>
+          <a href="#ministerios">Ministerios</a>
+          <a href="#organismos">Organismos públicos</a>
+        </div>
       </div>
     </section>
 
-    <section class="section" style="padding-top:0">
-      <div class="wrap">
-        <div class="directory-tabs page-tabs" id="sitios-tabs" role="tablist"></div>
-        <p class="sitios-lead" id="sitios-lead"></p>
-        <div class="links-grid" id="sitios-list"></div>
+    <section class="section inst-body">
+      <div class="wrap page-with-sidebar">
+        <div class="sitios-main">
+          <div class="directory-tabs page-tabs" id="sitios-tabs" role="tablist"></div>
+          <div class="sitios-head">
+            <p class="sitios-lead" id="sitios-lead"></p>
+            <p class="sitios-count" id="sitios-count"></p>
+          </div>
+          <div class="sitios-grid" id="sitios-list"></div>
+        </div>
+        <aside class="site-sidebar" data-site-sidebar></aside>
       </div>
     </section>
   </main>
@@ -74,6 +121,7 @@
 
   <script src="/js/config.js"></script>
   <script src="/js/main.js"></script>
+  <script src="/js/sidebar.js"></script>
   <script src="/js/sitios.js"></script>
 </body>
 </html>

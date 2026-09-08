@@ -49,6 +49,9 @@ class SiteHandler(SimpleHTTPRequestHandler):
         headers = {"Accept": "application/json"}
         if method != "GET":
             headers["Content-Type"] = self.headers.get("Content-Type") or "application/json"
+        auth = self.headers.get("Authorization")
+        if auth:
+            headers["Authorization"] = auth
         request = Request(target, data=body, headers=headers, method=method)
         try:
             with urlopen(request, timeout=20) as response:

@@ -332,6 +332,33 @@ def get_catalogs(table) -> dict[str, Any]:
     return {"ok": True, **catalogs}
 
 
+def apply_catalog_delta(table, company: dict[str, Any], delta: int) -> None:
+    current = get_catalogs(table)
+    catalogs: dict[str, list[dict[str, Any]]] = {
+        "sectors": list(current.get("sectors") or []),
+        "locations": list(current.get("locations") or []),
+        "brands": list(current.get("brands") or []),
+    }
+    for field in ("sectors", "locations", "brands"):
+        bucket = {item["slug"]: dict(item) for item in catalogs[field] if item.get("slug")}
+        for term in company.get(field) or []:
+            slug = clean(term.get("slug")).lower()
+            name = clean(term.get("name"))
+            if not slug:
+                continue
+            item = bucket.get(slug) or {"name": name or slug, "slug": slug, "count": 0}
+            item["count"] = max(0, int(item.get("count") or 0) + delta)
+            if name:
+                item["name"] = name
+            bucket[slug] = item
+        catalogs[field] = sorted(
+            bucket.values(),
+            key=lambda item: (-int(item.get("count") or 0), fold(item.get("name") or "")),
+        )
+    for item in catalog_items(catalogs):
+        table.put_item(Item=item)
+
+
 def get_company(table, key: str) -> dict[str, Any] | None:
     raw = clean(key)
     if not raw:

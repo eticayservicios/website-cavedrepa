@@ -69,22 +69,22 @@ const shortText = (value, max = 160) => {
   return `${text.slice(0, max - 1).replace(/\s+\S*$/, "")}…`;
 };
 
-const rowHtml = (post) => {
-  const image = post.image_url
-    ? `<img src="${post.image_url}" alt="">`
-    : `<div class="blog-row-fallback"></div>`;
-  return `
-    <article class="blog-row">
-      <p class="blog-row-cats">${catsLine(post.categories)}</p>
-      <a class="blog-row-media" href="${postHref(post)}" data-entrada="${post.slug || post.id}">${image}</a>
-      <div class="blog-row-body">
-        <h2><a href="${postHref(post)}" data-entrada="${post.slug || post.id}">${post.title || "Entrada"}</a></h2>
-        <p class="blog-row-excerpt">${shortText(post.excerpt)}</p>
-        <p class="blog-row-date">${formatDate(post.date)}</p>
-      </div>
+const BLOG_IMAGE = "/images/blog/editorial.jpg";
+
+const rowHtml = (post) => `
+    <article class="news-card">
+      <a class="company-card-link" href="${postHref(post)}" data-entrada="${post.slug || post.id}">
+        <img src="${BLOG_IMAGE}" alt="">
+        <div class="news-body">
+          <p class="blog-row-cats">${catsLine(post.categories)}</p>
+          <p class="news-date">${formatDate(post.date)}</p>
+          <h3>${post.title || "Entrada"}</h3>
+          <p>${shortText(post.excerpt)}</p>
+          <span class="read-more">Leer más →</span>
+        </div>
+      </a>
     </article>
   `;
-};
 
 const sideHtml = () => `
   <section class="blog-widget">
@@ -95,7 +95,7 @@ const sideHtml = () => `
             .map(
               (post) => `
       <a class="blog-recent" href="${postHref(post)}" data-entrada="${post.slug || post.id}">
-        ${post.image_url ? `<img src="${post.image_url}" alt="">` : `<span class="blog-row-fallback"></span>`}
+        <img src="${BLOG_IMAGE}" alt="">
         <span>
           <strong>${post.title || "Entrada"}</strong>
           <em>${formatDate(post.date)}</em>
@@ -176,7 +176,7 @@ const renderList = (payload) => {
   categories = payload.categories || categories;
   setStatus(total ? `${total} entradas · página ${page} de ${pages}` : "Aún no hay entradas.");
   results.innerHTML = posts.length
-    ? `${posts.map(rowHtml).join("")}${pagerHtml(payload)}`
+    ? `<div class="blog-grid">${posts.map(rowHtml).join("")}</div>${pagerHtml(payload)}`
     : `<p class="empty-state">No hay entradas para mostrar.</p>`;
   results.querySelectorAll(".page-btn").forEach((button) => {
     button.addEventListener("click", () => goToPage(Number(button.dataset.page)));
@@ -186,7 +186,7 @@ const renderList = (payload) => {
 };
 
 const renderArticle = (post) => {
-  const image = post.image_url ? `<img class="blog-hero-img" src="${post.image_url}" alt="">` : "";
+  const image = `<img class="blog-hero-img" src="${BLOG_IMAGE}" alt="">`;
   article.innerHTML = `
     <button type="button" class="blog-back" id="blog-back">← Volver al blog</button>
     <p class="blog-row-cats">${catsLine(post.categories)}</p>
