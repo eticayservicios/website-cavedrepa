@@ -1,0 +1,49 @@
+{
+  "items": [
+    {
+      "src": "/images/sidebar/marcas-representadas.jpg",
+      "href": "/directorio/?vista=marcas",
+      "alt": "Marcas representadas por nuestros afiliados"
+    },
+    {
+      "src": "/images/sidebar/sector-construccion.jpg",
+      "href": "/directorio/?sector=construccion",
+      "alt": "Empresas afiliadas del sector construcción"
+    },
+    {
+      "src": "/images/sidebar/camaras-agricolas.jpg",
+      "href": "/sitios-de-interes/#agricolas",
+      "alt": "Cámaras agrícolas internacionales"
+    },
+    {
+      "src": "/images/sidebar/aem.jpg",
+      "href": "https://www.aem.org/",
+      "alt": "Association of Equipment Manufacturers",
+      "external": true
+    },
+    {
+      "src": "/images/sidebar/utility-expo.jpg",
+      "href": "https://www.theutilityexpo.com/",
+      "alt": "The Utility Expo",
+      "external": true
+    },
+    {
+      "src": "/images/sidebar/conexpo.jpg",
+      "href": "https://www.conexpoconagg.com/conexpo-con-agg-construction-trade-show",
+      "alt": "CONEXPO-CON/AGG",
+      "external": true
+    },
+    {
+      "src": "/images/sidebar/world-of-asphalt.png",
+      "href": "https://www.worldofasphalt.com/",
+      "alt": "World of Asphalt",
+      "external": true
+    },
+    {
+      "src": "/images/sidebar/bauma2028.png",
+      "href": "https://www.bauma.de/",
+      "alt": "bauma 2028, Múnich",
+      "external": true
+    }
+  ]
+}
