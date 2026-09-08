@@ -33,7 +33,7 @@
       <div class="wrap admin-login-wrap">
         <p class="eyebrow">Panel interno</p>
         <h1>Entrar</h1>
-        <p>Consulta todas las empresas y los mensajes de contacto.</p>
+        <p>Consulta empresas, blog y mensajes de contacto.</p>
         <form class="apply-form admin-form" id="login-form">
           <label class="apply-field apply-field-wide">
             <span>Usuario</span>
@@ -53,6 +53,7 @@
       <div class="wrap">
         <div class="directory-tabs page-tabs" role="tablist">
           <button type="button" class="is-active" data-panel="queue">Empresas</button>
+          <button type="button" data-panel="blog">Blog</button>
           <button type="button" data-panel="messages">Mensajes</button>
           <button type="button" data-panel="users">Equipo</button>
         </div>
@@ -74,12 +75,48 @@
               <button type="button" data-status="expired">Expiradas</button>
               <button type="button" data-status="other" hidden>Otras</button>
             </div>
-            <label class="admin-search">
-              <span class="visually-hidden">Buscar empresa</span>
-              <input type="search" id="company-search" placeholder="Buscar por nombre, RIF o correo" autocomplete="off">
-            </label>
+            <div class="admin-tools">
+              <label class="admin-search">
+                <span>Buscar</span>
+                <input type="search" id="company-search" placeholder="Nombre, RIF o correo" autocomplete="off">
+              </label>
+              <label class="admin-sort">
+                <span>Ordenar</span>
+                <select id="company-sort">
+                  <option value="fecha-desc">Más recientes</option>
+                  <option value="fecha">Más antiguas</option>
+                  <option value="nombre">Nombre A-Z</option>
+                  <option value="nombre-desc">Nombre Z-A</option>
+                </select>
+              </label>
+            </div>
           </div>
           <div id="queue-list" class="admin-list"></div>
+        </div>
+
+        <div id="admin-blog" hidden>
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Publicaciones</p>
+              <h1>Blog</h1>
+            </div>
+            <p class="directory-status" id="blog-status"></p>
+          </div>
+          <div class="admin-toolbar">
+            <div class="admin-filters" id="blog-filters" role="tablist" aria-label="Estado">
+              <button type="button" class="is-active" data-blog-status="">Todas</button>
+              <button type="button" data-blog-status="publish">Publicadas</button>
+              <button type="button" data-blog-status="draft">Borradores</button>
+            </div>
+            <div class="admin-tools">
+              <label class="admin-search">
+                <span>Buscar</span>
+                <input type="search" id="blog-search" placeholder="Título o texto" autocomplete="off">
+              </label>
+              <button class="btn btn-yellow" type="button" id="blog-new">Nueva entrada</button>
+            </div>
+          </div>
+          <div id="blog-list" class="admin-list"></div>
         </div>
 
         <div id="admin-messages" hidden>

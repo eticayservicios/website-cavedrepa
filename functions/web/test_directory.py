@@ -109,6 +109,7 @@ class ApplicationTests(unittest.TestCase):
         self.assertEqual(company["locations"][0]["slug"], "valera-trujillo")
         self.assertEqual(company["brands"][0]["name"], "Honda")
         self.assertEqual(company["social"]["instagram"], "speedway")
+        self.assertTrue(company["expires_at"])
         pks = {item["pk"] for item in items_for_application(company)}
         self.assertIn("APPLICATION#pending", pks)
         self.assertNotIn("STATUS#publish", pks)
@@ -180,6 +181,29 @@ class BlogTests(unittest.TestCase):
         post = normalize_post({"id": 1633, "slug": "__trashed", "title": "X", "status": "publish"})
         items = items_for_post(post)
         self.assertEqual([item["pk"] for item in items], ["POST#1633"])
+
+    def test_admin_can_publish_and_unpublish_a_post(self):
+        from blog import get_post, items_for_post, list_admin_posts, save_admin_post
+        from test_admin import FakeTable
+
+        table = FakeTable()
+        created = save_admin_post(
+            table,
+            {
+                "title": "Editorial septiembre",
+                "content": "<p>Texto nuevo</p>",
+                "categories": "Editoriales, 2026",
+                "status": "draft",
+            },
+        )
+        self.assertTrue(created["ok"])
+        post_id = str(created["post"]["id"])
+        self.assertEqual(list_admin_posts(table)["total"], 1)
+        self.assertIsNone(get_post(table, post_id))
+        published = save_admin_post(table, {"title": "Editorial septiembre", "content": "<p>Texto nuevo</p>", "status": "publish"}, post_id)
+        self.assertEqual(published["post"]["status"], "publish")
+        self.assertTrue(get_post(table, post_id))
+        self.assertTrue(any(item["pk"] == "BLOG#publish" for item in items_for_post(published["post"])))
 
 
 if __name__ == "__main__":

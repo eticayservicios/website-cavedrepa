@@ -1,0 +1,868 @@
+[
+  {
+    "id": 1996,
+    "date": "2023-08-04 12:41:35",
+    "modified": "2026-08-03 12:49:44",
+    "status": "expired",
+    "title": "Todo Tractor, C.A.",
+    "slug": "todo-tractor-c-a",
+    "content": "<span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Repuestos para maquinarias &quot;}\" data-sheets-userformat=\"{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}\">Repuestos para maquinarias </span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1723666104:1",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "823",
+      "_877": "jefecontabilidad@todotractor.com.ve",
+      "_876": "contab.todotractor@gmail.com",
+      "_875": "Alfredo Carpico",
+      "_874": "J-309992422",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_zip": "",
+      "_phone": "04128000135",
+      "_phone2": "04244198575",
+      "_fax": "",
+      "_email": "impuesto.todotractor@gmail.com",
+      "_website": "",
+      "_social": "",
+      "_address": "Zona Industrial Castillito Centro Empresarial Valencia Galpon Nro 03. Municipio San Diego",
+      "_listing_img": "",
+      "_listing_prv_img": "2863",
+      "_videourl": "",
+      "_directory_type": "314",
+      "_featured": "0",
+      "_expiry_date": "2026-08-03 12:36:00",
+      "_listing_status": "expired",
+      "_thumbnail_id": "2863",
+      "_renewal_reminder_sent": "1",
+      "_deletion_date": "2026-09-12 16:49:44",
+      "_renewal_token": "cB0XtpVzGb180dgPi3hADW-1996"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        },
+        {
+          "name": "Sector Construcción",
+          "slug": "construccion"
+        }
+      ],
+      "location": [
+        {
+          "name": "San Diego - Carabobo",
+          "slug": "san-diego-carabobo"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/todotractor.jpg"
+  },
+  {
+    "id": 2665,
+    "date": "2023-12-27 11:47:59",
+    "modified": "2023-12-27 11:47:59",
+    "status": "draft",
+    "title": "ALICE NEUMATICOS DE VENEZUELA  CA",
+    "slug": "",
+    "content": "",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1704468105:1",
+      "_edit_last": "1"
+    },
+    "tax": {
+      "category": [],
+      "location": [],
+      "tags": []
+    },
+    "image_url": ""
+  },
+  {
+    "id": 2677,
+    "date": "2024-01-05 11:17:10",
+    "modified": "2025-01-04 11:18:53",
+    "status": "private",
+    "title": "APL INTERNATIONAL C.A",
+    "slug": "apl-international-c-a",
+    "content": "",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_email": "aplinternationalca@gmail.com",
+      "_874": "J50048008-3",
+      "_address": "av soublette casa s/n sector san antonio de las flores maiquetia la guaira zona postal 1160",
+      "_phone": "0212 3313349",
+      "_phone2": "4243152410",
+      "_directory_type": "314",
+      "_expiry_date": "2025-01-04 11:17:00",
+      "_featured": "",
+      "_listing_status": "renewal",
+      "_atbdp_post_views_count": "177",
+      "_edit_lock": "1720115966:1",
+      "_edit_last": "1",
+      "_877": "",
+      "_875": "",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_fax": "",
+      "_website": "",
+      "_social": "",
+      "_listing_img": "",
+      "_listing_prv_img": "2862",
+      "_thumbnail_id": "2862",
+      "_renewal_token": "cB0XtpVzGb180dgPi3hADW-2677",
+      "_deletion_date": "2025-02-13 15:18:53"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Maiquetía - La Guaira",
+          "slug": "maiquetia-guaira"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/apl.jpg"
+  },
+  {
+    "id": 2679,
+    "date": "2024-01-05 11:30:01",
+    "modified": "2025-01-04 11:48:52",
+    "status": "private",
+    "title": "AGROREPUESTOS DEL CAMPO, C.A (AGRODELCA)",
+    "slug": "agrorepuestos-del-campo-c-a-agrodelca",
+    "content": "",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_email": "mocanita2001@hotmail.com",
+      "_877": "agrorepcampo@hotmail.com",
+      "_874": "J-31190507-3",
+      "_address": "AV. ESPAÑA C.C DOÑA CUCHA, LOCAL 1, EL TIGRE EDO ANZOATEGUI",
+      "_phone": "0283-235-13-59",
+      "_phone2": "0283-235-07-42",
+      "_directory_type": "314",
+      "_expiry_date": "2025-01-04 11:30:00",
+      "_featured": "",
+      "_listing_status": "renewal",
+      "_atbdp_post_views_count": "251",
+      "_edit_lock": "1720107925:1",
+      "_edit_last": "1",
+      "_875": "",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_fax": "",
+      "_website": "",
+      "_social": "",
+      "_listing_img": "",
+      "_listing_prv_img": "2849",
+      "_thumbnail_id": "2849",
+      "_renewal_token": "cB0XtpVzGb180dgPi3hADW-2679",
+      "_deletion_date": "2025-02-13 15:48:52"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "El Tigre - Anzoátegui",
+          "slug": "el-tigre-anzoategui"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/1-2.jpg"
+  },
+  {
+    "id": 3028,
+    "date": "2025-08-04 10:55:13",
+    "modified": "2026-08-04 11:18:54",
+    "status": "expired",
+    "title": "AGRORUEDAS CHAKAO C.A",
+    "slug": "agroruedas-chakao-c-a",
+    "content": "<span data-sheets-root=\"1\">SEDE ACARIGUA/SEDE ARAURE/SEDE SAN RAFAEL</span>\r\n\r\n<span data-sheets-root=\"1\">NEUMATICOS DE TODO TIPO /CAMARAS DE AIRE AGRICOLAS/RINES/BATERIAS</span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1754573881:1",
+      "_edit_last": "1",
+      "_email": "agroruedaschakaoimp2023@gmail.com",
+      "_877": "aimportacion2gc@gmail.com",
+      "_875": "JOSE ORLANDO MEZA RAMOS",
+      "_874": "J-41023094-0",
+      "_address": "AV.3 BOLIVAR C/CALLE 7, LOCAL 4 Y 5 SECTOR CENTRO SAN RAFAEL DE ONOTO CANAL M7-2 PORTUGUESA ZONA POSTAL 3306",
+      "_phone": "0412-0240605",
+      "_phone2": "0412-0240548",
+      "_social": "a:1:{i:0;a:2:{s:2:\"id\";s:9:\"instagram\";s:3:\"url\";s:47:\"https://www.instagram.com/SUPERCAUCHOS%20CHAKAO\";}}",
+      "_directory_type": "314",
+      "_featured": "0",
+      "_expiry_date": "2026-08-04 10:52:00",
+      "_atbdp_post_views_count": "256",
+      "_listing_prv_img": "3035",
+      "_thumbnail_id": "3035",
+      "_listing_status": "expired",
+      "_renewal_reminder_sent": "1",
+      "_deletion_date": "2026-09-13 15:18:53"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": [
+        {
+          "name": "BKT/ROADGUIDER/FORREUNNER/ANNAITE/ROYAL BLACK/HAOHUA/NEXEN/LTH/ECOROAD",
+          "slug": "bkt-roadguider-forreunner-annaite-royal-black-haohua-nexen-lth-ecoroad"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/LOGO-AGRORUEDAS-DORIANA-DIAZ.png"
+  },
+  {
+    "id": 3029,
+    "date": "2025-08-06 18:47:52",
+    "modified": "2026-08-06 18:48:50",
+    "status": "expired",
+    "title": "TRACTO REPUESTOS MARIO RIERA C.A",
+    "slug": "tracto-repuestos-mario-riera-c-a",
+    "content": "<span data-sheets-root=\"1\">LOCAL COMERCIAL UBICADO EN ACARIGUA ESTADO PORTUGUESA</span>\r\n\r\n<span data-sheets-root=\"1\">PARTES Y PIEZAS PARA TRACTORES MASSEY FERGUSON </span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1754573689:1",
+      "_edit_last": "1",
+      "_email": "tractorepuestosmr@gmail.com",
+      "_875": "MARIO DOMINGO RIERA HERNANDEZ ",
+      "_874": "J-50112016-1",
+      "_address": "CALLE 22 ENTRE AV. 33 Y 34, SECTOR CENTRO, ACARIGUA, MUNICIPIO PAEZ, ESTADO PORTUGUESA",
+      "_phone": "04245042919",
+      "_phone2": "0424/5905266",
+      "_directory_type": "314",
+      "_featured": "0",
+      "_expiry_date": "2026-08-06 18:45:00",
+      "_listing_prv_img": "3032",
+      "_thumbnail_id": "3032",
+      "_atbdp_post_views_count": "163",
+      "_listing_status": "expired",
+      "_renewal_reminder_sent": "1",
+      "_deletion_date": "2026-09-15 22:48:50"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Massey Ferguson",
+          "slug": "massey-ferguson"
+        }
+      ]
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/LOGO-SOLO-TRACTOREPUESTOS-MARIO-RIERA.jpg"
+  },
+  {
+    "id": 3030,
+    "date": "2025-08-06 18:49:21",
+    "modified": "2026-08-06 18:48:50",
+    "status": "expired",
+    "title": "MULTI AGRO, C.A",
+    "slug": "multi-agro-c-a",
+    "content": "",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1754573612:1",
+      "_edit_last": "1",
+      "_email": "multiagrocaadmon@gmail.com",
+      "_877": "multiagro2030@gmail.com",
+      "_875": "ROGER JOSE GARCIA ",
+      "_874": "J-408534916",
+      "_address": "CARRETERA VALERA TIMOTES SECTOR QUEBRADA DE CUEVAS ",
+      "_phone": "+58 2712253216",
+      "_phone2": "+58 4143712390",
+      "_directory_type": "314",
+      "_featured": "0",
+      "_expiry_date": "2026-08-06 18:48:00",
+      "_listing_prv_img": "3033",
+      "_thumbnail_id": "3033",
+      "_atbdp_post_views_count": "156",
+      "_listing_status": "expired",
+      "_renewal_reminder_sent": "1",
+      "_deletion_date": "2026-09-15 22:48:49"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Valera - Trujillo",
+          "slug": "valera-trujillo"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/logo-nuevo-con-fondo-copia-MULTI-AGRO-CA.png"
+  },
+  {
+    "id": 3038,
+    "date": "2025-09-04 14:11:09",
+    "modified": "2026-09-04 14:18:54",
+    "status": "expired",
+    "title": "Importadora Agropartes",
+    "slug": "importadora-agropartees",
+    "content": "Repuestos para tractores e implementos agrícolas",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1757009583:1",
+      "_edit_last": "1",
+      "_email": "importadoraagropartes@gmail.com",
+      "_address": "Estación de servicios La Machiri local nro 15",
+      "_phone": "04247728220",
+      "_phone2": "04245738599",
+      "_social": "a:1:{i:0;a:2:{s:2:\"id\";s:9:\"instagram\";s:3:\"url\";s:48:\"https://www.instagram.com/importadoraagropartes/\";}}",
+      "_directory_type": "314",
+      "_featured": "0",
+      "_expiry_date": "2026-09-04 14:07:00",
+      "_875": "Yrwin Alberto Colmenares",
+      "_874": "J-50301583-7",
+      "_atbdp_post_views_count": "102",
+      "_listing_status": "expired",
+      "_renewal_reminder_sent": "1",
+      "_deletion_date": "2026-10-14 18:18:54"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "San Cristóbal - Táchira",
+          "slug": "san-cristobal-tachira"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Ford",
+          "slug": "ford"
+        },
+        {
+          "name": "Massey Ferguson",
+          "slug": "massey-ferguson"
+        },
+        {
+          "name": "New Holland",
+          "slug": "new-holland"
+        },
+        {
+          "name": "Valtra",
+          "slug": "valtra"
+        }
+      ]
+    },
+    "image_url": ""
+  },
+  {
+    "id": 3039,
+    "date": "2025-09-04 14:14:01",
+    "modified": "2026-09-04 14:18:54",
+    "status": "expired",
+    "title": "Russo Cauchos",
+    "slug": "russo-cauchos",
+    "content": "Compra y venta, importación directa de neumáticos.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1757009505:1",
+      "_edit_last": "1",
+      "_email": "inventario@russocauchos.com",
+      "_877": "mauricio.russo@lbrin.com",
+      "_875": "Antonio Mauricio Russo Tocco",
+      "_874": "J-08515150-8",
+      "_address": "Carrera 4, entre calles 30 y 31 edif S/N piso PB, zona industrial I Barquisimeto, edo Lara",
+      "_phone": "04245821827",
+      "_phone2": "04145303432",
+      "_listing_prv_img": "3040",
+      "_directory_type": "314",
+      "_featured": "0",
+      "_expiry_date": "2026-09-04 14:11:00",
+      "_thumbnail_id": "3040",
+      "_atbdp_post_views_count": "235",
+      "_listing_status": "expired",
+      "_renewal_reminder_sent": "1",
+      "_deletion_date": "2026-10-14 18:18:53"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Barquisimeto - Lara",
+          "slug": "barquisimeto-lara"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/images.jpeg"
+  },
+  {
+    "id": 3042,
+    "date": "2025-09-04 14:17:05",
+    "modified": "2026-09-04 14:18:53",
+    "status": "expired",
+    "title": "AVICAMPO, S.A.",
+    "slug": "avicampo-s-a",
+    "content": "",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1757009696:1",
+      "_edit_last": "1",
+      "_email": "pduffud@avicampo.com",
+      "_875": "Pierre W. Duffaud",
+      "_874": "J-00061461-0",
+      "_address": "Av. Principal San Luis, edifico Torre Mayupan, piso Mz1 y MZ2, urb El Cafetal",
+      "_phone": "041433319762",
+      "_directory_type": "314",
+      "_featured": "0",
+      "_expiry_date": "2026-09-04 14:15:00",
+      "_atbdp_post_views_count": "195",
+      "_listing_status": "expired",
+      "_renewal_reminder_sent": "1",
+      "_deletion_date": "2026-10-14 18:18:53"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Caracas - Distrito Capital",
+          "slug": "caracas-distrito-capital"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": ""
+  },
+  {
+    "id": 3043,
+    "date": "2025-09-04 14:19:05",
+    "modified": "2026-09-04 14:18:53",
+    "status": "expired",
+    "title": "ORUGAS CALABOZO",
+    "slug": "orugas-calabozo",
+    "content": "<span data-sheets-root=\"1\">repuesto y reparaciones para maquinarias agricolas</span>\r\n\r\n<span data-sheets-root=\"1\">Itr america, CTP, maxiforce,kmp brand,ghinassi</span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1757009807:1",
+      "_edit_last": "1",
+      "_email": "Orugascalobozorrss@gmail.com",
+      "_877": "fedeporcaro@gmail.com",
+      "_875": "Federico Porcaro",
+      "_874": "J503771364",
+      "_address": "calle principal de guamachito entre carreras 4 y 6 local SN barrio la  trinidad calabozo guarico venezuela",
+      "_phone": "0412-6260130",
+      "_phone2": "0412-1095443 ",
+      "_listing_prv_img": "3044",
+      "_directory_type": "314",
+      "_featured": "0",
+      "_expiry_date": "2026-09-04 14:17:00",
+      "_thumbnail_id": "3044",
+      "_atbdp_post_views_count": "86",
+      "_listing_status": "expired",
+      "_renewal_reminder_sent": "1",
+      "_deletion_date": "2026-10-14 18:18:52"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "San Juan de los Morros - Guárico",
+          "slug": "san-juan-de-los-morros-guarico"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/Logo-Orugas-Calabozo-Ppal.-Fondo-Blanco-JPG-Orugas-Calabozo.jpg"
+  },
+  {
+    "id": 3045,
+    "date": "2025-09-04 14:20:40",
+    "modified": "2026-09-04 14:48:50",
+    "status": "expired",
+    "title": "INVERSIONES RIALTO 7, C. A.",
+    "slug": "inversiones-rialto-7-c-a",
+    "content": "<span data-sheets-root=\"1\">Distribución y comercialización de equipos, partes, piezas, repuestos, accesorios, tuercas y tornillería, servicio de reparación y asesoría en materia de equipos agrícolas </span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1757009928:1",
+      "_edit_last": "1",
+      "_email": "inv.rialto7@gmail.com",
+      "_875": "Luis Campagna",
+      "_874": "J-506685108",
+      "_address": "Av. Las Industrias, Edf. Campagna, PB, Oflc 03, Sector Las Rodriguez, Valle La Pascua ,",
+      "_phone": "2.353.421.381",
+      "_phone2": "4.243.595.011",
+      "_listing_prv_img": "3046",
+      "_directory_type": "314",
+      "_featured": "0",
+      "_expiry_date": "2026-09-04 14:19:00",
+      "_thumbnail_id": "3046",
+      "_atbdp_post_views_count": "102",
+      "_listing_status": "expired",
+      "_renewal_reminder_sent": "1",
+      "_deletion_date": "2026-10-14 18:48:50"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "San Juan de los Morros - Guárico",
+          "slug": "san-juan-de-los-morros-guarico"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/5.b-Logotipo-Rialto-7-Lcda.-Norexa-Contramaestre.jpeg"
+  },
+  {
+    "id": 3047,
+    "date": "2025-09-04 14:22:46",
+    "modified": "2026-09-04 14:48:50",
+    "status": "expired",
+    "title": "AGROTECH, CA",
+    "slug": "agrotech-ca",
+    "content": "<span data-sheets-root=\"1\">Repuestos de maquinaria agrícola para sembradoras, cosechadoras y fumigadoras</span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1757010040:1",
+      "_edit_last": "1",
+      "_email": "agrotechven@gmail.com",
+      "_877": "daepadron@gmail.com",
+      "_875": "Daniel Antonio Esteban Sanchez Padron",
+      "_874": "J504047716",
+      "_address": "Ctra Nacional Cagua La Villa Local parcela N29 Galpon N2 sector Santa Maria Villa de Cura Edo Aragua",
+      "_phone": "04244296849",
+      "_phone2": "04123421728",
+      "_listing_prv_img": "3048",
+      "_directory_type": "314",
+      "_featured": "0",
+      "_expiry_date": "2026-09-04 14:21:00",
+      "_thumbnail_id": "3048",
+      "_atbdp_post_views_count": "197",
+      "_listing_status": "expired",
+      "_renewal_reminder_sent": "1",
+      "_deletion_date": "2026-10-14 18:48:50"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Maracay - Aragua",
+          "slug": "maracay-aragua"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/Black-and-White-Monogram-Business-Logo-AGROTECH.png"
+  },
+  {
+    "id": 3049,
+    "date": "2025-09-04 14:27:38",
+    "modified": "2026-09-04 14:48:50",
+    "status": "expired",
+    "title": "TRACTO REPUESTOS MARIO RIERA",
+    "slug": "tracto-repuestos-mario-riera",
+    "content": "<span data-sheets-root=\"1\">LOCAL COMERCIAL UBICADO EN ACARIGUA ESTADO PORTUGUESA</span>\r\n\r\n<span data-sheets-root=\"1\">PARTES Y PIEZAS PARA TRACTORES MASSEY FERGUSON </span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1757010323:1",
+      "_edit_last": "1",
+      "_875": "MARIO DOMINGO RIERA HERNANDEZ ",
+      "_874": "J-50112016-1",
+      "_address": "CALLE 22 ENTRE AV. 33 Y 34, SECTOR CENTRO, ACARIGUA, MUNICIPIO PAEZ, ESTADO PORTUGUESA",
+      "_phone": "0424/5905266",
+      "_phone2": "0424/5042919",
+      "_listing_prv_img": "3050",
+      "_directory_type": "314",
+      "_featured": "0",
+      "_expiry_date": "2026-09-04 14:23:00",
+      "_thumbnail_id": "3050",
+      "_atbdp_post_views_count": "59",
+      "_listing_status": "expired",
+      "_renewal_reminder_sent": "1",
+      "_deletion_date": "2026-10-14 18:48:50"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/2025-09-04_14-24.png"
+  },
+  {
+    "id": 3051,
+    "date": "2025-09-04 14:30:17",
+    "modified": "2026-09-04 14:48:50",
+    "status": "expired",
+    "title": "CFV MOTORS C.A.",
+    "slug": "cfv-motors-c-a",
+    "content": "<span data-sheets-root=\"1\">Tenemos presencia en Los LLanos Occidentales atendidos desde Acarigua y en el oriente del pais</span>\r\n\r\n<span data-sheets-root=\"1\">Tractores agricolas y sus repuestos</span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1757010483:1",
+      "_edit_last": "1",
+      "_email": "motorscfv@gmail.com",
+      "_877": "finanzas@agromotorsvzla.com",
+      "_875": "NESTOR VICENTE MENDEZ ARIAS",
+      "_874": "J-505829076",
+      "_address": "Av Los Pioneros Barrio San Vicente Local S/N al lado de Todo Agro ",
+      "_phone": "04123106579",
+      "_listing_prv_img": "3052",
+      "_directory_type": "314",
+      "_featured": "0",
+      "_expiry_date": "2026-09-04 14:27:00",
+      "_thumbnail_id": "3052",
+      "_atbdp_post_views_count": "149",
+      "_listing_status": "expired",
+      "_renewal_reminder_sent": "1",
+      "_deletion_date": "2026-10-14 18:48:50"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/logo-CFV-MOTORS-CFV-Motors.jpg"
+  },
+  {
+    "id": 3053,
+    "date": "2025-09-04 14:33:00",
+    "modified": "2026-09-04 14:48:50",
+    "status": "expired",
+    "title": "PARSUN MARGARITA C.A.",
+    "slug": "parsun-margarita-c-a",
+    "content": "<span data-sheets-root=\"1\">Repuestos y motores fuera de borda, artes de pesca</span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1757010660:1",
+      "_edit_last": "1",
+      "_email": "homedecocenter@gmail.com",
+      "_875": "Alexandre Ordaz ",
+      "_874": "506701316",
+      "_address": "Calle Santa Ana sector Altagracia Nueva Esparta",
+      "_phone": "02952636094",
+      "_phone2": "+58 412-3016979",
+      "_listing_prv_img": "3054",
+      "_directory_type": "314",
+      "_featured": "0",
+      "_expiry_date": "2026-09-04 14:30:00",
+      "_thumbnail_id": "3054",
+      "_atbdp_post_views_count": "351",
+      "_listing_status": "expired",
+      "_renewal_reminder_sent": "1",
+      "_deletion_date": "2026-10-14 18:48:50"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Acuícola",
+          "slug": "acuicola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Nueva Esparta - La Asunción",
+          "slug": "nueva-esparta-la-asuncion"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/Screenshot_20250609_114945_WhatsApp-Arq.-Liz-Liendo.jpg"
+  },
+  {
+    "id": 3055,
+    "date": "2025-09-04 14:34:59",
+    "modified": "2026-09-04 14:48:50",
+    "status": "expired",
+    "title": "BEST ONE IMPORT, C.A.",
+    "slug": "best-one-import-c-a",
+    "content": "<span data-sheets-root=\"1\">REPUESTOS FUERA DE BORDA</span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1757010763:1",
+      "_edit_last": "1",
+      "_email": "homedecocenter@gmail.com",
+      "_875": "ALEXANDRE ORDAZ",
+      "_874": "503907169",
+      "_address": "AV. BOLIVAR PLAYA EL ANGEL NUEVA ESPARTA",
+      "_phone": "04123016979",
+      "_listing_prv_img": "3056",
+      "_directory_type": "314",
+      "_featured": "0",
+      "_expiry_date": "2026-09-04 14:33:00",
+      "_thumbnail_id": "3056",
+      "_atbdp_post_views_count": "160",
+      "_listing_status": "expired",
+      "_renewal_reminder_sent": "1",
+      "_deletion_date": "2026-10-14 18:48:50"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Acuícola",
+          "slug": "acuicola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Nueva Esparta - La Asunción",
+          "slug": "nueva-esparta-la-asuncion"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/image-Liz-Liendo.jpg"
+  },
+  {
+    "id": 3057,
+    "date": "2025-09-04 14:37:04",
+    "modified": "2026-09-04 14:48:50",
+    "status": "expired",
+    "title": "VEHICULO AUTOMOTRICES Y MAQUINARIAS ASIA, C.A.",
+    "slug": "vehiculo-automotrices-y-maquinarias-asia-c-a",
+    "content": "<span data-sheets-root=\"1\">DESMALEZADORAS, MOTOSIERAS, BOMBAS DE AGUA, GENERADORES DIESEL, MOTORES DIESEL.</span><span data-sheets-root=\"1\">DESMALEZADORAS, MOTOSIERAS, BOMBAS DE AGUA, GENERADORES DIESEL, MOTORES DIESEL.</span>",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1757010909:1",
+      "_edit_last": "1",
+      "_email": "maqasia.ca@gmail.com",
+      "_877": "karincharles@hotmail.com",
+      "_875": "CHARLES KARIM",
+      "_874": "294707726",
+      "_address": "AVENIDA PRINCIPAL,LOCAL 4, PARQUE INDUSTRIAL LOS PINOS, MANZANA Nº11, ",
+      "_phone": "02869948485",
+      "_phone2": "04148954371",
+      "_listing_prv_img": "3058",
+      "_directory_type": "314",
+      "_featured": "0",
+      "_expiry_date": "2026-09-04 14:35:00",
+      "_thumbnail_id": "3058",
+      "_atbdp_post_views_count": "96",
+      "_listing_status": "expired",
+      "_renewal_reminder_sent": "1",
+      "_deletion_date": "2026-10-14 18:48:50"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Ciudad Bolívar - Bolívar",
+          "slug": "ciudad-bolivar-bolivar"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "https://www.cavedrepa.org/wp-content/uploads/WhatsApp_Image_2022-10-01_at_4.22.57_PM__1_-removebg-preview-VEHICULOS-AUTOMOTRICES-Y-MAQUINARIAS-ASIA-C.A.png"
+  }
+]

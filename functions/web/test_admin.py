@@ -5,6 +5,7 @@ from admin import (
     approve_application,
     create_user,
     delete_user,
+    expire_company,
     list_applications,
     list_companies,
     list_users,
@@ -12,8 +13,10 @@ from admin import (
     read_token,
     reject_application,
     reset_credentials_cache,
+    set_expiration,
     sign_token,
 )
+from directory import default_expires_at, search_directory
 from applications import company_from_application, items_for_application, validate_application
 from directory import get_item, items_for_company, normalize_listing
 
@@ -42,9 +45,12 @@ class FakeTable:
     def scan(self, **kwargs):
         values = kwargs.get("ExpressionAttributeValues") or {}
         wanted_sk = values.get(":sk")
+        wanted_entity = values.get(":entity")
         items = []
         for item in self.store.values():
             if wanted_sk is not None and item.get("sk") != wanted_sk:
+                continue
+            if wanted_entity is not None and item.get("entity") != wanted_entity:
                 continue
             items.append(dict(item))
         return {"Items": items}
@@ -133,6 +139,7 @@ class AdminQueueTests(unittest.TestCase):
         self.assertEqual(result["status"], "publish")
         profile = get_item(table, "COMPANY#9001", "PROFILE")
         self.assertEqual(profile["status"], "publish")
+        self.assertEqual(profile["expires_at"], default_expires_at())
         self.assertTrue(get_item(table, "STATUS#publish", "COMPANY#9001"))
         self.assertFalse(get_item(table, "APPLICATION#pending", "APPLICATION#9001"))
         self.assertEqual(list_applications(table)["total"], 0)
@@ -226,6 +233,25 @@ class AdminQueueTests(unittest.TestCase):
         found = list_companies(table, {"q": "agritrader"})
         self.assertEqual(found["total"], 1)
         self.assertEqual(found["companies"][0]["id"], 297)
+
+    def test_due_expiry_leaves_the_public_directory(self):
+        company = sample_application()
+        table = FakeTable(items_for_application(company))
+        approve_application(table, "9001")
+        result = set_expiration(table, "9001", "2020-01-01")
+        self.assertEqual(result["status"], "expired")
+        self.assertFalse(get_item(table, "STATUS#publish", "COMPANY#9001"))
+        self.assertEqual(search_directory(table, {})["total"], 0)
+
+    def test_expire_now_takes_company_down(self):
+        company = sample_application()
+        table = FakeTable(items_for_application(company))
+        approve_application(table, "9001")
+        result = expire_company(table, "9001")
+        self.assertEqual(result["status"], "expired")
+        profile = get_item(table, "COMPANY#9001", "PROFILE")
+        self.assertEqual(profile["status"], "expired")
+        self.assertFalse(get_item(table, "STATUS#publish", "COMPANY#9001"))
 
 
 if __name__ == "__main__":

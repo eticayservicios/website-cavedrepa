@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import html
 import unicodedata
+from datetime import date, datetime, timezone
 from decimal import Decimal
 from typing import Any
 
@@ -27,7 +28,51 @@ CARD_FIELDS = (
     "rif",
     "status",
     "created_at",
+    "expires_at",
 )
+PROFILE_SKIP = {"pk", "sk", "entity"}
+
+
+def now_stamp() -> str:
+    return datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+
+
+def today_utc() -> date:
+    return datetime.now(timezone.utc).date()
+
+
+def default_expires_at(from_day: date | None = None) -> str:
+    start = from_day or today_utc()
+    try:
+        return date(start.year + 1, start.month, start.day).isoformat()
+    except ValueError:
+        return date(start.year + 1, 2, 28).isoformat()
+
+
+def parse_expiry(value: Any) -> date | None:
+    raw = clean(str(value or ""))[:10]
+    if len(raw) < 10:
+        return None
+    try:
+        return date.fromisoformat(raw)
+    except ValueError:
+        return None
+
+
+def expiry_is_due(value: Any, today: date | None = None) -> bool:
+    day = parse_expiry(value)
+    if not day:
+        return False
+    return day < (today or today_utc())
+
+
+def as_company(item: dict[str, Any] | None) -> dict[str, Any] | None:
+    if not item:
+        return None
+    company = {key: value for key, value in item.items() if key not in PROFILE_SKIP}
+    if "id" in company:
+        company["id"] = int(company["id"])
+    return company
 
 
 def fold(value: str | None) -> str:
@@ -215,6 +260,52 @@ def items_for_company(company: dict[str, Any]) -> list[dict[str, Any]]:
     return [dynamodb_safe(item) for item in items]
 
 
+def persist_company(table, company: dict[str, Any]) -> None:
+    for item in items_for_company(company):
+        table.put_item(Item=item)
+
+
+def write_company(table, company: dict[str, Any], previous: dict[str, Any] | None = None) -> None:
+    company_id = int(company["id"])
+    was_public = (previous or {}).get("status") == "publish"
+    is_public = company.get("status") == "publish"
+    if was_public:
+        for item in items_for_company(previous or {}):
+            if item.get("sk") == "PROFILE":
+                continue
+            table.delete_item(Key={"pk": item["pk"], "sk": item["sk"]})
+        if not is_public:
+            apply_catalog_delta(table, previous or {}, -1)
+    persist_company(table, company)
+    table.delete_item(Key={"pk": "APPLICATION#pending", "sk": f"APPLICATION#{company_id}"})
+    if is_public and not was_public:
+        apply_catalog_delta(table, company, 1)
+
+
+def sync_expiry(table, company: dict[str, Any]) -> dict[str, Any]:
+    current = dict(company)
+    if not parse_expiry(current.get("expires_at")):
+        current["expires_at"] = default_expires_at()
+        profile = {
+            "pk": f"COMPANY#{current['id']}",
+            "sk": "PROFILE",
+            "entity": "company",
+            **current,
+        }
+        table.put_item(Item=dynamodb_safe(profile))
+        if current.get("status") == "publish":
+            card_item = get_item(table, "STATUS#publish", f"COMPANY#{current['id']}")
+            if card_item:
+                card_item["expires_at"] = current["expires_at"]
+                table.put_item(Item=dynamodb_safe(card_item))
+    if current.get("status") == "publish" and expiry_is_due(current.get("expires_at")):
+        previous = dict(current)
+        current["status"] = "expired"
+        current["updated_at"] = now_stamp()
+        write_company(table, current, previous)
+    return current
+
+
 def catalog_items(catalogs: dict[str, list[dict[str, Any]]]) -> list[dict[str, Any]]:
     return [
         dynamodb_safe({"pk": "CATALOG", "sk": "SECTORS", "items": catalogs["sectors"]}),
@@ -333,10 +424,19 @@ def search_directory(table, filters: dict[str, str]) -> dict[str, Any]:
         company_id = int(row.get("id") or 0)
         if not company_id or company_id in seen:
             continue
-        if not matches_filters(row, filters):
+        card_row = row
+        if expiry_is_due(row.get("expires_at")) or not parse_expiry(row.get("expires_at")):
+            profile = as_company(get_item(table, f"COMPANY#{company_id}", "PROFILE"))
+            if not profile:
+                continue
+            profile = sync_expiry(table, profile)
+            if profile.get("status") not in PUBLIC_STATUSES:
+                continue
+            card_row = profile
+        if not matches_filters(card_row, filters):
             continue
         seen.add(company_id)
-        companies.append(public_card(row))
+        companies.append(public_card(card_row))
 
     orden = clean(filters.get("orden") or filters.get("sort")).lower() or "nombre"
     sort_companies(companies, orden)
@@ -406,8 +506,13 @@ def get_company(table, key: str) -> dict[str, Any] | None:
         if not pointer:
             return None
         item = get_item(table, f"COMPANY#{int(pointer['id'])}", "PROFILE")
-    if not item or item.get("status") not in PUBLIC_STATUSES:
+    company = as_company(item)
+    if not company:
         return None
+    company = sync_expiry(table, company)
+    if company.get("status") not in PUBLIC_STATUSES:
+        return None
+    item = company
     detail = {**card(item)}
     detail.update(
         {

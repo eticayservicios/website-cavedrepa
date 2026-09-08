@@ -14,6 +14,7 @@ from admin import (
     approve_application,
     create_user,
     delete_user,
+    expire_company,
     get_application,
     list_applications,
     list_companies,
@@ -21,9 +22,17 @@ from admin import (
     login as admin_login,
     reject_application,
     require_admin,
+    set_expiration,
 )
 from applications import submit_application
-from blog import get_post, search_blog
+from blog import (
+    delete_admin_post,
+    get_admin_post,
+    get_post,
+    list_admin_posts,
+    save_admin_post,
+    search_blog,
+)
 from contact import list_messages, submit_message
 from directory import (
     SITE_ORIGIN,
@@ -206,6 +215,56 @@ def lambda_handler(event, context):
 
             if method == "GET" and path == "/admin/messages":
                 return respond(event, 200, list_messages(table()))
+
+            if method == "GET" and path == "/admin/posts":
+                return respond(event, 200, list_admin_posts(table(), query_params(event)))
+
+            if method == "POST" and path == "/admin/posts":
+                try:
+                    payload = request_body(event)
+                except ValueError:
+                    return respond(event, 400, {"ok": False, "error": "JSON inválido"})
+                result = save_admin_post(table(), payload)
+                return respond(event, 200 if result.get("ok") else 400, result)
+
+            if method == "POST" and path.startswith("/admin/posts/") and path.endswith("/delete"):
+                key = path.split("/admin/posts/", 1)[1].rsplit("/delete", 1)[0]
+                result = delete_admin_post(table(), key)
+                return respond(event, 200 if result.get("ok") else 404, result)
+
+            if method == "POST" and path.startswith("/admin/posts/"):
+                key = path.split("/admin/posts/", 1)[1]
+                if "/" not in key:
+                    try:
+                        payload = request_body(event)
+                    except ValueError:
+                        return respond(event, 400, {"ok": False, "error": "JSON inválido"})
+                    result = save_admin_post(table(), payload, key)
+                    return respond(event, 200 if result.get("ok") else 400, result)
+
+            if method == "GET" and path.startswith("/admin/posts/"):
+                rest = path.split("/admin/posts/", 1)[1]
+                if "/" not in rest:
+                    post = get_admin_post(table(), rest)
+                    if not post:
+                        return respond(event, 404, {"ok": False, "error": "Entrada no encontrada"})
+                    return respond(event, 200, {"ok": True, "post": post})
+
+            if method == "POST" and path.startswith("/admin/companies/") and path.endswith("/expiration"):
+                key = path.split("/admin/companies/", 1)[1].rsplit("/expiration", 1)[0]
+                try:
+                    payload = request_body(event)
+                except ValueError:
+                    payload = {}
+                result = set_expiration(
+                    table(), key, str(payload.get("expires_at") or ""), session.get("user") or ""
+                )
+                return respond(event, 200 if result.get("ok") else 404, result)
+
+            if method == "POST" and path.startswith("/admin/companies/") and path.endswith("/expire"):
+                key = path.split("/admin/companies/", 1)[1].rsplit("/expire", 1)[0]
+                result = expire_company(table(), key, session.get("user") or "")
+                return respond(event, 200 if result.get("ok") else 404, result)
 
             if method == "GET" and path.startswith("/admin/companies/"):
                 rest = path.split("/admin/companies/", 1)[1]

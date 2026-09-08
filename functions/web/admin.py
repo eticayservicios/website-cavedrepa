@@ -15,17 +15,20 @@ from typing import Any
 import boto3
 
 from directory import (
-    apply_catalog_delta,
+    as_company,
+    default_expires_at,
+    expiry_is_due,
     fold,
     get_item,
-    items_for_company,
+    parse_expiry,
     query_pk,
     scan_company_profiles,
+    sync_expiry,
+    write_company,
 )
 
 TOKEN_TTL = 12 * 3600
 HASH_ROUNDS = 120_000
-PROFILE_SKIP = {"pk", "sk", "entity"}
 USER_RE = re.compile(r"^[a-z0-9][a-z0-9._-]{1,31}$")
 _SEED: list[dict[str, str]] | None = None
 
@@ -254,12 +257,7 @@ def delete_user(table, username: str, actor: str) -> dict[str, Any]:
 
 
 def company_from_profile(item: dict[str, Any] | None) -> dict[str, Any] | None:
-    if not item:
-        return None
-    company = {key: value for key, value in item.items() if key not in PROFILE_SKIP}
-    if "id" in company:
-        company["id"] = int(company["id"])
-    return company
+    return as_company(item)
 
 
 STATUS_FILTERS = {
@@ -294,6 +292,7 @@ def company_summary(item: dict[str, Any], company: dict[str, Any] | None = None)
         "source": source.get("source") or "",
         "reject_reason": source.get("reject_reason") or "",
         "legal_rep": source.get("legal_rep") or "",
+        "expires_at": source.get("expires_at") or "",
     }
 
 
@@ -327,8 +326,9 @@ def list_companies(table, filters: dict[str, str] | None = None) -> dict[str, An
     companies = []
     for item in scan_company_profiles(table):
         company = company_from_profile(item)
-        if not company or not company.get("id"):
+        if not company or not company.get("id") or not company.get("name"):
             continue
+        company = sync_expiry(table, company)
         status = str(company.get("status") or "draft")
         _count_status(counts, status)
         if wanted is not None and status not in wanted:
@@ -373,16 +373,7 @@ def get_application(table, key: str) -> dict[str, Any] | None:
 
 
 def _replace_company(table, company: dict[str, Any], previous: dict[str, Any] | None = None) -> None:
-    company_id = int(company["id"])
-    if previous and previous.get("status") == "publish":
-        for item in items_for_company(previous):
-            if item.get("sk") == "PROFILE":
-                continue
-            table.delete_item(Key={"pk": item["pk"], "sk": item["sk"]})
-        apply_catalog_delta(table, previous, -1)
-    for item in items_for_company(company):
-        table.put_item(Item=item)
-    table.delete_item(Key={"pk": "APPLICATION#pending", "sk": f"APPLICATION#{company_id}"})
+    write_company(table, company, previous)
 
 
 def approve_application(table, key: str, actor: str = "") -> dict[str, Any]:
@@ -393,12 +384,19 @@ def approve_application(table, key: str, actor: str = "") -> dict[str, Any]:
         return {"ok": True, "status": "publish", "id": company["id"]}
     previous = dict(company)
     company["status"] = "publish"
+    if not parse_expiry(company.get("expires_at")) or expiry_is_due(company.get("expires_at")):
+        company["expires_at"] = default_expires_at()
     company["updated_at"] = now_stamp()
     if actor:
         company["reviewed_by"] = actor
-    _replace_company(table, company, previous if previous.get("status") == "publish" else None)
-    apply_catalog_delta(table, company, 1)
-    return {"ok": True, "status": "publish", "id": company["id"], "slug": company.get("slug") or ""}
+    write_company(table, company, previous)
+    return {
+        "ok": True,
+        "status": "publish",
+        "id": company["id"],
+        "slug": company.get("slug") or "",
+        "expires_at": company.get("expires_at") or "",
+    }
 
 
 def reject_application(table, key: str, reason: str = "", actor: str = "") -> dict[str, Any]:
@@ -412,5 +410,47 @@ def reject_application(table, key: str, reason: str = "", actor: str = "") -> di
         company["reject_reason"] = str(reason)[:400]
     if actor:
         company["reviewed_by"] = actor
-    _replace_company(table, company, previous)
+    write_company(table, company, previous)
     return {"ok": True, "status": "rejected", "id": company["id"]}
+
+
+def set_expiration(table, key: str, expires_at: str, actor: str = "") -> dict[str, Any]:
+    company = get_application(table, key)
+    if not company:
+        return {"ok": False, "error": "No se encontró esa empresa."}
+    day = parse_expiry(expires_at)
+    if not day:
+        return {"ok": False, "error": "Indica una fecha válida."}
+    previous = dict(company)
+    company["expires_at"] = day.isoformat()
+    company["updated_at"] = now_stamp()
+    if actor:
+        company["reviewed_by"] = actor
+    if company.get("status") == "publish" and expiry_is_due(company["expires_at"]):
+        company["status"] = "expired"
+    write_company(table, company, previous)
+    return {
+        "ok": True,
+        "id": company["id"],
+        "status": company.get("status") or "",
+        "expires_at": company["expires_at"],
+    }
+
+
+def expire_company(table, key: str, actor: str = "") -> dict[str, Any]:
+    company = get_application(table, key)
+    if not company:
+        return {"ok": False, "error": "No se encontró esa empresa."}
+    previous = dict(company)
+    company["expires_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    company["status"] = "expired"
+    company["updated_at"] = now_stamp()
+    if actor:
+        company["reviewed_by"] = actor
+    write_company(table, company, previous)
+    return {
+        "ok": True,
+        "id": company["id"],
+        "status": "expired",
+        "expires_at": company["expires_at"],
+    }

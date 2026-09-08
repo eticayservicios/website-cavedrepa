@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import html
 import re
+import time
+from datetime import datetime, timezone
 from typing import Any
 
 from directory import clean, dynamodb_safe, fold, get_item, paginate, query_pk
@@ -159,3 +161,163 @@ def get_post(table, key: str) -> dict[str, Any] | None:
     detail = {**card(item)}
     detail["content"] = item.get("content") or ""
     return detail
+
+
+PROFILE_SKIP = {"pk", "sk", "entity"}
+
+
+def now_stamp() -> str:
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S")
+
+
+def slugify_post(value: str) -> str:
+    slug = re.sub(r"[^a-z0-9]+", "-", fold(value)).strip("-")
+    return slug or "entrada"
+
+
+def as_post(item: dict[str, Any] | None) -> dict[str, Any] | None:
+    if not item:
+        return None
+    post = {key: value for key, value in item.items() if key not in PROFILE_SKIP}
+    if "id" in post:
+        post["id"] = int(post["id"])
+    return post
+
+
+def scan_posts(table) -> list[dict[str, Any]]:
+    items: list[dict[str, Any]] = []
+    kwargs = {
+        "FilterExpression": "entity = :entity",
+        "ExpressionAttributeValues": {":entity": "post"},
+    }
+    while True:
+        response = table.scan(**kwargs)
+        items.extend(response.get("Items") or [])
+        last = response.get("LastEvaluatedKey")
+        if not last:
+            break
+        kwargs["ExclusiveStartKey"] = last
+    return items
+
+
+def write_post(table, post: dict[str, Any], previous: dict[str, Any] | None = None) -> None:
+    if previous:
+        for item in items_for_post(previous):
+            table.delete_item(Key={"pk": item["pk"], "sk": item["sk"]})
+    for item in items_for_post(post):
+        table.put_item(Item=item)
+
+
+def post_summary(post: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "id": int(post.get("id") or 0),
+        "slug": post.get("slug") or "",
+        "title": post.get("title") or "",
+        "excerpt": post.get("excerpt") or "",
+        "date": post.get("date") or "",
+        "status": post.get("status") or "draft",
+        "categories": post.get("categories") or [],
+        "image_url": post.get("image_url") or "",
+    }
+
+
+def list_admin_posts(table, filters: dict[str, str] | None = None) -> dict[str, Any]:
+    filters = filters or {}
+    wanted = clean(filters.get("status")).lower()
+    query = fold(filters.get("q"))
+    counts = {"all": 0, "publish": 0, "draft": 0}
+    posts = []
+    for item in scan_posts(table):
+        post = as_post(item)
+        if not post or not post.get("title"):
+            continue
+        status = post.get("status") or "draft"
+        counts["all"] += 1
+        if status == "publish":
+            counts["publish"] += 1
+        else:
+            counts["draft"] += 1
+        if wanted == "publish" and status != "publish":
+            continue
+        if wanted == "draft" and status == "publish":
+            continue
+        blob = fold(
+            " ".join(
+                [
+                    str(post.get("title") or ""),
+                    str(post.get("excerpt") or ""),
+                    str(post.get("search") or ""),
+                ]
+            )
+        )
+        if query and query not in blob:
+            continue
+        posts.append(post_summary(post))
+    posts.sort(key=lambda item: item.get("date") or "", reverse=True)
+    return {"ok": True, "total": len(posts), "counts": counts, "posts": posts}
+
+
+def get_admin_post(table, key: str) -> dict[str, Any] | None:
+    raw = clean(key)
+    if not raw.isdigit():
+        return None
+    return as_post(get_item(table, f"POST#{int(raw)}", "PROFILE"))
+
+
+def categories_from_payload(payload: dict[str, Any]) -> list[dict[str, str]]:
+    raw = payload.get("categories")
+    if isinstance(raw, list):
+        items = raw
+    else:
+        items = [
+            {"name": part.strip(), "slug": slugify_post(part)}
+            for part in re.split(r"[,;/|]+", str(raw or ""))
+            if part.strip()
+        ]
+    return terms(items)
+
+
+def save_admin_post(table, payload: dict[str, Any], key: str = "") -> dict[str, Any]:
+    title = strip_html(str(payload.get("title") or ""))[:200]
+    if not title:
+        return {"ok": False, "error": "Escribe un título."}
+    content = clean_html(str(payload.get("content") or ""))[:50_000]
+    excerpt = strip_html(str(payload.get("excerpt") or ""))[:400]
+    if not excerpt:
+        excerpt = strip_html(content)[:220]
+    status = "publish" if clean(payload.get("status")).lower() == "publish" else "draft"
+    now = now_stamp()
+    date = clean(payload.get("date") or "") or now
+    previous = get_admin_post(table, key) if key else None
+    post_id = int(previous["id"]) if previous else int(time.time() * 1000)
+    slug = slugify_post(str(payload.get("slug") or title))
+    pointer = get_item(table, f"SLUG#post#{slug}", "POST")
+    if pointer and int(pointer.get("id") or 0) != post_id:
+        slug = f"{slug}-{post_id}"
+    post = {
+        "id": post_id,
+        "slug": slug,
+        "title": title,
+        "excerpt": excerpt,
+        "content": content,
+        "date": date,
+        "modified": now,
+        "image_url": clean(payload.get("image_url") or (previous or {}).get("image_url") or ""),
+        "categories": categories_from_payload(payload),
+        "status": status,
+        "source": (previous or {}).get("source") or "admin",
+    }
+    post["search"] = fold(
+        " ".join([post["title"], post["excerpt"], " ".join(item["name"] for item in post["categories"])])
+    )
+    write_post(table, post, previous)
+    return {"ok": True, "post": post}
+
+
+def delete_admin_post(table, key: str) -> dict[str, Any]:
+    post = get_admin_post(table, key)
+    if not post:
+        return {"ok": False, "error": "No se encontró esa entrada."}
+    for item in items_for_post(post):
+        table.delete_item(Key={"pk": item["pk"], "sk": item["sk"]})
+    return {"ok": True, "id": post["id"]}

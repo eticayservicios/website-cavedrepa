@@ -11,7 +11,7 @@ from typing import Any
 
 import boto3
 
-from directory import fold, items_for_company, search_blob
+from directory import default_expires_at, fold, items_for_company, search_blob
 
 SECTORS = {
     "agricola": "Sector Agrícola",
@@ -216,6 +216,7 @@ def company_from_application(data: dict[str, Any]) -> dict[str, Any]:
         "brands": data.get("brands") if isinstance(data.get("brands"), list) else terms_from_text(str(data.get("brands") or "")),
         "created_at": now,
         "updated_at": now,
+        "expires_at": default_expires_at(),
         "source": "application",
     }
     company["search"] = search_blob(company)

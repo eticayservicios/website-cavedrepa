@@ -185,6 +185,16 @@ window.CavedrepaApi = {
   adminApprove: (token, id) => apiSend("POST", `/admin/applications/${encodeURIComponent(id)}/approve`, {}, token),
   adminReject: (token, id, reason) =>
     apiSend("POST", `/admin/applications/${encodeURIComponent(id)}/reject`, { reason: reason || "" }, token),
+  adminSetExpiry: (token, id, expiresAt) =>
+    apiSend("POST", `/admin/companies/${encodeURIComponent(id)}/expiration`, { expires_at: expiresAt }, token),
+  adminExpireNow: (token, id) => apiSend("POST", `/admin/companies/${encodeURIComponent(id)}/expire`, {}, token),
+  adminPosts: (token) => apiSend("GET", "/admin/posts", null, token),
+  adminPost: (token, id) => apiSend("GET", `/admin/posts/${encodeURIComponent(id)}`, null, token),
+  adminSavePost: (token, payload, id) =>
+    id
+      ? apiSend("POST", `/admin/posts/${encodeURIComponent(id)}`, payload, token)
+      : apiSend("POST", "/admin/posts", payload, token),
+  adminDeletePost: (token, id) => apiSend("POST", `/admin/posts/${encodeURIComponent(id)}/delete`, {}, token),
   adminUsers: (token) => apiSend("GET", "/admin/users", null, token),
   adminCreateUser: (token, payload) => apiSend("POST", "/admin/users", payload, token),
   adminDeleteUser: (token, username) =>

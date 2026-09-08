@@ -214,7 +214,7 @@ const renderDetail = (company) => {
       company.description
         ? `<section class="detail-section">
             <h3 class="detail-heading">Perfil</h3>
-            <div class="detail-copy">${company.description}</div>
+            <div class="detail-copy">${String(company.description || "").replace(/<\/?(strong|b)\b[^>]*>/gi, "")}</div>
           </section>`
         : ""
     }
