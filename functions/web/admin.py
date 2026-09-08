@@ -16,9 +16,11 @@ import boto3
 
 from directory import (
     apply_catalog_delta,
+    fold,
     get_item,
     items_for_company,
     query_pk,
+    scan_company_profiles,
 )
 
 TOKEN_TTL = 12 * 3600
@@ -260,7 +262,19 @@ def company_from_profile(item: dict[str, Any] | None) -> dict[str, Any] | None:
     return company
 
 
-def application_summary(item: dict[str, Any], company: dict[str, Any] | None) -> dict[str, Any]:
+STATUS_FILTERS = {
+    "pending": {"pending"},
+    "publish": {"publish"},
+    "published": {"publish"},
+    "rejected": {"rejected"},
+    "expired": {"expired"},
+    "draft": {"draft"},
+    "private": {"private"},
+    "other": {"draft", "private"},
+}
+
+
+def company_summary(item: dict[str, Any], company: dict[str, Any] | None = None) -> dict[str, Any]:
     source = company or item
     return {
         "id": int(source.get("id") or item.get("id") or 0),
@@ -269,23 +283,83 @@ def application_summary(item: dict[str, Any], company: dict[str, Any] | None) ->
         "rif": source.get("rif") or item.get("rif") or "",
         "email": source.get("email") or item.get("email") or "",
         "phone": source.get("phone") or item.get("phone") or "",
+        "website": source.get("website") or "",
         "status": source.get("status") or item.get("status") or "pending",
         "created_at": source.get("created_at") or item.get("created_at") or "",
+        "updated_at": source.get("updated_at") or "",
         "image_url": source.get("image_url") or "",
         "sectors": source.get("sectors") or [],
         "locations": source.get("locations") or [],
+        "brands": source.get("brands") or [],
+        "source": source.get("source") or "",
+        "reject_reason": source.get("reject_reason") or "",
+        "legal_rep": source.get("legal_rep") or "",
     }
 
 
+application_summary = company_summary
+
+
+def _empty_counts() -> dict[str, int]:
+    return {
+        "all": 0,
+        "pending": 0,
+        "publish": 0,
+        "rejected": 0,
+        "expired": 0,
+        "other": 0,
+    }
+
+
+def _count_status(counts: dict[str, int], status: str) -> None:
+    counts["all"] += 1
+    if status in {"pending", "publish", "rejected", "expired"}:
+        counts[status] += 1
+    else:
+        counts["other"] += 1
+
+
+def list_companies(table, filters: dict[str, str] | None = None) -> dict[str, Any]:
+    filters = filters or {}
+    wanted = STATUS_FILTERS.get((filters.get("status") or "").strip().lower())
+    query = fold(filters.get("q"))
+    counts = _empty_counts()
+    companies = []
+    for item in scan_company_profiles(table):
+        company = company_from_profile(item)
+        if not company or not company.get("id"):
+            continue
+        status = str(company.get("status") or "draft")
+        _count_status(counts, status)
+        if wanted is not None and status not in wanted:
+            continue
+        blob = fold(
+            " ".join(
+                [
+                    str(company.get("name") or ""),
+                    str(company.get("rif") or ""),
+                    str(company.get("email") or ""),
+                    str(company.get("phone") or ""),
+                    str(company.get("search") or ""),
+                ]
+            )
+        )
+        if query and query not in blob:
+            continue
+        companies.append(company_summary(company))
+    companies.sort(key=lambda item: item.get("created_at") or "", reverse=True)
+    return {"ok": True, "total": len(companies), "counts": counts, "companies": companies}
+
+
 def list_applications(table) -> dict[str, Any]:
-    rows = query_pk(table, "APPLICATION#pending")
-    applications = []
-    for row in rows:
-        company_id = int(row.get("id") or 0)
-        company = company_from_profile(get_item(table, f"COMPANY#{company_id}", "PROFILE")) if company_id else None
-        applications.append(application_summary(row, company))
-    applications.sort(key=lambda item: item.get("created_at") or "", reverse=True)
-    return {"ok": True, "total": len(applications), "applications": applications}
+    result = list_companies(table, {"status": "pending"})
+    return {
+        "ok": True,
+        "total": result["total"],
+        "counts": result["counts"],
+        "applications": result["companies"],
+        "companies": result["companies"],
+    }
 
 
 def get_application(table, key: str) -> dict[str, Any] | None:

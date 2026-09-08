@@ -48,8 +48,9 @@ class DirectoryTests(unittest.TestCase):
     def test_pending_is_not_indexed_publicly(self):
         raw = dict(SAMPLE, status="pending", id=3354)
         items = items_for_company(normalize_listing(raw))
-        self.assertEqual(len(items), 1)
-        self.assertEqual(items[0]["pk"], "COMPANY#3354")
+        pks = {item["pk"] for item in items}
+        self.assertEqual(pks, {"COMPANY#3354", "APPLICATION#pending"})
+        self.assertNotIn("STATUS#publish", pks)
 
     def test_published_builds_browse_keys(self):
         items = items_for_company(normalize_listing(SAMPLE))

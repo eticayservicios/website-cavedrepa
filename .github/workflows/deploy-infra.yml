@@ -138,6 +138,13 @@ jobs:
             --listings scripts/seed_published.json \
             --table cavedrepa-web-core \
             --region "${AWS_REGION}"
+          if [ -f scripts/seed_pending.json ]; then
+            python3 scripts/import_directory.py \
+              --listings scripts/seed_pending.json \
+              --table cavedrepa-web-core \
+              --region "${AWS_REGION}" \
+              --no-catalogs
+          fi
           python3 scripts/import_blog.py \
             --posts scripts/seed_blog.json \
             --table cavedrepa-web-core \

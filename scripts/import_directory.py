@@ -44,6 +44,12 @@ def main() -> None:
     )
     parser.add_argument("--table", default="cavedrepa-web-core")
     parser.add_argument("--region", default="us-east-1")
+    parser.add_argument("--profile", default="")
+    parser.add_argument(
+        "--no-catalogs",
+        action="store_true",
+        help="No sobrescribe CATALOG; útil al importar solo solicitudes pending",
+    )
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
@@ -53,7 +59,7 @@ def main() -> None:
 
     companies = load_listings(listings_path)
     catalogs = build_catalogs(companies)
-    items = catalog_items(catalogs)
+    items = [] if args.no_catalogs else catalog_items(catalogs)
     for company in companies:
         items.extend(items_for_company(company))
 
@@ -83,7 +89,11 @@ def main() -> None:
 
     import boto3
 
-    table = boto3.resource("dynamodb", region_name=args.region).Table(args.table)
+    session_kwargs = {"region_name": args.region}
+    if args.profile:
+        session_kwargs["profile_name"] = args.profile
+    session = boto3.Session(**session_kwargs)
+    table = session.resource("dynamodb").Table(args.table)
     written = write_items(table, items)
     print(json.dumps({"written": written}, ensure_ascii=False))
 

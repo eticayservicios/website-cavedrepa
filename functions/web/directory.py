@@ -9,6 +9,7 @@ from typing import Any
 
 SITE_ORIGIN = "https://cavedrepa.smartravelevents.com"
 PUBLIC_STATUSES = {"publish"}
+QUEUE_STATUSES = {"pending"}
 PAGE_SIZE = 20
 CARD_FIELDS = (
     "id",
@@ -157,6 +158,22 @@ def dynamodb_safe(value: Any) -> Any:
     return value
 
 
+def application_index_item(company: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "pk": "APPLICATION#pending",
+        "sk": f"APPLICATION#{company['id']}",
+        "entity": "application",
+        "id": company["id"],
+        "slug": company.get("slug") or "",
+        "name": company.get("name") or "",
+        "rif": company.get("rif") or "",
+        "email": company.get("email") or "",
+        "phone": company.get("phone") or "",
+        "status": company.get("status") or "pending",
+        "created_at": company.get("created_at") or "",
+    }
+
+
 def items_for_company(company: dict[str, Any]) -> list[dict[str, Any]]:
     company_id = company["id"]
     profile = {
@@ -166,6 +183,9 @@ def items_for_company(company: dict[str, Any]) -> list[dict[str, Any]]:
         **company,
     }
     items = [profile]
+    if company["status"] in QUEUE_STATUSES:
+        items.append(application_index_item(company))
+        return [dynamodb_safe(item) for item in items]
     if company["status"] not in PUBLIC_STATUSES:
         return [dynamodb_safe(item) for item in items]
 
@@ -217,6 +237,22 @@ def matches_filters(company: dict[str, Any], filters: dict[str, str]) -> bool:
     if brand and brand not in {item["slug"] for item in company.get("brands") or []}:
         return False
     return True
+
+
+def scan_company_profiles(table) -> list[dict[str, Any]]:
+    items: list[dict[str, Any]] = []
+    kwargs = {
+        "FilterExpression": "sk = :sk",
+        "ExpressionAttributeValues": {":sk": "PROFILE"},
+    }
+    while True:
+        response = table.scan(**kwargs)
+        items.extend(response.get("Items") or [])
+        last = response.get("LastEvaluatedKey")
+        if not last:
+            break
+        kwargs["ExclusiveStartKey"] = last
+    return items
 
 
 def query_pk(table, pk: str) -> list[dict[str, Any]]:

@@ -170,6 +170,15 @@ window.CavedrepaApi = {
     }
   },
   login: (user, password) => apiPost("/admin/login", { user, password }),
+  adminCompanies: (token, params) => {
+    const query = new URLSearchParams();
+    Object.entries(params || {}).forEach(([key, value]) => {
+      if (value) query.set(key, value);
+    });
+    const suffix = query.toString() ? `?${query}` : "";
+    return apiSend("GET", `/admin/companies${suffix}`, null, token);
+  },
+  adminCompany: (token, id) => apiSend("GET", `/admin/companies/${encodeURIComponent(id)}`, null, token),
   adminApplications: (token) => apiSend("GET", "/admin/applications", null, token),
   adminMessages: (token) => apiSend("GET", "/admin/messages", null, token),
   adminApplication: (token, id) => apiSend("GET", `/admin/applications/${encodeURIComponent(id)}`, null, token),

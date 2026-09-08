@@ -11,7 +11,7 @@ from typing import Any
 
 import boto3
 
-from directory import dynamodb_safe, fold, items_for_company, search_blob
+from directory import fold, items_for_company, search_blob
 
 SECTORS = {
     "agricola": "Sector Agrícola",
@@ -223,25 +223,7 @@ def company_from_application(data: dict[str, Any]) -> dict[str, Any]:
 
 
 def items_for_application(company: dict[str, Any]) -> list[dict[str, Any]]:
-    items = items_for_company(company)
-    items.append(
-        dynamodb_safe(
-            {
-                "pk": "APPLICATION#pending",
-                "sk": f"APPLICATION#{company['id']}",
-                "entity": "application",
-                "id": company["id"],
-                "slug": company["slug"],
-                "name": company["name"],
-                "rif": company["rif"],
-                "email": company["email"],
-                "phone": company["phone"],
-                "status": "pending",
-                "created_at": company["created_at"],
-            }
-        )
-    )
-    return items
+    return items_for_company(company)
 
 
 def submit_application(table, payload: dict[str, Any]) -> dict[str, Any]:

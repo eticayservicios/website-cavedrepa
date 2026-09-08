@@ -33,7 +33,7 @@
       <div class="wrap admin-login-wrap">
         <p class="eyebrow">Panel interno</p>
         <h1>Entrar</h1>
-        <p>Revisa solicitudes de afiliación y mensajes de contacto.</p>
+        <p>Consulta todas las empresas y los mensajes de contacto.</p>
         <form class="apply-form admin-form" id="login-form">
           <label class="apply-field apply-field-wide">
             <span>Usuario</span>
@@ -52,7 +52,7 @@
     <section class="section admin-app" id="admin-app" hidden>
       <div class="wrap">
         <div class="directory-tabs page-tabs" role="tablist">
-          <button type="button" class="is-active" data-panel="queue">Solicitudes</button>
+          <button type="button" class="is-active" data-panel="queue">Empresas</button>
           <button type="button" data-panel="messages">Mensajes</button>
           <button type="button" data-panel="users">Equipo</button>
         </div>
@@ -60,10 +60,24 @@
         <div id="admin-queue">
           <div class="section-head">
             <div>
-              <p class="eyebrow">Afiliaciones</p>
-              <h1>Solicitudes en revisión</h1>
+              <p class="eyebrow">Directorio interno</p>
+              <h1>Empresas</h1>
             </div>
             <p class="directory-status" id="queue-status"></p>
+          </div>
+          <div class="admin-toolbar">
+            <div class="admin-filters" id="company-filters" role="tablist" aria-label="Estado">
+              <button type="button" class="is-active" data-status="">Todas</button>
+              <button type="button" data-status="pending">En revisión</button>
+              <button type="button" data-status="publish">Publicadas</button>
+              <button type="button" data-status="rejected">Rechazadas</button>
+              <button type="button" data-status="expired">Expiradas</button>
+              <button type="button" data-status="other" hidden>Otras</button>
+            </div>
+            <label class="admin-search">
+              <span class="visually-hidden">Buscar empresa</span>
+              <input type="search" id="company-search" placeholder="Buscar por nombre, RIF o correo" autocomplete="off">
+            </label>
           </div>
           <div id="queue-list" class="admin-list"></div>
         </div>
@@ -109,12 +123,12 @@
     </section>
   </main>
 
-  <aside class="company-drawer" id="admin-drawer" hidden>
-    <div class="company-drawer-panel" role="dialog" aria-labelledby="admin-title">
+  <div class="admin-modal" id="admin-modal" hidden>
+    <div class="admin-modal-panel" role="dialog" aria-modal="true" aria-labelledby="admin-title">
       <button class="drawer-close" type="button" id="admin-close" aria-label="Cerrar">×</button>
       <div id="admin-detail"></div>
     </div>
-  </aside>
+  </div>
 
   <script src="/js/config.js"></script>
   <script src="/js/api.js"></script>

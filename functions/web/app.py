@@ -16,6 +16,7 @@ from admin import (
     delete_user,
     get_application,
     list_applications,
+    list_companies,
     list_users,
     login as admin_login,
     reject_application,
@@ -197,11 +198,22 @@ def lambda_handler(event, context):
             if not session.get("ok"):
                 return respond(event, 401, session)
 
+            if method == "GET" and path == "/admin/companies":
+                return respond(event, 200, list_companies(table(), query_params(event)))
+
             if method == "GET" and path == "/admin/applications":
                 return respond(event, 200, list_applications(table()))
 
             if method == "GET" and path == "/admin/messages":
                 return respond(event, 200, list_messages(table()))
+
+            if method == "GET" and path.startswith("/admin/companies/"):
+                rest = path.split("/admin/companies/", 1)[1]
+                if "/" not in rest:
+                    company = get_application(table(), rest)
+                    if not company:
+                        return respond(event, 404, {"ok": False, "error": "Empresa no encontrada"})
+                    return respond(event, 200, {"ok": True, "company": company})
 
             if method == "GET" and path.startswith("/admin/applications/"):
                 rest = path.split("/admin/applications/", 1)[1]

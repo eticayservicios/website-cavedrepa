@@ -6,6 +6,7 @@ from admin import (
     create_user,
     delete_user,
     list_applications,
+    list_companies,
     list_users,
     login,
     read_token,
@@ -36,6 +37,16 @@ class FakeTable:
     def query(self, **kwargs):
         pk = kwargs["ExpressionAttributeValues"][":pk"]
         items = [dict(item) for (item_pk, _sk), item in self.store.items() if item_pk == pk]
+        return {"Items": items}
+
+    def scan(self, **kwargs):
+        values = kwargs.get("ExpressionAttributeValues") or {}
+        wanted_sk = values.get(":sk")
+        items = []
+        for item in self.store.values():
+            if wanted_sk is not None and item.get("sk") != wanted_sk:
+                continue
+            items.append(dict(item))
         return {"Items": items}
 
     def batch_writer(self):
@@ -140,6 +151,26 @@ class AdminQueueTests(unittest.TestCase):
         self.assertFalse(get_item(table, "STATUS#publish", "COMPANY#9001"))
         self.assertEqual(list_applications(table)["total"], 0)
 
+    def test_directorist_pending_listing_is_in_admin_queue(self):
+        pending = normalize_listing(
+            {
+                "id": 3354,
+                "status": "pending",
+                "title": "Speedway C.A.",
+                "slug": "speedway",
+                "date": "2026-03-01 10:00:00",
+                "tax": {
+                    "category": [{"name": "Sector Agrícola", "slug": "agricola"}],
+                    "location": [],
+                    "tags": [],
+                },
+            }
+        )
+        table = FakeTable(items_for_company(pending))
+        listed = list_applications(table)
+        self.assertEqual(listed["total"], 1)
+        self.assertEqual(listed["applications"][0]["name"], "Speedway C.A.")
+
     def test_published_company_is_not_in_admin_queue(self):
         published = normalize_listing(
             {
@@ -156,6 +187,45 @@ class AdminQueueTests(unittest.TestCase):
         )
         table = FakeTable(items_for_company(published))
         self.assertEqual(list_applications(table)["total"], 0)
+
+    def test_list_companies_includes_every_status(self):
+        pending = sample_application()
+        published = normalize_listing(
+            {
+                "id": 297,
+                "status": "publish",
+                "title": "Agritrader, S.A.",
+                "slug": "agritrader",
+                "date": "2019-11-16 19:05:48",
+                "tax": {"category": [], "location": [], "tags": []},
+            }
+        )
+        expired = normalize_listing(
+            {
+                "id": 1996,
+                "status": "expired",
+                "title": "Todo Tractor, C.A.",
+                "slug": "todo-tractor",
+                "date": "2020-01-01 00:00:00",
+                "tax": {"category": [], "location": [], "tags": []},
+            }
+        )
+        table = FakeTable(
+            items_for_application(pending)
+            + items_for_company(published)
+            + items_for_company(expired)
+        )
+        listed = list_companies(table)
+        self.assertEqual(listed["total"], 3)
+        self.assertEqual(listed["counts"]["pending"], 1)
+        self.assertEqual(listed["counts"]["publish"], 1)
+        self.assertEqual(listed["counts"]["expired"], 1)
+        expired_only = list_companies(table, {"status": "expired"})
+        self.assertEqual(expired_only["total"], 1)
+        self.assertEqual(expired_only["companies"][0]["name"], "Todo Tractor, C.A.")
+        found = list_companies(table, {"q": "agritrader"})
+        self.assertEqual(found["total"], 1)
+        self.assertEqual(found["companies"][0]["id"], 297)
 
 
 if __name__ == "__main__":
