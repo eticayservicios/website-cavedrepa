@@ -2680,3 +2680,106 @@ body.drawer-open {
 .back-to-top:hover {
   background: var(--yellow-hover);
 }
+
+.admin-page [hidden] {
+  display: none !important;
+}
+
+.admin-page .wrap {
+  min-width: 0;
+}
+
+.admin-login .btn {
+  width: 100%;
+}
+
+.admin-page .section-head h1 {
+  font-size: clamp(1.35rem, 4.5vw, 2.1rem);
+  overflow-wrap: anywhere;
+}
+
+.admin-page .admin-card,
+.admin-page .admin-card > div {
+  min-width: 0;
+}
+
+.admin-page .admin-card h2,
+.admin-page .admin-message {
+  overflow-wrap: anywhere;
+}
+
+.admin-page .page-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.admin-page .page-tabs button {
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  padding: 10px 8px;
+}
+
+@media (max-width: 900px) {
+  .admin-page .site-header .wrap {
+    grid-template-columns: minmax(0, 1fr) auto;
+    width: min(1360px, calc(100% - 20px));
+    gap: 10px;
+  }
+
+  .admin-page .brand img {
+    height: 44px;
+    max-width: min(180px, 46vw);
+  }
+
+  .admin-page .admin-who {
+    max-width: 30vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .admin-page .admin-header-actions .btn {
+    padding: 8px 12px;
+    font-size: 0.72rem;
+  }
+
+  .admin-page .section {
+    padding-top: 28px;
+    padding-bottom: 40px;
+  }
+
+  .admin-page .admin-card,
+  .admin-page .admin-card-actions,
+  .admin-page .admin-user-form {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-page .admin-card-actions {
+    justify-content: stretch;
+  }
+
+  .admin-page .admin-card-actions .btn {
+    flex: 1 1 calc(50% - 8px);
+    justify-content: center;
+  }
+
+  .admin-page .page-tabs {
+    flex-direction: row;
+  }
+
+  .admin-page .page-tabs button {
+    font-size: 0.78rem;
+    white-space: normal;
+    line-height: 1.25;
+  }
+
+  .admin-page .apply-form {
+    padding: 18px 14px 22px;
+  }
+
+  .admin-page .company-drawer-panel {
+    width: 100%;
+    padding: 52px 18px 32px;
+  }
+}

@@ -72,11 +72,13 @@ def origin_for(event: dict) -> str:
 
 
 def cors_headers(event: dict) -> dict[str, str]:
+    origin = origin_for(event)
     return {
         "Content-Type": "application/json; charset=utf-8",
-        "Access-Control-Allow-Origin": origin_for(event),
+        "Access-Control-Allow-Origin": origin,
         "Access-Control-Allow-Methods": "GET,POST,PUT,PATCH,DELETE,OPTIONS",
         "Access-Control-Allow-Headers": "Content-Type,Authorization",
+        "Access-Control-Max-Age": "600",
         "Vary": "Origin",
     }
 

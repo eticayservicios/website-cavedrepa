@@ -57,10 +57,8 @@ const isLocalHost = () => {
 };
 
 const apiUrl = () => {
-  const prod = (window.CAVEDREPA_API_URL || "").replace(/\/$/, "");
-  if (prod) return prod;
   if (isLocalHost()) return `${window.location.origin}/api`;
-  return "";
+  return (window.CAVEDREPA_API_URL || "").replace(/\/$/, "");
 };
 
 const apiGet = async (path, params) => {

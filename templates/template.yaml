@@ -414,7 +414,7 @@ Resources:
       Cors:
         AllowMethods: "'OPTIONS,GET,POST,PUT,PATCH,DELETE'"
         AllowHeaders: "'Content-Type,Authorization'"
-        AllowOrigin: "'https://cavedrepa.smartravelevents.com'"
+        AllowOrigin: "'*'"
       Tags:
         Project: !Ref ProjectName
         Site: !Ref SiteName
