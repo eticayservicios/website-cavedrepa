@@ -152,8 +152,10 @@ if (search && !isDirectoryPage) {
   search.setAttribute("method", "get");
 }
 
-const homeNews = document.getElementById("home-news");
-if (homeNews && window.CavedrepaApi) {
+const homeFeatured = document.getElementById("home-featured");
+const homeLatest = document.getElementById("home-latest");
+const homeCats = document.getElementById("home-cats");
+if (homeFeatured && homeLatest && window.CavedrepaApi) {
   const months = [
     "enero",
     "febrero",
@@ -168,11 +170,26 @@ if (homeNews && window.CavedrepaApi) {
     "noviembre",
     "diciembre",
   ];
+  const HOME_CATS = [
+    { name: "Todos", slug: "" },
+    { name: "Agrícola", slugs: ["agro", "agricola", "agroindustria"] },
+    { name: "Construcción", slugs: ["construccion"] },
+    { name: "Industrial", slugs: ["industrial"] },
+    { name: "Pesca y acuícola", slugs: ["acuicola", "pesca"] },
+    { name: "Economía", slugs: ["economia", "estadisticas"] },
+    { name: "Eventos", slugs: ["eventos"] },
+  ];
+  const escapeHtml = (value) =>
+    String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
   const formatDate = (value) => {
     const stamp = String(value || "").slice(0, 10);
     const [year, month, day] = stamp.split("-");
     if (!year || !month || !day) return "";
-    return `${Number(day)} ${months[Number(month) - 1] || ""} ${year}`;
+    return `${Number(day)} de ${months[Number(month) - 1] || ""} de ${year}`;
   };
   const softenCaps = (value) => {
     const text = String(value || "").replace(/\s*\[(?:&hellip;|…)\]\s*$/i, "…").trim();
@@ -183,35 +200,154 @@ if (homeNews && window.CavedrepaApi) {
     const lower = text.toLocaleLowerCase("es");
     return lower.charAt(0).toLocaleUpperCase("es") + lower.slice(1);
   };
-  const shortExcerpt = (value, max = 150) => {
+  const shortExcerpt = (value, max = 170) => {
     const text = softenCaps(value);
     if (text.length <= max) return text;
     return `${text.slice(0, max - 1).replace(/\s+\S*$/, "")}…`;
   };
-  window.CavedrepaApi.posts({ per_page: "3" })
-    .then((payload) => {
+  const postHref = (post, coverKey) => {
+    const next = new URL("/blog/", window.location.origin);
+    next.searchParams.set("entrada", post.slug || post.id);
+    if (coverKey) next.searchParams.set("foto", coverKey);
+    return `${next.pathname}${next.search}`;
+  };
+  const catName = (post) => {
+    const cats = post.categories || [];
+    const named = cats.find((item) => !/^\d{4}$/.test(item.slug || ""));
+    return (named || cats[0] || {}).name || "Noticias";
+  };
+  const FEATURED_IMAGES = [
+    "/images/home/tractor.jpg",
+    "/images/home/construccion.jpg",
+    "/images/home/buque.jpg",
+  ];
+  const LATEST_IMAGES = [
+    "/images/home/agricola.jpg",
+    "/images/home/construccion.jpg",
+    "/images/home/industrial.jpg",
+    "/images/home/pesca.jpg",
+    "/images/home/economia.jpg",
+    "/images/home/eventos.jpg",
+  ];
+  const imageFor = (variant, index) => {
+    if (variant === "mini") return LATEST_IMAGES[index] || LATEST_IMAGES[0];
+    if (variant === "main") return FEATURED_IMAGES[0];
+    return FEATURED_IMAGES[Math.min(index + 1, FEATURED_IMAGES.length - 1)];
+  };
+  const storyHtml = (post, variant, index = 0) => {
+    const title = escapeHtml(softenCaps(post.title || "Entrada"));
+    const kicker = escapeHtml(catName(post));
+    const date = escapeHtml(formatDate(post.date));
+    const excerpt = escapeHtml(shortExcerpt(post.excerpt));
+    const image = imageFor(variant, index);
+    const coverKey = window.CavedrepaCovers?.keyFromSrc(image) || "";
+    const href = postHref(post, coverKey);
+    if (variant === "mini") {
+      return `
+        <a class="home-mini" href="${href}">
+          <img src="${escapeHtml(image)}" alt="" width="400" height="267" onerror="this.src='/images/blog/editorial.jpg'">
+          <div class="home-mini-body">
+            <p class="home-kicker">${kicker}</p>
+            <time>${date}</time>
+            <h3>${title}</h3>
+            <span class="home-mini-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>`;
+    }
+    return `
+      <a class="${variant === "main" ? "home-featured-main" : "home-story"}" href="${href}">
+        <img src="${escapeHtml(image)}" alt="" width="640" height="400" onerror="this.src='/images/blog/editorial.jpg'">
+        <p class="home-kicker">${kicker}</p>
+        <h3>${title}</h3>
+        ${variant === "main" && excerpt ? `<p class="home-excerpt">${excerpt}</p>` : ""}
+        <p class="home-meta"><time>${date}</time><span>Leer artículo →</span></p>
+      </a>`;
+  };
+  let allPosts = [];
+  let currentCat = "Todos";
+  const renderCats = () => {
+    if (!homeCats) return;
+    homeCats.innerHTML = HOME_CATS.map(
+      (item) =>
+        `<button type="button" data-cat="${escapeHtml(item.name)}" class="${
+          item.name === currentCat ? "is-active" : ""
+        }">${escapeHtml(item.name)}</button>`
+    ).join("");
+  };
+  const paintFeed = (posts) => {
+    if (!posts.length) {
+      homeFeatured.innerHTML = `<p class="home-empty">Pronto publicaremos más notas de este tema.</p>`;
+      homeLatest.innerHTML = "";
+      return;
+    }
+    const featured = posts.slice(0, 3);
+    const latest = posts.slice(3, 9);
+    homeFeatured.innerHTML = `
+      ${storyHtml(featured[0], "main", 0)}
+      <div class="home-featured-side">
+        ${featured.slice(1).map((post, index) => storyHtml(post, "side", index)).join("")}
+      </div>`;
+    homeLatest.innerHTML = latest.length
+      ? latest.map((post, index) => storyHtml(post, "mini", index)).join("")
+      : "";
+  };
+  const loadFeed = async (name) => {
+    currentCat = name || "Todos";
+    renderCats();
+    const filter = HOME_CATS.find((item) => item.name === currentCat);
+    const slug = filter && filter.slugs ? filter.slugs[0] : "";
+    if (!slug && allPosts.length) {
+      paintFeed(allPosts);
+      return;
+    }
+    homeFeatured.innerHTML = `<p class="home-empty">Cargando…</p>`;
+    homeLatest.innerHTML = "";
+    try {
+      const payload = await window.CavedrepaApi.posts({
+        per_page: "12",
+        categoria: slug,
+      });
       const posts = payload.posts || [];
-      homeNews.innerHTML = posts
-        .map((post) => {
-          const media = `<img src="/images/blog/editorial.jpg" alt="Editorial CAVEDREPA">`;
-          return `
-            <article class="news-card">
-              <a class="company-card-link" href="/blog/?entrada=${encodeURIComponent(post.slug || post.id)}">
-                ${media}
-                <div class="news-body">
-                  <p class="news-date">${formatDate(post.date)}</p>
-                  <h3>${post.title || "Entrada"}</h3>
-                  <p>${shortExcerpt(post.excerpt)}</p>
-                  <span class="read-more">Leer más →</span>
-                </div>
-              </a>
-            </article>`;
-        })
-        .join("");
-    })
-    .catch(() => {
-      homeNews.innerHTML = `<p class="empty-state">Las entradas aparecerán aquí en breve.</p>`;
-    });
+      if (!slug) allPosts = posts;
+      paintFeed(posts);
+    } catch (_error) {
+      homeFeatured.innerHTML = `<p class="home-empty">Las entradas aparecerán aquí en breve.</p>`;
+    }
+  };
+  renderCats();
+  loadFeed("Todos");
+  homeCats?.addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-cat]");
+    if (!button) return;
+    loadFeed(button.dataset.cat || "Todos");
+  });
+}
+
+const newsletter = document.getElementById("home-newsletter");
+const newsletterBox = document.getElementById("home-newsletter-box");
+if (newsletter && window.CavedrepaApi) {
+  newsletter.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const raw = Object.fromEntries(new FormData(newsletter).entries());
+    const button = newsletter.querySelector("button");
+    if (button) button.disabled = true;
+    try {
+      await window.CavedrepaApi.contact({
+        name: "Boletín CAVEDREPA",
+        email: raw.email,
+        message: "Quiero recibir las últimas noticias, estudios y oportunidades del sector.",
+        website_url: raw.website_url,
+      });
+      if (newsletterBox) {
+        newsletterBox.classList.add("is-done");
+        newsletterBox.innerHTML = `
+          <h3>Listo</h3>
+          <p>Recibimos tu correo. La Cámara lo revisará para el envío de información.</p>`;
+      }
+    } catch (_error) {
+      if (button) button.disabled = false;
+    }
+  });
 }
 
 const backToTop = document.createElement("button");

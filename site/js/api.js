@@ -140,6 +140,31 @@ const apiSend = async (method, path, body, token) => {
   }
 };
 
+window.CavedrepaCovers = {
+  files: {
+    agricola: "/images/home/agricola.jpg",
+    tractor: "/images/home/tractor.jpg",
+    construccion: "/images/home/construccion.jpg",
+    industrial: "/images/home/industrial.jpg",
+    pesca: "/images/home/pesca.jpg",
+    buque: "/images/home/buque.jpg",
+    economia: "/images/home/economia.jpg",
+    eventos: "/images/home/eventos.jpg",
+  },
+  fromKey(key) {
+    return this.files[String(key || "").toLowerCase()] || "";
+  },
+  keyFromSrc(src) {
+    const match = String(src || "").match(/\/images\/home\/([a-z]+)\.jpg$/i);
+    return match ? match[1] : "";
+  },
+  forPost(post) {
+    const keys = Object.keys(this.files);
+    const id = Number(post && post.id) || 0;
+    return this.files[keys[Math.abs(id) % keys.length]];
+  },
+};
+
 window.CavedrepaApi = {
   catalogs: async () => {
     try {

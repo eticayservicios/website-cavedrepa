@@ -38,6 +38,8 @@ const syncMenu = () => {
 const postHref = (post) => {
   const next = new URL("/blog/", window.location.origin);
   next.searchParams.set("entrada", post.slug || post.id);
+  const foto = coverKeyFor(post);
+  if (foto) next.searchParams.set("foto", foto);
   return `${next.pathname}${next.search}`;
 };
 
@@ -71,10 +73,18 @@ const shortText = (value, max = 160) => {
 
 const BLOG_IMAGE = "/images/blog/editorial.jpg";
 
+const coverSrc = (post, fotoKey) => {
+  const covers = window.CavedrepaCovers;
+  if (!covers) return BLOG_IMAGE;
+  return covers.fromKey(fotoKey) || covers.forPost(post) || BLOG_IMAGE;
+};
+
+const coverKeyFor = (post) => window.CavedrepaCovers?.keyFromSrc(coverSrc(post)) || "";
+
 const rowHtml = (post) => `
     <article class="news-card">
-      <a class="company-card-link" href="${postHref(post)}" data-entrada="${post.slug || post.id}">
-        <img src="${BLOG_IMAGE}" alt="">
+      <a class="company-card-link" href="${postHref(post)}" data-entrada="${post.slug || post.id}" data-foto="${coverKeyFor(post)}">
+        <img src="${coverSrc(post)}" alt="">
         <div class="news-body">
           <p class="blog-row-cats">${catsLine(post.categories)}</p>
           <p class="news-date">${formatDate(post.date)}</p>
@@ -94,8 +104,8 @@ const sideHtml = () => `
         ? recentPosts
             .map(
               (post) => `
-      <a class="blog-recent" href="${postHref(post)}" data-entrada="${post.slug || post.id}">
-        <img src="${BLOG_IMAGE}" alt="">
+      <a class="blog-recent" href="${postHref(post)}" data-entrada="${post.slug || post.id}" data-foto="${coverKeyFor(post)}">
+        <img src="${coverSrc(post)}" alt="">
         <span>
           <strong>${post.title || "Entrada"}</strong>
           <em>${formatDate(post.date)}</em>
@@ -185,8 +195,8 @@ const renderList = (payload) => {
   showList();
 };
 
-const renderArticle = (post) => {
-  const image = `<img class="blog-hero-img" src="${BLOG_IMAGE}" alt="">`;
+const renderArticle = (post, fotoKey) => {
+  const image = `<img class="blog-hero-img" src="${coverSrc(post, fotoKey)}" alt="">`;
   article.innerHTML = `
     <button type="button" class="blog-back" id="blog-back">← Volver al blog</button>
     <p class="blog-row-cats">${catsLine(post.categories)}</p>
@@ -252,16 +262,18 @@ const loadList = async () => {
   }
 };
 
-const openPost = async (key, push = true) => {
+const openPost = async (key, push = true, fotoKey = "") => {
   if (!key) return;
   setStatus("Cargando la entrada...");
   try {
     const payload = await window.CavedrepaApi.post(key);
-    renderArticle(payload.post);
+    const coverKey = fotoKey || coverKeyFor(payload.post);
+    renderArticle(payload.post, coverKey);
     if (push) {
       const next = new URL(window.location.href);
       next.searchParams.set("entrada", key);
       next.searchParams.delete("page");
+      if (coverKey) next.searchParams.set("foto", coverKey);
       window.history.pushState({}, "", next);
     }
   } catch (_error) {
@@ -273,6 +285,7 @@ const openPost = async (key, push = true) => {
 const closeArticle = () => {
   const next = new URL(window.location.href);
   next.searchParams.delete("entrada");
+  next.searchParams.delete("foto");
   window.history.pushState({}, "", next);
   showList();
   if (!results.querySelector(".blog-row")) loadList();
@@ -308,7 +321,7 @@ document.querySelector(".blog-layout")?.addEventListener("click", (event) => {
   const link = event.target.closest("[data-entrada]");
   if (!link) return;
   event.preventDefault();
-  openPost(link.dataset.entrada);
+  openPost(link.dataset.entrada, true, link.dataset.foto || "");
 });
 
 window.addEventListener("popstate", () => {
@@ -316,13 +329,13 @@ window.addEventListener("popstate", () => {
   const key = next.get("entrada");
   currentCategory = next.get("categoria") || "";
   currentPage = Number(next.get("page") || 1) || 1;
-  if (key) openPost(key, false);
+  if (key) openPost(key, false, next.get("foto") || "");
   else loadList();
 });
 
 (async () => {
   const key = new URLSearchParams(window.location.search).get("entrada");
   await Promise.all([loadList(), loadSide()]);
-  if (key) await openPost(key, false);
+  if (key) await openPost(key, false, new URLSearchParams(window.location.search).get("foto") || "");
 })();
 })();
