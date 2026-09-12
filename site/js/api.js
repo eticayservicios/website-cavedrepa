@@ -62,22 +62,33 @@ const apiUrl = () => {
 };
 
 const apiGet = async (path, params) => {
-  const base = apiUrl();
-  if (!base) {
-    const error = new Error("API_URL");
-    error.code = "API_URL";
+  const send = async (base) => {
+    if (!base) {
+      const error = new Error("API_URL");
+      error.code = "API_URL";
+      throw error;
+    }
+    const url = new URL(base + path);
+    Object.entries(params || {}).forEach(([key, value]) => {
+      if (value) url.searchParams.set(key, value);
+    });
+    const response = await fetch(url.toString(), { headers: { Accept: "application/json" } });
+    const payload = await response.json().catch(() => ({}));
+    if (!response.ok || payload.ok === false) {
+      throw new Error(payload.error || "API");
+    }
+    return payload;
+  };
+
+  try {
+    return await send(apiUrl());
+  } catch (error) {
+    const prod = (window.CAVEDREPA_API_URL || "").replace(/\/$/, "");
+    if (isLocalHost() && prod && apiUrl() !== prod) {
+      return send(prod);
+    }
     throw error;
   }
-  const url = new URL(base + path);
-  Object.entries(params || {}).forEach(([key, value]) => {
-    if (value) url.searchParams.set(key, value);
-  });
-  const response = await fetch(url.toString(), { headers: { Accept: "application/json" } });
-  const payload = await response.json().catch(() => ({}));
-  if (!response.ok || payload.ok === false) {
-    throw new Error(payload.error || "API");
-  }
-  return payload;
 };
 
 const postUrl = (path) => `${apiUrl()}${path}`;
