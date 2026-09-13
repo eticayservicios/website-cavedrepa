@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >-
-  cavedrepa.smartravelevents.com — static hosting plus web API.
+  www.cavedrepa.org — static hosting plus web API.
   Private S3 origin behind CloudFront with Origin Access Control.
   REST API, Lambda del directorio y DynamoDB table.
 
@@ -33,15 +33,18 @@ Parameters:
 
   DomainName:
     Type: String
-    Default: cavedrepa.smartravelevents.com
-    Description: >-
-      Public hostname on CloudFront. Requires HostedZoneId for DNS and ACM.
-      Without HostedZoneId the stack deploys on *.cloudfront.net.
+    Default: cavedrepa.org
+    Description: Apex hostname. Redirects to WwwDomainName when both are set.
 
   WwwDomainName:
     Type: String
-    Default: none
-    Description: Optional www hostname. Use none to skip www.
+    Default: www.cavedrepa.org
+    Description: Canonical public hostname. Use none to skip www.
+
+  LegacyDomainName:
+    Type: String
+    Default: cavedrepa.smartravelevents.com
+    Description: Previous hostname kept as a 301 to WwwDomainName. Use none to drop it.
 
   CertificateArn:
     Type: String
@@ -51,7 +54,12 @@ Parameters:
   HostedZoneId:
     Type: String
     Default: ''
-    Description: Route 53 hosted zone ID. Required for DNS and auto certificate.
+    Description: Route 53 hosted zone ID for DomainName (cavedrepa.org).
+
+  LegacyHostedZoneId:
+    Type: String
+    Default: ''
+    Description: Route 53 hosted zone ID for LegacyDomainName. Use none or empty to skip.
 
   PriceClass:
     Type: String
@@ -94,6 +102,22 @@ Conditions:
   CreateWwwDns: !And
     - !Condition HasCustomWww
     - !Condition HasHostedZone
+  HasLegacyDomain: !And
+    - !Not [!Equals [!Ref LegacyDomainName, '']]
+    - !Not [!Equals [!Ref LegacyDomainName, 'none']]
+  HasLegacyHostedZone: !And
+    - !Not [!Equals [!Ref LegacyHostedZoneId, '']]
+    - !Not [!Equals [!Ref LegacyHostedZoneId, 'none']]
+  HasLegacyOnCert: !And
+    - !Condition HasLegacyDomain
+    - !Condition HasLegacyHostedZone
+    - !Condition HasCustomDomain
+  HasWwwAndLegacy: !And
+    - !Condition HasWwwDomain
+    - !Condition HasLegacyOnCert
+  CreateLegacyDns: !And
+    - !Condition HasLegacyOnCert
+    - !Condition HasLegacyHostedZone
 
 Globals:
   Function:
@@ -110,18 +134,39 @@ Resources:
     Properties:
       DomainName: !Ref DomainName
       SubjectAlternativeNames: !If
-        - HasWwwDomain
+        - HasWwwAndLegacy
         - - !Ref WwwDomainName
-        - !Ref AWS::NoValue
+          - !Ref LegacyDomainName
+        - !If
+          - HasWwwDomain
+          - - !Ref WwwDomainName
+          - !If
+            - HasLegacyOnCert
+            - - !Ref LegacyDomainName
+            - !Ref AWS::NoValue
       ValidationMethod: DNS
       DomainValidationOptions: !If
-        - HasWwwDomain
+        - HasWwwAndLegacy
         - - DomainName: !Ref DomainName
             HostedZoneId: !Ref HostedZoneId
           - DomainName: !Ref WwwDomainName
             HostedZoneId: !Ref HostedZoneId
-        - - DomainName: !Ref DomainName
-            HostedZoneId: !Ref HostedZoneId
+          - DomainName: !Ref LegacyDomainName
+            HostedZoneId: !Ref LegacyHostedZoneId
+        - !If
+          - HasWwwDomain
+          - - DomainName: !Ref DomainName
+              HostedZoneId: !Ref HostedZoneId
+            - DomainName: !Ref WwwDomainName
+              HostedZoneId: !Ref HostedZoneId
+          - !If
+            - HasLegacyOnCert
+            - - DomainName: !Ref DomainName
+                HostedZoneId: !Ref HostedZoneId
+              - DomainName: !Ref LegacyDomainName
+                HostedZoneId: !Ref LegacyHostedZoneId
+            - - DomainName: !Ref DomainName
+                HostedZoneId: !Ref HostedZoneId
       Tags:
         - Key: Project
           Value: !Ref ProjectName
@@ -173,22 +218,27 @@ Resources:
       Name: !Sub '${SiteName}-${Environment}-static-routing'
       AutoPublish: true
       FunctionConfig:
-        Comment: Redirects www to apex and maps WordPress pretty URLs to index.html.
+        Comment: Redirects apex and legacy hosts to www, then maps pretty URLs to index.html.
         Runtime: cloudfront-js-2.0
-      FunctionCode: |
+      FunctionCode: !Sub |
         function handler(event) {
           var request = event.request;
-          var host = request.headers.host ? request.headers.host.value : '';
+          var host = request.headers.host ? request.headers.host.value.split(':')[0].toLowerCase() : '';
           var uri = request.uri;
+          var canonical = '${WwwDomainName}';
+          var apex = '${DomainName}';
+          var legacy = '${LegacyDomainName}';
 
-          if (host.startsWith('www.')) {
-            return {
-              statusCode: 301,
-              statusDescription: 'Moved Permanently',
-              headers: {
-                location: { value: 'https://' + host.slice(4) + uri }
-              }
-            };
+          if (canonical && canonical !== 'none' && host && host !== canonical) {
+            if (host === apex || (legacy && legacy !== 'none' && host === legacy)) {
+              return {
+                statusCode: 301,
+                statusDescription: 'Moved Permanently',
+                headers: {
+                  location: { value: 'https://' + canonical + uri }
+                }
+              };
+            }
           }
 
           if (uri.endsWith('/')) {
@@ -272,13 +322,22 @@ Resources:
             ResponsePagePath: /404.html
             ErrorCachingMinTTL: 60
         Aliases: !If
-          - HasCustomWww
+          - HasWwwAndLegacy
           - - !Ref DomainName
             - !Ref WwwDomainName
+            - !Ref LegacyDomainName
           - !If
-            - HasCustomDomain
+            - HasCustomWww
             - - !Ref DomainName
-            - !Ref AWS::NoValue
+              - !Ref WwwDomainName
+            - !If
+              - HasLegacyOnCert
+              - - !Ref DomainName
+                - !Ref LegacyDomainName
+              - !If
+                - HasCustomDomain
+                - - !Ref DomainName
+                - !Ref AWS::NoValue
         ViewerCertificate: !If
           - HasViewerCertificate
           - AcmCertificateArn: !If
@@ -355,6 +414,30 @@ Resources:
     Properties:
       HostedZoneId: !Ref HostedZoneId
       Name: !Ref WwwDomainName
+      Type: AAAA
+      AliasTarget:
+        DNSName: !GetAtt SiteDistribution.DomainName
+        HostedZoneId: Z2FDTNDATAQYW2
+        EvaluateTargetHealth: false
+
+  SiteLegacyDnsRecord:
+    Type: AWS::Route53::RecordSet
+    Condition: CreateLegacyDns
+    Properties:
+      HostedZoneId: !Ref LegacyHostedZoneId
+      Name: !Ref LegacyDomainName
+      Type: A
+      AliasTarget:
+        DNSName: !GetAtt SiteDistribution.DomainName
+        HostedZoneId: Z2FDTNDATAQYW2
+        EvaluateTargetHealth: false
+
+  SiteLegacyDnsRecordIpv6:
+    Type: AWS::Route53::RecordSet
+    Condition: CreateLegacyDns
+    Properties:
+      HostedZoneId: !Ref LegacyHostedZoneId
+      Name: !Ref LegacyDomainName
       Type: AAAA
       AliasTarget:
         DNSName: !GetAtt SiteDistribution.DomainName
@@ -490,9 +573,12 @@ Outputs:
   SiteUrl:
     Description: Public HTTPS URL.
     Value: !If
-      - HasCustomDomain
-      - !Sub 'https://${DomainName}'
-      - !Sub 'https://${SiteDistribution.DomainName}'
+      - HasCustomWww
+      - !Sub 'https://${WwwDomainName}'
+      - !If
+        - HasCustomDomain
+        - !Sub 'https://${DomainName}'
+        - !Sub 'https://${SiteDistribution.DomainName}'
 
   ApiName:
     Description: REST API Gateway name.
