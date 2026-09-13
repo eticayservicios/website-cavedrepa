@@ -14,7 +14,7 @@
   --shadow: 0 12px 30px rgba(11, 47, 40, 0.08);
   --radius: 12px;
   --header-h: 88px;
-  --header-bg: #2c2c2c;
+  --header-bg: #ffffff;
   --topbar-h: 40px;
   --max: 1180px;
 }
@@ -69,8 +69,8 @@ textarea {
 }
 
 .topbar {
-  background: var(--white);
-  color: var(--green-800);
+  background: var(--green-800);
+  color: var(--white);
   font-size: 0.82rem;
   height: var(--topbar-h);
 }
@@ -123,7 +123,8 @@ textarea {
   top: 0;
   z-index: 40;
   background: var(--header-bg);
-  border-bottom: 0;
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 8px 24px rgba(11, 47, 40, 0.06);
   overflow: visible;
 }
 
@@ -153,11 +154,14 @@ body.menu-open {
 .brand img {
   display: block;
   width: auto;
-  height: 64px;
-  max-height: 72px;
+  height: 56px;
+  max-height: 64px;
   max-width: min(280px, 46vw);
   object-fit: contain;
   object-position: left center;
+  background: var(--green-900);
+  padding: 8px 12px;
+  border-radius: 10px;
 }
 
 .brand > span {
@@ -195,7 +199,7 @@ body.menu-open {
 .has-sub > a {
   font-size: 14px;
   font-weight: 700;
-  color: var(--white);
+  color: var(--green-800);
   padding: 10px 0;
   position: relative;
   white-space: nowrap;
@@ -243,8 +247,10 @@ body.menu-open {
   min-width: 280px;
   max-width: 360px;
   padding: 8px 0;
-  background: #1f1f1f;
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.28);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 16px 32px rgba(11, 47, 40, 0.12);
   z-index: 50;
 }
 
@@ -260,14 +266,14 @@ body.menu-open {
   font-size: 0.8rem;
   font-weight: 600;
   line-height: 1.35;
-  color: #eee;
+  color: var(--green-800);
   white-space: normal;
 }
 
 .nav-sub a:hover,
 .nav-sub a:focus {
-  background: #333;
-  color: var(--yellow);
+  background: var(--paper);
+  color: var(--green-900);
 }
 
 .btn {
@@ -328,7 +334,7 @@ body.menu-open {
   flex-shrink: 0;
   width: 42px;
   height: 42px;
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  border: 1px solid var(--line);
   background: transparent;
   border-radius: 8px;
   cursor: pointer;
@@ -339,16 +345,16 @@ body.menu-open {
   width: 18px;
   height: 2px;
   margin: 4px auto;
-  background: var(--white);
+  background: var(--green-800);
 }
 
 .site-header .btn-ghost-ink {
-  color: var(--white);
-  border-color: rgba(255, 255, 255, 0.35);
+  color: var(--green-800);
+  border-color: var(--line);
 }
 
 .site-header .btn-ghost-ink:hover {
-  border-color: var(--white);
+  border-color: var(--green-800);
 }
 
 .hero {
@@ -356,8 +362,8 @@ body.menu-open {
   min-height: 640px;
   color: var(--white);
   background:
-    linear-gradient(90deg, rgba(8, 32, 28, 0.82) 0%, rgba(8, 32, 28, 0.45) 48%, rgba(8, 32, 28, 0.18) 100%),
-    url("../images/hero-alt.jpg") center/cover no-repeat;
+    linear-gradient(90deg, rgba(8, 32, 28, 0.86) 0%, rgba(8, 32, 28, 0.52) 46%, rgba(8, 32, 28, 0.22) 100%),
+    url("../images/home/tractor.jpg") 55% center / cover no-repeat;
   display: flex;
   align-items: center;
 }
@@ -404,6 +410,13 @@ body.menu-open {
   color: rgba(255, 255, 255, 0.9);
 }
 
+.hero-proof svg {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
 .hero-side {
   display: flex;
   flex-direction: column;
@@ -420,6 +433,7 @@ body.menu-open {
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .hero-caption {
@@ -472,7 +486,8 @@ body.menu-open {
   gap: 20px;
 }
 
-.sector-card {
+.sector-card,
+.news-card {
   display: block;
   color: inherit;
 }
@@ -507,6 +522,12 @@ body.menu-open {
   object-fit: contain;
   object-position: center;
   background: #fff;
+}
+
+.home-page .news-card img {
+  height: 180px;
+  object-fit: cover;
+  background: #e8eeea;
 }
 
 .sector-body,
@@ -553,9 +574,7 @@ body.menu-open {
 }
 
 .search-band {
-  background:
-    linear-gradient(180deg, rgba(11, 47, 40, 0.92), rgba(11, 47, 40, 0.88)),
-    url("../images/tepui.jpg") center/cover no-repeat;
+  background: var(--green-800);
   color: var(--white);
   padding: 64px 0 72px;
   text-align: center;
@@ -613,6 +632,25 @@ body.menu-open {
   border-radius: 0;
   padding-inline: 28px;
   align-self: stretch;
+}
+
+.home-page .home-search-bar {
+  grid-template-columns: 1.4fr 1fr 1fr auto;
+  gap: 12px;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.home-page .home-search-bar .search-field {
+  background: var(--white);
+  border-radius: 10px;
+  border-right: 0;
+}
+
+.home-page .home-search-bar .btn {
+  border-radius: 10px;
+  min-width: 140px;
 }
 
 .benefits-grid {
@@ -728,6 +766,7 @@ body.menu-open {
   font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .site-footer {
@@ -1958,7 +1997,7 @@ body.drawer-open {
 .admin-who {
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--green-800);
 }
 
 .admin-you {
@@ -3123,35 +3162,39 @@ body.admin-modal-open {
 }
 
 .home-newsletter {
-  background: var(--green-950);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 18px 24px;
+  align-items: center;
+  background: var(--green-800);
   color: var(--white);
-  border-radius: 10px;
-  padding: 28px 24px 24px;
+  border-radius: 16px;
+  padding: 32px 36px;
 }
 
 .home-newsletter svg {
-  width: 28px;
-  height: 28px;
-  fill: currentColor;
-  margin-bottom: 16px;
+  width: 32px;
+  height: 32px;
+  fill: var(--yellow);
 }
 
 .home-newsletter h3 {
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   line-height: 1.2;
   letter-spacing: -0.03em;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
-.home-newsletter > p {
+.home-newsletter > p,
+.home-newsletter > div p {
   color: rgba(255, 255, 255, 0.82);
-  font-size: 0.92rem;
-  margin-bottom: 18px;
+  font-size: 0.95rem;
 }
 
 .home-newsletter form {
-  display: grid;
+  display: flex;
   gap: 10px;
+  min-width: min(360px, 100%);
 }
 
 .home-newsletter input[type="email"] {
@@ -3164,14 +3207,26 @@ body.admin-modal-open {
 }
 
 .home-newsletter .btn {
-  width: 100%;
+  width: auto;
+  flex-shrink: 0;
   justify-content: center;
 }
 
 .home-newsletter-note {
-  margin-top: 14px;
+  grid-column: 1 / -1;
+  margin-top: 0;
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.62);
+}
+
+.home-newsletter.is-done {
+  grid-template-columns: 1fr;
+  text-align: center;
+  justify-items: center;
+}
+
+.home-subscribe {
+  padding-top: 0;
 }
 
 .home-newsletter.is-done h3 {
@@ -3282,7 +3337,7 @@ body.admin-modal-open {
     align-items: stretch;
     padding: 12px 20px 24px;
     gap: 4px;
-    border-bottom: 1px solid #1a1a1a;
+    border-bottom: 1px solid var(--line);
     max-height: calc(100dvh - var(--header-h) - var(--topbar-h));
     overflow: auto;
     -webkit-overflow-scrolling: touch;
@@ -3337,6 +3392,7 @@ body.admin-modal-open {
   .brand img {
     height: 52px;
     max-width: min(220px, 48vw);
+    padding: 6px 10px;
   }
 }
 
@@ -3399,10 +3455,19 @@ body.admin-modal-open {
 
   .home-newsletter {
     grid-column: 1 / -1;
+    grid-template-columns: auto 1fr;
+  }
+
+  .home-newsletter form,
+  .home-newsletter-note {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
   }
 
   .search-bar,
-  .directory-page .search-bar {
+  .directory-page .search-bar,
+  .home-page .home-search-bar {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -3434,6 +3499,7 @@ body.admin-modal-open {
 
   .search-bar,
   .directory-page .search-bar,
+  .home-page .home-search-bar,
   .apply-form fieldset,
   .blog-layout,
   .page-with-sidebar,
@@ -3450,6 +3516,23 @@ body.admin-modal-open {
   .search-field {
     border-right: 0;
     border-bottom: 1px solid var(--line);
+  }
+
+  .home-page .home-search-bar .search-field {
+    border-bottom: 0;
+  }
+
+  .home-newsletter,
+  .home-newsletter form {
+    grid-template-columns: 1fr;
+  }
+
+  .home-newsletter form {
+    flex-direction: column;
+  }
+
+  .home-newsletter .btn {
+    width: 100%;
   }
 
   .cta-band .wrap {
@@ -3499,8 +3582,9 @@ body.admin-modal-open {
   }
 
   .brand img {
-    height: 40px;
+    height: 44px;
     max-width: min(168px, 58vw);
+    padding: 5px 8px;
   }
 
   .menu-toggle {

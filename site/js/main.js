@@ -152,10 +152,8 @@ if (search && !isDirectoryPage) {
   search.setAttribute("method", "get");
 }
 
-const homeFeatured = document.getElementById("home-featured");
 const homeLatest = document.getElementById("home-latest");
-const homeCats = document.getElementById("home-cats");
-if (homeFeatured && homeLatest && window.CavedrepaApi) {
+if (homeLatest && window.CavedrepaApi) {
   const months = [
     "enero",
     "febrero",
@@ -170,14 +168,10 @@ if (homeFeatured && homeLatest && window.CavedrepaApi) {
     "noviembre",
     "diciembre",
   ];
-  const HOME_CATS = [
-    { name: "Todos", slug: "" },
-    { name: "Agrícola", slugs: ["agro", "agricola", "agroindustria"] },
-    { name: "Construcción", slugs: ["construccion"] },
-    { name: "Industrial", slugs: ["industrial"] },
-    { name: "Pesca y acuícola", slugs: ["acuicola", "pesca"] },
-    { name: "Economía", slugs: ["economia", "estadisticas"] },
-    { name: "Eventos", slugs: ["eventos"] },
+  const NEWS_IMAGES = [
+    "/images/home/tractor.jpg",
+    "/images/home/construccion.jpg",
+    "/images/home/buque.jpg",
   ];
   const escapeHtml = (value) =>
     String(value || "")
@@ -200,7 +194,7 @@ if (homeFeatured && homeLatest && window.CavedrepaApi) {
     const lower = text.toLocaleLowerCase("es");
     return lower.charAt(0).toLocaleUpperCase("es") + lower.slice(1);
   };
-  const shortExcerpt = (value, max = 170) => {
+  const shortExcerpt = (value, max = 140) => {
     const text = softenCaps(value);
     if (text.length <= max) return text;
     return `${text.slice(0, max - 1).replace(/\s+\S*$/, "")}…`;
@@ -211,116 +205,37 @@ if (homeFeatured && homeLatest && window.CavedrepaApi) {
     if (coverKey) next.searchParams.set("foto", coverKey);
     return `${next.pathname}${next.search}`;
   };
-  const catName = (post) => {
-    const cats = post.categories || [];
-    const named = cats.find((item) => !/^\d{4}$/.test(item.slug || ""));
-    return (named || cats[0] || {}).name || "Noticias";
-  };
-  const FEATURED_IMAGES = [
-    "/images/home/tractor.jpg",
-    "/images/home/construccion.jpg",
-    "/images/home/buque.jpg",
-  ];
-  const LATEST_IMAGES = [
-    "/images/home/agricola.jpg",
-    "/images/home/construccion.jpg",
-    "/images/home/industrial.jpg",
-    "/images/home/pesca.jpg",
-    "/images/home/economia.jpg",
-    "/images/home/eventos.jpg",
-  ];
-  const imageFor = (variant, index) => {
-    if (variant === "mini") return LATEST_IMAGES[index] || LATEST_IMAGES[0];
-    if (variant === "main") return FEATURED_IMAGES[0];
-    return FEATURED_IMAGES[Math.min(index + 1, FEATURED_IMAGES.length - 1)];
-  };
-  const storyHtml = (post, variant, index = 0) => {
+  const newsHtml = (post, index = 0) => {
     const title = escapeHtml(softenCaps(post.title || "Entrada"));
-    const kicker = escapeHtml(catName(post));
     const date = escapeHtml(formatDate(post.date));
     const excerpt = escapeHtml(shortExcerpt(post.excerpt));
-    const image = imageFor(variant, index);
+    const image = NEWS_IMAGES[index] || NEWS_IMAGES[0];
     const coverKey = window.CavedrepaCovers?.keyFromSrc(image) || "";
     const href = postHref(post, coverKey);
-    if (variant === "mini") {
-      return `
-        <a class="home-mini" href="${href}">
-          <img src="${escapeHtml(image)}" alt="" width="400" height="267" onerror="this.src='/images/blog/editorial.jpg'">
-          <div class="home-mini-body">
-            <p class="home-kicker">${kicker}</p>
-            <time>${date}</time>
-            <h3>${title}</h3>
-            <span class="home-mini-arrow" aria-hidden="true">→</span>
-          </div>
-        </a>`;
-    }
     return `
-      <a class="${variant === "main" ? "home-featured-main" : "home-story"}" href="${href}">
+      <a class="news-card" href="${href}">
         <img src="${escapeHtml(image)}" alt="" width="640" height="400" onerror="this.src='/images/blog/editorial.jpg'">
-        <p class="home-kicker">${kicker}</p>
-        <h3>${title}</h3>
-        ${variant === "main" && excerpt ? `<p class="home-excerpt">${excerpt}</p>` : ""}
-        <p class="home-meta"><time>${date}</time><span>Leer artículo →</span></p>
+        <div class="news-body">
+          <p class="news-date">${date}</p>
+          <h3>${title}</h3>
+          ${excerpt ? `<p>${excerpt}</p>` : ""}
+          <span class="read-more">Leer más →</span>
+        </div>
       </a>`;
-  };
-  let allPosts = [];
-  let currentCat = "Todos";
-  const renderCats = () => {
-    if (!homeCats) return;
-    homeCats.innerHTML = HOME_CATS.map(
-      (item) =>
-        `<button type="button" data-cat="${escapeHtml(item.name)}" class="${
-          item.name === currentCat ? "is-active" : ""
-        }">${escapeHtml(item.name)}</button>`
-    ).join("");
   };
   const paintFeed = (posts) => {
     if (!posts.length) {
-      homeFeatured.innerHTML = `<p class="home-empty">Pronto publicaremos más notas de este tema.</p>`;
-      homeLatest.innerHTML = "";
+      homeLatest.innerHTML = `<p class="home-empty">Pronto publicaremos más notas de este tema.</p>`;
       return;
     }
-    const featured = posts.slice(0, 3);
-    const latest = posts.slice(3, 9);
-    homeFeatured.innerHTML = `
-      ${storyHtml(featured[0], "main", 0)}
-      <div class="home-featured-side">
-        ${featured.slice(1).map((post, index) => storyHtml(post, "side", index)).join("")}
-      </div>`;
-    homeLatest.innerHTML = latest.length
-      ? latest.map((post, index) => storyHtml(post, "mini", index)).join("")
-      : "";
+    homeLatest.innerHTML = posts.slice(0, 3).map((post, index) => newsHtml(post, index)).join("");
   };
-  const loadFeed = async (name) => {
-    currentCat = name || "Todos";
-    renderCats();
-    const filter = HOME_CATS.find((item) => item.name === currentCat);
-    const slug = filter && filter.slugs ? filter.slugs[0] : "";
-    if (!slug && allPosts.length) {
-      paintFeed(allPosts);
-      return;
-    }
-    homeFeatured.innerHTML = `<p class="home-empty">Cargando…</p>`;
-    homeLatest.innerHTML = "";
-    try {
-      const payload = await window.CavedrepaApi.posts({
-        per_page: "12",
-        categoria: slug,
-      });
-      const posts = payload.posts || [];
-      if (!slug) allPosts = posts;
-      paintFeed(posts);
-    } catch (_error) {
-      homeFeatured.innerHTML = `<p class="home-empty">Las entradas aparecerán aquí en breve.</p>`;
-    }
-  };
-  renderCats();
-  loadFeed("Todos");
-  homeCats?.addEventListener("click", (event) => {
-    const button = event.target.closest("button[data-cat]");
-    if (!button) return;
-    loadFeed(button.dataset.cat || "Todos");
-  });
+  homeLatest.innerHTML = `<p class="home-empty">Cargando…</p>`;
+  window.CavedrepaApi.posts({ per_page: "3" })
+    .then((payload) => paintFeed(payload.posts || []))
+    .catch(() => {
+      homeLatest.innerHTML = `<p class="home-empty">Las entradas aparecerán aquí en breve.</p>`;
+    });
 }
 
 const newsletter = document.getElementById("home-newsletter");
