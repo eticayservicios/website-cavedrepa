@@ -84,8 +84,20 @@ jobs:
 
           zone_id=$(lookup_zone "${HOSTED_ZONE_DNS}")
           if [ -z "${zone_id}" ] || [ "${zone_id}" = "None" ]; then
-            echo "::error::No se encontró la hosted zone ${HOSTED_ZONE_DNS} en Route 53. Créala para cavedrepa.org y apunta los NS del registrador."
-            exit 1
+            echo "No existe hosted zone para ${HOSTED_ZONE_DNS}; se crea ahora."
+            created=$(aws route53 create-hosted-zone \
+              --name cavedrepa.org \
+              --caller-reference "website-cavedrepa-$(date -u +%Y%m%d%H%M%S)" \
+              --hosted-zone-config Comment="CAVEDREPA public zone",PrivateZone=false)
+            zone_id=$(echo "${created}" | jq -r '.HostedZone.Id' | sed 's|/hostedzone/||')
+            {
+              echo "## Nameservers de cavedrepa.org"
+              echo "Pon estos NS en el registrador del dominio. El certificado ACM no valida hasta que el DNS público use esta zona."
+              echo
+              echo "${created}" | jq -r '.DelegationSet.NameServers[]' | sed 's/^/- /'
+            } >> "${GITHUB_STEP_SUMMARY}"
+            echo "::warning::Hosted zone nueva ${zone_id}. Debes configurar estos NS en el registrador de cavedrepa.org:"
+            echo "${created}" | jq -r '.DelegationSet.NameServers[]'
           fi
 
           legacy_id=$(lookup_zone "${LEGACY_ZONE_DNS}")
