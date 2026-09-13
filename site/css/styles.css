@@ -2526,7 +2526,8 @@ body.admin-modal-open {
 
 .inst-page .site-sidebar,
 .sitios-page .site-sidebar,
-.edu-page .site-sidebar {
+.edu-page .site-sidebar,
+.home-page .site-sidebar {
   position: sticky;
   top: calc(var(--header-h) + 24px);
 }
@@ -3227,6 +3228,34 @@ body.admin-modal-open {
 
 .home-subscribe {
   padding-top: 0;
+}
+
+.home-rail {
+  padding-top: 64px;
+}
+
+.home-main {
+  display: grid;
+  gap: 64px;
+  min-width: 0;
+}
+
+.home-page .page-with-sidebar .home-newsletter {
+  grid-template-columns: auto 1fr;
+}
+
+.home-page .page-with-sidebar .home-newsletter form,
+.home-page .page-with-sidebar .home-newsletter-note {
+  grid-column: 1 / -1;
+  width: 100%;
+  min-width: 0;
+}
+
+@media (min-width: 981px) {
+  .home-page .home-rail .benefits-grid,
+  .home-page .home-rail .news-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .home-newsletter.is-done h3 {
