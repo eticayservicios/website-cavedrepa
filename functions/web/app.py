@@ -44,6 +44,9 @@ from directory import (
 TABLE_NAME = os.environ.get("TABLE_NAME", "")
 ALLOWED_ORIGINS = {
     SITE_ORIGIN,
+    "https://www.cavedrepa.org",
+    "https://cavedrepa.org",
+    "https://cavedrepa.smartravelevents.com",
 }
 
 _table = None

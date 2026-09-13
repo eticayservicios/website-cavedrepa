@@ -8,7 +8,7 @@ from datetime import date, datetime, timezone
 from decimal import Decimal
 from typing import Any
 
-SITE_ORIGIN = "https://cavedrepa.smartravelevents.com"
+SITE_ORIGIN = "https://www.cavedrepa.org"
 PUBLIC_STATUSES = {"publish"}
 QUEUE_STATUSES = {"pending"}
 PAGE_SIZE = 20
