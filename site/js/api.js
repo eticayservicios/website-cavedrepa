@@ -169,10 +169,16 @@ window.CavedrepaCovers = {
     const match = String(src || "").match(/\/images\/home\/([a-z]+)\.jpg$/i);
     return match ? match[1] : "";
   },
+  fallback() {
+    return this.files.tractor;
+  },
   forPost(post) {
     const keys = Object.keys(this.files);
     const id = Number(post && post.id) || 0;
-    return this.files[keys[Math.abs(id) % keys.length]];
+    return this.files[keys[Math.abs(id) % keys.length]] || this.fallback();
+  },
+  src(post, fotoKey) {
+    return this.fromKey(fotoKey) || this.forPost(post) || this.fallback();
   },
 };
 

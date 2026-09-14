@@ -71,12 +71,12 @@ const shortText = (value, max = 160) => {
   return `${text.slice(0, max - 1).replace(/\s+\S*$/, "")}…`;
 };
 
-const BLOG_IMAGE = "/images/blog/editorial.jpg";
+const FALLBACK_IMAGE = window.CavedrepaCovers?.fallback?.() || "/images/home/tractor.jpg";
 
 const coverSrc = (post, fotoKey) => {
   const covers = window.CavedrepaCovers;
-  if (!covers) return BLOG_IMAGE;
-  return covers.fromKey(fotoKey) || covers.forPost(post) || BLOG_IMAGE;
+  if (!covers) return FALLBACK_IMAGE;
+  return covers.src(post, fotoKey) || FALLBACK_IMAGE;
 };
 
 const coverKeyFor = (post) => window.CavedrepaCovers?.keyFromSrc(coverSrc(post)) || "";

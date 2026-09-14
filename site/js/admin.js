@@ -29,6 +29,7 @@ const blogNew = document.getElementById("blog-new");
 const TOKEN_KEY = "cavedrepa-admin-token";
 const USER_KEY = "cavedrepa-admin-user";
 const NAME_KEY = "cavedrepa-admin-name";
+const ROLE_KEY = "cavedrepa-admin-role";
 
 const STATUS_LABELS = {
   pending: "En revisión",
@@ -56,16 +57,21 @@ let blogPage = 1;
 const token = () => sessionStorage.getItem(TOKEN_KEY) || "";
 const currentUser = () => sessionStorage.getItem(USER_KEY) || "";
 const currentName = () => sessionStorage.getItem(NAME_KEY) || currentUser();
+const currentRole = () => sessionStorage.getItem(ROLE_KEY) || "admin";
+const canManageUsers = () => currentRole() === "admin";
+const usersTab = document.querySelector('[data-panel="users"]');
 
-const setSession = (value, user, name) => {
+const setSession = (value, user, name, role) => {
   if (value) {
     sessionStorage.setItem(TOKEN_KEY, value);
     if (user) sessionStorage.setItem(USER_KEY, user);
     if (name) sessionStorage.setItem(NAME_KEY, name);
+    sessionStorage.setItem(ROLE_KEY, role === "editor" ? "editor" : "admin");
   } else {
     sessionStorage.removeItem(TOKEN_KEY);
     sessionStorage.removeItem(USER_KEY);
     sessionStorage.removeItem(NAME_KEY);
+    sessionStorage.removeItem(ROLE_KEY);
   }
 };
 
@@ -94,6 +100,8 @@ const showApp = () => {
     who.hidden = !currentUser();
     who.textContent = currentName();
   }
+  if (usersTab) usersTab.hidden = !canManageUsers();
+  if (usersPanel && !canManageUsers()) usersPanel.hidden = true;
 };
 
 const names = (items) => (items || []).map((item) => item.name).join(" · ");
@@ -811,10 +819,11 @@ const saveExpiry = async (id) => {
 
 document.querySelectorAll("[data-panel]").forEach((button) => {
   button.addEventListener("click", () => {
+    const panel = button.dataset.panel;
+    if (panel === "users" && !canManageUsers()) return;
     document.querySelectorAll("[data-panel]").forEach((item) => {
       item.classList.toggle("is-active", item === button);
     });
-    const panel = button.dataset.panel;
     if (queuePanel) queuePanel.hidden = panel !== "queue";
     if (blogPanel) blogPanel.hidden = panel !== "blog";
     if (messagesPanel) messagesPanel.hidden = panel !== "messages";
@@ -881,7 +890,7 @@ loginForm?.addEventListener("submit", async (event) => {
   if (loginStatus) loginStatus.textContent = "Entrando...";
   try {
     const payload = await window.CavedrepaApi.login(loginForm.user.value, loginForm.password.value);
-    setSession(payload.token, payload.user, payload.name || payload.user);
+    setSession(payload.token, payload.user, payload.name || payload.user, payload.role);
     showApp();
     await loadCompanies();
   } catch (error) {
@@ -966,4 +975,16 @@ if (token()) {
 } else {
   showLogin("");
 }
+
+document.querySelectorAll(".password-toggle").forEach((button) => {
+  button.addEventListener("click", () => {
+    const field = button.closest(".password-field")?.querySelector("input");
+    if (!field) return;
+    const show = field.type === "password";
+    field.type = show ? "text" : "password";
+    button.classList.toggle("is-visible", show);
+    button.setAttribute("aria-pressed", show ? "true" : "false");
+    button.setAttribute("aria-label", show ? "Ocultar contraseña" : "Mostrar contraseña");
+  });
+});
 })();

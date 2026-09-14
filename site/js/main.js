@@ -168,11 +168,7 @@ if (homeLatest && window.CavedrepaApi) {
     "noviembre",
     "diciembre",
   ];
-  const NEWS_IMAGES = [
-    "/images/home/tractor.jpg",
-    "/images/home/construccion.jpg",
-    "/images/home/buque.jpg",
-  ];
+  const FALLBACK_IMAGE = window.CavedrepaCovers?.fallback?.() || "/images/home/tractor.jpg";
   const escapeHtml = (value) =>
     String(value || "")
       .replace(/&/g, "&amp;")
@@ -205,16 +201,16 @@ if (homeLatest && window.CavedrepaApi) {
     if (coverKey) next.searchParams.set("foto", coverKey);
     return `${next.pathname}${next.search}`;
   };
-  const newsHtml = (post, index = 0) => {
+  const newsHtml = (post) => {
     const title = escapeHtml(softenCaps(post.title || "Entrada"));
     const date = escapeHtml(formatDate(post.date));
     const excerpt = escapeHtml(shortExcerpt(post.excerpt));
-    const image = NEWS_IMAGES[index] || NEWS_IMAGES[0];
+    const image = window.CavedrepaCovers?.src(post) || FALLBACK_IMAGE;
     const coverKey = window.CavedrepaCovers?.keyFromSrc(image) || "";
     const href = postHref(post, coverKey);
     return `
       <a class="news-card" href="${href}">
-        <img src="${escapeHtml(image)}" alt="" width="640" height="400" onerror="this.src='/images/blog/editorial.jpg'">
+        <img src="${escapeHtml(image)}" alt="" width="640" height="400" onerror="this.src='${FALLBACK_IMAGE}'">
         <div class="news-body">
           <p class="news-date">${date}</p>
           <h3>${title}</h3>
@@ -228,10 +224,10 @@ if (homeLatest && window.CavedrepaApi) {
       homeLatest.innerHTML = `<p class="home-empty">Pronto publicaremos más notas de este tema.</p>`;
       return;
     }
-    homeLatest.innerHTML = posts.slice(0, 3).map((post, index) => newsHtml(post, index)).join("");
+    homeLatest.innerHTML = posts.slice(0, 4).map((post) => newsHtml(post)).join("");
   };
   homeLatest.innerHTML = `<p class="home-empty">Cargando…</p>`;
-  window.CavedrepaApi.posts({ per_page: "3" })
+  window.CavedrepaApi.posts({ per_page: "4" })
     .then((payload) => paintFeed(payload.posts || []))
     .catch(() => {
       homeLatest.innerHTML = `<p class="home-empty">Las entradas aparecerán aquí en breve.</p>`;

@@ -1,0 +1,33 @@
+{
+  "categories": [
+    { "name": "Noticias", "slug": "noticias", "href": "/blog/" },
+    { "name": "Entrevistas", "slug": "entrevistas", "href": "/blog/?categoria=entrevistas" },
+    { "name": "Estudios", "slug": "estudios", "href": "/blog/?categoria=estudios" },
+    { "name": "Opinión institucional", "slug": "opinion-institucional", "href": "/blog/?categoria=opinion-institucional" },
+    { "name": "Eventos", "slug": "eventos", "href": "/blog/?categoria=eventos" }
+  ],
+  "items": [
+    {
+      "id": "televen-doblete-sismico-2026",
+      "slug": "reconstruccion-doblete-sismico",
+      "href": "/blog/entrevistas/reconstruccion-doblete-sismico/",
+      "youtubeId": "TbqMPFx4TZQ",
+      "title": "Reconstrucción de zonas afectadas por doblete sismico, podría costar mil millones de dólares",
+      "excerpt": "Erich Hartkopf, presidente de CAVEDREPA, habla en el programa La Entrevista de Televen sobre el costo de reconstruir las zonas afectadas por el doblete sísmico.",
+      "interviewee": "Erich Hartkopf",
+      "role": "Presidente de CAVEDREPA",
+      "media": "La Entrevista — Televen",
+      "publishedAt": "2026-07-14",
+      "duration": null,
+      "highlights": [],
+      "context": "",
+      "category": "entrevistas",
+      "featured": true,
+      "thumbnails": {
+        "maxres": "https://img.youtube.com/vi/TbqMPFx4TZQ/maxresdefault.jpg",
+        "hq": "https://img.youtube.com/vi/TbqMPFx4TZQ/hqdefault.jpg"
+      },
+      "alt": "Miniatura de la entrevista a Erich Hartkopf, presidente de CAVEDREPA, en Televen"
+    }
+  ]
+}
