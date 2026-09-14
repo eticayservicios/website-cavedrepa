@@ -80,7 +80,7 @@ const markCurrentNav = () => {
       if (path === "/blog" && url.searchParams.get("categoria") === "estadisticas") {
         match = here === "/blog" && stats;
       } else if (path === "/blog") {
-        match = here === "/blog" && !stats;
+        match = (here === "/blog" && !stats) || here.startsWith("/blog/entrevistas");
       } else if (path === "/directorio") {
         match = here === "/directorio" || here === "/afiliate";
       } else {

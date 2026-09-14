@@ -168,16 +168,45 @@ const renderSide = () => {
   if (side) side.innerHTML = sideHtml();
 };
 
+const interviewsList = document.getElementById("interviews-results");
+const featuredBox = document.getElementById("actualidad-featured");
+
+const syncActualidadTabs = () => {
+  document.querySelectorAll("[data-actualidad]").forEach((link) => {
+    const slug = link.dataset.actualidad || "";
+    const active =
+      slug === "entrevistas"
+        ? currentCategory === "entrevistas"
+        : slug === "noticias"
+          ? !currentCategory || currentCategory === "noticias"
+          : currentCategory === slug;
+    link.classList.toggle("is-active", active);
+  });
+};
+
+const showInterviews = () => {
+  if (article) {
+    article.hidden = true;
+    article.innerHTML = "";
+  }
+  results.hidden = true;
+  if (featuredBox) featuredBox.hidden = true;
+  if (interviewsList) interviewsList.hidden = false;
+};
+
 const showList = () => {
   if (article) {
     article.hidden = true;
     article.innerHTML = "";
   }
+  if (interviewsList) interviewsList.hidden = true;
+  if (featuredBox) featuredBox.hidden = Boolean(currentCategory);
   results.hidden = false;
 };
 
 const renderList = (payload) => {
   syncMenu();
+  syncActualidadTabs();
   const posts = payload.posts || [];
   const page = payload.page || 1;
   const pages = payload.pages || 1;
@@ -198,7 +227,7 @@ const renderList = (payload) => {
 const renderArticle = (post, fotoKey) => {
   const image = `<img class="blog-hero-img" src="${coverSrc(post, fotoKey)}" alt="">`;
   article.innerHTML = `
-    <button type="button" class="blog-back" id="blog-back">← Volver al blog</button>
+    <button type="button" class="blog-back" id="blog-back">← Volver a Actualidad</button>
     <p class="blog-row-cats">${catsLine(post.categories)}</p>
     ${image}
     <p class="blog-row-date">${formatDate(post.date)}</p>
@@ -207,6 +236,8 @@ const renderArticle = (post, fotoKey) => {
   `;
   article.hidden = false;
   results.hidden = true;
+  if (featuredBox) featuredBox.hidden = true;
+  if (interviewsList) interviewsList.hidden = true;
   setStatus("");
   document.getElementById("blog-back")?.addEventListener("click", closeArticle);
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -247,6 +278,27 @@ const loadSide = async () => {
 };
 
 const loadList = async () => {
+  syncActualidadTabs();
+  if (currentCategory === "entrevistas") {
+    setStatus("");
+    try {
+      const payload = await window.CavedrepaInterviews.load();
+      const rows = window.CavedrepaInterviews.items(payload);
+      if (interviewsList) {
+        interviewsList.innerHTML = rows.length
+          ? `<div class="blog-grid">${rows.map(window.CavedrepaInterviews.listCardHtml).join("")}</div>`
+          : `<p class="empty-state">Aún no hay entrevistas publicadas.</p>`;
+      }
+    } catch (_error) {
+      if (interviewsList) {
+        interviewsList.innerHTML = `<p class="empty-state">No se pudieron cargar las entrevistas.</p>`;
+      }
+    }
+    showInterviews();
+    renderSide();
+    syncMenu();
+    return;
+  }
   setStatus("Cargando el blog...");
   try {
     const payload = await window.CavedrepaApi.posts({
@@ -310,6 +362,13 @@ const applyCategory = (slug) => {
   window.history.pushState({}, "", next);
   loadList();
 };
+
+document.querySelector(".actualidad-tabs")?.addEventListener("click", (event) => {
+  const tab = event.target.closest("[data-actualidad]");
+  if (!tab) return;
+  event.preventDefault();
+  applyCategory(tab.dataset.actualidad === "noticias" ? "" : tab.dataset.actualidad);
+});
 
 document.querySelector(".blog-layout")?.addEventListener("click", (event) => {
   const category = event.target.closest("[data-categoria]");

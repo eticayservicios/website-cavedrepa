@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css?v=entrevistas">
 </head>
 <body class="home-page">
   <div class="topbar">
@@ -88,7 +88,16 @@
             <a href="/sitios-de-interes/#organismos">Organismos públicos</a>
           </div>
         </div>
-        <a href="/blog/">Blog</a>
+        <div class="has-sub">
+          <a href="/blog/">Actualidad <span class="nav-caret" aria-hidden="true"></span></a>
+          <div class="nav-sub">
+            <a href="/blog/">Noticias</a>
+            <a href="/blog/?categoria=entrevistas">Entrevistas</a>
+            <a href="/blog/?categoria=estudios">Estudios</a>
+            <a href="/blog/?categoria=opinion-institucional">Opinión institucional</a>
+            <a href="/blog/?categoria=eventos">Eventos</a>
+          </div>
+        </div>
         <a href="/contacto/">Contacto</a>
         <a class="nav-mobile-cta" href="/afiliate/">Afíliate →</a>
       </nav>
@@ -231,6 +240,10 @@
             </div>
           </div>
 
+          <section class="home-medios" id="medios" aria-labelledby="medios-title">
+            <div data-interviews-home></div>
+          </section>
+
           <div class="home-feed" id="noticias">
             <div class="section-head">
               <h2>Últimas noticias y estudios</h2>
@@ -329,6 +342,7 @@
   <script src="/js/config.js"></script>
   <script src="/js/api.js"></script>
   <script src="/js/main.js"></script>
+  <script src="/js/interviews.js?v=entrevistas"></script>
   <script src="/js/sidebar.js"></script>
 </body>
 </html>

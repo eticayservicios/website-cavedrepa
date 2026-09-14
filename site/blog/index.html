@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog — CAVEDREPA</title>
-  <meta name="description" content="Editoriales, noticias y estudios de CAVEDREPA.">
+  <title>Actualidad — CAVEDREPA</title>
+  <meta name="description" content="Noticias, entrevistas, estudios, opinión institucional y eventos de CAVEDREPA.">
   <link rel="icon" href="/images/logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css?v=entrevistas">
 </head>
 <body class="blog-page">
   <div class="topbar">
@@ -68,7 +68,16 @@
             <a href="/sitios-de-interes/#organismos">Organismos públicos</a>
           </div>
         </div>
-        <a href="/blog/">Blog</a>
+        <div class="has-sub">
+          <a href="/blog/">Actualidad <span class="nav-caret" aria-hidden="true"></span></a>
+          <div class="nav-sub">
+            <a href="/blog/">Noticias</a>
+            <a href="/blog/?categoria=entrevistas">Entrevistas</a>
+            <a href="/blog/?categoria=estudios">Estudios</a>
+            <a href="/blog/?categoria=opinion-institucional">Opinión institucional</a>
+            <a href="/blog/?categoria=eventos">Eventos</a>
+          </div>
+        </div>
         <a href="/contacto/">Contacto</a>
         <a class="nav-mobile-cta" href="/afiliate/">Afíliate →</a>
       </nav>
@@ -82,10 +91,19 @@
   <main>
     <section class="section blog-body">
       <div class="wrap">
-        <h1 class="blog-page-title">Noticavedrepa: blog de noticias de la Cámara</h1>
+        <h1 class="blog-page-title">Actualidad</h1>
+        <nav class="actualidad-tabs" aria-label="Categorías de Actualidad">
+          <a href="/blog/" data-actualidad="noticias">Noticias</a>
+          <a href="/blog/?categoria=entrevistas" data-actualidad="entrevistas">Entrevistas</a>
+          <a href="/blog/?categoria=estudios" data-actualidad="estudios">Estudios</a>
+          <a href="/blog/?categoria=opinion-institucional" data-actualidad="opinion-institucional">Opinión institucional</a>
+          <a href="/blog/?categoria=eventos" data-actualidad="eventos">Eventos</a>
+        </nav>
         <div class="blog-layout">
           <div class="blog-main">
+            <div id="actualidad-featured" data-interviews-featured></div>
             <div id="blog-status" class="directory-status"></div>
+            <div id="interviews-results" data-interviews-list hidden></div>
             <div id="blog-results" class="directory-results"></div>
             <article id="blog-article" class="blog-article" hidden></article>
           </div>
@@ -132,6 +150,7 @@
   <script src="/js/config.js"></script>
   <script src="/js/api.js"></script>
   <script src="/js/main.js"></script>
+  <script src="/js/interviews.js?v=entrevistas"></script>
   <script src="/js/blog.js"></script>
 </body>
 </html>
