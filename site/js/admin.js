@@ -57,16 +57,43 @@ let blogPage = 1;
 const token = () => sessionStorage.getItem(TOKEN_KEY) || "";
 const currentUser = () => sessionStorage.getItem(USER_KEY) || "";
 const currentName = () => sessionStorage.getItem(NAME_KEY) || currentUser();
-const currentRole = () => sessionStorage.getItem(ROLE_KEY) || "admin";
+const currentRole = () => sessionStorage.getItem(ROLE_KEY) || "";
+const knownEditor = (user) => String(user || "").toLowerCase() === "erich.hartkopf";
 const canManageUsers = () => currentRole() === "admin";
+const applyRole = (payload) => {
+  const user = String(payload?.username || payload?.user || currentUser() || "").toLowerCase();
+  const role = String(payload?.role || "").toLowerCase();
+  if (payload?.can_manage_users === false || role === "editor" || knownEditor(user)) {
+    sessionStorage.setItem(ROLE_KEY, "editor");
+    return;
+  }
+  if (payload?.can_manage_users === true || role === "admin") {
+    sessionStorage.setItem(ROLE_KEY, "admin");
+  }
+};
+
+const syncAccess = async () => {
+  if (!token()) return;
+  applyRole({ user: currentUser() });
+  if (!window.CavedrepaApi?.adminMe) return;
+  try {
+    const payload = await window.CavedrepaApi.adminMe(token());
+    if (payload.username) sessionStorage.setItem(USER_KEY, payload.username);
+    if (payload.name) sessionStorage.setItem(NAME_KEY, payload.name);
+    applyRole(payload);
+  } catch (_error) {
+    applyRole({ user: currentUser() });
+  }
+};
+
 const usersTab = document.querySelector('[data-panel="users"]');
 
-const setSession = (value, user, name, role) => {
+const setSession = (value, user, name, role, canManage) => {
   if (value) {
     sessionStorage.setItem(TOKEN_KEY, value);
     if (user) sessionStorage.setItem(USER_KEY, user);
     if (name) sessionStorage.setItem(NAME_KEY, name);
-    sessionStorage.setItem(ROLE_KEY, role === "editor" ? "editor" : "admin");
+    applyRole({ user, role, can_manage_users: canManage });
   } else {
     sessionStorage.removeItem(TOKEN_KEY);
     sessionStorage.removeItem(USER_KEY);
@@ -100,8 +127,17 @@ const showApp = () => {
     who.hidden = !currentUser();
     who.textContent = currentName();
   }
-  if (usersTab) usersTab.hidden = !canManageUsers();
-  if (usersPanel && !canManageUsers()) usersPanel.hidden = true;
+  const allowUsers = canManageUsers();
+  if (usersTab) usersTab.hidden = !allowUsers;
+  if (!allowUsers) {
+    const teamOpen = Boolean(usersPanel && !usersPanel.hidden);
+    if (usersPanel) usersPanel.hidden = true;
+    if (usersTab) usersTab.classList.remove("is-active");
+    if (teamOpen) {
+      document.querySelector('[data-panel="queue"]')?.classList.add("is-active");
+      if (queuePanel) queuePanel.hidden = false;
+    }
+  }
 };
 
 const names = (items) => (items || []).map((item) => item.name).join(" · ");
@@ -247,7 +283,9 @@ const userHtml = (item) => `
       ${
         item.username === currentUser()
           ? `<span class="admin-you">Eres tú</span>`
-          : `<button type="button" class="btn btn-ghost-ink" data-delete-user="${escapeHtml(item.username)}">Quitar</button>`
+          : canManageUsers()
+            ? `<button type="button" class="btn btn-ghost-ink" data-delete-user="${escapeHtml(item.username)}">Quitar</button>`
+            : ""
       }
     </div>
   </article>
@@ -447,6 +485,7 @@ const loadMessages = async () => {
 };
 
 const loadUsers = async () => {
+  if (!canManageUsers()) return;
   if (userStatus) userStatus.textContent = "";
   try {
     const payload = await window.CavedrepaApi.adminUsers(token());
@@ -890,7 +929,14 @@ loginForm?.addEventListener("submit", async (event) => {
   if (loginStatus) loginStatus.textContent = "Entrando...";
   try {
     const payload = await window.CavedrepaApi.login(loginForm.user.value, loginForm.password.value);
-    setSession(payload.token, payload.user, payload.name || payload.user, payload.role);
+    setSession(
+      payload.token,
+      payload.user,
+      payload.name || payload.user,
+      payload.role,
+      payload.can_manage_users
+    );
+    await syncAccess();
     showApp();
     await loadCompanies();
   } catch (error) {
@@ -970,21 +1016,35 @@ document.addEventListener("keydown", (event) => {
 });
 
 if (token()) {
-  showApp();
-  loadCompanies();
+  syncAccess().then(() => {
+    showApp();
+    loadCompanies();
+  });
 } else {
   showLogin("");
 }
 
-document.querySelectorAll(".password-toggle").forEach((button) => {
-  button.addEventListener("click", () => {
-    const field = button.closest(".password-field")?.querySelector("input");
-    if (!field) return;
-    const show = field.type === "password";
-    field.type = show ? "text" : "password";
-    button.classList.toggle("is-visible", show);
-    button.setAttribute("aria-pressed", show ? "true" : "false");
-    button.setAttribute("aria-label", show ? "Ocultar contraseña" : "Mostrar contraseña");
-  });
+const togglePassword = (button) => {
+  const field =
+    document.getElementById(button.getAttribute("aria-controls") || "") ||
+    button.closest(".password-field")?.querySelector("input");
+  if (!field) return;
+  const show = field.type === "password";
+  field.type = show ? "text" : "password";
+  button.classList.toggle("is-visible", show);
+  button.setAttribute("aria-pressed", show ? "true" : "false");
+  button.setAttribute("aria-label", show ? "Ocultar contraseña" : "Mostrar contraseña");
+};
+
+document.addEventListener("mousedown", (event) => {
+  if (event.target.closest(".password-toggle")) event.preventDefault();
+});
+
+document.addEventListener("click", (event) => {
+  const button = event.target.closest(".password-toggle");
+  if (!button) return;
+  event.preventDefault();
+  event.stopPropagation();
+  togglePassword(button);
 });
 })();

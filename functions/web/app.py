@@ -15,11 +15,14 @@ from admin import (
     create_user,
     delete_user,
     expire_company,
+    can_manage_users,
+    find_user,
     get_application,
     list_applications,
     list_companies,
     list_users,
     login as admin_login,
+    public_user,
     reject_application,
     require_admin,
     require_user_manager,
@@ -210,6 +213,17 @@ def lambda_handler(event, context):
             session = require_admin(event)
             if not session.get("ok"):
                 return respond(event, 401, session)
+
+            if method == "GET" and path == "/admin/me":
+                record = find_user(table(), session.get("user") or "")
+                if not record:
+                    return respond(event, 401, {"ok": False, "error": "Inicia sesión para continuar."})
+                user = public_user(record)
+                return respond(
+                    event,
+                    200,
+                    {"ok": True, **user, "can_manage_users": can_manage_users(record)},
+                )
 
             if method == "GET" and path == "/admin/companies":
                 return respond(event, 200, list_companies(table(), query_params(event)))

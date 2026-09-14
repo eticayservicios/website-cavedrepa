@@ -238,6 +238,7 @@ window.CavedrepaApi = {
       : apiSend("POST", "/admin/posts", payload, token),
   adminDeletePost: (token, id) => apiSend("POST", `/admin/posts/${encodeURIComponent(id)}/delete`, {}, token),
   adminUsers: (token) => apiSend("GET", "/admin/users", null, token),
+  adminMe: (token) => apiSend("GET", "/admin/me", null, token),
   adminCreateUser: (token, payload) => apiSend("POST", "/admin/users", payload, token),
   adminDeleteUser: (token, username) =>
     apiSend("POST", `/admin/users/${encodeURIComponent(username)}/delete`, {}, token),

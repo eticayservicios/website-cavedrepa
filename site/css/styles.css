@@ -1272,7 +1272,8 @@ body.drawer-open {
   grid-column: 1 / -1;
 }
 
-.apply-field span {
+.apply-field span,
+.apply-field > label {
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.04em;
@@ -1310,6 +1311,7 @@ body.drawer-open {
   right: 6px;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 2;
   width: 36px;
   height: 36px;
   border: 0;
@@ -1331,9 +1333,13 @@ body.drawer-open {
   width: 20px;
   height: 20px;
   fill: currentColor;
+  pointer-events: none;
 }
 
-.password-toggle-hide,
+.password-toggle .password-toggle-hide {
+  display: none;
+}
+
 .password-toggle.is-visible .password-toggle-show {
   display: none;
 }
@@ -4035,6 +4041,10 @@ body.admin-modal-open {
 .admin-page .page-tabs {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.admin-page .page-tabs:has(button[data-panel="users"][hidden]) {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .admin-page .page-tabs button {
