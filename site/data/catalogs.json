@@ -3,17 +3,17 @@
     {
       "name": "Sector Agrícola",
       "slug": "agricola",
-      "count": 60
+      "count": 84
     },
     {
       "name": "Sector Construcción",
       "slug": "construccion",
-      "count": 12
+      "count": 14
     },
     {
       "name": "Sector Acuícola",
       "slug": "acuicola",
-      "count": 6
+      "count": 7
     }
   ],
   "locations": [
@@ -30,7 +30,12 @@
     {
       "name": "Barquisimeto - Lara",
       "slug": "barquisimeto-lara",
-      "count": 9
+      "count": 10
+    },
+    {
+      "name": "Barinas - Barinas",
+      "slug": "barinas-barinas",
+      "count": 7
     },
     {
       "name": "Maracay - Aragua",
@@ -38,13 +43,23 @@
       "count": 6
     },
     {
-      "name": "Barinas - Barinas",
-      "slug": "barinas-barinas",
-      "count": 5
+      "name": "Araure - Edo. Portuguesa",
+      "slug": "araure-edo-portuguesa",
+      "count": 4
     },
     {
       "name": "Los Teques - Miranda",
       "slug": "los-teques-miranda",
+      "count": 4
+    },
+    {
+      "name": "Maracaibo - Zulia",
+      "slug": "maracaibo-zulia",
+      "count": 3
+    },
+    {
+      "name": "San Diego - Carabobo",
+      "slug": "san-diego-carabobo",
       "count": 3
     },
     {
@@ -55,11 +70,6 @@
     {
       "name": "Ciudad Bolívar - Bolívar",
       "slug": "ciudad-bolivar-bolivar",
-      "count": 2
-    },
-    {
-      "name": "Maracaibo - Zulia",
-      "slug": "maracaibo-zulia",
       "count": 2
     },
     {
@@ -88,13 +98,33 @@
       "count": 1
     },
     {
-      "name": "San Diego - Carabobo",
-      "slug": "san-diego-carabobo",
+      "name": "Monagas - Maturín",
+      "slug": "monagas-maturin",
+      "count": 1
+    },
+    {
+      "name": "Montalban - Carabobo",
+      "slug": "montalban-carabobo",
+      "count": 1
+    },
+    {
+      "name": "SOCOPO",
+      "slug": "socopo",
+      "count": 1
+    },
+    {
+      "name": "TUREN - PORTUGUESA",
+      "slug": "turen-portuguesa",
       "count": 1
     },
     {
       "name": "Valera - Trujillo",
       "slug": "valera-trujillo",
+      "count": 1
+    },
+    {
+      "name": "YARACUY",
+      "slug": "yaracuy",
       "count": 1
     }
   ],
@@ -102,11 +132,26 @@
     {
       "name": "Massey Ferguson",
       "slug": "massey-ferguson",
-      "count": 7
+      "count": 11
+    },
+    {
+      "name": "john Deere",
+      "slug": "john-deere",
+      "count": 6
     },
     {
       "name": "Landini",
       "slug": "landini",
+      "count": 6
+    },
+    {
+      "name": "New Holland",
+      "slug": "new-holland",
+      "count": 5
+    },
+    {
+      "name": "Domosa",
+      "slug": "domosa",
       "count": 4
     },
     {
@@ -115,8 +160,8 @@
       "count": 3
     },
     {
-      "name": "Domosa",
-      "slug": "domosa",
+      "name": "Case IH",
+      "slug": "case-ih",
       "count": 3
     },
     {
@@ -130,13 +175,38 @@
       "count": 3
     },
     {
+      "name": "Valtra",
+      "slug": "valtra",
+      "count": 3
+    },
+    {
       "name": "Yamaha",
       "slug": "yamaha",
       "count": 3
     },
     {
+      "name": "AGCO",
+      "slug": "agco",
+      "count": 2
+    },
+    {
+      "name": "BIG HERDSMAN",
+      "slug": "big-herdsman",
+      "count": 2
+    },
+    {
       "name": "China",
       "slug": "china",
+      "count": 2
+    },
+    {
+      "name": "CLASS KGAA MBH",
+      "slug": "class-kgaa-mbh",
+      "count": 2
+    },
+    {
+      "name": "Covo",
+      "slug": "covo",
       "count": 2
     },
     {
@@ -145,8 +215,38 @@
       "count": 2
     },
     {
+      "name": "FENDT",
+      "slug": "fendt",
+      "count": 2
+    },
+    {
+      "name": "Fiat",
+      "slug": "fiat",
+      "count": 2
+    },
+    {
+      "name": "Fiatagri",
+      "slug": "fiatagri",
+      "count": 2
+    },
+    {
       "name": "Ford",
       "slug": "ford",
+      "count": 2
+    },
+    {
+      "name": "Ford Tractor",
+      "slug": "ford-tractor",
+      "count": 2
+    },
+    {
+      "name": "Genpar",
+      "slug": "genpar",
+      "count": 2
+    },
+    {
+      "name": "Griven",
+      "slug": "griven",
       "count": 2
     },
     {
@@ -155,13 +255,28 @@
       "count": 2
     },
     {
-      "name": "john Deere",
-      "slug": "john-deere",
+      "name": "JONH DEERE",
+      "slug": "jonh-deere",
       "count": 2
     },
     {
-      "name": "New Holland",
-      "slug": "new-holland",
+      "name": "Laverda",
+      "slug": "laverda",
+      "count": 2
+    },
+    {
+      "name": "mahindra",
+      "slug": "mahindra",
+      "count": 2
+    },
+    {
+      "name": "sdf",
+      "slug": "sdf",
+      "count": 2
+    },
+    {
+      "name": "SINOTRUK",
+      "slug": "sinotruk",
       "count": 2
     },
     {
@@ -172,11 +287,6 @@
     {
       "name": "Stara",
       "slug": "stara",
-      "count": 2
-    },
-    {
-      "name": "Valtra",
-      "slug": "valtra",
       "count": 2
     },
     {
@@ -207,6 +317,11 @@
     {
       "name": "Angel light",
       "slug": "angel-light",
+      "count": 1
+    },
+    {
+      "name": "APROCA",
+      "slug": "aproca",
       "count": 1
     },
     {
@@ -270,6 +385,11 @@
       "count": 1
     },
     {
+      "name": "Bosch",
+      "slug": "bosch",
+      "count": 1
+    },
+    {
       "name": "Branco",
       "slug": "branco",
       "count": 1
@@ -300,8 +420,8 @@
       "count": 1
     },
     {
-      "name": "Case IH",
-      "slug": "case-ih",
+      "name": "CHANGAN",
+      "slug": "changan",
       "count": 1
     },
     {
@@ -310,8 +430,23 @@
       "count": 1
     },
     {
+      "name": "CHN INDUSTRIAL",
+      "slug": "chn-industrial",
+      "count": 1
+    },
+    {
+      "name": "chn industril",
+      "slug": "chn-industril",
+      "count": 1
+    },
+    {
       "name": "Comet",
       "slug": "comet",
+      "count": 1
+    },
+    {
+      "name": "Comil, Brock, SuperBrix, Selgron, Gaviagro, Solagro, Tapco, Tracsa, Nitta y Altinbilek.",
+      "slug": "comil-brock-superbrix-selgron-gaviagro-solagro-tapco-tracsa-nitta-y-altinbilek",
       "count": 1
     },
     {
@@ -320,8 +455,8 @@
       "count": 1
     },
     {
-      "name": "Covo",
-      "slug": "covo",
+      "name": "DAFNG",
+      "slug": "dafng",
       "count": 1
     },
     {
@@ -335,8 +470,38 @@
       "count": 1
     },
     {
+      "name": "Deutz",
+      "slug": "deutz",
+      "count": 1
+    },
+    {
+      "name": "DEUTZ FAHR",
+      "slug": "deutz-fahr",
+      "count": 1
+    },
+    {
+      "name": "Diesel",
+      "slug": "diesel",
+      "count": 1
+    },
+    {
       "name": "Domopower",
       "slug": "domopower",
+      "count": 1
+    },
+    {
+      "name": "DOÑA ALICIA",
+      "slug": "dona-alicia",
+      "count": 1
+    },
+    {
+      "name": "DONGFENG",
+      "slug": "dongfeng",
+      "count": 1
+    },
+    {
+      "name": "dremel",
+      "slug": "dremel",
       "count": 1
     },
     {
@@ -347,6 +512,11 @@
     {
       "name": "Efco",
       "slug": "efco",
+      "count": 1
+    },
+    {
+      "name": "Emmark",
+      "slug": "emmark",
       "count": 1
     },
     {
@@ -370,13 +540,13 @@
       "count": 1
     },
     {
-      "name": "FERTILIZANTES NPK",
-      "slug": "fertilizantes-npk",
+      "name": "fahr",
+      "slug": "fahr",
       "count": 1
     },
     {
-      "name": "Fiatagri",
-      "slug": "fiatagri",
+      "name": "FERTILIZANTES NPK",
+      "slug": "fertilizantes-npk",
       "count": 1
     },
     {
@@ -390,8 +560,13 @@
       "count": 1
     },
     {
-      "name": "Ford Tractor",
-      "slug": "ford-tractor",
+      "name": "FM WORLD",
+      "slug": "fm-world",
+      "count": 1
+    },
+    {
+      "name": "FMWORDL",
+      "slug": "fmwordl",
       "count": 1
     },
     {
@@ -405,18 +580,8 @@
       "count": 1
     },
     {
-      "name": "Genpar",
-      "slug": "genpar",
-      "count": 1
-    },
-    {
       "name": "Greaves",
       "slug": "greaves",
-      "count": 1
-    },
-    {
-      "name": "Griven",
-      "slug": "griven",
       "count": 1
     },
     {
@@ -427,6 +592,11 @@
     {
       "name": "Hamm",
       "slug": "hamm",
+      "count": 1
+    },
+    {
+      "name": "HIDROPUMP",
+      "slug": "hidropump",
       "count": 1
     },
     {
@@ -465,6 +635,11 @@
       "count": 1
     },
     {
+      "name": "Inco",
+      "slug": "inco",
+      "count": 1
+    },
+    {
       "name": "Ingersol",
       "slug": "ingersol",
       "count": 1
@@ -485,8 +660,18 @@
       "count": 1
     },
     {
+      "name": "ITR",
+      "slug": "itr",
+      "count": 1
+    },
+    {
       "name": "Iveco",
       "slug": "iveco",
+      "count": 1
+    },
+    {
+      "name": "JAC",
+      "slug": "jac",
       "count": 1
     },
     {
@@ -530,13 +715,13 @@
       "count": 1
     },
     {
-      "name": "Launtop",
-      "slug": "launtop",
+      "name": "KUBOTA",
+      "slug": "kubota",
       "count": 1
     },
     {
-      "name": "Laverda",
-      "slug": "laverda",
+      "name": "Launtop",
+      "slug": "launtop",
       "count": 1
     },
     {
@@ -562,6 +747,11 @@
     {
       "name": "Loncin",
       "slug": "loncin",
+      "count": 1
+    },
+    {
+      "name": "LOVOL",
+      "slug": "lovol",
       "count": 1
     },
     {
@@ -650,6 +840,11 @@
       "count": 1
     },
     {
+      "name": "Pedrollo",
+      "slug": "pedrollo",
+      "count": 1
+    },
+    {
       "name": "Pel",
       "slug": "pel",
       "count": 1
@@ -657,6 +852,11 @@
     {
       "name": "Penagos",
       "slug": "penagos",
+      "count": 1
+    },
+    {
+      "name": "Pentax",
+      "slug": "pentax",
       "count": 1
     },
     {
@@ -685,6 +885,11 @@
       "count": 1
     },
     {
+      "name": "qubota",
+      "slug": "qubota",
+      "count": 1
+    },
+    {
       "name": "RAFAGA PS 90",
       "slug": "rafaga-ps-90",
       "count": 1
@@ -692,6 +897,11 @@
     {
       "name": "RAM",
       "slug": "ram",
+      "count": 1
+    },
+    {
+      "name": "Resinca",
+      "slug": "resinca",
       "count": 1
     },
     {
@@ -727,6 +937,11 @@
     {
       "name": "Sennebogen",
       "slug": "sennebogen",
+      "count": 1
+    },
+    {
+      "name": "SHANDONG",
+      "slug": "shandong",
       "count": 1
     },
     {
@@ -875,6 +1090,11 @@
       "count": 1
     },
     {
+      "name": "WEIFANG",
+      "slug": "weifang",
+      "count": 1
+    },
+    {
       "name": "Wirtgen",
       "slug": "wirtgen",
       "count": 1
@@ -892,6 +1112,11 @@
     {
       "name": "ZM bombas",
       "slug": "zm-bombas",
+      "count": 1
+    },
+    {
+      "name": "zooliom",
+      "slug": "zooliom",
       "count": 1
     }
   ]

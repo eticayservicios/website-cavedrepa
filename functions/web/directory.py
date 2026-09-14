@@ -161,6 +161,7 @@ def normalize_listing(raw: dict[str, Any]) -> dict[str, Any]:
         "brands": terms(tax.get("tags")),
         "created_at": raw.get("date") or "",
         "updated_at": raw.get("modified") or "",
+        "expires_at": clean(raw.get("expires_at")),
         "source": "directorist",
     }
     company["search"] = search_blob(company)
