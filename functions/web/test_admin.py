@@ -12,6 +12,7 @@ from admin import (
     login,
     read_token,
     reject_application,
+    require_user_manager,
     reset_credentials_cache,
     set_expiration,
     sign_token,
@@ -122,11 +123,44 @@ class AdminAuthTests(unittest.TestCase):
         other = login(table, {"user": "maria", "password": "maria-1234"})
         self.assertTrue(other["ok"])
         self.assertEqual(other["name"], "María")
+        self.assertEqual(other["role"], "admin")
+        self.assertTrue(other["can_manage_users"])
         self.assertEqual(len(list_users(table)["users"]), 2)
         blocked = delete_user(table, "maria", "maria")
         self.assertFalse(blocked["ok"])
         self.assertTrue(delete_user(table, "maria", "cavedrepa")["ok"])
         self.assertEqual(len(list_users(table)["users"]), 1)
+
+    def test_editor_can_sign_in_with_email_but_not_manage_users(self):
+        table = FakeTable()
+        login(table, {"user": "cavedrepa", "password": "clave-secreta"})
+        created = create_user(
+            table,
+            {
+                "username": "erich.hartkopf",
+                "password": "erich-1234",
+                "name": "Erich Hartkopf",
+                "email": "cavedrepa2013@gmail.com",
+                "role": "editor",
+            },
+        )
+        self.assertTrue(created["ok"])
+        self.assertEqual(created["user"]["role"], "editor")
+        by_email = login(table, {"user": "cavedrepa2013@gmail.com", "password": "erich-1234"})
+        self.assertTrue(by_email["ok"])
+        self.assertEqual(by_email["user"], "erich.hartkopf")
+        self.assertFalse(by_email["can_manage_users"])
+        denied = require_user_manager(
+            table,
+            {"headers": {"authorization": f"Bearer {by_email['token']}"}},
+        )
+        self.assertFalse(denied["ok"])
+        admin = login(table, {"user": "cavedrepa", "password": "clave-secreta"})
+        allowed = require_user_manager(
+            table,
+            {"headers": {"authorization": f"Bearer {admin['token']}"}},
+        )
+        self.assertTrue(allowed["ok"])
 
 
 class AdminQueueTests(unittest.TestCase):

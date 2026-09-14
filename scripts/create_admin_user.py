@@ -5,6 +5,8 @@ from __future__ import annotations
 
 import argparse
 import getpass
+import re
+import secrets
 import sys
 from pathlib import Path
 
@@ -39,8 +41,11 @@ def resolve_table(session, name: str) -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--username", default="admin_eticayservicios")
-    parser.add_argument("--name", default="Ética y Servicios")
+    parser.add_argument("--username", default="")
+    parser.add_argument("--name", default="")
+    parser.add_argument("--email", default="")
+    parser.add_argument("--role", default="admin", choices=["admin", "editor"])
+    parser.add_argument("--password", default="")
     parser.add_argument("--table", default="")
     parser.add_argument("--region", default="us-east-1")
     parser.add_argument("--profile", default="")
@@ -62,16 +67,37 @@ def main() -> None:
             f"{exc}"
         ) from exc
 
-    password = getpass.getpass(f"Clave para {args.username} (mínimo 8 caracteres): ")
+    if not args.username:
+        local = re.sub(r"[^a-z0-9._-]", "", (args.email.split("@", 1)[0] if args.email else "").lower())
+        args.username = local or "editor"
+    if not args.name:
+        args.name = args.username
+
+    password = args.password.strip()
+    generated = False
+    if not password:
+        if sys.stdin.isatty():
+            password = getpass.getpass(f"Clave para {args.username} (mínimo 8 caracteres): ")
+        else:
+            password = f"Cavedrepa-{secrets.token_urlsafe(8)}"
+            generated = True
     table = session.resource("dynamodb").Table(table_name)
     result = create_user(
         table,
-        {"username": args.username, "name": args.name, "password": password},
+        {
+            "username": args.username,
+            "name": args.name,
+            "password": password,
+            "email": args.email,
+            "role": args.role,
+        },
     )
     print(result)
     if not result.get("ok"):
         raise SystemExit(1)
-    print(f"Listo. Entra en /admin/ con {args.username}.")
+    print(f"Listo. Entra en /admin/ con {args.username}" + (f" o {args.email}" if args.email else "") + ".")
+    if generated:
+        print(f"Clave temporal: {password}")
 
 
 if __name__ == "__main__":

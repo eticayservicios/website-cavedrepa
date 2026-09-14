@@ -22,6 +22,7 @@ from admin import (
     login as admin_login,
     reject_application,
     require_admin,
+    require_user_manager,
     set_expiration,
 )
 from applications import submit_application
@@ -302,9 +303,15 @@ def lambda_handler(event, context):
                 return respond(event, 200 if result.get("ok") else 404, result)
 
             if method == "GET" and path == "/admin/users":
+                gate = require_user_manager(table(), event)
+                if not gate.get("ok"):
+                    return respond(event, 403, gate)
                 return respond(event, 200, list_users(table()))
 
             if method == "POST" and path == "/admin/users":
+                gate = require_user_manager(table(), event)
+                if not gate.get("ok"):
+                    return respond(event, 403, gate)
                 try:
                     payload = request_body(event)
                 except ValueError:
@@ -313,6 +320,9 @@ def lambda_handler(event, context):
                 return respond(event, 200 if result.get("ok") else 400, result)
 
             if method == "POST" and path.startswith("/admin/users/") and path.endswith("/delete"):
+                gate = require_user_manager(table(), event)
+                if not gate.get("ok"):
+                    return respond(event, 403, gate)
                 username = path.split("/admin/users/", 1)[1].rsplit("/delete", 1)[0]
                 result = delete_user(table(), username, session.get("user") or "")
                 return respond(event, 200 if result.get("ok") else 400, result)

@@ -30,6 +30,8 @@ from directory import (
 TOKEN_TTL = 12 * 3600
 HASH_ROUNDS = 120_000
 USER_RE = re.compile(r"^[a-z0-9][a-z0-9._-]{1,31}$")
+EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+ROLES = {"admin", "editor"}
 _SEED: list[dict[str, str]] | None = None
 
 
@@ -51,6 +53,26 @@ def reset_credentials_cache() -> None:
 
 def clean_username(value: Any) -> str:
     return re.sub(r"\s+", "", str(value or "").strip().lower())
+
+
+def clean_email(value: Any) -> str:
+    raw = str(value or "").strip().lower()
+    return raw if EMAIL_RE.match(raw) else ""
+
+
+def normalize_role(value: Any, default: str = "admin") -> str:
+    role = str(value or "").strip().lower()
+    return role if role in ROLES else default
+
+
+def user_role(item: dict[str, Any] | None) -> str:
+    if not item:
+        return "admin"
+    return normalize_role(item.get("role"), "admin")
+
+
+def can_manage_users(item: dict[str, Any] | None) -> bool:
+    return user_role(item) == "admin"
 
 
 def hash_password(password: str, salt: str | None = None) -> str:
@@ -160,9 +182,9 @@ def seed_users() -> list[dict[str, str]]:
     return users
 
 
-def user_item(username: str, password: str, name: str) -> dict[str, Any]:
+def user_item(username: str, password: str, name: str, email: str = "", role: str = "admin") -> dict[str, Any]:
     user = clean_username(username)
-    return {
+    item = {
         "pk": "ADMIN#users",
         "sk": f"USER#{user}",
         "entity": "admin_user",
@@ -170,13 +192,20 @@ def user_item(username: str, password: str, name: str) -> dict[str, Any]:
         "name": (name or user).strip()[:80],
         "password_hash": hash_password(password),
         "created_at": now_stamp(),
+        "role": normalize_role(role, "admin"),
     }
+    mail = clean_email(email)
+    if mail:
+        item["email"] = mail
+    return item
 
 
 def public_user(item: dict[str, Any]) -> dict[str, str]:
     return {
         "username": item.get("username") or "",
         "name": item.get("name") or item.get("username") or "",
+        "email": item.get("email") or "",
+        "role": user_role(item),
     }
 
 
@@ -200,20 +229,34 @@ def find_user(table, username: str) -> dict[str, Any] | None:
     return get_item(table, "ADMIN#users", f"USER#{user}")
 
 
+def find_user_for_login(table, value: str) -> dict[str, Any] | None:
+    raw = str(value or "").strip().lower()
+    if EMAIL_RE.match(raw):
+        for item in stored_users(table):
+            if str(item.get("email") or "").strip().lower() == raw:
+                return item
+        return None
+    return find_user(table, raw)
+
+
 def login(table, payload: dict[str, Any]) -> dict[str, Any]:
-    user = clean_username(payload.get("user") or payload.get("username"))
+    identity = str(payload.get("user") or payload.get("username") or payload.get("email") or "")
     password = str(payload.get("password") or "")
     rows = ensure_users(table)
     if not rows:
         return {"ok": False, "error": "El acceso no está configurado."}
-    record = find_user(table, user)
+    record = find_user_for_login(table, identity)
     if not record or not check_password(password, str(record.get("password_hash") or "")):
         return {"ok": False, "error": "Usuario o contraseña incorrectos."}
+    role = user_role(record)
     return {
         "ok": True,
         "token": sign_token(record["username"]),
         "user": record["username"],
         "name": record.get("name") or record["username"],
+        "email": record.get("email") or "",
+        "role": role,
+        "can_manage_users": role == "admin",
     }
 
 
@@ -222,6 +265,16 @@ def require_admin(event: dict) -> dict[str, Any]:
     if not session:
         return {"ok": False, "error": "Inicia sesión para continuar."}
     return {"ok": True, **session}
+
+
+def require_user_manager(table, event: dict) -> dict[str, Any]:
+    session = require_admin(event)
+    if not session.get("ok"):
+        return session
+    record = find_user(table, session.get("user") or "")
+    if not can_manage_users(record):
+        return {"ok": False, "error": "No puedes gestionar usuarios."}
+    return {**session, "role": user_role(record)}
 
 
 def list_users(table) -> dict[str, Any]:
@@ -234,14 +287,22 @@ def create_user(table, payload: dict[str, Any]) -> dict[str, Any]:
     username = clean_username(payload.get("username") or payload.get("user"))
     password = str(payload.get("password") or "")
     name = str(payload.get("name") or username).strip()[:80]
+    email = clean_email(payload.get("email"))
+    role = normalize_role(payload.get("role"), "admin")
     if not USER_RE.match(username):
         return {"ok": False, "error": "El usuario debe tener letras o números, sin espacios."}
     if len(password) < 8:
         return {"ok": False, "error": "La contraseña debe tener al menos 8 caracteres."}
+    if payload.get("email") and not email:
+        return {"ok": False, "error": "Indica un correo válido."}
     if find_user(table, username):
         return {"ok": False, "error": "Ese usuario ya existe."}
-    table.put_item(Item=user_item(username, password, name))
-    return {"ok": True, "user": {"username": username, "name": name or username}}
+    if email:
+        for item in stored_users(table):
+            if str(item.get("email") or "").strip().lower() == email:
+                return {"ok": False, "error": "Ese correo ya está en uso."}
+    table.put_item(Item=user_item(username, password, name, email, role))
+    return {"ok": True, "user": {"username": username, "name": name or username, "email": email, "role": role}}
 
 
 def delete_user(table, username: str, actor: str) -> dict[str, Any]:

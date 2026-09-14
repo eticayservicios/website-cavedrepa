@@ -19,6 +19,7 @@ SCRIPTS = [
     SITE / "js" / "sitios.js",
     SITE / "js" / "contact.js",
     SITE / "js" / "sidebar.js",
+    SITE / "js" / "interviews.js",
     SITE / "js" / "admin.js",
 ]
 
