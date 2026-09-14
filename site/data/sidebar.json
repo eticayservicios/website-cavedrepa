@@ -29,14 +29,20 @@
     },
     {
       "src": "/images/sidebar/conexpo.jpg",
-      "href": "https://www.conexpoconagg.com/conexpo-con-agg-construction-trade-show",
-      "alt": "CONEXPO-CON/AGG",
+      "href": "https://www.conexpoconagg.com/",
+      "alt": "CONEXPO-CON/AGG 2029, Las Vegas, 13-17 de marzo. Taking construction to the next level",
       "external": true
     },
     {
-      "src": "/images/sidebar/world-of-asphalt.png",
+      "src": "/images/sidebar/world-of-asphalt-2027.png",
       "href": "https://www.worldofasphalt.com/",
-      "alt": "World of Asphalt",
+      "alt": "World of Asphalt 2027, Nueva Orleans, 15-17 de marzo",
+      "external": true
+    },
+    {
+      "src": "/images/sidebar/agroexpo-2027.png",
+      "href": "https://en.agroexpo.com.tr/",
+      "alt": "AgroExpo Turquía 2027, Esmirna, 2-6 de febrero",
       "external": true
     },
     {
