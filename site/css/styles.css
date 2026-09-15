@@ -3933,6 +3933,8 @@ body.admin-modal-open {
 .interview-page,
 .actualidad-tabs,
 .media-feature,
+.media-home-grid,
+.media-home-card,
 .media-list-card {
   min-width: 0;
 }
@@ -3944,9 +3946,14 @@ body.admin-modal-open {
 
 .media-section-head {
   align-items: start;
-  flex-direction: column;
-  gap: 10px;
+  gap: 16px;
   margin-bottom: 20px;
+}
+
+.media-section-head > div {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
 }
 
 .media-section-head h2 {
@@ -3957,6 +3964,50 @@ body.admin-modal-open {
   color: var(--muted);
   font-size: 1rem;
   max-width: 42rem;
+}
+
+.media-home-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.media-home-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.media-home-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(11, 47, 40, 0.12);
+}
+
+.media-home-card .media-copy {
+  flex: 1;
+  display: grid;
+  gap: 10px;
+  padding: 18px 18px 20px;
+  align-content: start;
+}
+
+.media-home-card .media-copy h3 a {
+  color: inherit;
+}
+
+.media-home-card .media-copy h3 a:hover {
+  color: var(--green-700);
+}
+
+.media-home-card .media-cta {
+  width: auto;
+  justify-self: start;
+  margin-top: auto;
 }
 
 .media-feature {
@@ -4259,6 +4310,16 @@ body.admin-modal-open {
 }
 
 @media (min-width: 900px) {
+  .media-home-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  .media-home-card .media-copy {
+    padding: 22px 22px 22px;
+    align-content: start;
+  }
+
   .media-feature {
     grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
     align-items: stretch;

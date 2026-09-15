@@ -1,5 +1,5 @@
 (() => {
-const DATA_URL = "/data/interviews.json";
+const DATA_URL = "/data/interviews.json?v=medios2";
 let cache = null;
 
 const escapeHtml = (value) =>
@@ -43,6 +43,12 @@ const itemsOf = (payload) => (payload && payload.items) || [];
 
 const featuredOf = (payload) => itemsOf(payload).find((item) => item.featured) || itemsOf(payload)[0] || null;
 
+const featuredItems = (payload, limit = 2) => {
+  const rows = itemsOf(payload);
+  const featured = rows.filter((item) => item.featured);
+  return (featured.length ? featured : rows).slice(0, limit);
+};
+
 const bySlug = (payload, slug) => itemsOf(payload).find((item) => item.slug === slug) || null;
 
 const thumbSrc = (item) => item?.thumbnails?.maxres || `https://img.youtube.com/vi/${item.youtubeId}/maxresdefault.jpg`;
@@ -77,34 +83,35 @@ const shareUrls = (item) => {
 const metaLine = (item) =>
   [formatDate(item.publishedAt), item.interviewee, item.media].filter(Boolean).join(" · ");
 
-const homeHtml = (item) => {
-  if (!item) return "";
-  const points = (item.highlights || [])
-    .slice(0, 3)
-    .map((point) => `<li>${escapeHtml(point)}</li>`)
-    .join("");
+const homeCardHtml = (item) => `
+  <article class="media-home-card">
+    <a class="media-thumb" href="${escapeHtml(item.href)}">
+      ${thumbImg(item)}
+      <span class="media-play" aria-hidden="true">${playIcon}</span>
+      <span class="visually-hidden">Reproducir entrevista</span>
+    </a>
+    <div class="media-copy">
+      <p class="media-kicker">${escapeHtml(item.media || "Entrevista")}</p>
+      <h3><a href="${escapeHtml(item.href)}">${escapeHtml(item.title)}</a></h3>
+      <p class="media-excerpt">${escapeHtml(item.excerpt)}</p>
+      <a class="btn btn-yellow media-cta" href="${escapeHtml(item.href)}">Ver entrevista</a>
+    </div>
+  </article>`;
+
+const homeHtml = (items) => {
+  const rows = (Array.isArray(items) ? items : items ? [items] : []).filter(Boolean);
+  if (!rows.length) return "";
   return `
     <div class="section-head media-section-head">
       <div>
         <h2 id="medios-title">CAVEDREPA en los medios</h2>
         <p>Entrevistas, análisis y posiciones institucionales sobre los sectores que impulsan el desarrollo del país.</p>
       </div>
+      <a class="link-more media-more" href="/blog/?categoria=entrevistas">Ver todas →</a>
     </div>
-    <article class="media-feature">
-      <a class="media-thumb" href="${escapeHtml(item.href)}">
-        ${thumbImg(item)}
-        <span class="media-play" aria-hidden="true">${playIcon}</span>
-        <span class="visually-hidden">Reproducir entrevista</span>
-      </a>
-      <div class="media-copy">
-        <p class="media-kicker">Entrevista</p>
-        <h3>${escapeHtml(item.title)}</h3>
-        <p class="media-excerpt">${escapeHtml(item.excerpt)}</p>
-        ${points ? `<ul class="media-points">${points}</ul>` : ""}
-        <a class="btn btn-yellow media-cta" href="${escapeHtml(item.href)}">Ver entrevista</a>
-        <a class="link-more media-more" href="/blog/?categoria=entrevistas">Ver más entrevistas</a>
-      </div>
-    </article>`;
+    <div class="media-home-grid media-home-grid-${rows.length}">
+      ${rows.map(homeCardHtml).join("")}
+    </div>`;
 };
 
 const listCardHtml = (item) => `
@@ -206,8 +213,7 @@ const mountHome = async () => {
   if (!root) return;
   try {
     const payload = await load();
-    const item = featuredOf(payload);
-    root.innerHTML = homeHtml(item);
+    root.innerHTML = homeHtml(featuredItems(payload, 2));
   } catch (_error) {
     root.innerHTML = `<p class="home-empty">La entrevista aparecerá aquí en breve.</p>`;
   }
@@ -275,6 +281,7 @@ const mountPage = async () => {
 window.CavedrepaInterviews = {
   load,
   featured: featuredOf,
+  featuredItems,
   items: itemsOf,
   bySlug,
   formatDate,
