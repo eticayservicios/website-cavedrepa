@@ -6196,13 +6196,14 @@
     "status": "publish",
     "title": "Laureles Motors, C.A.",
     "slug": "laureles-motors-c-a",
-    "content": "",
+    "content": "<ol>\r\n\t<li>Motores fuera y dentro de borda, desde 2.5 HP hasta 600 HP</li>\r\n\t<li>Motores eléctricos fuera de borda</li>\r\n\t<li>Motores Mercruiser</li>\r\n\t<li>Lubricantes y repuestos Mercury y Quicksilver</li>\r\n</ol>",
     "excerpt": "",
     "author": 1,
     "meta": {
       "_featured": "0",
       "_listing_status": "post_status",
-      "_expiry_date": "2027-09-14 00:00:00"
+      "_expiry_date": "2027-09-14 00:00:00",
+      "874": "J-31313731-6"
     },
     "tax": {
       "category": [
@@ -6212,9 +6213,14 @@
         }
       ],
       "location": [],
-      "tags": []
+      "tags": [
+        {
+          "name": "MERCURY Marine",
+          "slug": "mercury-marine"
+        }
+      ]
     },
-    "image_url": "/images/afiliados/placeholder.png",
+    "image_url": "/images/afiliados/4009.jpg",
     "expires_at": "2027-09-14"
   },
   {
