@@ -3911,7 +3911,7 @@
     "date": "2024-06-28 12:52:46",
     "modified": "2024-07-17 17:52:09",
     "status": "publish",
-    "title": "CONTINENTAL DEL AGRO C.A.",
+    "title": "CONTINENTAL DEL AGRO, C.A.",
     "slug": "continental-del-agro-c-a",
     "content": "",
     "excerpt": "",
@@ -3922,7 +3922,7 @@
       "_atbdp_post_views_count": "332",
       "_877": "",
       "_875": "",
-      "_874": "J298060557",
+      "_874": "J-29806055-7",
       "_tax_input[at_biz_dir-location][]": "",
       "_tax_input[at_biz_dir-tags][]": "",
       "_admin_category_select[]": "",
@@ -3941,7 +3941,8 @@
       "_never_expire": "1",
       "_expiry_date": "2025-07-15 14:25:28",
       "_listing_status": "post_status",
-      "_thumbnail_id": "2881"
+      "_thumbnail_id": "2881",
+      "_branches": "[{\"label\": \"Sede principal\", \"place\": \"Valle de la Pascua - Estado Guárico\"}, {\"label\": \"Sucursal\", \"place\": \"Araure - Estado Portuguesa\"}]"
     },
     "tax": {
       "category": [
@@ -3952,8 +3953,12 @@
       ],
       "location": [
         {
-          "name": "San Juan de los Morros - Guárico",
-          "slug": "san-juan-de-los-morros-guarico"
+          "name": "Valle de la Pascua - Estado Guárico",
+          "slug": "valle-de-la-pascua-estado-guarico"
+        },
+        {
+          "name": "Araure - Edo. Portuguesa",
+          "slug": "araure-edo-portuguesa"
         }
       ],
       "tags": []

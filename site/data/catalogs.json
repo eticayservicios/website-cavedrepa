@@ -45,7 +45,7 @@
     {
       "name": "Araure - Edo. Portuguesa",
       "slug": "araure-edo-portuguesa",
-      "count": 4
+      "count": 5
     },
     {
       "name": "Los Teques - Miranda",
@@ -63,11 +63,6 @@
       "count": 3
     },
     {
-      "name": "San Juan de los Morros - Guárico",
-      "slug": "san-juan-de-los-morros-guarico",
-      "count": 3
-    },
-    {
       "name": "Ciudad Bolívar - Bolívar",
       "slug": "ciudad-bolivar-bolivar",
       "count": 2
@@ -80,6 +75,11 @@
     {
       "name": "San Fernando de Apure - Apure",
       "slug": "san-fernando-de-apure-apure",
+      "count": 2
+    },
+    {
+      "name": "San Juan de los Morros - Guárico",
+      "slug": "san-juan-de-los-morros-guarico",
       "count": 2
     },
     {
@@ -120,6 +120,11 @@
     {
       "name": "Valera - Trujillo",
       "slug": "valera-trujillo",
+      "count": 1
+    },
+    {
+      "name": "Valle de la Pascua - Estado Guárico",
+      "slug": "valle-de-la-pascua-estado-guarico",
       "count": 1
     },
     {

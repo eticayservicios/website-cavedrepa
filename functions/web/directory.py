@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import html
+import json
 import unicodedata
 from datetime import date, datetime, timezone
 from decimal import Decimal
@@ -102,6 +103,24 @@ def terms(items: list[dict[str, Any]] | None) -> list[dict[str, str]]:
     return result
 
 
+def branches(meta: dict[str, Any]) -> list[dict[str, str]]:
+    raw = meta.get("_branches")
+    if isinstance(raw, str):
+        try:
+            raw = json.loads(raw)
+        except json.JSONDecodeError:
+            return []
+    result = []
+    for item in raw or []:
+        if not isinstance(item, dict):
+            continue
+        label = clean(item.get("label"))
+        place = clean(item.get("place"))
+        if label and place:
+            result.append({"label": label, "place": place})
+    return result
+
+
 def first_meta(meta: dict[str, Any], *keys: str) -> str:
     for key in keys:
         if key in meta and meta[key] not in (None, "", [], {}):
@@ -148,6 +167,7 @@ def normalize_listing(raw: dict[str, Any]) -> dict[str, Any]:
         "email2": first_meta(meta, "877", "_877"),
         "website": first_meta(meta, "_website"),
         "address": first_meta(meta, "_address"),
+        "branches": branches(meta),
         "zip": first_meta(meta, "_zip"),
         "rif": first_meta(meta, "874", "_874"),
         "legal_rep": first_meta(meta, "875", "_875"),
@@ -518,6 +538,7 @@ def get_company(table, key: str) -> dict[str, Any] | None:
     detail.update(
         {
             "description": item.get("description") or "",
+            "branches": item.get("branches") or [],
             "phone2": item.get("phone2") or "",
             "fax": item.get("fax") or "",
             "email": item.get("email") or "",
