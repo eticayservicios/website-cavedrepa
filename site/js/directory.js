@@ -195,6 +195,7 @@ const renderDetail = (company) => {
       ${line("Web", company.website, website)}
       ${line("Fax", company.fax)}
       ${line("Dirección", [company.address, company.zip].filter(Boolean).join(" "))}
+      ${(company.branches || []).map((branch) => line(branch.label, branch.place)).join("")}
       ${socialLine("Facebook", "facebook", company.social?.facebook)}
       ${socialLine("Instagram", "instagram", company.social?.instagram)}
       ${socialLine("LinkedIn", "linkedin", company.social?.linkedin)}
