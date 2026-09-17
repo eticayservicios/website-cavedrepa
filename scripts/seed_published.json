@@ -1907,7 +1907,7 @@
       "874": "J-30120814-5",
       "875": "José Chaves",
       "876": "jose.chaves@domosa.com",
-      "877": "marbelys.flores@domosa.com",
+      "877": "ventas@domosa.com",
       "_wp_old_slug": "maquinarias-domo-s-a",
       "_atbdp_post_views_count": "1064",
       "_directory_type": "314"
@@ -1927,24 +1927,24 @@
       ],
       "tags": [
         {
-          "name": "Dolmar",
-          "slug": "dolmar"
-        },
-        {
-          "name": "Domopower",
-          "slug": "domopower"
-        },
-        {
-          "name": "Domosa",
+          "name": "DOMOSA",
           "slug": "domosa"
         },
         {
-          "name": "LEuropea",
-          "slug": "leuropea"
+          "name": "Honda",
+          "slug": "honda"
         },
         {
-          "name": "Siveti",
-          "slug": "siveti"
+          "name": "Baudouin",
+          "slug": "baudouin"
+        },
+        {
+          "name": "Deutz",
+          "slug": "deutz"
+        },
+        {
+          "name": "Cummins",
+          "slug": "cummins"
         }
       ]
     },

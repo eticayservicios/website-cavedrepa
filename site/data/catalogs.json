@@ -175,6 +175,11 @@
       "count": 3
     },
     {
+      "name": "Honda",
+      "slug": "honda",
+      "count": 3
+    },
+    {
       "name": "Jacto",
       "slug": "jacto",
       "count": 3
@@ -220,8 +225,8 @@
       "count": 2
     },
     {
-      "name": "Dolmar",
-      "slug": "dolmar",
+      "name": "Deutz",
+      "slug": "deutz",
       "count": 2
     },
     {
@@ -260,11 +265,6 @@
       "count": 2
     },
     {
-      "name": "Honda",
-      "slug": "honda",
-      "count": 2
-    },
-    {
       "name": "Inroda",
       "slug": "inroda",
       "count": 2
@@ -292,11 +292,6 @@
     {
       "name": "SINOTRUK",
       "slug": "sinotruk",
-      "count": 2
-    },
-    {
-      "name": "Siveti",
-      "slug": "siveti",
       "count": 2
     },
     {
@@ -372,6 +367,11 @@
     {
       "name": "Bambozzi",
       "slug": "bambozzi",
+      "count": 1
+    },
+    {
+      "name": "Baudouin",
+      "slug": "baudouin",
       "count": 1
     },
     {
@@ -465,6 +465,11 @@
       "count": 1
     },
     {
+      "name": "Cummins",
+      "slug": "cummins",
+      "count": 1
+    },
+    {
       "name": "DAFNG",
       "slug": "dafng",
       "count": 1
@@ -480,11 +485,6 @@
       "count": 1
     },
     {
-      "name": "Deutz",
-      "slug": "deutz",
-      "count": 1
-    },
-    {
       "name": "DEUTZ FAHR",
       "slug": "deutz-fahr",
       "count": 1
@@ -495,8 +495,8 @@
       "count": 1
     },
     {
-      "name": "Domopower",
-      "slug": "domopower",
+      "name": "Dolmar",
+      "slug": "dolmar",
       "count": 1
     },
     {
@@ -740,11 +740,6 @@
       "count": 1
     },
     {
-      "name": "LEuropea",
-      "slug": "leuropea",
-      "count": 1
-    },
-    {
       "name": "Liebherr",
       "slug": "liebherr",
       "count": 1
@@ -957,6 +952,11 @@
     {
       "name": "Sigma",
       "slug": "sigma",
+      "count": 1
+    },
+    {
+      "name": "Siveti",
+      "slug": "siveti",
       "count": 1
     },
     {
