@@ -23,13 +23,13 @@
       "count": 16
     },
     {
-      "name": "Caracas - Distrito Capital",
-      "slug": "caracas-distrito-capital",
-      "count": 11
-    },
-    {
       "name": "Barquisimeto - Lara",
       "slug": "barquisimeto-lara",
+      "count": 10
+    },
+    {
+      "name": "Caracas - Distrito Capital",
+      "slug": "caracas-distrito-capital",
       "count": 10
     },
     {
@@ -95,6 +95,11 @@
     {
       "name": "CIUDAD GUAYANA - EDO. BOLIVAR",
       "slug": "ciudad-guayana-edo-bolivar",
+      "count": 1
+    },
+    {
+      "name": "Miranda",
+      "slug": "miranda",
       "count": 1
     },
     {
@@ -260,6 +265,11 @@
       "count": 2
     },
     {
+      "name": "Inroda",
+      "slug": "inroda",
+      "count": 2
+    },
+    {
       "name": "JONH DEERE",
       "slug": "jonh-deere",
       "count": 2
@@ -300,8 +310,18 @@
       "count": 1
     },
     {
+      "name": "AGRISTAR",
+      "slug": "agristar",
+      "count": 1
+    },
+    {
       "name": "AGROFORTUNA",
       "slug": "agrofortuna",
+      "count": 1
+    },
+    {
+      "name": "AGROFORZA",
+      "slug": "agroforza",
       "count": 1
     },
     {
@@ -375,11 +395,6 @@
       "count": 1
     },
     {
-      "name": "Bertolini",
-      "slug": "bertolini",
-      "count": 1
-    },
-    {
       "name": "Blue Bird",
       "slug": "blue-bird",
       "count": 1
@@ -392,11 +407,6 @@
     {
       "name": "Bosch",
       "slug": "bosch",
-      "count": 1
-    },
-    {
-      "name": "Branco",
-      "slug": "branco",
       "count": 1
     },
     {
@@ -417,11 +427,6 @@
     {
       "name": "Carlile",
       "slug": "carlile",
-      "count": 1
-    },
-    {
-      "name": "Carlton",
-      "slug": "carlton",
       "count": 1
     },
     {
@@ -515,11 +520,6 @@
       "count": 1
     },
     {
-      "name": "Efco",
-      "slug": "efco",
-      "count": 1
-    },
-    {
       "name": "Emmark",
       "slug": "emmark",
       "count": 1
@@ -560,6 +560,11 @@
       "count": 1
     },
     {
+      "name": "FIMAKS",
+      "slug": "fimaks",
+      "count": 1
+    },
+    {
       "name": "FLAVON EC 400",
       "slug": "flavon-ec-400",
       "count": 1
@@ -597,6 +602,11 @@
     {
       "name": "Hamm",
       "slug": "hamm",
+      "count": 1
+    },
+    {
+      "name": "HARAMAQ",
+      "slug": "haramaq",
       "count": 1
     },
     {
@@ -650,11 +660,6 @@
       "count": 1
     },
     {
-      "name": "Inroda",
-      "slug": "inroda",
-      "count": 1
-    },
-    {
       "name": "Ipesasilo",
       "slug": "ipesasilo",
       "count": 1
@@ -700,6 +705,11 @@
       "count": 1
     },
     {
+      "name": "KAYHAN",
+      "slug": "kayhan",
+      "count": 1
+    },
+    {
       "name": "KIOTI",
       "slug": "kioti",
       "count": 1
@@ -725,8 +735,8 @@
       "count": 1
     },
     {
-      "name": "Launtop",
-      "slug": "launtop",
+      "name": "KUHN",
+      "slug": "kuhn",
       "count": 1
     },
     {
@@ -795,11 +805,6 @@
       "count": 1
     },
     {
-      "name": "Mazzaferro",
-      "slug": "mazzaferro",
-      "count": 1
-    },
-    {
       "name": "Menzi Muck",
       "slug": "menzi-muck",
       "count": 1
@@ -865,8 +870,8 @@
       "count": 1
     },
     {
-      "name": "Peon",
-      "slug": "peon",
+      "name": "PINHEIRO",
+      "slug": "pinheiro",
       "count": 1
     },
     {
@@ -995,11 +1000,6 @@
       "count": 1
     },
     {
-      "name": "Surgente",
-      "slug": "surgente",
-      "count": 1
-    },
-    {
       "name": "Takima",
       "slug": "takima",
       "count": 1
@@ -1015,11 +1015,6 @@
       "count": 1
     },
     {
-      "name": "Tecnosac",
-      "slug": "tecnosac",
-      "count": 1
-    },
-    {
       "name": "Tohatsu",
       "slug": "tohatsu",
       "count": 1
@@ -1032,6 +1027,11 @@
     {
       "name": "Toyama",
       "slug": "toyama",
+      "count": 1
+    },
+    {
+      "name": "TRACTORES SONALIKA",
+      "slug": "tractores-sonalika",
       "count": 1
     },
     {
@@ -1067,11 +1067,6 @@
     {
       "name": "Vence Tudo",
       "slug": "vence-tudo",
-      "count": 1
-    },
-    {
-      "name": "Vencedora Maqtron",
-      "slug": "vencedora-maqtron",
       "count": 1
     },
     {
@@ -1112,11 +1107,6 @@
     {
       "name": "Yardman",
       "slug": "yardman",
-      "count": 1
-    },
-    {
-      "name": "ZM bombas",
-      "slug": "zm-bombas",
       "count": 1
     },
     {
