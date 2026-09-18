@@ -454,49 +454,6 @@
     "image_url": "https://www.cavedrepa.org/wp-content/uploads/images.jpeg"
   },
   {
-    "id": 3042,
-    "date": "2025-09-04 14:17:05",
-    "modified": "2026-09-04 14:18:53",
-    "status": "expired",
-    "title": "AVICAMPO, S.A.",
-    "slug": "avicampo-s-a",
-    "content": "",
-    "excerpt": "",
-    "author": 1,
-    "meta": {
-      "_edit_lock": "1757009696:1",
-      "_edit_last": "1",
-      "_email": "pduffud@avicampo.com",
-      "_875": "Pierre W. Duffaud",
-      "_874": "J-00061461-0",
-      "_address": "Av. Principal San Luis, edifico Torre Mayupan, piso Mz1 y MZ2, urb El Cafetal",
-      "_phone": "041433319762",
-      "_directory_type": "314",
-      "_featured": "0",
-      "_expiry_date": "2026-09-04 14:15:00",
-      "_atbdp_post_views_count": "195",
-      "_listing_status": "expired",
-      "_renewal_reminder_sent": "1",
-      "_deletion_date": "2026-10-14 18:18:53"
-    },
-    "tax": {
-      "category": [
-        {
-          "name": "Sector Agrícola",
-          "slug": "agricola"
-        }
-      ],
-      "location": [
-        {
-          "name": "Caracas - Distrito Capital",
-          "slug": "caracas-distrito-capital"
-        }
-      ],
-      "tags": []
-    },
-    "image_url": ""
-  },
-  {
     "id": 3043,
     "date": "2025-09-04 14:19:05",
     "modified": "2026-09-04 14:18:53",

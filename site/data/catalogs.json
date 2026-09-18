@@ -3,7 +3,7 @@
     {
       "name": "Sector Agrícola",
       "slug": "agricola",
-      "count": 84
+      "count": 85
     },
     {
       "name": "Sector Construcción",
@@ -23,13 +23,13 @@
       "count": 16
     },
     {
-      "name": "Barquisimeto - Lara",
-      "slug": "barquisimeto-lara",
-      "count": 10
-    },
-    {
       "name": "Caracas - Distrito Capital",
       "slug": "caracas-distrito-capital",
+      "count": 11
+    },
+    {
+      "name": "Barquisimeto - Lara",
+      "slug": "barquisimeto-lara",
       "count": 10
     },
     {
