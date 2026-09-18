@@ -3,7 +3,7 @@
     {
       "name": "Sector Agrícola",
       "slug": "agricola",
-      "count": 87
+      "count": 88
     },
     {
       "name": "Sector Construcción",
@@ -93,6 +93,11 @@
       "count": 2
     },
     {
+      "name": "Valle de la Pascua - Estado Guárico",
+      "slug": "valle-de-la-pascua-estado-guarico",
+      "count": 2
+    },
+    {
       "name": "Aragua",
       "slug": "aragua",
       "count": 1
@@ -130,11 +135,6 @@
     {
       "name": "Valera - Trujillo",
       "slug": "valera-trujillo",
-      "count": 1
-    },
-    {
-      "name": "Valle de la Pascua - Estado Guárico",
-      "slug": "valle-de-la-pascua-estado-guarico",
       "count": 1
     },
     {
@@ -302,6 +302,11 @@
     {
       "name": "Stara",
       "slug": "stara",
+      "count": 2
+    },
+    {
+      "name": "Tatu",
+      "slug": "tatu",
       "count": 2
     },
     {
@@ -1017,11 +1022,6 @@
     {
       "name": "Takima",
       "slug": "takima",
-      "count": 1
-    },
-    {
-      "name": "Tatu",
-      "slug": "tatu",
       "count": 1
     },
     {
