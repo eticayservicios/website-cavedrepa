@@ -5544,8 +5544,8 @@
       "_email": "latintirescorp@gmail.com",
       "_877": "honogonza1984@gmail.com",
       "_875": "RAFAEL FUENTES DIGIROLAMO",
-      "_874": "504385980",
-      "_address": "CALLE 1 CON CARRERA 1A PARCELA 205 Y 206 ZONAINDUSTRIAL II BARQUISIMETO",
+      "_874": "J-50438598-0",
+      "_address": "Calle 1 con Carrera A-1, Parcelas 205 y 206, Local Galpón Nro. 11, Zona Industrial II, Parque Industrial Bello Campo, Barquisimeto, Estado Lara",
       "_hide_contact_owner": "1",
       "_phone": "0251-4184029",
       "_phone2": "04245759434",
@@ -5555,7 +5555,8 @@
       "_listing_status": "post_status",
       "_listing_prv_img": "3323",
       "_thumbnail_id": "3323",
-      "_cavedrepa_afiliacion_email_sent": "2026-06-11 09:53:48"
+      "_cavedrepa_afiliacion_email_sent": "2026-06-11 09:53:48",
+      "_zip": "3001"
     },
     "tax": {
       "category": [
@@ -5572,7 +5573,7 @@
       ],
       "tags": []
     },
-    "image_url": "/images/afiliados/placeholder.png",
+    "image_url": "/images/afiliados/3322.jpg",
     "expires_at": "2027-09-14"
   },
   {
