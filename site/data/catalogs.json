@@ -3,7 +3,7 @@
     {
       "name": "Sector Agrícola",
       "slug": "agricola",
-      "count": 86
+      "count": 87
     },
     {
       "name": "Sector Construcción",
@@ -38,14 +38,14 @@
       "count": 7
     },
     {
-      "name": "Maracay - Aragua",
-      "slug": "maracay-aragua",
+      "name": "Araure - Edo. Portuguesa",
+      "slug": "araure-edo-portuguesa",
       "count": 6
     },
     {
-      "name": "Araure - Edo. Portuguesa",
-      "slug": "araure-edo-portuguesa",
-      "count": 5
+      "name": "Maracay - Aragua",
+      "slug": "maracay-aragua",
+      "count": 6
     },
     {
       "name": "Los Teques - Miranda",
