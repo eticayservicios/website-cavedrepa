@@ -4054,6 +4054,58 @@
     "expires_at": "2027-09-18"
   },
   {
+    "id": 3047,
+    "date": "2025-09-04 14:22:46",
+    "modified": "2026-09-04 14:48:50",
+    "status": "publish",
+    "title": "AGROTECH, C.A.",
+    "slug": "agrotech-ca",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Áreas de presencia:</span></h3>\r\n<span class=\"itemExtraFieldsValue\">Territorio nacional.</span>\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nRepuestos de maquinaria agrícola para sembradoras, cosechadoras y fumigadoras.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1757010040:1",
+      "_edit_last": "1",
+      "_email": "agrotechven@gmail.com",
+      "_877": "daepadron@gmail.com",
+      "_875": "Daniel Antonio Esteban Sanchez Padron",
+      "_874": "J-50404771-6",
+      "_address": "Ctra. Nacional Cagua La Villa, Local Parcela N-29, Galpón N.º 2, Sector Santa María, Villa de Cura, Estado Aragua",
+      "_phone": "0424-4296849",
+      "_phone2": "0412-3421728",
+      "_listing_prv_img": "3048",
+      "_directory_type": "314",
+      "_featured": "0",
+      "_expiry_date": "2027-09-18 00:00:00",
+      "_thumbnail_id": "3048",
+      "_atbdp_post_views_count": "197",
+      "_listing_status": "post_status",
+      "_zip": "2126"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Aragua",
+          "slug": "aragua"
+        }
+      ],
+      "tags": [
+        {
+          "name": "FJ Dynamics",
+          "slug": "fj-dynamics"
+        }
+      ]
+    },
+    "image_url": "/images/afiliados/3047.jpg",
+    "expires_at": "2027-09-18"
+  },
+  {
     "id": 3060,
     "date": "2025-09-08 08:46:23",
     "modified": "2025-09-08 08:46:23",

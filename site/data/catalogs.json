@@ -3,7 +3,7 @@
     {
       "name": "Sector Agrícola",
       "slug": "agricola",
-      "count": 85
+      "count": 86
     },
     {
       "name": "Sector Construcción",
@@ -91,6 +91,11 @@
       "name": "Valencia - Carabobo",
       "slug": "valencia-carabobo",
       "count": 2
+    },
+    {
+      "name": "Aragua",
+      "slug": "aragua",
+      "count": 1
     },
     {
       "name": "CIUDAD GUAYANA - EDO. BOLIVAR",
@@ -562,6 +567,11 @@
     {
       "name": "FIMAKS",
       "slug": "fimaks",
+      "count": 1
+    },
+    {
+      "name": "FJ Dynamics",
+      "slug": "fj-dynamics",
       "count": 1
     },
     {
