@@ -6345,5 +6345,41 @@
     },
     "image_url": "/images/afiliados/placeholder.png",
     "expires_at": "2027-09-14"
+  },
+  {
+    "id": 4011,
+    "date": "2026-09-18 18:45:00",
+    "modified": "2026-09-18 18:45:00",
+    "status": "publish",
+    "title": "DISTRIBUIDORA LLANO BIG RAMIREZ F,P",
+    "slug": "distribuidora-llano-big-ramirez-f-p",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nRepuestos agrícolas.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_874": "V207357460",
+      "_address": "Av. 5 de Diciembre, Edificio San Miguel Arcángel, Piso 1, Local 2, Araure, Estado Portuguesa",
+      "_phone": "0412-0568934",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_expiry_date": "2027-09-18 00:00:00"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Araure - Edo. Portuguesa",
+          "slug": "araure-edo-portuguesa"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "/images/afiliados/placeholder.png",
+    "expires_at": "2027-09-18"
   }
 ]
