@@ -6431,5 +6431,76 @@
     },
     "image_url": "/images/afiliados/placeholder.png",
     "expires_at": "2027-09-18"
+  },
+  {
+    "id": 3359,
+    "date": "2026-09-18 20:40:00",
+    "modified": "2026-09-18 20:40:00",
+    "status": "publish",
+    "title": "ROLIVEN 2016 NYM CA",
+    "slug": "roliven-2016-nym-ca",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nROLIVEN comercializa repuestos alternativos de excelente calidad compatibles con una gran variedad de máquinas de uso agrícola y forestal, además de maquinarias, implementos e insumos.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_874": "J-505073176",
+      "_875": "MAURO EZEQUIEL VERGARA MARTINS",
+      "_email": "roliven2016@gmail.com",
+      "_address": "Calle 99 C.C Unicentro del Norte Local 2",
+      "_phone": "0412-3640082",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_expiry_date": "2027-09-18 00:00:00"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Valencia - Carabobo",
+          "slug": "valencia-carabobo"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Briggs & Stratton",
+          "slug": "briggs-stratton"
+        },
+        {
+          "name": "Honda",
+          "slug": "honda"
+        },
+        {
+          "name": "Husqvarna",
+          "slug": "husqvarna"
+        },
+        {
+          "name": "JONH DEERE",
+          "slug": "jonh-deere"
+        },
+        {
+          "name": "OLEOMAC",
+          "slug": "oleomac"
+        },
+        {
+          "name": "Ryobi",
+          "slug": "ryobi"
+        },
+        {
+          "name": "Shindaiwa",
+          "slug": "shindaiwa"
+        },
+        {
+          "name": "Stihl",
+          "slug": "stihl"
+        }
+      ]
+    },
+    "image_url": "/images/afiliados/placeholder.png",
+    "expires_at": "2027-09-18"
   }
 ]
