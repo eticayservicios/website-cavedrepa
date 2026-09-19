@@ -3004,7 +3004,6 @@
       "_fax": "",
       "_email": "agroparteszaire@gmail.com",
       "_website": "",
-      "_social": "a:1:{i:0;a:2:{s:2:\"id\";s:9:\"instagram\";s:3:\"url\";s:41:\"https://www.instagram.com/agroparteszaire\";}}",
       "_address": "ESTACION DE SERVICIOS LA MACHIRI LOCAL NRO 15 SAN CRISTOBAL",
       "_listing_img": "",
       "_listing_prv_img": "2348",
@@ -3014,7 +3013,8 @@
       "_never_expire": "1",
       "_expiry_date": "2024-10-08 13:58:53",
       "_listing_status": "post_status",
-      "_thumbnail_id": "2348"
+      "_thumbnail_id": "2348",
+      "_instagram": "agroparteszaire"
     },
     "tax": {
       "category": [
@@ -4285,13 +4285,13 @@
       "_address": "AV PPAL CASA HACIENDA EL ENCANTADO NRO GALPON 17 SECTOR LA GUAIRITA EL HATILLO CARACAS",
       "_phone": "02122272086",
       "_phone2": "04126202766",
-      "_social": "a:1:{i:0;a:2:{s:2:\"id\";s:9:\"instagram\";s:3:\"url\";s:36:\"https://www.instagram.com/isonicvlza\";}}",
       "_listing_prv_img": "3080",
       "_directory_type": "314",
       "_featured": "",
       "_expiry_date": "2026-09-24 13:53:00",
       "_thumbnail_id": "3080",
-      "_atbdp_post_views_count": "476"
+      "_atbdp_post_views_count": "476",
+      "_instagram": "isonicvlza"
     },
     "tax": {
       "category": [
@@ -4800,7 +4800,6 @@
       "_hide_contact_owner": "1",
       "_phone": "0286-9231880",
       "_phone2": "04148985744",
-      "_social": "a:1:{i:0;a:2:{s:2:\"id\";s:9:\"instagram\";s:3:\"url\";s:42:\"https://www.instagram.com/euromakca/?hl=es\";}}",
       "_directory_type": "314",
       "_expiry_date": "2026-11-11 15:08:28",
       "_featured": "0",
@@ -4808,7 +4807,8 @@
       "_listing_prv_img": "3121",
       "_thumbnail_id": "3121",
       "_wp_old_date": "2025-11-11",
-      "_atbdp_post_views_count": "167"
+      "_atbdp_post_views_count": "167",
+      "_instagram": "euromakca"
     },
     "tax": {
       "category": [
@@ -5079,7 +5079,6 @@
       "_address": "SERVICIO AUTOPISTA CENTRO OCCIDENTAL ESQUINA CALLE 18 YATITAGUA EDO. YARACUY",
       "_phone": "04122627605",
       "_phone2": "04149731245",
-      "_social": "a:1:{i:0;a:2:{s:2:\"id\";s:9:\"instagram\";s:3:\"url\";s:37:\"https://www.instagram.com/agroplusve/\";}}",
       "_directory_type": "314",
       "_expiry_date": "2027-01-30 16:54:28",
       "_featured": "0",
@@ -5087,7 +5086,8 @@
       "_listing_prv_img": "3215",
       "_thumbnail_id": "3215",
       "_wp_old_date": "2026-01-30",
-      "_atbdp_post_views_count": "192"
+      "_atbdp_post_views_count": "192",
+      "_instagram": "agroplusve"
     },
     "tax": {
       "category": [
@@ -5280,14 +5280,14 @@
       "_phone": "+58 414-5850912",
       "_phone2": "+58 414-9420494",
       "_website": "https://maxiferdevenezuela.com/",
-      "_social": "a:1:{i:0;a:2:{s:2:\"id\";s:9:\"instagram\";s:3:\"url\";s:61:\"https://www.instagram.com/maxiferdevzla?igsh=MWJtazJhazdicnk3\";}}",
       "_directory_type": "314",
       "_expiry_date": "2027-09-14 00:00:00",
       "_featured": "0",
       "_listing_status": "post_status",
       "_listing_prv_img": "3288",
       "_thumbnail_id": "3288",
-      "_cavedrepa_afiliacion_email_sent": "2026-04-28 19:05:37"
+      "_cavedrepa_afiliacion_email_sent": "2026-04-28 19:05:37",
+      "_instagram": "maxiferdevzla"
     },
     "tax": {
       "category": [
@@ -5796,7 +5796,6 @@
       "_phone": "0414-0801515",
       "_phone2": "0414-0801515",
       "_website": "https://www.newfarmerspower.com/",
-      "_social": "a:1:{i:0;a:2:{s:2:\"id\";s:9:\"instagram\";s:3:\"url\";s:42:\"https://www.instagram.com/newfarmerspower/\";}}",
       "_directory_type": "314",
       "_expiry_date": "2027-09-14 00:00:00",
       "_featured": "0",
@@ -5804,7 +5803,8 @@
       "_listing_prv_img": "3325",
       "_thumbnail_id": "3325",
       "_listing_img": "a:1:{i:1;i:3326;}",
-      "_cavedrepa_afiliacion_email_sent": "2026-06-18 17:04:09"
+      "_cavedrepa_afiliacion_email_sent": "2026-06-18 17:04:09",
+      "_instagram": "newfarmerspower"
     },
     "tax": {
       "category": [
