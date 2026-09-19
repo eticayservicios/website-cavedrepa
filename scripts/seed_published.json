@@ -4025,15 +4025,16 @@
       "_edit_lock": "1757009696:1",
       "_edit_last": "1",
       "_email": "pduffud@avicampo.com",
-      "_875": "Pierre W. Duffaud",
+      "_875": "Pierre W. Duffaud D.",
       "_874": "J-00061461-0",
-      "_address": "Av. Principal San Luis, edifico Torre Mayupan, piso Mz1 y MZ2, urb El Cafetal",
-      "_phone": "041433319762",
+      "_address": "Av. Principal San Luis, Edif. Torre Mayupan, Piso MZ, Of. MZ-1 y MZ-2, Urb. San Luis (El Cafetal), Caracas, Estado Miranda",
+      "_phone": "0414-3319762",
       "_directory_type": "314",
       "_featured": "0",
       "_expiry_date": "2027-09-18 00:00:00",
       "_atbdp_post_views_count": "195",
-      "_listing_status": "post_status"
+      "_listing_status": "post_status",
+      "_zip": "1061"
     },
     "tax": {
       "category": [
@@ -4044,11 +4045,20 @@
       ],
       "location": [
         {
-          "name": "Caracas - Distrito Capital",
-          "slug": "caracas-distrito-capital"
+          "name": "El Cafetal - Miranda",
+          "slug": "el-cafetal-miranda"
         }
       ],
-      "tags": []
+      "tags": [
+        {
+          "name": "Plasson Brasil",
+          "slug": "plasson-brasil"
+        },
+        {
+          "name": "Jamesway - USA",
+          "slug": "jamesway-usa"
+        }
+      ]
     },
     "image_url": "/images/afiliados/3042.jpg",
     "expires_at": "2027-09-18"

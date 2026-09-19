@@ -30,7 +30,7 @@
     {
       "name": "Caracas - Distrito Capital",
       "slug": "caracas-distrito-capital",
-      "count": 11
+      "count": 10
     },
     {
       "name": "Araure - Edo. Portuguesa",
@@ -105,6 +105,11 @@
     {
       "name": "CIUDAD GUAYANA - EDO. BOLIVAR",
       "slug": "ciudad-guayana-edo-bolivar",
+      "count": 1
+    },
+    {
+      "name": "El Cafetal - Miranda",
+      "slug": "el-cafetal-miranda",
       "count": 1
     },
     {
@@ -720,6 +725,11 @@
       "count": 1
     },
     {
+      "name": "Jamesway - USA",
+      "slug": "jamesway-usa",
+      "count": 1
+    },
+    {
       "name": "Jan",
       "slug": "jan",
       "count": 1
@@ -907,6 +917,11 @@
     {
       "name": "Pinheiros",
       "slug": "pinheiros",
+      "count": 1
+    },
+    {
+      "name": "Plasson Brasil",
+      "slug": "plasson-brasil",
       "count": 1
     },
     {
