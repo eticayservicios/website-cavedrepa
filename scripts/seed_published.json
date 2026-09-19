@@ -4157,6 +4157,52 @@
     "expires_at": "2027-09-18"
   },
   {
+    "id": 3039,
+    "date": "2025-09-04 14:14:01",
+    "modified": "2026-09-04 14:18:54",
+    "status": "publish",
+    "title": "RUSSO CAUCHOS, C.A.",
+    "slug": "russo-cauchos",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nCompra y venta e importación directa de neumáticos agrícolas con fines comerciales.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1757009505:1",
+      "_edit_last": "1",
+      "_email": "inventario@russocauchos.com",
+      "_877": "mauricio.russo@lbrin.com",
+      "_875": "Antonio Mauricio Russo Tocco",
+      "_874": "J-08515150-8",
+      "_address": "Carrera 4 entre calles 30 y 31, Edif. S/N, Piso PB, Zona Industrial I, Barquisimeto, Estado Lara",
+      "_phone": "0424-5821827",
+      "_phone2": "0414-5303432",
+      "_listing_prv_img": "3040",
+      "_directory_type": "314",
+      "_featured": "0",
+      "_expiry_date": "2027-09-18 00:00:00",
+      "_thumbnail_id": "3040",
+      "_atbdp_post_views_count": "235",
+      "_listing_status": "post_status"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Barquisimeto - Lara",
+          "slug": "barquisimeto-lara"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "/images/afiliados/3039.jpg",
+    "expires_at": "2027-09-18"
+  },
+  {
     "id": 3060,
     "date": "2025-09-08 08:46:23",
     "modified": "2025-09-08 08:46:23",
