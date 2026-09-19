@@ -6549,5 +6549,43 @@
     },
     "image_url": "/images/afiliados/placeholder.png",
     "expires_at": "2027-09-18"
+  },
+  {
+    "id": 4012,
+    "date": "2026-09-18 23:20:00",
+    "modified": "2026-09-18 23:20:00",
+    "status": "publish",
+    "title": "AGRO REPUESTOS RAMIREZ, C.A.",
+    "slug": "agro-repuestos-ramirez-c-a",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nRepuestos para tractores agrícolas.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_874": "J-31184283-7",
+      "_875": "Tony Darnel Ramírez Mora",
+      "_email": "agrorepraca@gmail.com",
+      "_address": "Vía El Vigía, Casa # 1K337, Sector Km 2, Santa Bárbara del Zulia, Estado Zulia",
+      "_phone": "0414-7019430",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_expiry_date": "2027-09-18 00:00:00"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Santa Bárbara del Zulia - Zulia",
+          "slug": "santa-barbara-del-zulia-zulia"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "/images/afiliados/placeholder.png",
+    "expires_at": "2027-09-18"
   }
 ]

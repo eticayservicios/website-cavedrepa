@@ -3,7 +3,7 @@
     {
       "name": "Sector Agrícola",
       "slug": "agricola",
-      "count": 90
+      "count": 91
     },
     {
       "name": "Sector Construcción",
@@ -120,6 +120,11 @@
     {
       "name": "Montalban - Carabobo",
       "slug": "montalban-carabobo",
+      "count": 1
+    },
+    {
+      "name": "Santa Bárbara del Zulia - Zulia",
+      "slug": "santa-barbara-del-zulia-zulia",
       "count": 1
     },
     {
