@@ -6738,5 +6738,91 @@
     },
     "image_url": "/images/afiliados/4014.jpg",
     "expires_at": "2027-09-19"
+  },
+  {
+    "id": 3028,
+    "date": "2025-08-04 10:55:13",
+    "modified": "2026-08-04 11:18:54",
+    "status": "publish",
+    "title": "AGRORUEDAS CHAKAO C.A.",
+    "slug": "agroruedas-chakao-c-a",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Áreas de presencia:</span></h3>\r\nSede Acarigua, Sede Araure y Sede San Rafael.\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nNeumáticos de todo tipo, cámaras de aire agrícolas, rines y baterías.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1754573881:1",
+      "_edit_last": "1",
+      "_email": "agroruedaschakaoimp2023@gmail.com",
+      "_877": "aimportacion2gc@gmail.com",
+      "_875": "JOSE ORLANDO MEZA RAMOS",
+      "_874": "J-41023094-0",
+      "_address": "Av. 3 Bolívar con Calle 7, Locales 4 y 5, Sector Centro, San Rafael de Onoto, Canal M7-2, Estado Portuguesa",
+      "_phone": "0412-0240605",
+      "_phone2": "0412-0240548",
+      "_directory_type": "314",
+      "_featured": "0",
+      "_expiry_date": "2027-09-19 00:00:00",
+      "_atbdp_post_views_count": "256",
+      "_listing_prv_img": "3035",
+      "_thumbnail_id": "3035",
+      "_listing_status": "post_status",
+      "_zip": "3306",
+      "_instagram": "supercauchos_chakao",
+      "_branches": "[{\"label\": \"Sede Acarigua\", \"place\": \"Acarigua - Estado Portuguesa\"}, {\"label\": \"Sede Araure\", \"place\": \"Araure - Estado Portuguesa\"}, {\"label\": \"Sede San Rafael\", \"place\": \"San Rafael de Onoto - Estado Portuguesa\"}]"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "San Rafael de Onoto - Portuguesa",
+          "slug": "san-rafael-de-onoto-portuguesa"
+        }
+      ],
+      "tags": [
+        {
+          "name": "BKT",
+          "slug": "bkt"
+        },
+        {
+          "name": "ROADGUIDER",
+          "slug": "roadguider"
+        },
+        {
+          "name": "FORREUNNER",
+          "slug": "forreunner"
+        },
+        {
+          "name": "ANNAITE",
+          "slug": "annaite"
+        },
+        {
+          "name": "ROYAL BLACK",
+          "slug": "royal-black"
+        },
+        {
+          "name": "HAOHUA",
+          "slug": "haohua"
+        },
+        {
+          "name": "NEXEN",
+          "slug": "nexen"
+        },
+        {
+          "name": "LTH",
+          "slug": "lth"
+        },
+        {
+          "name": "ECOROAD",
+          "slug": "ecoroad"
+        }
+      ]
+    },
+    "image_url": "/images/afiliados/placeholder.png",
+    "expires_at": "2027-09-19"
   }
 ]

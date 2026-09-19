@@ -3,7 +3,7 @@
     {
       "name": "Sector Agrícola",
       "slug": "agricola",
-      "count": 93
+      "count": 94
     },
     {
       "name": "Sector Construcción",
@@ -125,6 +125,11 @@
     {
       "name": "Montalban - Carabobo",
       "slug": "montalban-carabobo",
+      "count": 1
+    },
+    {
+      "name": "San Rafael de Onoto - Portuguesa",
+      "slug": "san-rafael-de-onoto-portuguesa",
       "count": 1
     },
     {
@@ -390,6 +395,11 @@
       "count": 1
     },
     {
+      "name": "ANNAITE",
+      "slug": "annaite",
+      "count": 1
+    },
+    {
       "name": "APROCA",
       "slug": "aproca",
       "count": 1
@@ -442,6 +452,11 @@
     {
       "name": "BELLOTA",
       "slug": "bellota",
+      "count": 1
+    },
+    {
+      "name": "BKT",
+      "slug": "bkt",
       "count": 1
     },
     {
@@ -595,6 +610,11 @@
       "count": 1
     },
     {
+      "name": "ECOROAD",
+      "slug": "ecoroad",
+      "count": 1
+    },
+    {
       "name": "Emmark",
       "slug": "emmark",
       "count": 1
@@ -660,6 +680,11 @@
       "count": 1
     },
     {
+      "name": "FORREUNNER",
+      "slug": "forreunner",
+      "count": 1
+    },
+    {
       "name": "Furukawa",
       "slug": "furukawa",
       "count": 1
@@ -682,6 +707,11 @@
     {
       "name": "Hamm",
       "slug": "hamm",
+      "count": 1
+    },
+    {
+      "name": "HAOHUA",
+      "slug": "haohua",
       "count": 1
     },
     {
@@ -865,6 +895,11 @@
       "count": 1
     },
     {
+      "name": "LTH",
+      "slug": "lth",
+      "count": 1
+    },
+    {
       "name": "LUSQI",
       "slug": "lusqi",
       "count": 1
@@ -927,6 +962,11 @@
     {
       "name": "Neptuno Mares",
       "slug": "neptuno-mares",
+      "count": 1
+    },
+    {
+      "name": "NEXEN",
+      "slug": "nexen",
       "count": 1
     },
     {
@@ -1010,6 +1050,11 @@
       "count": 1
     },
     {
+      "name": "ROADGUIDER",
+      "slug": "roadguider",
+      "count": 1
+    },
+    {
       "name": "Rosenbauer",
       "slug": "rosenbauer",
       "count": 1
@@ -1017,6 +1062,11 @@
     {
       "name": "Royal",
       "slug": "royal",
+      "count": 1
+    },
+    {
+      "name": "ROYAL BLACK",
+      "slug": "royal-black",
       "count": 1
     },
     {
