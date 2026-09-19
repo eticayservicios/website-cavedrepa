@@ -3,7 +3,7 @@
     {
       "name": "Sector Agrícola",
       "slug": "agricola",
-      "count": 88
+      "count": 89
     },
     {
       "name": "Sector Construcción",
@@ -63,6 +63,11 @@
       "count": 3
     },
     {
+      "name": "Valencia - Carabobo",
+      "slug": "valencia-carabobo",
+      "count": 3
+    },
+    {
       "name": "Ciudad Bolívar - Bolívar",
       "slug": "ciudad-bolivar-bolivar",
       "count": 2
@@ -85,11 +90,6 @@
     {
       "name": "Sucre – Cumaná",
       "slug": "sucre-cumana",
-      "count": 2
-    },
-    {
-      "name": "Valencia - Carabobo",
-      "slug": "valencia-carabobo",
       "count": 2
     },
     {
@@ -170,6 +170,11 @@
       "count": 4
     },
     {
+      "name": "Honda",
+      "slug": "honda",
+      "count": 4
+    },
+    {
       "name": "Baldan",
       "slug": "baldan",
       "count": 3
@@ -180,13 +185,13 @@
       "count": 3
     },
     {
-      "name": "Honda",
-      "slug": "honda",
+      "name": "Jacto",
+      "slug": "jacto",
       "count": 3
     },
     {
-      "name": "Jacto",
-      "slug": "jacto",
+      "name": "JONH DEERE",
+      "slug": "jonh-deere",
       "count": 3
     },
     {
@@ -212,6 +217,11 @@
     {
       "name": "BIG HERDSMAN",
       "slug": "big-herdsman",
+      "count": 2
+    },
+    {
+      "name": "Briggs & Stratton",
+      "slug": "briggs-stratton",
       "count": 2
     },
     {
@@ -270,13 +280,13 @@
       "count": 2
     },
     {
-      "name": "Inroda",
-      "slug": "inroda",
+      "name": "Husqvarna",
+      "slug": "husqvarna",
       "count": 2
     },
     {
-      "name": "JONH DEERE",
-      "slug": "jonh-deere",
+      "name": "Inroda",
+      "slug": "inroda",
       "count": 2
     },
     {
@@ -287,6 +297,16 @@
     {
       "name": "mahindra",
       "slug": "mahindra",
+      "count": 2
+    },
+    {
+      "name": "OLEOMAC",
+      "slug": "oleomac",
+      "count": 2
+    },
+    {
+      "name": "Ryobi",
+      "slug": "ryobi",
       "count": 2
     },
     {
@@ -302,6 +322,11 @@
     {
       "name": "Stara",
       "slug": "stara",
+      "count": 2
+    },
+    {
+      "name": "Stihl",
+      "slug": "stihl",
       "count": 2
     },
     {
@@ -417,11 +442,6 @@
     {
       "name": "Bosch",
       "slug": "bosch",
-      "count": 1
-    },
-    {
-      "name": "Briggs & Stratton",
-      "slug": "briggs-stratton",
       "count": 1
     },
     {
@@ -632,11 +652,6 @@
     {
       "name": "HQVP",
       "slug": "hqvp",
-      "count": 1
-    },
-    {
-      "name": "Husqvarna",
-      "slug": "husqvarna",
       "count": 1
     },
     {
@@ -860,11 +875,6 @@
       "count": 1
     },
     {
-      "name": "OLEOMAC",
-      "slug": "oleomac",
-      "count": 1
-    },
-    {
       "name": "Pedrollo",
       "slug": "pedrollo",
       "count": 1
@@ -940,11 +950,6 @@
       "count": 1
     },
     {
-      "name": "Ryobi",
-      "slug": "ryobi",
-      "count": 1
-    },
-    {
       "name": "sam lee",
       "slug": "sam-lee",
       "count": 1
@@ -967,6 +972,11 @@
     {
       "name": "SHANDONG",
       "slug": "shandong",
+      "count": 1
+    },
+    {
+      "name": "Shindaiwa",
+      "slug": "shindaiwa",
       "count": 1
     },
     {
@@ -997,11 +1007,6 @@
     {
       "name": "STAL Y PLAST A/S",
       "slug": "stal-y-plast-a-s",
-      "count": 1
-    },
-    {
-      "name": "Stihl",
-      "slug": "stihl",
       "count": 1
     },
     {
