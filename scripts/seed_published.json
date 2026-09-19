@@ -6431,48 +6431,5 @@
     },
     "image_url": "/images/afiliados/placeholder.png",
     "expires_at": "2027-09-18"
-  },
-  {
-    "id": 4012,
-    "date": "2026-09-18 19:50:00",
-    "modified": "2026-09-18 19:50:00",
-    "status": "publish",
-    "title": "GRUPO AGROPECUARIO DON ANTONIO, C.A.",
-    "slug": "grupo-agropecuario-don-antonio-c-a",
-    "content": "",
-    "excerpt": "",
-    "author": 1,
-    "meta": {
-      "_874": "J-412711784",
-      "_875": "Julio Morles",
-      "_email": "grupodonantonio@gmail.com",
-      "_address": "Ctra vía al Consejo Lonal Nro S/N Sector Boca Chica, Sabana de la Plata, Estado Zulia",
-      "_phone": "0412-6431309",
-      "_featured": "0",
-      "_listing_status": "post_status",
-      "_expiry_date": "2027-09-18 00:00:00"
-    },
-    "tax": {
-      "category": [
-        {
-          "name": "Sector Agrícola",
-          "slug": "agricola"
-        }
-      ],
-      "location": [
-        {
-          "name": "Maracaibo - Zulia",
-          "slug": "maracaibo-zulia"
-        }
-      ],
-      "tags": [
-        {
-          "name": "China",
-          "slug": "china"
-        }
-      ]
-    },
-    "image_url": "/images/afiliados/placeholder.png",
-    "expires_at": "2027-09-18"
   }
 ]

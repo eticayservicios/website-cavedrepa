@@ -3,7 +3,7 @@
     {
       "name": "Sector Agrícola",
       "slug": "agricola",
-      "count": 89
+      "count": 88
     },
     {
       "name": "Sector Construcción",
@@ -55,7 +55,7 @@
     {
       "name": "Maracaibo - Zulia",
       "slug": "maracaibo-zulia",
-      "count": 4
+      "count": 3
     },
     {
       "name": "San Diego - Carabobo",
@@ -180,11 +180,6 @@
       "count": 3
     },
     {
-      "name": "China",
-      "slug": "china",
-      "count": 3
-    },
-    {
       "name": "Honda",
       "slug": "honda",
       "count": 3
@@ -217,6 +212,11 @@
     {
       "name": "BIG HERDSMAN",
       "slug": "big-herdsman",
+      "count": 2
+    },
+    {
+      "name": "China",
+      "slug": "china",
       "count": 2
     },
     {
