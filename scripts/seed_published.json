@@ -6507,7 +6507,8 @@
       "_phone": "0412-3640082",
       "_featured": "0",
       "_listing_status": "post_status",
-      "_expiry_date": "2027-09-18 00:00:00"
+      "_expiry_date": "2027-09-18 00:00:00",
+      "_instagram": "fervenvzla"
     },
     "tax": {
       "category": [
@@ -6690,5 +6691,52 @@
     },
     "image_url": "/images/afiliados/4013.jpg",
     "expires_at": "2027-09-18"
+  },
+  {
+    "id": 4014,
+    "date": "2026-09-19 00:30:00",
+    "modified": "2026-09-19 00:30:00",
+    "status": "publish",
+    "title": "INTOP DE VENEZUELA, C.A.",
+    "slug": "intop-de-venezuela-c-a",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Áreas de presencia:</span></h3>\r\nGanadería y agricultura en todo el país.\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nBombas de agua centrífugas, autocebantes, sumergibles de pozo profundo, de combustión diésel y gasolina, de alto caudal y afines.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_874": "J-50106029-0",
+      "_875": "Sergio Fernandez",
+      "_email": "sergiofernandezvalverde@gmail.com",
+      "_877": "ventasintop@gmail.com",
+      "_website": "https://www.intopdevenezuela.com",
+      "_instagram": "intopvzla",
+      "_address": "Av. Principal Alirio Ugarte Pelayo, Local N.º 01, frente a PDVSA, PB, Sector Tipuro, Maturín, Estado Monagas",
+      "_phone": "0414-7666805",
+      "_phone2": "0426-5803691 / 0412-1103698",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_expiry_date": "2027-09-19 00:00:00"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Monagas - Maturín",
+          "slug": "monagas-maturin"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Intop",
+          "slug": "intop"
+        }
+      ]
+    },
+    "image_url": "/images/afiliados/4014.jpg",
+    "expires_at": "2027-09-19"
   }
 ]

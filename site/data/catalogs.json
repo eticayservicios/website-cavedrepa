@@ -3,7 +3,7 @@
     {
       "name": "Sector Agrícola",
       "slug": "agricola",
-      "count": 92
+      "count": 93
     },
     {
       "name": "Sector Construcción",
@@ -73,6 +73,11 @@
       "count": 2
     },
     {
+      "name": "Monagas - Maturín",
+      "slug": "monagas-maturin",
+      "count": 2
+    },
+    {
       "name": "San Cristóbal - Táchira",
       "slug": "san-cristobal-tachira",
       "count": 2
@@ -115,11 +120,6 @@
     {
       "name": "Miranda",
       "slug": "miranda",
-      "count": 1
-    },
-    {
-      "name": "Monagas - Maturín",
-      "slug": "monagas-maturin",
       "count": 1
     },
     {
@@ -732,6 +732,11 @@
     {
       "name": "Ingersol",
       "slug": "ingersol",
+      "count": 1
+    },
+    {
+      "name": "Intop",
+      "slug": "intop",
       "count": 1
     },
     {
