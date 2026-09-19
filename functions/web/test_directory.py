@@ -45,6 +45,11 @@ class DirectoryTests(unittest.TestCase):
         self.assertIn("massey ferguson", company["search"])
         self.assertTrue(matches_filters(company, {"q": "agritráder", "marca": "massey-ferguson"}))
 
+    def test_social_profiles_come_from_meta(self):
+        raw = dict(SAMPLE, meta=dict(SAMPLE["meta"], _instagram="@agritrader"))
+        self.assertEqual(normalize_listing(raw)["social"], {"instagram": "agritrader"})
+        self.assertEqual(normalize_listing(SAMPLE)["social"], {})
+
     def test_pending_is_not_indexed_publicly(self):
         raw = dict(SAMPLE, status="pending", id=3354)
         items = items_for_company(normalize_listing(raw))

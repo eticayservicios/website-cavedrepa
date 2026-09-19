@@ -32,6 +32,7 @@ CARD_FIELDS = (
     "expires_at",
 )
 PROFILE_SKIP = {"pk", "sk", "entity"}
+SOCIAL_NETWORKS = ("facebook", "instagram", "linkedin", "youtube", "twitter")
 
 
 def now_stamp() -> str:
@@ -121,6 +122,15 @@ def branches(meta: dict[str, Any]) -> list[dict[str, str]]:
     return result
 
 
+def social(meta: dict[str, Any]) -> dict[str, str]:
+    result = {}
+    for network in SOCIAL_NETWORKS:
+        handle = first_meta(meta, f"_{network}").lstrip("@")
+        if handle:
+            result[network] = handle
+    return result
+
+
 def first_meta(meta: dict[str, Any], *keys: str) -> str:
     for key in keys:
         if key in meta and meta[key] not in (None, "", [], {}):
@@ -166,6 +176,7 @@ def normalize_listing(raw: dict[str, Any]) -> dict[str, Any]:
         "email": first_meta(meta, "_email", "876", "_876"),
         "email2": first_meta(meta, "877", "_877"),
         "website": first_meta(meta, "_website"),
+        "social": social(meta),
         "address": first_meta(meta, "_address"),
         "branches": branches(meta),
         "zip": first_meta(meta, "_zip"),
