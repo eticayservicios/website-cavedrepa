@@ -6597,5 +6597,98 @@
     },
     "image_url": "/images/afiliados/placeholder.png",
     "expires_at": "2027-09-18"
+  },
+  {
+    "id": 4013,
+    "date": "2026-09-18 23:59:00",
+    "modified": "2026-09-18 23:59:00",
+    "status": "publish",
+    "title": "LUTRACTOR, C.A.",
+    "slug": "lutractor-c-a",
+    "content": "",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_874": "J-40503747-4",
+      "_875": "Cristobal Luzardo",
+      "_email": "administracion@lutractor.com",
+      "_address": "Av. 25 entre calles 70 y 71, Local Planta Baja N.º 70-38, Sector Santa María, Maracaibo, Estado Zulia",
+      "_zip": "4001",
+      "_phone": "0414-6026930",
+      "_phone2": "0424-6984236 / 0424-6039905",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_expiry_date": "2027-09-18 00:00:00"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        },
+        {
+          "name": "Sector Construcción",
+          "slug": "construccion"
+        }
+      ],
+      "location": [
+        {
+          "name": "Maracaibo - Zulia",
+          "slug": "maracaibo-zulia"
+        }
+      ],
+      "tags": [
+        {
+          "name": "CATERPILLAR",
+          "slug": "caterpillar"
+        },
+        {
+          "name": "CTP",
+          "slug": "ctp"
+        },
+        {
+          "name": "IPD",
+          "slug": "ipd"
+        },
+        {
+          "name": "DSG",
+          "slug": "dsg"
+        },
+        {
+          "name": "ITR",
+          "slug": "itr"
+        },
+        {
+          "name": "CGR",
+          "slug": "cgr"
+        },
+        {
+          "name": "YSM",
+          "slug": "ysm"
+        },
+        {
+          "name": "KMP",
+          "slug": "kmp"
+        },
+        {
+          "name": "TREK",
+          "slug": "trek"
+        },
+        {
+          "name": "Maxiforce",
+          "slug": "maxiforce"
+        },
+        {
+          "name": "Bulldog Gaskets",
+          "slug": "bulldog-gaskets"
+        },
+        {
+          "name": "DPA Diesel",
+          "slug": "dpa-diesel"
+        }
+      ]
+    },
+    "image_url": "/images/afiliados/4013.jpg",
+    "expires_at": "2027-09-18"
   }
 ]

@@ -3,12 +3,12 @@
     {
       "name": "Sector Agrícola",
       "slug": "agricola",
-      "count": 91
+      "count": 92
     },
     {
       "name": "Sector Construcción",
       "slug": "construccion",
-      "count": 14
+      "count": 15
     },
     {
       "name": "Sector Acuícola",
@@ -55,7 +55,7 @@
     {
       "name": "Maracaibo - Zulia",
       "slug": "maracaibo-zulia",
-      "count": 3
+      "count": 4
     },
     {
       "name": "San Diego - Carabobo",
@@ -300,6 +300,11 @@
       "count": 2
     },
     {
+      "name": "ITR",
+      "slug": "itr",
+      "count": 2
+    },
+    {
       "name": "Laverda",
       "slug": "laverda",
       "count": 2
@@ -465,8 +470,23 @@
       "count": 1
     },
     {
+      "name": "Bulldog Gaskets",
+      "slug": "bulldog-gaskets",
+      "count": 1
+    },
+    {
       "name": "Carlile",
       "slug": "carlile",
+      "count": 1
+    },
+    {
+      "name": "CATERPILLAR",
+      "slug": "caterpillar",
+      "count": 1
+    },
+    {
+      "name": "CGR",
+      "slug": "cgr",
       "count": 1
     },
     {
@@ -502,6 +522,11 @@
     {
       "name": "Condor",
       "slug": "condor",
+      "count": 1
+    },
+    {
+      "name": "CTP",
+      "slug": "ctp",
       "count": 1
     },
     {
@@ -550,8 +575,18 @@
       "count": 1
     },
     {
+      "name": "DPA Diesel",
+      "slug": "dpa-diesel",
+      "count": 1
+    },
+    {
       "name": "dremel",
       "slug": "dremel",
+      "count": 1
+    },
+    {
+      "name": "DSG",
+      "slug": "dsg",
       "count": 1
     },
     {
@@ -700,6 +735,11 @@
       "count": 1
     },
     {
+      "name": "IPD",
+      "slug": "ipd",
+      "count": 1
+    },
+    {
       "name": "Ipesasilo",
       "slug": "ipesasilo",
       "count": 1
@@ -707,11 +747,6 @@
     {
       "name": "IRRIPLAST",
       "slug": "irriplast",
-      "count": 1
-    },
-    {
-      "name": "ITR",
-      "slug": "itr",
       "count": 1
     },
     {
@@ -767,6 +802,11 @@
     {
       "name": "Kleemann",
       "slug": "kleemann",
+      "count": 1
+    },
+    {
+      "name": "KMP",
+      "slug": "kmp",
       "count": 1
     },
     {
@@ -837,6 +877,11 @@
     {
       "name": "massey fergsuson",
       "slug": "massey-fergsuson",
+      "count": 1
+    },
+    {
+      "name": "Maxiforce",
+      "slug": "maxiforce",
       "count": 1
     },
     {
@@ -1075,6 +1120,11 @@
       "count": 1
     },
     {
+      "name": "TREK",
+      "slug": "trek",
+      "count": 1
+    },
+    {
       "name": "Unipac",
       "slug": "unipac",
       "count": 1
@@ -1147,6 +1197,11 @@
     {
       "name": "Yardman",
       "slug": "yardman",
+      "count": 1
+    },
+    {
+      "name": "YSM",
+      "slug": "ysm",
       "count": 1
     },
     {
