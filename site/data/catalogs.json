@@ -3,7 +3,7 @@
     {
       "name": "Sector Agrícola",
       "slug": "agricola",
-      "count": 89
+      "count": 90
     },
     {
       "name": "Sector Construcción",
@@ -23,14 +23,14 @@
       "count": 14
     },
     {
-      "name": "Caracas - Distrito Capital",
-      "slug": "caracas-distrito-capital",
+      "name": "Barquisimeto - Lara",
+      "slug": "barquisimeto-lara",
       "count": 11
     },
     {
-      "name": "Barquisimeto - Lara",
-      "slug": "barquisimeto-lara",
-      "count": 10
+      "name": "Caracas - Distrito Capital",
+      "slug": "caracas-distrito-capital",
+      "count": 11
     },
     {
       "name": "Araure - Edo. Portuguesa",
