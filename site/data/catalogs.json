@@ -3,12 +3,12 @@
     {
       "name": "Sector Agrícola",
       "slug": "agricola",
-      "count": 94
+      "count": 95
     },
     {
       "name": "Sector Construcción",
       "slug": "construccion",
-      "count": 15
+      "count": 16
     },
     {
       "name": "Sector Acuícola",
@@ -60,7 +60,7 @@
     {
       "name": "San Diego - Carabobo",
       "slug": "san-diego-carabobo",
-      "count": 3
+      "count": 4
     },
     {
       "name": "Valencia - Carabobo",
