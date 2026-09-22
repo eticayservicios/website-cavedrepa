@@ -3,7 +3,7 @@
     {
       "name": "Sector Agrícola",
       "slug": "agricola",
-      "count": 95
+      "count": 96
     },
     {
       "name": "Sector Construcción",
@@ -115,6 +115,11 @@
     {
       "name": "El Cafetal - Miranda",
       "slug": "el-cafetal-miranda",
+      "count": 1
+    },
+    {
+      "name": "Maiquetía - La Guaira",
+      "slug": "maiquetia-la-guaira",
       "count": 1
     },
     {
@@ -397,6 +402,11 @@
     {
       "name": "ANNAITE",
       "slug": "annaite",
+      "count": 1
+    },
+    {
+      "name": "APL INTERNATIONAL CA",
+      "slug": "apl-international-ca",
       "count": 1
     },
     {

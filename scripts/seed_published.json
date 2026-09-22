@@ -3354,6 +3354,66 @@
     "image_url": "/images/afiliados/2674.jpg"
   },
   {
+    "id": 2677,
+    "date": "2024-01-05 11:17:10",
+    "modified": "2026-09-22 15:59:48",
+    "status": "publish",
+    "title": "APL INTERNATIONAL C.A.",
+    "slug": "apl-international-c-a",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Áreas de presencia:</span></h3>\r\nA nivel Nacional.\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nEquipos, repuestos, accesorios y servicios agrícolas.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_email": "aplinternationalca@gmail.com",
+      "_874": "J-50048008-3",
+      "_address": "Edif. 252, Piso 3, Nivel 3, Nro. P3-A, Frente a la Plaza Los Maestros, Maiquetía, La Guaira",
+      "_phone": "0212-3313349",
+      "_phone2": "0424-3152410",
+      "_directory_type": "314",
+      "_expiry_date": "2027-09-22 00:00:00",
+      "_featured": "",
+      "_listing_status": "post_status",
+      "_atbdp_post_views_count": "177",
+      "_edit_lock": "1720115966:1",
+      "_edit_last": "1",
+      "_877": "",
+      "_875": "Carlos Oscar Iván Liendo Colmenárez",
+      "_tax_input[at_biz_dir-location][]": "",
+      "_tax_input[at_biz_dir-tags][]": "",
+      "_admin_category_select[]": "",
+      "_hide_contact_owner": "",
+      "_fax": "",
+      "_website": "",
+      "_social": "",
+      "_listing_img": "",
+      "_listing_prv_img": "2862",
+      "_thumbnail_id": "2862",
+      "_instagram": "APLINTERNATIONAL"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Maiquetía - La Guaira",
+          "slug": "maiquetia-la-guaira"
+        }
+      ],
+      "tags": [
+        {
+          "name": "APL INTERNATIONAL CA",
+          "slug": "apl-international-ca"
+        }
+      ]
+    },
+    "image_url": "/images/afiliados/placeholder.png",
+    "expires_at": "2027-09-22"
+  },
+  {
     "id": 2678,
     "date": "2024-01-05 11:28:23",
     "modified": "2024-07-17 17:51:48",
@@ -4073,6 +4133,138 @@
     "image_url": "/images/afiliados/2890.jpg"
   },
   {
+    "id": 3028,
+    "date": "2025-08-04 10:55:13",
+    "modified": "2026-08-04 11:18:54",
+    "status": "publish",
+    "title": "AGRORUEDAS CHAKAO C.A.",
+    "slug": "agroruedas-chakao-c-a",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Áreas de presencia:</span></h3>\r\nSede Acarigua, Sede Araure y Sede San Rafael.\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nNeumáticos de todo tipo, cámaras de aire agrícolas, rines y baterías.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1754573881:1",
+      "_edit_last": "1",
+      "_email": "agroruedaschakaoimp2023@gmail.com",
+      "_877": "aimportacion2gc@gmail.com",
+      "_875": "JOSE ORLANDO MEZA RAMOS",
+      "_874": "J-41023094-0",
+      "_address": "Av. 3 Bolívar con Calle 7, Locales 4 y 5, Sector Centro, San Rafael de Onoto, Canal M7-2, Estado Portuguesa",
+      "_phone": "0412-0240605",
+      "_phone2": "0412-0240548",
+      "_directory_type": "314",
+      "_featured": "0",
+      "_expiry_date": "2027-09-19 00:00:00",
+      "_atbdp_post_views_count": "256",
+      "_listing_prv_img": "3035",
+      "_thumbnail_id": "3035",
+      "_listing_status": "post_status",
+      "_zip": "3306",
+      "_instagram": "supercauchoschakao",
+      "_branches": "[{\"label\": \"Sede Acarigua\", \"place\": \"Acarigua - Estado Portuguesa\"}, {\"label\": \"Sede Araure\", \"place\": \"Araure - Estado Portuguesa\"}, {\"label\": \"Sede San Rafael\", \"place\": \"San Rafael de Onoto - Estado Portuguesa\"}]"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "San Rafael de Onoto - Portuguesa",
+          "slug": "san-rafael-de-onoto-portuguesa"
+        }
+      ],
+      "tags": [
+        {
+          "name": "BKT",
+          "slug": "bkt"
+        },
+        {
+          "name": "ROADGUIDER",
+          "slug": "roadguider"
+        },
+        {
+          "name": "FORREUNNER",
+          "slug": "forreunner"
+        },
+        {
+          "name": "ANNAITE",
+          "slug": "annaite"
+        },
+        {
+          "name": "ROYAL BLACK",
+          "slug": "royal-black"
+        },
+        {
+          "name": "HAOHUA",
+          "slug": "haohua"
+        },
+        {
+          "name": "NEXEN",
+          "slug": "nexen"
+        },
+        {
+          "name": "LTH",
+          "slug": "lth"
+        },
+        {
+          "name": "ECOROAD",
+          "slug": "ecoroad"
+        }
+      ]
+    },
+    "image_url": "/images/afiliados/3028.jpg",
+    "expires_at": "2027-09-19"
+  },
+  {
+    "id": 3039,
+    "date": "2025-09-04 14:14:01",
+    "modified": "2026-09-04 14:18:54",
+    "status": "publish",
+    "title": "RUSSO CAUCHOS, C.A.",
+    "slug": "russo-cauchos",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nCompra y venta e importación directa de neumáticos agrícolas con fines comerciales.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1757009505:1",
+      "_edit_last": "1",
+      "_email": "inventario@russocauchos.com",
+      "_877": "mauricio.russo@lbrin.com",
+      "_875": "Antonio Mauricio Russo Tocco",
+      "_874": "J-08515150-8",
+      "_address": "Carrera 4 entre calles 30 y 31, Edif. S/N, Piso PB, Zona Industrial I, Barquisimeto, Estado Lara",
+      "_phone": "0424-5821827",
+      "_phone2": "0414-5303432",
+      "_listing_prv_img": "3040",
+      "_directory_type": "314",
+      "_featured": "0",
+      "_expiry_date": "2027-09-18 00:00:00",
+      "_thumbnail_id": "3040",
+      "_atbdp_post_views_count": "235",
+      "_listing_status": "post_status"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Barquisimeto - Lara",
+          "slug": "barquisimeto-lara"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "/images/afiliados/3039.jpg",
+    "expires_at": "2027-09-18"
+  },
+  {
     "id": 3042,
     "date": "2025-09-04 14:17:05",
     "modified": "2026-09-04 14:18:53",
@@ -4122,6 +4314,57 @@
       ]
     },
     "image_url": "/images/afiliados/3042.jpg",
+    "expires_at": "2027-09-18"
+  },
+  {
+    "id": 3045,
+    "date": "2025-09-04 14:20:40",
+    "modified": "2026-09-04 14:48:50",
+    "status": "publish",
+    "title": "INVERSIONES RIALTO 7, C.A.",
+    "slug": "inversiones-rialto-7-c-a",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Áreas de presencia:</span></h3>\r\n<span class=\"itemExtraFieldsValue\">Guárico, Cojedes, Portuguesa y Anzoátegui.</span>\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nDistribución y comercialización de equipos, partes, piezas, repuestos, accesorios, tuercas y tornillería, servicio de reparación y asesoría en materia de equipos agrícolas.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_edit_lock": "1757009928:1",
+      "_edit_last": "1",
+      "_email": "inv.rialto7@gmail.com",
+      "_875": "Luis Campagna",
+      "_874": "J-50668510-8",
+      "_address": "Av. Las Industrias, Edif. Campagna, Piso PB, Of. N.º 03, Sector La Rodriguera, Valle de La Pascua, Estado Guárico",
+      "_phone": "0235-3421381",
+      "_phone2": "0424-3595011",
+      "_listing_prv_img": "3046",
+      "_directory_type": "314",
+      "_featured": "0",
+      "_expiry_date": "2027-09-18 00:00:00",
+      "_thumbnail_id": "3046",
+      "_atbdp_post_views_count": "102",
+      "_listing_status": "post_status",
+      "_zip": "2307"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Valle de la Pascua - Estado Guárico",
+          "slug": "valle-de-la-pascua-estado-guarico"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Tatu",
+          "slug": "tatu"
+        }
+      ]
+    },
+    "image_url": "/images/afiliados/3045.jpg",
     "expires_at": "2027-09-18"
   },
   {
@@ -4190,103 +4433,6 @@
       ]
     },
     "image_url": "/images/afiliados/3047.jpg",
-    "expires_at": "2027-09-18"
-  },
-  {
-    "id": 3045,
-    "date": "2025-09-04 14:20:40",
-    "modified": "2026-09-04 14:48:50",
-    "status": "publish",
-    "title": "INVERSIONES RIALTO 7, C.A.",
-    "slug": "inversiones-rialto-7-c-a",
-    "content": "<h3><span class=\"itemExtraFieldsLabel\">Áreas de presencia:</span></h3>\r\n<span class=\"itemExtraFieldsValue\">Guárico, Cojedes, Portuguesa y Anzoátegui.</span>\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nDistribución y comercialización de equipos, partes, piezas, repuestos, accesorios, tuercas y tornillería, servicio de reparación y asesoría en materia de equipos agrícolas.",
-    "excerpt": "",
-    "author": 1,
-    "meta": {
-      "_edit_lock": "1757009928:1",
-      "_edit_last": "1",
-      "_email": "inv.rialto7@gmail.com",
-      "_875": "Luis Campagna",
-      "_874": "J-50668510-8",
-      "_address": "Av. Las Industrias, Edif. Campagna, Piso PB, Of. N.º 03, Sector La Rodriguera, Valle de La Pascua, Estado Guárico",
-      "_phone": "0235-3421381",
-      "_phone2": "0424-3595011",
-      "_listing_prv_img": "3046",
-      "_directory_type": "314",
-      "_featured": "0",
-      "_expiry_date": "2027-09-18 00:00:00",
-      "_thumbnail_id": "3046",
-      "_atbdp_post_views_count": "102",
-      "_listing_status": "post_status",
-      "_zip": "2307"
-    },
-    "tax": {
-      "category": [
-        {
-          "name": "Sector Agrícola",
-          "slug": "agricola"
-        }
-      ],
-      "location": [
-        {
-          "name": "Valle de la Pascua - Estado Guárico",
-          "slug": "valle-de-la-pascua-estado-guarico"
-        }
-      ],
-      "tags": [
-        {
-          "name": "Tatu",
-          "slug": "tatu"
-        }
-      ]
-    },
-    "image_url": "/images/afiliados/3045.jpg",
-    "expires_at": "2027-09-18"
-  },
-  {
-    "id": 3039,
-    "date": "2025-09-04 14:14:01",
-    "modified": "2026-09-04 14:18:54",
-    "status": "publish",
-    "title": "RUSSO CAUCHOS, C.A.",
-    "slug": "russo-cauchos",
-    "content": "<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nCompra y venta e importación directa de neumáticos agrícolas con fines comerciales.",
-    "excerpt": "",
-    "author": 1,
-    "meta": {
-      "_edit_lock": "1757009505:1",
-      "_edit_last": "1",
-      "_email": "inventario@russocauchos.com",
-      "_877": "mauricio.russo@lbrin.com",
-      "_875": "Antonio Mauricio Russo Tocco",
-      "_874": "J-08515150-8",
-      "_address": "Carrera 4 entre calles 30 y 31, Edif. S/N, Piso PB, Zona Industrial I, Barquisimeto, Estado Lara",
-      "_phone": "0424-5821827",
-      "_phone2": "0414-5303432",
-      "_listing_prv_img": "3040",
-      "_directory_type": "314",
-      "_featured": "0",
-      "_expiry_date": "2027-09-18 00:00:00",
-      "_thumbnail_id": "3040",
-      "_atbdp_post_views_count": "235",
-      "_listing_status": "post_status"
-    },
-    "tax": {
-      "category": [
-        {
-          "name": "Sector Agrícola",
-          "slug": "agricola"
-        }
-      ],
-      "location": [
-        {
-          "name": "Barquisimeto - Lara",
-          "slug": "barquisimeto-lara"
-        }
-      ],
-      "tags": []
-    },
-    "image_url": "/images/afiliados/3039.jpg",
     "expires_at": "2027-09-18"
   },
   {
@@ -4725,6 +4871,64 @@
       "tags": []
     },
     "image_url": "/images/afiliados/3093.jpg"
+  },
+  {
+    "id": 3105,
+    "date": "2025-10-14 19:25:50",
+    "modified": "2026-09-14 14:05:03",
+    "status": "publish",
+    "title": "Agrorepuestos JVP",
+    "slug": "agrorepuestos-jvp",
+    "content": "Comercializamos todo lo que es la parte de motores, doble transmisión, transmisiones, partes eléctricas y mas de las líneas ya mencionadas.",
+    "excerpt": "",
+    "author": 10,
+    "meta": {
+      "_email": "agrorepuestosjvp@gmail.com",
+      "_877": "jvpb230723@gmail.com",
+      "_875": "Jairo Vicente Perez Blanco",
+      "_874": "V-14625420-5",
+      "_address": "AV. CIRCUNVALACION SUR CALLE 8 MANZANA J CASA NRO 10 URB PRADOS DEL SOL",
+      "_hide_contact_owner": "1",
+      "_phone": "04245091316",
+      "_phone2": "04127217646",
+      "_directory_type": "314",
+      "_expiry_date": "2027-09-14 00:00:00",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_listing_prv_img": "3107",
+      "_thumbnail_id": "3107",
+      "_cavedrepa_afiliacion_email_sent": "2026-04-22 18:31:40"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Araure - Edo. Portuguesa",
+          "slug": "araure-edo-portuguesa"
+        }
+      ],
+      "tags": [
+        {
+          "name": "john Deere",
+          "slug": "john-deere"
+        },
+        {
+          "name": "Massey Ferguson",
+          "slug": "massey-ferguson"
+        },
+        {
+          "name": "New Holland",
+          "slug": "new-holland"
+        }
+      ]
+    },
+    "image_url": "/images/afiliados/placeholder.png",
+    "expires_at": "2027-09-14"
   },
   {
     "id": 3110,
@@ -5206,64 +5410,6 @@
       "tags": []
     },
     "image_url": "/images/afiliados/3234.jpg"
-  },
-  {
-    "id": 3105,
-    "date": "2025-10-14 19:25:50",
-    "modified": "2026-09-14 14:05:03",
-    "status": "publish",
-    "title": "Agrorepuestos JVP",
-    "slug": "agrorepuestos-jvp",
-    "content": "Comercializamos todo lo que es la parte de motores, doble transmisión, transmisiones, partes eléctricas y mas de las líneas ya mencionadas.",
-    "excerpt": "",
-    "author": 10,
-    "meta": {
-      "_email": "agrorepuestosjvp@gmail.com",
-      "_877": "jvpb230723@gmail.com",
-      "_875": "Jairo Vicente Perez Blanco",
-      "_874": "V-14625420-5",
-      "_address": "AV. CIRCUNVALACION SUR CALLE 8 MANZANA J CASA NRO 10 URB PRADOS DEL SOL",
-      "_hide_contact_owner": "1",
-      "_phone": "04245091316",
-      "_phone2": "04127217646",
-      "_directory_type": "314",
-      "_expiry_date": "2027-09-14 00:00:00",
-      "_featured": "0",
-      "_listing_status": "post_status",
-      "_listing_prv_img": "3107",
-      "_thumbnail_id": "3107",
-      "_cavedrepa_afiliacion_email_sent": "2026-04-22 18:31:40"
-    },
-    "tax": {
-      "category": [
-        {
-          "name": "Sector Agrícola",
-          "slug": "agricola"
-        }
-      ],
-      "location": [
-        {
-          "name": "Araure - Edo. Portuguesa",
-          "slug": "araure-edo-portuguesa"
-        }
-      ],
-      "tags": [
-        {
-          "name": "john Deere",
-          "slug": "john-deere"
-        },
-        {
-          "name": "Massey Ferguson",
-          "slug": "massey-ferguson"
-        },
-        {
-          "name": "New Holland",
-          "slug": "new-holland"
-        }
-      ]
-    },
-    "image_url": "/images/afiliados/placeholder.png",
-    "expires_at": "2027-09-14"
   },
   {
     "id": 3238,
@@ -6221,6 +6367,78 @@
     "expires_at": "2027-09-14"
   },
   {
+    "id": 3359,
+    "date": "2026-09-18 20:40:00",
+    "modified": "2026-09-18 20:40:00",
+    "status": "publish",
+    "title": "ROLIVEN 2016 NYM CA",
+    "slug": "roliven-2016-nym-ca",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nROLIVEN comercializa repuestos alternativos de excelente calidad compatibles con una gran variedad de máquinas de uso agrícola y forestal, además de maquinarias, implementos e insumos.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_874": "J-505073176",
+      "_875": "MAURO EZEQUIEL VERGARA MARTINS",
+      "_email": "roliven2016@gmail.com",
+      "_address": "Calle 99 C.C Unicentro del Norte Local 2",
+      "_phone": "0412-3640082",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_expiry_date": "2027-09-18 00:00:00",
+      "_instagram": "fervenvzla"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Valencia - Carabobo",
+          "slug": "valencia-carabobo"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Briggs & Stratton",
+          "slug": "briggs-stratton"
+        },
+        {
+          "name": "Honda",
+          "slug": "honda"
+        },
+        {
+          "name": "Husqvarna",
+          "slug": "husqvarna"
+        },
+        {
+          "name": "JONH DEERE",
+          "slug": "jonh-deere"
+        },
+        {
+          "name": "OLEOMAC",
+          "slug": "oleomac"
+        },
+        {
+          "name": "Ryobi",
+          "slug": "ryobi"
+        },
+        {
+          "name": "Shindaiwa",
+          "slug": "shindaiwa"
+        },
+        {
+          "name": "Stihl",
+          "slug": "stihl"
+        }
+      ]
+    },
+    "image_url": "/images/afiliados/placeholder.png",
+    "expires_at": "2027-09-18"
+  },
+  {
     "id": 4001,
     "date": "2026-09-14 14:05:03",
     "modified": "2026-09-14 14:05:03",
@@ -6543,78 +6761,6 @@
     "expires_at": "2027-09-18"
   },
   {
-    "id": 3359,
-    "date": "2026-09-18 20:40:00",
-    "modified": "2026-09-18 20:40:00",
-    "status": "publish",
-    "title": "ROLIVEN 2016 NYM CA",
-    "slug": "roliven-2016-nym-ca",
-    "content": "<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nROLIVEN comercializa repuestos alternativos de excelente calidad compatibles con una gran variedad de máquinas de uso agrícola y forestal, además de maquinarias, implementos e insumos.",
-    "excerpt": "",
-    "author": 1,
-    "meta": {
-      "_874": "J-505073176",
-      "_875": "MAURO EZEQUIEL VERGARA MARTINS",
-      "_email": "roliven2016@gmail.com",
-      "_address": "Calle 99 C.C Unicentro del Norte Local 2",
-      "_phone": "0412-3640082",
-      "_featured": "0",
-      "_listing_status": "post_status",
-      "_expiry_date": "2027-09-18 00:00:00",
-      "_instagram": "fervenvzla"
-    },
-    "tax": {
-      "category": [
-        {
-          "name": "Sector Agrícola",
-          "slug": "agricola"
-        }
-      ],
-      "location": [
-        {
-          "name": "Valencia - Carabobo",
-          "slug": "valencia-carabobo"
-        }
-      ],
-      "tags": [
-        {
-          "name": "Briggs & Stratton",
-          "slug": "briggs-stratton"
-        },
-        {
-          "name": "Honda",
-          "slug": "honda"
-        },
-        {
-          "name": "Husqvarna",
-          "slug": "husqvarna"
-        },
-        {
-          "name": "JONH DEERE",
-          "slug": "jonh-deere"
-        },
-        {
-          "name": "OLEOMAC",
-          "slug": "oleomac"
-        },
-        {
-          "name": "Ryobi",
-          "slug": "ryobi"
-        },
-        {
-          "name": "Shindaiwa",
-          "slug": "shindaiwa"
-        },
-        {
-          "name": "Stihl",
-          "slug": "stihl"
-        }
-      ]
-    },
-    "image_url": "/images/afiliados/placeholder.png",
-    "expires_at": "2027-09-18"
-  },
-  {
     "id": 4012,
     "date": "2026-09-18 23:20:00",
     "modified": "2026-09-18 23:20:00",
@@ -6790,92 +6936,6 @@
       ]
     },
     "image_url": "/images/afiliados/4014.jpg",
-    "expires_at": "2027-09-19"
-  },
-  {
-    "id": 3028,
-    "date": "2025-08-04 10:55:13",
-    "modified": "2026-08-04 11:18:54",
-    "status": "publish",
-    "title": "AGRORUEDAS CHAKAO C.A.",
-    "slug": "agroruedas-chakao-c-a",
-    "content": "<h3><span class=\"itemExtraFieldsLabel\">Áreas de presencia:</span></h3>\r\nSede Acarigua, Sede Araure y Sede San Rafael.\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nNeumáticos de todo tipo, cámaras de aire agrícolas, rines y baterías.",
-    "excerpt": "",
-    "author": 1,
-    "meta": {
-      "_edit_lock": "1754573881:1",
-      "_edit_last": "1",
-      "_email": "agroruedaschakaoimp2023@gmail.com",
-      "_877": "aimportacion2gc@gmail.com",
-      "_875": "JOSE ORLANDO MEZA RAMOS",
-      "_874": "J-41023094-0",
-      "_address": "Av. 3 Bolívar con Calle 7, Locales 4 y 5, Sector Centro, San Rafael de Onoto, Canal M7-2, Estado Portuguesa",
-      "_phone": "0412-0240605",
-      "_phone2": "0412-0240548",
-      "_directory_type": "314",
-      "_featured": "0",
-      "_expiry_date": "2027-09-19 00:00:00",
-      "_atbdp_post_views_count": "256",
-      "_listing_prv_img": "3035",
-      "_thumbnail_id": "3035",
-      "_listing_status": "post_status",
-      "_zip": "3306",
-      "_instagram": "supercauchoschakao",
-      "_branches": "[{\"label\": \"Sede Acarigua\", \"place\": \"Acarigua - Estado Portuguesa\"}, {\"label\": \"Sede Araure\", \"place\": \"Araure - Estado Portuguesa\"}, {\"label\": \"Sede San Rafael\", \"place\": \"San Rafael de Onoto - Estado Portuguesa\"}]"
-    },
-    "tax": {
-      "category": [
-        {
-          "name": "Sector Agrícola",
-          "slug": "agricola"
-        }
-      ],
-      "location": [
-        {
-          "name": "San Rafael de Onoto - Portuguesa",
-          "slug": "san-rafael-de-onoto-portuguesa"
-        }
-      ],
-      "tags": [
-        {
-          "name": "BKT",
-          "slug": "bkt"
-        },
-        {
-          "name": "ROADGUIDER",
-          "slug": "roadguider"
-        },
-        {
-          "name": "FORREUNNER",
-          "slug": "forreunner"
-        },
-        {
-          "name": "ANNAITE",
-          "slug": "annaite"
-        },
-        {
-          "name": "ROYAL BLACK",
-          "slug": "royal-black"
-        },
-        {
-          "name": "HAOHUA",
-          "slug": "haohua"
-        },
-        {
-          "name": "NEXEN",
-          "slug": "nexen"
-        },
-        {
-          "name": "LTH",
-          "slug": "lth"
-        },
-        {
-          "name": "ECOROAD",
-          "slug": "ecoroad"
-        }
-      ]
-    },
-    "image_url": "/images/afiliados/3028.jpg",
     "expires_at": "2027-09-19"
   }
 ]

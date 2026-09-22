@@ -21,61 +21,6 @@
     "image_url": ""
   },
   {
-    "id": 2677,
-    "date": "2024-01-05 11:17:10",
-    "modified": "2025-01-04 11:18:53",
-    "status": "private",
-    "title": "APL INTERNATIONAL C.A",
-    "slug": "apl-international-c-a",
-    "content": "",
-    "excerpt": "",
-    "author": 1,
-    "meta": {
-      "_email": "aplinternationalca@gmail.com",
-      "_874": "J50048008-3",
-      "_address": "av soublette casa s/n sector san antonio de las flores maiquetia la guaira zona postal 1160",
-      "_phone": "0212 3313349",
-      "_phone2": "4243152410",
-      "_directory_type": "314",
-      "_expiry_date": "2025-01-04 11:17:00",
-      "_featured": "",
-      "_listing_status": "renewal",
-      "_atbdp_post_views_count": "177",
-      "_edit_lock": "1720115966:1",
-      "_edit_last": "1",
-      "_877": "",
-      "_875": "",
-      "_tax_input[at_biz_dir-location][]": "",
-      "_tax_input[at_biz_dir-tags][]": "",
-      "_admin_category_select[]": "",
-      "_hide_contact_owner": "",
-      "_fax": "",
-      "_website": "",
-      "_social": "",
-      "_listing_img": "",
-      "_listing_prv_img": "2862",
-      "_thumbnail_id": "2862",
-      "_renewal_token": "cB0XtpVzGb180dgPi3hADW-2677",
-      "_deletion_date": "2025-02-13 15:18:53"
-    },
-    "tax": {
-      "category": [
-        {
-          "name": "Sector Agrícola",
-          "slug": "agricola"
-        }
-      ],
-      "location": [
-        {
-          "name": "Maiquetía - La Guaira",
-          "slug": "maiquetia-guaira"
-        }
-      ],
-      "tags": []
-    },
-    "image_url": "https://www.cavedrepa.org/wp-content/uploads/apl.jpg"
-  },
-  {
     "id": 2679,
     "date": "2024-01-05 11:30:01",
     "modified": "2025-01-04 11:48:52",
