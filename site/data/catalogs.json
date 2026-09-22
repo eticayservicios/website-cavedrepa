@@ -365,6 +365,11 @@
       "count": 1
     },
     {
+      "name": "Agro Vivar",
+      "slug": "agro-vivar",
+      "count": 1
+    },
+    {
       "name": "AGROFORTUNA",
       "slug": "agrofortuna",
       "count": 1
@@ -382,11 +387,6 @@
     {
       "name": "ALPHA EC",
       "slug": "alpha-ec",
-      "count": 1
-    },
-    {
-      "name": "AMERICAN DISTRIBUTION Y MANUFACTURING",
-      "slug": "american-distribution-y-manufacturing",
       "count": 1
     },
     {
@@ -830,11 +830,6 @@
       "count": 1
     },
     {
-      "name": "KLASSMAN-DEILMANN AMERICAS INC",
-      "slug": "klassman-deilmann-americas-inc",
-      "count": 1
-    },
-    {
       "name": "Kleemann",
       "slug": "kleemann",
       "count": 1
@@ -902,11 +897,6 @@
     {
       "name": "LUSQI",
       "slug": "lusqi",
-      "count": 1
-    },
-    {
-      "name": "LYN CITRUS SEED",
-      "slug": "lyn-citrus-seed",
       "count": 1
     },
     {
@@ -1115,21 +1105,6 @@
       "count": 1
     },
     {
-      "name": "SOUTHERN CITRUS NURSERIES",
-      "slug": "southern-citrus-nurseries",
-      "count": 1
-    },
-    {
-      "name": "STAAL Y PLAST USA INC",
-      "slug": "staal-y-plast-usa-inc",
-      "count": 1
-    },
-    {
-      "name": "STAL Y PLAST A/S",
-      "slug": "stal-y-plast-a-s",
-      "count": 1
-    },
-    {
       "name": "STLP",
       "slug": "stlp",
       "count": 1
@@ -1137,11 +1112,6 @@
     {
       "name": "Storti",
       "slug": "storti",
-      "count": 1
-    },
-    {
-      "name": "STUEWE Y SONS,INC",
-      "slug": "stuewe-y-sonsinc",
       "count": 1
     },
     {

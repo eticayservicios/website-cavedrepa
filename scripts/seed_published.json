@@ -5009,7 +5009,7 @@
     "status": "publish",
     "title": "AGRO VIVAR, C.A",
     "slug": "agro-vivar-c-a",
-    "content": "REPUESTOS AGRICOLAS, MANGUERAS ,BOMBAS DE AGUA, MOTORES DE RIEGO, PODADORAS , FERTILIZANTES, MANOFACTURA AGRICOLA  ETC.",
+    "content": "Plantas de Frutales y otros agrícolas",
     "excerpt": "",
     "author": 21,
     "meta": {
@@ -5043,32 +5043,8 @@
       ],
       "tags": [
         {
-          "name": "LYN CITRUS SEED",
-          "slug": "lyn-citrus-seed"
-        },
-        {
-          "name": "SOUTHERN CITRUS NURSERIES",
-          "slug": "southern-citrus-nurseries"
-        },
-        {
-          "name": "STUEWE Y SONS,INC",
-          "slug": "stuewe-y-sonsinc"
-        },
-        {
-          "name": "KLASSMAN-DEILMANN AMERICAS INC",
-          "slug": "klassman-deilmann-americas-inc"
-        },
-        {
-          "name": "AMERICAN DISTRIBUTION Y MANUFACTURING",
-          "slug": "american-distribution-y-manufacturing"
-        },
-        {
-          "name": "STAAL Y PLAST USA INC",
-          "slug": "staal-y-plast-usa-inc"
-        },
-        {
-          "name": "STAL Y PLAST A/S",
-          "slug": "stal-y-plast-a-s"
+          "name": "Agro Vivar",
+          "slug": "agro-vivar"
         }
       ]
     },
