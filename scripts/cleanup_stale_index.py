@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Borra los índices BRAND# que quedaron en DynamoDB tras quitarle marcas a una empresa.
+"""Borra los índices de taxonomía que quedaron en DynamoDB para una empresa.
 
-El import solo escribe items, así que al reducir las marcas de una ficha las
-relaciones anteriores siguen respondiendo en /directory?brand=<slug>.
+El import solo escribe items, así que al quitarle marcas a una ficha o al
+moverla de ubicación las relaciones anteriores siguen respondiendo en
+/directory?marca=<slug> y ?ubicacion=<slug>, además con los datos viejos.
 
-    python3 scripts/cleanup_brand_index.py 3141
+    python3 scripts/cleanup_stale_index.py 3047 3141
 """
 
 from __future__ import annotations
@@ -21,23 +22,36 @@ sys.path.insert(0, str(ROOT / "functions" / "web"))
 
 from directory import normalize_listing  # noqa: E402
 
+PREFIXES = {"brands": "BRAND#", "locations": "LOCATION#", "sectors": "SECTOR#"}
 
-def seed_brand_slugs(company_id: int) -> set[str]:
+
+def seed_index_pks(company_id: int) -> set[str]:
+    """Índices que le corresponden a la empresa según la semilla publicada."""
     rows = json.loads((ROOT / "scripts" / "seed_published.json").read_text(encoding="utf-8"))
     row = next((item for item in rows if int(item.get("id") or 0) == company_id), None)
     if row is None:
         raise SystemExit(f"{company_id} no está en seed_published.json")
-    return {brand["slug"] for brand in normalize_listing(row)["brands"] if brand.get("slug")}
+    company = normalize_listing(row)
+    return {
+        f"{prefix}{term['slug']}"
+        for field, prefix in PREFIXES.items()
+        for term in company.get(field) or []
+        if term.get("slug")
+    }
 
 
-def stored_brand_pks(table, company_id: int) -> list[str]:
-    """Índices BRAND# que la tabla tiene hoy para la empresa."""
-    condition = Attr("sk").eq(f"COMPANY#{company_id}") & Attr("pk").begins_with("BRAND#")
-    pks: list[str] = []
+def stored_index_pks(table, company_id: int) -> set[str]:
+    """Índices que la tabla tiene hoy para la empresa."""
+    condition = Attr("sk").eq(f"COMPANY#{company_id}")
+    pks: set[str] = set()
     kwargs: dict = {"FilterExpression": condition, "ProjectionExpression": "pk"}
     while True:
         page = table.scan(**kwargs)
-        pks.extend(item["pk"] for item in page.get("Items", []))
+        pks.update(
+            item["pk"]
+            for item in page.get("Items", [])
+            if item["pk"].startswith(tuple(PREFIXES.values()))
+        )
         token = page.get("LastEvaluatedKey")
         if not token:
             return pks
@@ -57,8 +71,8 @@ def main() -> None:
     table = boto3.resource("dynamodb", region_name=args.region).Table(args.table)
     deleted = 0
     for company_id in args.ids:
-        keep = {f"BRAND#{slug}" for slug in seed_brand_slugs(company_id)}
-        for pk in sorted(set(stored_brand_pks(table, company_id)) - keep):
+        keep = seed_index_pks(company_id)
+        for pk in sorted(stored_index_pks(table, company_id) - keep):
             print(f"DROP  {pk}\tCOMPANY#{company_id}")
             if not args.dry_run:
                 table.delete_item(Key={"pk": pk, "sk": f"COMPANY#{company_id}"})
