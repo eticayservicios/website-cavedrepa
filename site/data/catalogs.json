@@ -103,8 +103,8 @@
       "count": 2
     },
     {
-      "name": "Aragua",
-      "slug": "aragua",
+      "name": "Cagua - Aragua",
+      "slug": "cagua-aragua",
       "count": 1
     },
     {
@@ -645,6 +645,16 @@
       "count": 1
     },
     {
+      "name": "FARM TRX",
+      "slug": "farm-trx",
+      "count": 1
+    },
+    {
+      "name": "FARMPRO",
+      "slug": "farmpro",
+      "count": 1
+    },
+    {
       "name": "FERTILIZANTES NPK",
       "slug": "fertilizantes-npk",
       "count": 1
@@ -787,6 +797,11 @@
     {
       "name": "Iveco",
       "slug": "iveco",
+      "count": 1
+    },
+    {
+      "name": "J ASSY",
+      "slug": "j-assy",
       "count": 1
     },
     {
@@ -1122,6 +1137,11 @@
     {
       "name": "Technoflex",
       "slug": "technoflex",
+      "count": 1
+    },
+    {
+      "name": "TEEJET",
+      "slug": "teejet",
       "count": 1
     },
     {
