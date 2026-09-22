@@ -4131,7 +4131,7 @@
     "status": "publish",
     "title": "AGROTECH, C.A.",
     "slug": "agrotech-ca",
-    "content": "<h3><span class=\"itemExtraFieldsLabel\">Áreas de presencia:</span></h3>\r\n<span class=\"itemExtraFieldsValue\">Territorio nacional.</span>\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nRepuestos de maquinaria agrícola para sembradoras, cosechadoras y fumigadoras.",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Áreas de presencia:</span></h3>\r\n<span class=\"itemExtraFieldsValue\">Territorio nacional.</span>\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nTecnología Agrícola. Repuestos de maquinaria agrícola para sembradoras, cosechadoras y fumigadoras.",
     "excerpt": "",
     "author": 1,
     "meta": {
@@ -4141,7 +4141,7 @@
       "_877": "daepadron@gmail.com",
       "_875": "Daniel Antonio Esteban Sanchez Padron",
       "_874": "J-50404771-6",
-      "_address": "Ctra. Nacional Cagua La Villa, Local Parcela N-29, Galpón N.º 2, Sector Santa María, Villa de Cura, Estado Aragua",
+      "_address": "AV. ISAIAS MEDINA ANGARITA, ZONA INDUSTRIAL DE LA VEGA, GALPÓN CONSORCIO PALO ALTO, PISO 1, OFICINA B, MUNICIPIO SUCRE, CAGUA, ESTADO ARAGUA",
       "_phone": "0424-4296849",
       "_phone2": "0412-3421728",
       "_listing_prv_img": "3048",
@@ -4162,14 +4162,30 @@
       ],
       "location": [
         {
-          "name": "Aragua",
-          "slug": "aragua"
+          "name": "Cagua - Aragua",
+          "slug": "cagua-aragua"
         }
       ],
       "tags": [
         {
           "name": "FJ Dynamics",
           "slug": "fj-dynamics"
+        },
+        {
+          "name": "J ASSY",
+          "slug": "j-assy"
+        },
+        {
+          "name": "FARM TRX",
+          "slug": "farm-trx"
+        },
+        {
+          "name": "TEEJET",
+          "slug": "teejet"
+        },
+        {
+          "name": "FARMPRO",
+          "slug": "farmpro"
         }
       ]
     },
