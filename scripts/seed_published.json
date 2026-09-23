@@ -6937,5 +6937,29 @@
     },
     "image_url": "/images/afiliados/4014.jpg",
     "expires_at": "2027-09-19"
+  },
+  {
+    "id": 4015,
+    "date": "2026-09-23 16:50:00",
+    "modified": "2026-09-23 16:50:00",
+    "status": "publish",
+    "title": "INVERSIONES VAR-GRASS 2020, C.A.",
+    "slug": "inversiones-var-grass-2020-c-a",
+    "content": "",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_874": "J-50049875-6",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_expiry_date": "2027-09-23 00:00:00"
+    },
+    "tax": {
+      "category": [],
+      "location": [],
+      "tags": []
+    },
+    "image_url": "/images/afiliados/4015.jpg",
+    "expires_at": "2027-09-23"
   }
 ]
