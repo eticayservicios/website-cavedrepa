@@ -2795,33 +2795,33 @@
   {
     "id": 1986,
     "date": "2023-08-04 10:45:43",
-    "modified": "2024-07-17 17:45:32",
+    "modified": "2026-09-25 13:00:00",
     "status": "publish",
     "title": "MPAGRO, C.A.",
     "slug": "mpagro-c-a",
-    "content": "<span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Semilla de maiz, fertilizantes NPK, urea, agroquimicos (herbicidas, insecticidas y fungicidas), implementos y equipos agricolas. &quot;}\" data-sheets-userformat=\"{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}\">Semilla de maiz, fertilizantes NPK, urea, agroquimicos (herbicidas, insecticidas y fungicidas), implementos y equipos agricolas. </span>\r\n\r\nMarcas que representa: <span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Bayer-Monsanto (semilla y agroquimicos). Importamos y comercializamos productos de las marcas BALDAN y STARA (implementos agricolas). Tambien tenemos nuestra propia marca de insumos agricolas, actualmente con 17 productos registrados; algunos de ellos son: MP FERTILIZANTES NPK, MP AMINA 720 (2,4D), AZOTE 747 WG (glifosato), FLAVON EC 400 (pendimetalin), ALPHA EC 10, DELTARIN EC 2,5 y RAFAGA PS 90 (insecticidas). &quot;}\" data-sheets-userformat=\"{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}\">Bayer-Monsanto (semilla y agroquimicos). Importamos y comercializamos productos de las marcas BALDAN y STARA (implementos agricolas). Tambien tenemos nuestra propia marca de insumos agricolas, actualmente con 17 productos registrados; algunos de ellos son: MP FERTILIZANTES NPK, MP AMINA 720 (2,4D), AZOTE 747 WG (glifosato), FLAVON EC 400 (pendimetalin), ALPHA EC 10, DELTARIN EC 2,5 y RAFAGA PS 90 (insecticidas). </span>",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nHerbicidas:\r\nAzote WG 747, Sunmax OD, Yerlin 75% WG,\r\nFlavon EC 400, Azadon SL 200, MP Amina SL 720,\r\nCyperon SL 480, MP Propanil 48EC, Oxidon 380 SC,\r\nDaga 60 EC.\r\nInsecticidas:\r\nAcclaim 5,7% WDG, Rafaga PS 90, Alpha EC 10,\r\nAltilium EC 500, Aluphos 56% TB, Deltarin 2,5 EC,\r\nEmbate 50 EC, Coltan SC 350, Nextara.\r\nFungicidas:\r\nFanatico SC 500, Funghiman WP 80, Kumicrom DF,\r\nVoltium 300 SC.\r\nFertilizantes:\r\nMP Fertilizante NPK(s) 15-15-15/10,\r\nMP Fertilizante NPK 10-26-26,\r\nMP Fertilizante NPK(s) 8-20-30/2,\r\nMP Cloruro KCL 60%,\r\nMP Urea 46-0-0,\r\nNutriexc,\r\nNanoexc.",
     "excerpt": "",
     "author": 1,
     "meta": {
       "_edit_lock": "1704716954:1",
       "_edit_last": "1",
       "_atbdp_post_views_count": "1153",
-      "_877": "peter.petschner@mpagro.net ",
-      "_876": "carlos.munoz@mpagro.co",
-      "_875": "Carlos Munoz ",
+      "_877": "info@mpagro.co",
+      "_876": "comunicaciones@mpagro.net",
+      "_875": "Christian Petschner",
       "_874": "J-40744949-4",
       "_tax_input[at_biz_dir-location][]": "",
       "_tax_input[at_biz_dir-tags][]": "",
       "_admin_category_select[]": "",
       "_hide_contact_owner": "",
       "_zip": "0255-6218897 ",
-      "_phone": "0255-6218897 ",
-      "_phone2": "0424-5692028",
+      "_phone": "+58 422-6353621",
+      "_phone2": "+58 414-5229695",
       "_fax": "",
-      "_email": "carlos.munoz@mpagro.co",
+      "_email": "comunicaciones@mpagro.net",
       "_website": "www.mpagro.co ",
       "_social": "",
-      "_address": "Portuguesa, Acarigua - Municipio Paez, Av. 13 de junio, Edif. Residencias Grano de Oro, planta baja, sector centro",
+      "_address": "AV. LOS PIONEROS SALIDA A GUANARE, EDIF. MPAGRO, SECTOR ARAURE, EDO. PORTUGUESA",
       "_listing_img": "",
       "_listing_prv_img": "1991",
       "_videourl": "",
@@ -2841,50 +2841,58 @@
       ],
       "location": [
         {
-          "name": "Guanare -- Portuguesa",
-          "slug": "guanare-portuguesa"
+          "name": "Araure - Portuguesa",
+          "slug": "araure-edo-portuguesa"
         }
       ],
       "tags": [
         {
-          "name": "Baldan",
+          "name": "JUMIL",
+          "slug": "jumil"
+        },
+        {
+          "name": "JACTO",
+          "slug": "jacto"
+        },
+        {
+          "name": "LAVRALE",
+          "slug": "lavrale"
+        },
+        {
+          "name": "BALDAN",
           "slug": "baldan"
         },
         {
-          "name": "Stara",
-          "slug": "stara"
+          "name": "MEC RUL",
+          "slug": "mec-rul"
         },
         {
-          "name": "Bayer-Monsanto",
-          "slug": "bayer-monsanto"
+          "name": "SCHULZ",
+          "slug": "schulz"
         },
         {
-          "name": "RAFAGA PS 90",
-          "slug": "rafaga-ps-90"
+          "name": "DEKALB",
+          "slug": "dekalb"
         },
         {
-          "name": "DELTARIN EC",
-          "slug": "deltarin-ec"
+          "name": "FUNDACIÓN DANAC",
+          "slug": "fundacion-danac"
         },
         {
-          "name": "ALPHA EC",
-          "slug": "alpha-ec"
+          "name": "JHON DEERE",
+          "slug": "jhon-deere"
         },
         {
-          "name": "FLAVON EC 400",
-          "slug": "flavon-ec-400"
+          "name": "VALTRA",
+          "slug": "valtra"
         },
         {
-          "name": "FERTILIZANTES NPK",
-          "slug": "fertilizantes-npk"
+          "name": "AISEN",
+          "slug": "aisen"
         },
         {
-          "name": "MP AMINA 720",
-          "slug": "mp-amina-720"
-        },
-        {
-          "name": "AZOTE 747 WG",
-          "slug": "azote-747-wg"
+          "name": "BLUE BISON",
+          "slug": "blue-bison"
         }
       ]
     },

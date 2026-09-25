@@ -20,7 +20,7 @@
     {
       "name": "Guanare - Portuguesa",
       "slug": "guanare-portuguesa",
-      "count": 14
+      "count": 13
     },
     {
       "name": "Barquisimeto - Lara",
@@ -35,7 +35,7 @@
     {
       "name": "Araure - Edo. Portuguesa",
       "slug": "araure-edo-portuguesa",
-      "count": 8
+      "count": 9
     },
     {
       "name": "Barinas - Barinas",
@@ -195,6 +195,16 @@
       "count": 4
     },
     {
+      "name": "Jacto",
+      "slug": "jacto",
+      "count": 4
+    },
+    {
+      "name": "Valtra",
+      "slug": "valtra",
+      "count": 4
+    },
+    {
       "name": "Baldan",
       "slug": "baldan",
       "count": 3
@@ -205,11 +215,6 @@
       "count": 3
     },
     {
-      "name": "Jacto",
-      "slug": "jacto",
-      "count": 3
-    },
-    {
       "name": "JONH DEERE",
       "slug": "jonh-deere",
       "count": 3
@@ -217,11 +222,6 @@
     {
       "name": "Perkins",
       "slug": "perkins",
-      "count": 3
-    },
-    {
-      "name": "Valtra",
-      "slug": "valtra",
       "count": 3
     },
     {
@@ -345,11 +345,6 @@
       "count": 2
     },
     {
-      "name": "Stara",
-      "slug": "stara",
-      "count": 2
-    },
-    {
       "name": "Stihl",
       "slug": "stihl",
       "count": 2
@@ -390,8 +385,8 @@
       "count": 1
     },
     {
-      "name": "ALPHA EC",
-      "slug": "alpha-ec",
+      "name": "AISEN",
+      "slug": "aisen",
       "count": 1
     },
     {
@@ -430,11 +425,6 @@
       "count": 1
     },
     {
-      "name": "AZOTE 747 WG",
-      "slug": "azote-747-wg",
-      "count": 1
-    },
-    {
       "name": "Bambozzi",
       "slug": "bambozzi",
       "count": 1
@@ -442,11 +432,6 @@
     {
       "name": "Baudouin",
       "slug": "baudouin",
-      "count": 1
-    },
-    {
-      "name": "Bayer-Monsanto",
-      "slug": "bayer-monsanto",
       "count": 1
     },
     {
@@ -472,6 +457,11 @@
     {
       "name": "Blue Bird",
       "slug": "blue-bird",
+      "count": 1
+    },
+    {
+      "name": "BLUE BISON",
+      "slug": "blue-bison",
       "count": 1
     },
     {
@@ -565,8 +555,8 @@
       "count": 1
     },
     {
-      "name": "DELTARIN EC",
-      "slug": "deltarin-ec",
+      "name": "DEKALB",
+      "slug": "dekalb",
       "count": 1
     },
     {
@@ -665,11 +655,6 @@
       "count": 1
     },
     {
-      "name": "FERTILIZANTES NPK",
-      "slug": "fertilizantes-npk",
-      "count": 1
-    },
-    {
       "name": "Fieldmarshall",
       "slug": "fieldmarshall",
       "count": 1
@@ -685,11 +670,6 @@
       "count": 1
     },
     {
-      "name": "FLAVON EC 400",
-      "slug": "flavon-ec-400",
-      "count": 1
-    },
-    {
       "name": "FM WORLD",
       "slug": "fm-world",
       "count": 1
@@ -702,6 +682,11 @@
     {
       "name": "FORREUNNER",
       "slug": "forreunner",
+      "count": 1
+    },
+    {
+      "name": "FUNDACIÓN DANAC",
+      "slug": "fundacion-danac",
       "count": 1
     },
     {
@@ -835,6 +820,16 @@
       "count": 1
     },
     {
+      "name": "JHON DEERE",
+      "slug": "jhon-deere",
+      "count": 1
+    },
+    {
+      "name": "JUMIL",
+      "slug": "jumil",
+      "count": 1
+    },
+    {
       "name": "Jungheinrich",
       "slug": "jungheinrich",
       "count": 1
@@ -877,6 +872,11 @@
     {
       "name": "KUHN",
       "slug": "kuhn",
+      "count": 1
+    },
+    {
+      "name": "LAVRALE",
+      "slug": "lavrale",
       "count": 1
     },
     {
@@ -945,6 +945,11 @@
       "count": 1
     },
     {
+      "name": "MEC RUL",
+      "slug": "mec-rul",
+      "count": 1
+    },
+    {
       "name": "Menzi Muck",
       "slug": "menzi-muck",
       "count": 1
@@ -957,11 +962,6 @@
     {
       "name": "Motul",
       "slug": "motul",
-      "count": 1
-    },
-    {
-      "name": "MP AMINA 720",
-      "slug": "mp-amina-720",
       "count": 1
     },
     {
@@ -1050,11 +1050,6 @@
       "count": 1
     },
     {
-      "name": "RAFAGA PS 90",
-      "slug": "rafaga-ps-90",
-      "count": 1
-    },
-    {
       "name": "RAM",
       "slug": "ram",
       "count": 1
@@ -1095,6 +1090,11 @@
       "count": 1
     },
     {
+      "name": "SCHULZ",
+      "slug": "schulz",
+      "count": 1
+    },
+    {
       "name": "SDMO",
       "slug": "sdmo",
       "count": 1
@@ -1127,6 +1127,11 @@
     {
       "name": "Solpower",
       "slug": "solpower",
+      "count": 1
+    },
+    {
+      "name": "Stara",
+      "slug": "stara",
       "count": 1
     },
     {
