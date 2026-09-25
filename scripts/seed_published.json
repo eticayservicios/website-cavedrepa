@@ -6969,5 +6969,44 @@
     },
     "image_url": "/images/afiliados/4015.jpg",
     "expires_at": "2027-09-23"
+  },
+  {
+    "id": 4016,
+    "date": "2026-09-25 18:00:00",
+    "modified": "2026-09-25 18:00:00",
+    "status": "publish",
+    "title": "TRACTO CENTRO C.A.",
+    "slug": "tracto-centro-c-a",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Áreas de presencia:</span></h3>\r\nValencia; Valle de la Pascua, Estado Guárico; Santa Bárbara, Estado Zulia.\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nMaquinaria agrícola, tractores, implementos agrícolas, repuestos y servicio de postventa especializado. Venta y distribución de maquinarias agrícolas, repuestos y accesorios para vehículos y maquinarias.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_874": "J-30219731-7",
+      "_address": "CTRA VIA DE SERVICIO DE LA AUTOPISTA VALENCIA CAMPO CARABOBO, LOCAL NRO S/N, SECTOR FUNDO PECUARIO LAS CAÑADAS, VALENCIA, CARABOBO, ZONA POSTAL 2003",
+      "_zip": "2003",
+      "_phone": "0412-8548318",
+      "_phone2": "0412-8955154",
+      "_instagram": "tractocentrovenezuela",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_expiry_date": "2027-09-25 00:00:00"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Valencia - Carabobo",
+          "slug": "valencia-carabobo"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "/images/afiliados/4016.jpg",
+    "expires_at": "2027-09-25"
   }
 ]
