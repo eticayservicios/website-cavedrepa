@@ -7633,5 +7633,38 @@
     },
     "image_url": "https://www.cavedrepa.org/wp-content/uploads/LOGO-AGROPA.jpg",
     "expires_at": "2027-09-14"
+  },
+  {
+    "id": 4017,
+    "date": "2026-09-28 15:10:00",
+    "modified": "2026-09-28 15:10:00",
+    "status": "publish",
+    "title": "AGRIMAQ DISTRIBUCIONES C.A.",
+    "slug": "agrimaq-distribuciones-c-a",
+    "content": "Comercialización y distribución vinculada a maquinaria agrícola.",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_expiry_date": "2027-09-28 00:00:00"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Caracas",
+          "slug": "caracas"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "/images/afiliados/placeholder.png",
+    "expires_at": "2027-09-28"
   }
 ]
