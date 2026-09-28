@@ -3,29 +3,29 @@
     {
       "name": "Sector Agrícola",
       "slug": "agricola",
-      "count": 97
+      "count": 106
     },
     {
       "name": "Sector Construcción",
       "slug": "construccion",
-      "count": 16
+      "count": 15
     },
     {
       "name": "Sector Acuícola",
       "slug": "acuicola",
-      "count": 7
+      "count": 8
     }
   ],
   "locations": [
     {
       "name": "Guanare - Portuguesa",
       "slug": "guanare-portuguesa",
-      "count": 13
+      "count": 16
     },
     {
       "name": "Barquisimeto - Lara",
       "slug": "barquisimeto-lara",
-      "count": 11
+      "count": 12
     },
     {
       "name": "Caracas - Distrito Capital",
@@ -43,19 +43,19 @@
       "count": 7
     },
     {
-      "name": "Maracay - Aragua",
-      "slug": "maracay-aragua",
-      "count": 6
-    },
-    {
       "name": "Los Teques - Miranda",
       "slug": "los-teques-miranda",
-      "count": 4
+      "count": 5
     },
     {
       "name": "Maracaibo - Zulia",
       "slug": "maracaibo-zulia",
-      "count": 4
+      "count": 5
+    },
+    {
+      "name": "Maracay - Aragua",
+      "slug": "maracay-aragua",
+      "count": 5
     },
     {
       "name": "San Diego - Carabobo",
@@ -70,7 +70,17 @@
     {
       "name": "Ciudad Bolívar - Bolívar",
       "slug": "ciudad-bolivar-bolivar",
-      "count": 2
+      "count": 3
+    },
+    {
+      "name": "San Cristóbal - Táchira",
+      "slug": "san-cristobal-tachira",
+      "count": 3
+    },
+    {
+      "name": "San Juan de los Morros - Guárico",
+      "slug": "san-juan-de-los-morros-guarico",
+      "count": 3
     },
     {
       "name": "Monagas - Maturín",
@@ -78,23 +88,18 @@
       "count": 2
     },
     {
-      "name": "San Cristóbal - Táchira",
-      "slug": "san-cristobal-tachira",
-      "count": 2
-    },
-    {
-      "name": "San Fernando de Apure - Apure",
-      "slug": "san-fernando-de-apure-apure",
-      "count": 2
-    },
-    {
-      "name": "San Juan de los Morros - Guárico",
-      "slug": "san-juan-de-los-morros-guarico",
+      "name": "Nueva Esparta - La Asunción",
+      "slug": "nueva-esparta-la-asuncion",
       "count": 2
     },
     {
       "name": "Sucre – Cumaná",
       "slug": "sucre-cumana",
+      "count": 2
+    },
+    {
+      "name": "Valera - Trujillo",
+      "slug": "valera-trujillo",
       "count": 2
     },
     {
@@ -118,6 +123,11 @@
       "count": 1
     },
     {
+      "name": "GUARICO",
+      "slug": "guarico",
+      "count": 1
+    },
+    {
       "name": "Maiquetía - La Guaira",
       "slug": "maiquetia-la-guaira",
       "count": 1
@@ -130,6 +140,11 @@
     {
       "name": "Montalban - Carabobo",
       "slug": "montalban-carabobo",
+      "count": 1
+    },
+    {
+      "name": "San Fernando de Apure - Apure",
+      "slug": "san-fernando-de-apure-apure",
       "count": 1
     },
     {
@@ -153,11 +168,6 @@
       "count": 1
     },
     {
-      "name": "Valera - Trujillo",
-      "slug": "valera-trujillo",
-      "count": 1
-    },
-    {
       "name": "YARACUY",
       "slug": "yaracuy",
       "count": 1
@@ -167,26 +177,41 @@
     {
       "name": "Massey Ferguson",
       "slug": "massey-ferguson",
-      "count": 11
+      "count": 14
     },
     {
       "name": "john Deere",
       "slug": "john-deere",
-      "count": 6
-    },
-    {
-      "name": "Landini",
-      "slug": "landini",
-      "count": 6
+      "count": 8
     },
     {
       "name": "New Holland",
       "slug": "new-holland",
-      "count": 5
+      "count": 8
+    },
+    {
+      "name": "Landini",
+      "slug": "landini",
+      "count": 7
+    },
+    {
+      "name": "Valtra",
+      "slug": "valtra",
+      "count": 7
     },
     {
       "name": "Domosa",
       "slug": "domosa",
+      "count": 4
+    },
+    {
+      "name": "Fiat",
+      "slug": "fiat",
+      "count": 4
+    },
+    {
+      "name": "Ford Tractor",
+      "slug": "ford-tractor",
       "count": 4
     },
     {
@@ -200,18 +225,23 @@
       "count": 4
     },
     {
-      "name": "Valtra",
-      "slug": "valtra",
-      "count": 4
-    },
-    {
       "name": "Baldan",
       "slug": "baldan",
       "count": 3
     },
     {
+      "name": "Belarus",
+      "slug": "belarus",
+      "count": 3
+    },
+    {
       "name": "Case IH",
       "slug": "case-ih",
+      "count": 3
+    },
+    {
+      "name": "Ford",
+      "slug": "ford",
       "count": 3
     },
     {
@@ -232,6 +262,11 @@
     {
       "name": "AGCO",
       "slug": "agco",
+      "count": 2
+    },
+    {
+      "name": "AGF",
+      "slug": "agf",
       "count": 2
     },
     {
@@ -270,23 +305,8 @@
       "count": 2
     },
     {
-      "name": "Fiat",
-      "slug": "fiat",
-      "count": 2
-    },
-    {
       "name": "Fiatagri",
       "slug": "fiatagri",
-      "count": 2
-    },
-    {
-      "name": "Ford",
-      "slug": "ford",
-      "count": 2
-    },
-    {
-      "name": "Ford Tractor",
-      "slug": "ford-tractor",
       "count": 2
     },
     {
@@ -325,6 +345,16 @@
       "count": 2
     },
     {
+      "name": "massey fergsuson",
+      "slug": "massey-fergsuson",
+      "count": 2
+    },
+    {
+      "name": "MWM",
+      "slug": "mwm",
+      "count": 2
+    },
+    {
       "name": "OLEOMAC",
       "slug": "oleomac",
       "count": 2
@@ -355,9 +385,9 @@
       "count": 2
     },
     {
-      "name": "AGF",
-      "slug": "agf",
-      "count": 1
+      "name": "Veniram",
+      "slug": "veniram",
+      "count": 2
     },
     {
       "name": "AGRISTAR",
@@ -382,6 +412,11 @@
     {
       "name": "Agromdo",
       "slug": "agromdo",
+      "count": 1
+    },
+    {
+      "name": "AGROPACA",
+      "slug": "agropaca",
       "count": 1
     },
     {
@@ -435,11 +470,6 @@
       "count": 1
     },
     {
-      "name": "Belarus",
-      "slug": "belarus",
-      "count": 1
-    },
-    {
       "name": "BELL",
       "slug": "bell",
       "count": 1
@@ -447,6 +477,11 @@
     {
       "name": "BELLOTA",
       "slug": "bellota",
+      "count": 1
+    },
+    {
+      "name": "BELLOTA, TAURO, METROX, ARGOS, PIRAMIDE, SOLIMAX",
+      "slug": "bellota-tauro-metrox-argos-piramide-solimax",
       "count": 1
     },
     {
@@ -930,11 +965,6 @@
       "count": 1
     },
     {
-      "name": "massey fergsuson",
-      "slug": "massey-fergsuson",
-      "count": 1
-    },
-    {
       "name": "Maxiforce",
       "slug": "maxiforce",
       "count": 1
@@ -967,11 +997,6 @@
     {
       "name": "MTD",
       "slug": "mtd",
-      "count": 1
-    },
-    {
-      "name": "MWM",
-      "slug": "mwm",
       "count": 1
     },
     {
