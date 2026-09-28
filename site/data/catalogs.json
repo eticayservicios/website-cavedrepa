@@ -3,7 +3,7 @@
     {
       "name": "Sector Agrícola",
       "slug": "agricola",
-      "count": 106
+      "count": 107
     },
     {
       "name": "Sector Construcción",
@@ -110,6 +110,11 @@
     {
       "name": "Cagua - Aragua",
       "slug": "cagua-aragua",
+      "count": 1
+    },
+    {
+      "name": "Caracas",
+      "slug": "caracas",
       "count": 1
     },
     {
