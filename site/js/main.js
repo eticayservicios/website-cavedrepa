@@ -287,30 +287,17 @@ const heroCarousel = document.querySelector(".hero-carousel");
 if (heroCarousel) {
   const slides = [...heroCarousel.querySelectorAll(".hero-slide")];
   const dots = [...heroCarousel.querySelectorAll(".hero-dot")];
-  const panelWoa = heroCarousel.querySelector(".hero-panel-woa");
-  const panelDefault = heroCarousel.querySelector(".hero-panel-default");
   let active = 0;
   let timer = null;
 
   const showSlide = (index) => {
     if (!slides.length) return;
     active = (index + slides.length) % slides.length;
-    const isWoa = active === 0;
     slides.forEach((slide, i) => slide.classList.toggle("is-active", i === active));
     dots.forEach((dot, i) => {
       dot.classList.toggle("is-active", i === active);
       dot.setAttribute("aria-selected", i === active ? "true" : "false");
     });
-    heroCarousel.classList.toggle("hero-carousel-woa", isWoa);
-    heroCarousel.setAttribute("data-active-slide", String(active));
-    if (panelWoa) {
-      panelWoa.classList.toggle("is-active", isWoa);
-      panelWoa.hidden = !isWoa;
-    }
-    if (panelDefault) {
-      panelDefault.classList.toggle("is-active", !isWoa);
-      panelDefault.hidden = isWoa;
-    }
   };
 
   const nextSlide = () => showSlide(active + 1);
