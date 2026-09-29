@@ -17,6 +17,7 @@ SECTORS = {
     "agricola": "Sector Agrícola",
     "construccion": "Sector Construcción",
     "acuicola": "Sector Acuícola",
+    "petrolero": "Sector Petrolero",
 }
 
 SOCIAL_KEYS = ("facebook", "instagram", "linkedin", "youtube", "twitter")

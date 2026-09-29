@@ -282,4 +282,45 @@ backToTop.addEventListener("click", () => {
 
 syncBackToTop();
 window.addEventListener("scroll", syncBackToTop, { passive: true });
+
+const heroCarousel = document.querySelector(".hero-carousel");
+if (heroCarousel) {
+  const slides = [...heroCarousel.querySelectorAll(".hero-slide")];
+  const dots = [...heroCarousel.querySelectorAll(".hero-dot")];
+  let active = 0;
+  let timer = null;
+
+  const showSlide = (index) => {
+    if (!slides.length) return;
+    active = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => slide.classList.toggle("is-active", i === active));
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("is-active", i === active);
+      dot.setAttribute("aria-selected", i === active ? "true" : "false");
+    });
+  };
+
+  const nextSlide = () => showSlide(active + 1);
+
+  const restartTimer = () => {
+    if (timer) window.clearInterval(timer);
+    timer = window.setInterval(nextSlide, 6000);
+  };
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      showSlide(index);
+      restartTimer();
+    });
+  });
+
+  heroCarousel.addEventListener("mouseenter", () => {
+    if (timer) window.clearInterval(timer);
+  });
+
+  heroCarousel.addEventListener("mouseleave", restartTimer);
+
+  showSlide(0);
+  restartTimer();
+}
 })();

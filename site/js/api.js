@@ -151,6 +151,25 @@ const apiSend = async (method, path, body, token) => {
   }
 };
 
+const BASE_SECTORS = [{ name: "Sector Petrolero", slug: "petrolero", count: 0 }];
+
+const mergeCatalogSectors = (sectors) => {
+  const bucket = new Map();
+  [...(sectors || []), ...BASE_SECTORS].forEach((item) => {
+    const slug = String(item?.slug || "").toLowerCase();
+    if (!slug) return;
+    const prev = bucket.get(slug) || {};
+    bucket.set(slug, {
+      name: item.name || prev.name || slug,
+      slug,
+      count: Math.max(Number(item.count) || 0, Number(prev.count) || 0),
+    });
+  });
+  return [...bucket.values()].sort(
+    (a, b) => -(a.count || 0) + (b.count || 0) || a.name.localeCompare(b.name, "es")
+  );
+};
+
 window.CavedrepaCovers = {
   files: {
     agricola: "/images/home/agricola.jpg",
@@ -180,12 +199,14 @@ window.CavedrepaApi = {
   catalogs: async () => {
     try {
       const payload = await apiGet("/directory/catalogs");
-      if ((payload.sectors || []).length) return payload;
+      if ((payload.sectors || []).length) {
+        return { ...payload, sectors: mergeCatalogSectors(payload.sectors) };
+      }
     } catch (_error) {
       /* fallback local */
     }
     const local = await fallbackCatalogs();
-    return { ok: true, ...local };
+    return { ok: true, ...local, sectors: mergeCatalogSectors(local.sectors) };
   },
   search: (params) => apiGet("/directory", params),
   company: (key) => apiGet(`/directory/companies/${encodeURIComponent(key)}`),

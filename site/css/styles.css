@@ -361,14 +361,79 @@ body.menu-open {
   position: relative;
   min-height: 640px;
   color: var(--white);
-  background:
-    linear-gradient(90deg, rgba(8, 32, 28, 0.86) 0%, rgba(8, 32, 28, 0.52) 46%, rgba(8, 32, 28, 0.22) 100%),
-    url("../images/home/tractor.jpg") 55% center / cover no-repeat;
   display: flex;
   align-items: center;
+  overflow: hidden;
+}
+
+.hero-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 1.1s ease, transform 8s ease;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero-slide-petroleo {
+  background-position: 50% 42%;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(8, 32, 28, 0.9) 0%,
+    rgba(8, 32, 28, 0.58) 46%,
+    rgba(8, 32, 28, 0.28) 100%
+  );
+  pointer-events: none;
+}
+
+.hero-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  z-index: 3;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.hero-dot {
+  width: 11px;
+  height: 11px;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.42);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.hero-dot.is-active {
+  background: var(--yellow);
+  transform: scale(1.15);
 }
 
 .hero .wrap {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 40px;
@@ -482,7 +547,7 @@ body.menu-open {
 
 .sectors-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 20px;
 }
 
