@@ -6787,7 +6787,7 @@
   {
     "id": 4015,
     "date": "2026-09-23 16:50:00",
-    "modified": "2026-09-23 16:50:00",
+    "modified": "2026-09-28 12:00:00",
     "status": "publish",
     "title": "INVERSIONES VAR-GRASS 2020, C.A.",
     "slug": "inversiones-var-grass-2020-c-a",
@@ -6798,11 +6798,23 @@
       "_874": "J-50049875-6",
       "_featured": "0",
       "_listing_status": "post_status",
-      "_expiry_date": "2027-09-23 00:00:00"
+      "_expiry_date": "2027-09-23 00:00:00",
+      "_email": "g.vargrass@gmail.com",
+      "_phone": "0412-9711567"
     },
     "tax": {
-      "category": [],
-      "location": [],
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "San Diego - Carabobo",
+          "slug": "san-diego-carabobo"
+        }
+      ],
       "tags": []
     },
     "image_url": "/images/afiliados/4015.jpg",
