@@ -388,9 +388,12 @@ body.menu-open {
   transform: scale(1);
 }
 
-.hero-slide-petroleo,
-.hero-slide-woa {
+.hero-slide-petroleo {
   background-position: 50% 42%;
+}
+
+.hero-slide-woa {
+  background-position: 55% center;
 }
 
 .hero-overlay {
