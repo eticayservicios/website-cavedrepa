@@ -11,6 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
 SCRIPTS = [
     SITE / "js" / "config.js",
+    SITE / "js" / "tracking-config.js",
+    SITE / "js" / "tracking.js",
     SITE / "js" / "api.js",
     SITE / "js" / "main.js",
     SITE / "js" / "directory.js",

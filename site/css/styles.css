@@ -487,12 +487,21 @@ body.menu-open {
   margin: 0 0 24px;
   font-size: 1rem;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero-panel-woa .hero-event-meta span {
+  color: var(--yellow);
 }
 
 .hero-panel-woa .hero-lead {
   max-width: 52ch;
   margin-bottom: 18px;
+}
+
+.hero-panel-woa .hero-lead span {
+  color: var(--yellow);
+  font-weight: 700;
 }
 
 .hero-panel-woa h1 {
