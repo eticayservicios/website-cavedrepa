@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css?v=hero-petrolero">
+  <link rel="stylesheet" href="/css/styles.css?v=woa-hero-2027">
 </head>
 <body class="home-page">
   <div class="topbar">
@@ -109,45 +109,66 @@
   </header>
 
   <main>
-    <section class="hero hero-carousel" id="inicio">
+    <section class="hero hero-carousel hero-carousel-woa" id="inicio" data-active-slide="0">
       <div class="hero-slides" aria-hidden="true">
-        <div class="hero-slide is-active" style="background-image: url('/images/home/tractor.jpg');"></div>
+        <div
+          class="hero-slide hero-slide-woa is-active"
+          style="background-image: url('https://images.unsplash.com/photo-1772852340517-b11ec88979fc?auto=format&fit=crop&w=2070&q=80');"
+        ></div>
+        <div class="hero-slide" style="background-image: url('/images/home/tractor.jpg');"></div>
         <div class="hero-slide" style="background-image: url('/images/home/construccion.jpg');"></div>
         <div class="hero-slide" style="background-image: url('/images/home/industrial.jpg');"></div>
         <div class="hero-slide hero-slide-petroleo" style="background-image: url('https://images.unsplash.com/photo-1772852340517-b11ec88979fc?auto=format&fit=crop&w=2070&q=80');"></div>
       </div>
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="hero-dots" role="tablist" aria-label="Imágenes del banner principal">
-        <button type="button" class="hero-dot is-active" aria-label="Imagen 1" aria-selected="true"></button>
-        <button type="button" class="hero-dot" aria-label="Imagen 2" aria-selected="false"></button>
-        <button type="button" class="hero-dot" aria-label="Imagen 3" aria-selected="false"></button>
+        <button type="button" class="hero-dot is-active" aria-label="World of Asphalt 2027" aria-selected="true"></button>
+        <button type="button" class="hero-dot" aria-label="Sector agrícola" aria-selected="false"></button>
+        <button type="button" class="hero-dot" aria-label="Sector construcción" aria-selected="false"></button>
+        <button type="button" class="hero-dot" aria-label="Sector industrial" aria-selected="false"></button>
         <button type="button" class="hero-dot" aria-label="Asfalto y sector petrolero" aria-selected="false"></button>
       </div>
-      <div class="wrap">
-        <div>
-          <h1>Impulsamos a las empresas que mueven <span>el desarrollo de Venezuela</span></h1>
-          <p class="hero-lead">Representamos, conectamos y fortalecemos a distribuidores de maquinaria, equipos y repuestos.</p>
+      <div class="wrap hero-wrap">
+        <div class="hero-panel hero-panel-woa is-active">
+          <p class="hero-kicker">CAVEDREPA PRESENTE</p>
+          <h1>El futuro de la infraestructura también se construye conectados</h1>
+          <p class="hero-lead">Acompañamos a nuestro sector en World of Asphalt 2027, el encuentro internacional donde convergen innovación, tecnología y conocimiento para la industria del asfalto y la vialidad.</p>
+          <p class="hero-event-meta">15–17 de marzo de 2027 · Nueva Orleans, EE. UU.</p>
           <div class="hero-actions">
-            <a class="btn btn-yellow" href="/afiliate/">Afiliar mi empresa</a>
-            <a class="btn btn-ghost" href="/directorio/">
-              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.8l-.3-.3a6.5 6.5 0 1 0-.7.7l.3.3v.8l5 5 1.5-1.5-5-5zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"/></svg>
-              Explorar directorio
-            </a>
+            <a
+              class="btn btn-yellow"
+              href="https://www.worldofasphalt.com/learn-more-at-world-of-asphalt"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Conoce el evento</a>
           </div>
-          <p class="hero-proof">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11a3 3 0 1 0-3-3 3 3 0 0 0 3 3zm6 0a3 3 0 1 0-3-3 3 3 0 0 0 3 3zM3.6 19a5.4 5.4 0 0 1 10.8 0zm10.2 0a6.7 6.7 0 0 1 6.6-5.2 5.4 5.4 0 0 1 0 10.4H13.8z"/></svg>
-            Desde 1986 representando al sector productivo
-          </p>
         </div>
-        <aside class="hero-side" aria-hidden="true">
-          <div class="hero-words">
-            <span>Maquinaria</span>
-            <span>Personas</span>
-            <span>Oportunidades</span>
-            <span>Un país que avanza</span>
+        <div class="hero-panel hero-panel-default" hidden>
+          <div>
+            <h1>Impulsamos a las empresas que mueven <span>el desarrollo de Venezuela</span></h1>
+            <p class="hero-lead">Representamos, conectamos y fortalecemos a distribuidores de maquinaria, equipos y repuestos.</p>
+            <div class="hero-actions">
+              <a class="btn btn-yellow" href="/afiliate/">Afiliar mi empresa</a>
+              <a class="btn btn-ghost" href="/directorio/">
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.8l-.3-.3a6.5 6.5 0 1 0-.7.7l.3.3v.8l5 5 1.5-1.5-5-5zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"/></svg>
+                Explorar directorio
+              </a>
+            </div>
+            <p class="hero-proof">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11a3 3 0 1 0-3-3 3 3 0 0 0 3 3zm6 0a3 3 0 1 0-3-3 3 3 0 0 0 3 3zM3.6 19a5.4 5.4 0 0 1 10.8 0zm10.2 0a6.7 6.7 0 0 1 6.6-5.2 5.4 5.4 0 0 1 0 10.4H13.8z"/></svg>
+              Desde 1986 representando al sector productivo
+            </p>
           </div>
-          <p class="hero-caption">El sector productivo también construye un mejor mañana</p>
-        </aside>
+          <aside class="hero-side" aria-hidden="true">
+            <div class="hero-words">
+              <span>Maquinaria</span>
+              <span>Personas</span>
+              <span>Oportunidades</span>
+              <span>Un país que avanza</span>
+            </div>
+            <p class="hero-caption">El sector productivo también construye un mejor mañana</p>
+          </aside>
+        </div>
       </div>
     </section>
 

@@ -388,7 +388,8 @@ body.menu-open {
   transform: scale(1);
 }
 
-.hero-slide-petroleo {
+.hero-slide-petroleo,
+.hero-slide-woa {
   background-position: 50% 42%;
 }
 
@@ -403,6 +404,17 @@ body.menu-open {
     rgba(8, 32, 28, 0.28) 100%
   );
   pointer-events: none;
+  transition: background 0.6s ease;
+}
+
+.hero-carousel-woa .hero-overlay {
+  background: linear-gradient(
+    105deg,
+    rgba(8, 32, 28, 0.94) 0%,
+    rgba(8, 32, 28, 0.82) 42%,
+    rgba(8, 32, 28, 0.55) 68%,
+    rgba(8, 32, 28, 0.35) 100%
+  );
 }
 
 .hero-dots {
@@ -431,14 +443,75 @@ body.menu-open {
   transform: scale(1.15);
 }
 
-.hero .wrap {
+.hero .wrap,
+.hero-wrap {
   position: relative;
   z-index: 2;
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 40px;
-  padding: 72px 0 64px;
+  padding: 72px 0 76px;
   width: min(var(--max), calc(100% - 40px));
+}
+
+.hero-panel {
+  display: none;
+}
+
+.hero-panel.is-active {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+  animation: hero-panel-in 0.45s ease;
+}
+
+.hero-panel-default.is-active {
+  grid-template-columns: 1.2fr 0.8fr;
+}
+
+.hero-panel-woa.is-active {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 44rem;
+}
+
+.hero-kicker {
+  margin: 0 0 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: var(--yellow);
+}
+
+.hero-event-meta {
+  margin: 0 0 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.hero-panel-woa .hero-lead {
+  max-width: 52ch;
+  margin-bottom: 18px;
+}
+
+.hero-panel-woa h1 {
+  max-width: 22ch;
+}
+
+@media (min-width: 900px) {
+  .hero-panel-woa h1 {
+    max-width: 28ch;
+    font-size: clamp(2.2rem, 3.6vw, 3.15rem);
+  }
+}
+
+@keyframes hero-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero h1 {
@@ -3571,9 +3644,29 @@ body.admin-modal-open {
     padding: 14px 20px;
   }
 
-  .hero .wrap {
+  .hero .wrap,
+  .hero-wrap {
+    padding: 56px 0 64px;
+  }
+
+  .hero-panel-default.is-active {
     grid-template-columns: 1fr;
-    padding: 56px 0 48px;
+  }
+
+  .hero-panel-woa h1 {
+    max-width: none;
+    font-size: clamp(1.75rem, 7.5vw, 2.35rem);
+  }
+
+  .hero-panel-woa .hero-lead {
+    font-size: 1rem;
+    margin-bottom: 14px;
+  }
+
+  .hero-event-meta {
+    font-size: 0.95rem;
+    line-height: 1.45;
+    margin-bottom: 20px;
   }
 
   .hero-side {
