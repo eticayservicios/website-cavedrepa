@@ -8,5 +8,5 @@
  */
 window.CAVEDREPA_TRACKING = {
   searchConsoleVerification: "",
-  ga4MeasurementId: "",
+  ga4MeasurementId: "G-DN1QCC2DG1",
 };
