@@ -2184,11 +2184,11 @@
   {
     "id": 969,
     "date": "2019-12-04 00:59:39",
-    "modified": "2020-02-04 20:10:42",
+    "modified": "2026-09-30 17:30:00",
     "status": "publish",
     "title": "VENEZOLANA DE EQUIPOS Y REPUESTOS VENEQUIRCA C.A.",
     "slug": "venequirca",
-    "content": "<h3><span class=\"itemExtraFieldsLabel\">Áreas de presencia:</span></h3>\r\n<span class=\"itemExtraFieldsValue\">Todo el territorio nacional.</span>\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nTractores, implementos y maquinaria agrícola, pecuaria, pesquera y forestal; así como sus repuestos originales y no originales.",
+    "content": "<h3><span class=\"itemExtraFieldsLabel\">Áreas de presencia:</span></h3>\r\n<span class=\"itemExtraFieldsValue\">TODO EL TERRITORIO NACIONAL</span>\r\n<h3><span class=\"itemExtraFieldsLabel\">Productos comercializados:</span></h3>\r\nTractores, implementos y maquinaria agrícola, pecuaria, pesquera y forestal, así como sus repuestos originales y no originales.",
     "excerpt": "",
     "author": 1,
     "meta": {
@@ -2208,8 +2208,8 @@
       "_tagline": "",
       "_excerpt": "",
       "_address": "Carretera Nacional Guatire-Araira, Sector El Rodeo, Zona Industrial, Galpón 1, Guatire - Estado Miranda",
-      "_phone": "(0212) 630.90.07",
-      "_phone2": "+58 424-1745501",
+      "_phone": "0212-630.90.07",
+      "_phone2": "0424-1745501",
       "_fax": "",
       "_email": "",
       "_website": "https://venequirca.com/",
@@ -2267,6 +2267,14 @@
         {
           "name": "PINHEIRO",
           "slug": "pinheiro"
+        },
+        {
+          "name": "CANSA",
+          "slug": "cansa"
+        },
+        {
+          "name": "MATSUDA",
+          "slug": "matsuda"
         },
         {
           "name": "AGRISTAR",
