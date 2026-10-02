@@ -7686,5 +7686,54 @@
     },
     "image_url": "/images/afiliados/placeholder.png",
     "expires_at": "2027-09-28"
+  },
+  {
+    "id": 3352,
+    "date": "2026-08-12 17:08:00",
+    "modified": "2026-10-02 11:45:00",
+    "status": "publish",
+    "title": "Ventas sin Fronteras C.A",
+    "slug": "ventas-sin-fronteras-c-a",
+    "content": "trabajamos con repuestos de motores diesel para tractores jonh deere, ford, perkins",
+    "excerpt": "",
+    "author": 61,
+    "meta": {
+      "_email": "ventassinfrontera@gmail.com",
+      "_877": "ventassinfrontera@gmail.com",
+      "_875": "Yerlin Ali Arteaga Rodriguez",
+      "_874": "12860818",
+      "_address": "Av 36 entre calles 25 y 26",
+      "_hide_contact_owner": "1",
+      "_phone": "04122694802",
+      "_directory_type": "314",
+      "_expiry_date": "2027-08-12 16:59:23",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_listing_prv_img": "3353",
+      "_thumbnail_id": "3353",
+      "_cavedrepa_afiliacion_email_sent": "2026-08-12 16:59:40"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Araure - Portuguesa",
+          "slug": "araure-edo-portuguesa"
+        }
+      ],
+      "tags": [
+        {
+          "name": "JONH DEERE",
+          "slug": "jonh-deere"
+        }
+      ]
+    },
+    "image_url": "/images/afiliados/placeholder.png",
+    "expires_at": "2027-08-12"
   }
 ]

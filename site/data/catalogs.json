@@ -3,7 +3,7 @@
     {
       "name": "Sector Agrícola",
       "slug": "agricola",
-      "count": 108
+      "count": 109
     },
     {
       "name": "Sector Construcción",
@@ -33,14 +33,14 @@
       "count": 12
     },
     {
-      "name": "Caracas - Distrito Capital",
-      "slug": "caracas-distrito-capital",
+      "name": "Araure - Edo. Portuguesa",
+      "slug": "araure-edo-portuguesa",
       "count": 10
     },
     {
-      "name": "Araure - Edo. Portuguesa",
-      "slug": "araure-edo-portuguesa",
-      "count": 9
+      "name": "Caracas - Distrito Capital",
+      "slug": "caracas-distrito-capital",
+      "count": 10
     },
     {
       "name": "Barinas - Barinas",
@@ -235,6 +235,11 @@
       "count": 4
     },
     {
+      "name": "JONH DEERE",
+      "slug": "jonh-deere",
+      "count": 4
+    },
+    {
       "name": "Baldan",
       "slug": "baldan",
       "count": 3
@@ -252,11 +257,6 @@
     {
       "name": "Ford",
       "slug": "ford",
-      "count": 3
-    },
-    {
-      "name": "JONH DEERE",
-      "slug": "jonh-deere",
       "count": 3
     },
     {
