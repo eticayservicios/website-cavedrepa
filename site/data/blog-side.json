@@ -1,6 +1,13 @@
 {
   "recent": [
     {
+      "id": 3400,
+      "slug": "cavedrepa-presente-encuentro-grupo-bid",
+      "title": "CAVEDREPA presente en el Encuentro con el Grupo BID",
+      "date": "2026-10-02T10:09:22",
+      "image_url": "/images/blog/3400.jpg"
+    },
+    {
       "id": 3347,
       "slug": "editorial-cavedrepa-mes-agosto-2026",
       "title": "Editorial Cavedrepa MES AGOSTO 2026",
@@ -27,13 +34,6 @@
       "title": "Editorial Cavedrepa MES MAYO 2026",
       "date": "2026-05-12T09:40:13",
       "image_url": "/images/blog/3297.jpg"
-    },
-    {
-      "id": 3249,
-      "slug": "editorial-cavedrepa-mes-abril-2026",
-      "title": "Editorial Cavedrepa MES ABRIL 2026",
-      "date": "2026-04-17T09:48:39",
-      "image_url": "/images/blog/3249.jpg"
     }
   ],
   "categories": [
@@ -121,6 +121,11 @@
       "name": "Otros temas",
       "slug": "otros-temas",
       "count": 7
+    },
+    {
+      "name": "Actualidad institucional",
+      "slug": "actualidad-institucional",
+      "count": 1
     }
   ]
 }

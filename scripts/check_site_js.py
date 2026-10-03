@@ -34,12 +34,12 @@ def main() -> None:
     bundle = "\n;\n".join(path.read_text(encoding="utf-8") for path in SCRIPTS)
     proc = subprocess.run(
         ["node", "--check"],
-        input=bundle,
-        text=True,
+        input=bundle.encode("utf-8"),
         capture_output=True,
     )
     if proc.returncode != 0:
-        sys.stderr.write(proc.stderr or proc.stdout or "JS inválido\n")
+        err = proc.stderr or proc.stdout or b"JS invalido\n"
+        sys.stderr.write(err.decode("utf-8", errors="replace"))
         raise SystemExit(1)
     print("ok site js")
 

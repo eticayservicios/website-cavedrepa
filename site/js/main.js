@@ -199,27 +199,38 @@ if (homeLatest && window.CavedrepaApi) {
     if (text.length <= max) return text;
     return `${text.slice(0, max - 1).replace(/\s+\S*$/, "")}…`;
   };
-  const postHref = (post, coverKey) => {
+  const postHref = (post) => {
     const next = new URL("/blog/", window.location.origin);
     next.searchParams.set("entrada", post.slug || post.id);
-    if (coverKey) next.searchParams.set("foto", coverKey);
+    if (!post.image_url) {
+      const coverKey =
+        window.CavedrepaCovers?.keyFromSrc(NEWS_IMAGES[0]) || "";
+      if (coverKey) next.searchParams.set("foto", coverKey);
+    }
     return `${next.pathname}${next.search}`;
   };
   const newsHtml = (post, index = 0) => {
+    const covers = window.CavedrepaCovers;
     const title = escapeHtml(softenCaps(post.title || "Entrada"));
     const date = escapeHtml(formatDate(post.date));
     const excerpt = escapeHtml(shortExcerpt(post.excerpt));
-    const image = NEWS_IMAGES[index] || NEWS_IMAGES[0];
-    const coverKey = window.CavedrepaCovers?.keyFromSrc(image) || "";
-    const href = postHref(post, coverKey);
+    const image = covers?.postImage(post) || NEWS_IMAGES[index] || NEWS_IMAGES[0];
+    const imgClass = covers?.postCardImageClass(post) || "";
+    const alt = escapeHtml(covers?.postImageAlt(post) || "");
+    const category = covers?.primaryCategory(post);
+    const categoryLine = category
+      ? `<p class="news-card-cat">${escapeHtml(category.name)}</p>`
+      : "";
+    const href = postHref(post);
     return `
       <a class="news-card" href="${href}">
-        <img src="${escapeHtml(image)}" alt="" width="640" height="400" onerror="this.src='/images/blog/editorial.jpg'">
+        <img class="${escapeHtml(imgClass)}" src="${escapeHtml(image)}" alt="${alt}" width="640" height="400" loading="lazy" decoding="async" onerror="this.src='/images/blog/editorial.jpg'">
         <div class="news-body">
+          ${categoryLine}
           <p class="news-date">${date}</p>
           <h3>${title}</h3>
           ${excerpt ? `<p>${excerpt}</p>` : ""}
-          <span class="read-more">Leer más →</span>
+          <span class="read-more">Leer noticia →</span>
         </div>
       </a>`;
   };

@@ -10,6 +10,10 @@ const fallbackBlogFile = () =>
     return response.json();
   });
 
+const BID_INSTITUTIONAL_SLUG = "cavedrepa-presente-encuentro-grupo-bid";
+const BID_INSTITUTIONAL_ALT =
+  "Erick Hartkopf, director de CAVEDREPA, durante el Encuentro con el Grupo BID en el Consejo Nacional de Economía.";
+
 const paginateLocal = (items, page, perPage) => {
   const per = Number(perPage) || 10;
   const current = Math.max(1, Number(page) || 1);
@@ -49,6 +53,37 @@ const fallbackPost = async (key) => {
   );
   if (!post) throw new Error("NOT_FOUND");
   return { ok: true, post: { ...post, content: post.content || post.excerpt || "" } };
+};
+
+const mergeFeaturedBlogPosts = async (payload, params) => {
+  const slug = BID_INSTITUTIONAL_SLUG;
+  const posts = [...(payload.posts || [])];
+  if (posts.some((item) => item.slug === slug)) return payload;
+  const category = String(params?.categoria || "").toLowerCase();
+  if (category && category !== "noticias" && category !== "actualidad-institucional") {
+    return payload;
+  }
+  try {
+    const local = await fallbackBlogFile();
+    const featured = (local.posts || []).find((item) => item.slug === slug);
+    if (!featured) return payload;
+    if (category === "actualidad-institucional") {
+      const inCategory = (featured.categories || []).some((item) => item.slug === category);
+      if (!inCategory) return payload;
+    }
+    const page = Math.max(1, Number(payload.page) || Number(params?.page) || 1);
+    const perPage = Number(payload.per_page) || Number(params?.per_page) || 12;
+    const merged = page === 1 ? [featured, ...posts.filter((item) => item.slug !== slug)] : posts;
+    const recent = [featured, ...(payload.recent || []).filter((item) => item.slug !== slug)].slice(0, 5);
+    return {
+      ...payload,
+      posts: merged.slice(0, perPage),
+      recent,
+      total: (Number(payload.total) || posts.length) + 1,
+    };
+  } catch (_error) {
+    return payload;
+  }
 };
 
 const isLocalHost = () => {
@@ -171,6 +206,8 @@ const mergeCatalogSectors = (sectors) => {
 };
 
 window.CavedrepaCovers = {
+  BID_INSTITUTIONAL_SLUG,
+  BID_INSTITUTIONAL_ALT,
   files: {
     agricola: "/images/home/agricola.jpg",
     tractor: "/images/home/tractor.jpg",
@@ -193,6 +230,28 @@ window.CavedrepaCovers = {
     const id = Number(post && post.id) || 0;
     return this.files[keys[Math.abs(id) % keys.length]];
   },
+  postImage(post) {
+    const url = String(post?.image_url || "").trim();
+    if (url) return url;
+    return this.forPost(post);
+  },
+  postImageAlt(post) {
+    if (String(post?.slug || "") === BID_INSTITUTIONAL_SLUG) return BID_INSTITUTIONAL_ALT;
+    return "";
+  },
+  postCardImageClass(post) {
+    if (String(post?.slug || "") === BID_INSTITUTIONAL_SLUG) return "news-card-img--bid-event";
+    return "";
+  },
+  postHeroImageClass(post) {
+    if (String(post?.slug || "") === BID_INSTITUTIONAL_SLUG) return "blog-hero-img--bid-event";
+    return "";
+  },
+  primaryCategory(post) {
+    const items = post?.categories || [];
+    const match = items.find((item) => item.slug === "actualidad-institucional");
+    return match || items[0] || null;
+  },
 };
 
 window.CavedrepaApi = {
@@ -214,7 +273,8 @@ window.CavedrepaApi = {
   contact: (payload) => apiPost("/contact", payload),
   posts: async (params) => {
     try {
-      return await apiGet("/blog", params);
+      const payload = await apiGet("/blog", params);
+      return mergeFeaturedBlogPosts(payload, params);
     } catch (_error) {
       return fallbackBlog(params);
     }

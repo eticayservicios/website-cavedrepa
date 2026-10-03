@@ -38,8 +38,10 @@ const syncMenu = () => {
 const postHref = (post) => {
   const next = new URL("/blog/", window.location.origin);
   next.searchParams.set("entrada", post.slug || post.id);
-  const foto = coverKeyFor(post);
-  if (foto) next.searchParams.set("foto", foto);
+  if (!post.image_url) {
+    const foto = coverKeyFor(post);
+    if (foto) next.searchParams.set("foto", foto);
+  }
   return `${next.pathname}${next.search}`;
 };
 
@@ -76,15 +78,24 @@ const BLOG_IMAGE = "/images/blog/editorial.jpg";
 const coverSrc = (post, fotoKey) => {
   const covers = window.CavedrepaCovers;
   if (!covers) return BLOG_IMAGE;
+  const direct = String(post?.image_url || "").trim();
+  if (direct) return direct;
   return covers.fromKey(fotoKey) || covers.forPost(post) || BLOG_IMAGE;
 };
 
-const coverKeyFor = (post) => window.CavedrepaCovers?.keyFromSrc(coverSrc(post)) || "";
+const coverKeyFor = (post) => {
+  if (post?.image_url) return "";
+  return window.CavedrepaCovers?.keyFromSrc(coverSrc(post)) || "";
+};
+
+const postImageAlt = (post) => window.CavedrepaCovers?.postImageAlt(post) || "";
+const postCardImageClass = (post) => window.CavedrepaCovers?.postCardImageClass(post) || "";
+const postHeroImageClass = (post) => window.CavedrepaCovers?.postHeroImageClass(post) || "";
 
 const rowHtml = (post) => `
     <article class="news-card">
       <a class="company-card-link" href="${postHref(post)}" data-entrada="${post.slug || post.id}" data-foto="${coverKeyFor(post)}">
-        <img src="${coverSrc(post)}" alt="">
+        <img class="${postCardImageClass(post)}" src="${coverSrc(post)}" alt="${postImageAlt(post)}">
         <div class="news-body">
           <p class="blog-row-cats">${catsLine(post.categories)}</p>
           <p class="news-date">${formatDate(post.date)}</p>
@@ -225,7 +236,8 @@ const renderList = (payload) => {
 };
 
 const renderArticle = (post, fotoKey) => {
-  const image = `<img class="blog-hero-img" src="${coverSrc(post, fotoKey)}" alt="">`;
+  const heroClass = ["blog-hero-img", postHeroImageClass(post)].filter(Boolean).join(" ");
+  const image = `<img class="${heroClass}" src="${coverSrc(post, fotoKey)}" alt="${postImageAlt(post)}">`;
   article.innerHTML = `
     <button type="button" class="blog-back" id="blog-back">← Volver a Actualidad</button>
     <p class="blog-row-cats">${catsLine(post.categories)}</p>
