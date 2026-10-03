@@ -680,7 +680,11 @@ body.menu-open {
   background: #e8eeea;
 }
 
-.home-page .news-card-img--bid-event,
+.home-page .news-card-img--bid-event {
+  object-fit: cover;
+  object-position: center 8%;
+}
+
 .blog-grid .news-card-img--bid-event {
   object-fit: cover;
   object-position: center 22%;
