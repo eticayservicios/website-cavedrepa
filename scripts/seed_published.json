@@ -7735,5 +7735,45 @@
     },
     "image_url": "/images/afiliados/placeholder.png",
     "expires_at": "2027-08-12"
+  },
+  {
+    "id": 4018,
+    "date": "2026-10-06 10:45:00",
+    "modified": "2026-10-06 10:45:00",
+    "status": "publish",
+    "title": "IMPREAGRICOLA, C.A.",
+    "slug": "impreagricola-c-a",
+    "content": "",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_874": "J-259068946",
+      "_875": "Nicolás Rinascente",
+      "_phone": "0251-2690989",
+      "_phone2": "0414-5014166",
+      "_email": "impreagricola@gmail.com",
+      "_877": "marfar89@gmail.com",
+      "_address": "Av. Las Industrias, Km 14, Local S/N, Zona Industrial II, Barquisimeto, Estado Lara",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_expiry_date": "2027-10-06 00:00:00"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Barquisimeto - Lara",
+          "slug": "barquisimeto-lara"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "/images/afiliados/placeholder.png",
+    "expires_at": "2027-10-06"
   }
 ]
