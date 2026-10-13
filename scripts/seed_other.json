@@ -215,5 +215,233 @@
       "tags": []
     },
     "image_url": "/images/afiliados/3085.jpg"
+  },
+  {
+    "id": 3083,
+    "date": "2025-10-13 09:52:31",
+    "modified": "2025-10-13 09:52:31",
+    "status": "expired",
+    "title": "AGRICOLA EL PALMAR, C.A",
+    "slug": "agricola-el-palmar-c-a",
+    "content": "Caña  de azucar",
+    "excerpt": "",
+    "author": 7,
+    "meta": {
+      "_email": "aepseniat@gmail.com",
+      "_877": "dpto.fiscal.legal@gmail.com",
+      "_875": "EVERTH MATOS",
+      "_874": "J075135806",
+      "_address": "L CTRA NACIONAL LA ENCRUCIJADA EDIF CENTRAL EL PALMAR PISO S/N OF S/N SECTOR SAN MATEO EDO. ARAGUA",
+      "_hide_contact_owner": "on",
+      "_phone": "02443901227",
+      "_phone2": "04123137400",
+      "_directory_type": "314",
+      "_expiry_date": "2026-10-06 17:47:00",
+      "_featured": "",
+      "_listing_status": "post_status",
+      "_listing_prv_img": "3084",
+      "_thumbnail_id": "3084",
+      "_edit_lock": "1760363414:1",
+      "_edit_last": "1",
+      "_wp_old_date": "2025-10-06",
+      "_atbdp_post_views_count": "362"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Maracay - Aragua",
+          "slug": "maracay-aragua"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "/images/afiliados/3083.jpg"
+  },
+  {
+    "id": 3087,
+    "date": "2025-10-13 09:53:26",
+    "modified": "2025-10-13 09:53:26",
+    "status": "expired",
+    "title": "C.A AGRICOLA TUCUPIDO",
+    "slug": "c-a-agricola-tucupido",
+    "content": "Empresa cañicultora, dedicada a la siembra y cultivo de caña de azucar.",
+    "excerpt": "",
+    "author": 7,
+    "meta": {
+      "_email": "tucupidoseniat@gmail.com",
+      "_877": "Dpto.fiscal.legal@gmail.com",
+      "_875": "EVERTH MATOS",
+      "_874": "J075320077",
+      "_address": "L CTRA NACIONAL LA ENCRUCIJADA EDIF CENTRAL EL PALMAR PISO S/N OF S/N SECTOR SAN MATEO EDO. ARAGUA",
+      "_hide_contact_owner": "1",
+      "_phone": "02443901227",
+      "_phone2": "04123137400",
+      "_directory_type": "314",
+      "_expiry_date": "2026-10-06 18:14:07",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_listing_prv_img": "3088",
+      "_thumbnail_id": "3088",
+      "_wp_old_date": "2025-10-06",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "102"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Maracay - Aragua",
+          "slug": "maracay-aragua"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "/images/afiliados/3087.jpg"
+  },
+  {
+    "id": 3089,
+    "date": "2025-10-13 09:53:23",
+    "modified": "2025-10-13 09:53:23",
+    "status": "expired",
+    "title": "AGRICOLA KALAHARI C.A.",
+    "slug": "agricola-kalahari-c-a",
+    "content": "Empresa cañicultora, dedicada a la siembra y cultivo de caña de azucar.",
+    "excerpt": "",
+    "author": 7,
+    "meta": {
+      "_email": "agricolakalahari@gmail.com",
+      "_877": "Dpto.fiscal.legal@gmail.com",
+      "_875": "JESUS MENDOZA",
+      "_874": "J305392200",
+      "_address": "CTRA VIA PAPELON CASA FINCA AGRICHU CASERIO CAÑO DELGADITO CAÑO DELGADITO PORTUGUESA",
+      "_phone": "02443901227",
+      "_phone2": "04123137400",
+      "_directory_type": "314",
+      "_expiry_date": "2026-10-06 19:03:24",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_listing_prv_img": "3090",
+      "_thumbnail_id": "3090",
+      "_wp_old_date": "2025-10-06",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "194"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "/images/afiliados/3089.jpg"
+  },
+  {
+    "id": 3091,
+    "date": "2025-10-13 09:53:20",
+    "modified": "2025-10-13 09:53:20",
+    "status": "expired",
+    "title": "AGRICOLA SERENGETI CA",
+    "slug": "agricola-serengeti-ca",
+    "content": "Empresa cañicultora, dedicada a la siembra y cultivo de caña de azucar.",
+    "excerpt": "",
+    "author": 7,
+    "meta": {
+      "_email": "agricolaserengetica@gmail.com",
+      "_877": "Dpto.fiscal.legal@gmail.com",
+      "_875": "JESUS MENDOZA",
+      "_874": "J305391831",
+      "_address": "CTRA VIA PAPELON CASA FINCA CAÑO MARACA CASERIO CAÑO DELGADITO CAÑO DELGADITO PORTUGUESA",
+      "_phone": "02443901227",
+      "_phone2": "04123137400",
+      "_directory_type": "314",
+      "_expiry_date": "2026-10-06 19:28:00",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_listing_prv_img": "3092",
+      "_thumbnail_id": "3092",
+      "_wp_old_date": "2025-10-06",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "128"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "/images/afiliados/3091.jpg"
+  },
+  {
+    "id": 3093,
+    "date": "2025-10-13 09:53:17",
+    "modified": "2025-10-13 09:53:17",
+    "status": "expired",
+    "title": "AGRICOLA LAS VEGAS, S.A.",
+    "slug": "agricola-las-vegas-s-a",
+    "content": "Empresa cañicultora, dedicada a la siembra y cultivo de caña de azucar.",
+    "excerpt": "",
+    "author": 7,
+    "meta": {
+      "_email": "agrilasvegas@gmail.com",
+      "_877": "Dpto.fiscal.legal@gmail.com",
+      "_875": "JESUS MENDOZA",
+      "_874": "J302180686",
+      "_address": "L CTRA VIA PAPELON CASA FINCA CUMAREPO CASERIO CAÑO DELGADITO CAÑO DELGADITO PORTUGUESA",
+      "_phone": "02443901227",
+      "_phone2": "04123137400",
+      "_directory_type": "314",
+      "_expiry_date": "2026-10-06 19:37:30",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_listing_prv_img": "3094",
+      "_thumbnail_id": "3094",
+      "_wp_old_date": "2025-10-06",
+      "_edit_last": "1",
+      "_atbdp_post_views_count": "187"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        }
+      ],
+      "location": [
+        {
+          "name": "Guanare -- Portuguesa",
+          "slug": "guanare-portuguesa"
+        }
+      ],
+      "tags": []
+    },
+    "image_url": "/images/afiliados/3093.jpg"
   }
 ]
