@@ -3,7 +3,7 @@
     {
       "name": "Sector Agrícola",
       "slug": "agricola",
-      "count": 110
+      "count": 105
     },
     {
       "name": "Sector Construcción",
@@ -23,13 +23,13 @@
   ],
   "locations": [
     {
-      "name": "Guanare - Portuguesa",
-      "slug": "guanare-portuguesa",
-      "count": 16
-    },
-    {
       "name": "Barquisimeto - Lara",
       "slug": "barquisimeto-lara",
+      "count": 13
+    },
+    {
+      "name": "Guanare - Portuguesa",
+      "slug": "guanare-portuguesa",
       "count": 13
     },
     {
@@ -58,11 +58,6 @@
       "count": 5
     },
     {
-      "name": "Maracay - Aragua",
-      "slug": "maracay-aragua",
-      "count": 5
-    },
-    {
       "name": "San Diego - Carabobo",
       "slug": "san-diego-carabobo",
       "count": 5
@@ -75,6 +70,11 @@
     {
       "name": "Ciudad Bolívar - Bolívar",
       "slug": "ciudad-bolivar-bolivar",
+      "count": 3
+    },
+    {
+      "name": "Maracay - Aragua",
+      "slug": "maracay-aragua",
       "count": 3
     },
     {
