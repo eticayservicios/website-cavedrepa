@@ -1175,6 +1175,12 @@ body.menu-open {
   margin: 12px 0 16px;
 }
 
+/* REAGRINCA ships a full 16:9 banner instead of a logo; 6px keeps its corners clear of the rounded edges. */
+.company-media[data-afiliado="861"],
+.detail-image-wrap[data-afiliado="861"] {
+  padding: 6px;
+}
+
 .company-card-body,
 .browse-card {
   padding: 16px 18px 18px;
