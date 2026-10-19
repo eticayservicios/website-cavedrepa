@@ -7547,5 +7547,70 @@
     },
     "image_url": "/images/afiliados/placeholder.png",
     "expires_at": "2027-10-06"
+  },
+  {
+    "id": 4019,
+    "date": "2026-10-19 17:15:00",
+    "modified": "2026-10-19 17:15:00",
+    "status": "publish",
+    "title": "HERRAMIENTAS BRINK, C.A.",
+    "slug": "herramientas-brink-c-a",
+    "content": "Sectores: Construcción, Agrícola, Ferretero en General",
+    "excerpt": "",
+    "author": 1,
+    "meta": {
+      "_874": "J-31518622-5",
+      "_875": "ANTONIO ISSA",
+      "_phone": "0286-9343872",
+      "_phone2": "0414-0940933 / 0414-8928720",
+      "_email": "lisbeth.romero@grupoprincipal.com.ve",
+      "_877": "Antonioissa73@gmail.com",
+      "_address": "Av. Manuel Piar, Edif. Mundo Cerámico Principal, Piso S/N, Of S/N, Urb. Primero de Mayo, San Félix - Edo. Bolívar",
+      "_featured": "0",
+      "_listing_status": "post_status",
+      "_expiry_date": "2027-10-19 00:00:00"
+    },
+    "tax": {
+      "category": [
+        {
+          "name": "Sector Agrícola",
+          "slug": "agricola"
+        },
+        {
+          "name": "Sector Construcción",
+          "slug": "construccion"
+        }
+      ],
+      "location": [
+        {
+          "name": "San Félix - Bolívar",
+          "slug": "san-felix-bolivar"
+        }
+      ],
+      "tags": [
+        {
+          "name": "TAURO",
+          "slug": "tauro"
+        },
+        {
+          "name": "BELLOTA",
+          "slug": "bellota"
+        },
+        {
+          "name": "ARGOS",
+          "slug": "argos"
+        },
+        {
+          "name": "PIRAMIDE",
+          "slug": "piramide"
+        },
+        {
+          "name": "SOLIMAX",
+          "slug": "solimax"
+        }
+      ]
+    },
+    "image_url": "/images/afiliados/4019.jpg",
+    "expires_at": "2027-10-19"
   }
 ]
