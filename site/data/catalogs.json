@@ -3,12 +3,12 @@
     {
       "name": "Sector Agrícola",
       "slug": "agricola",
-      "count": 105
+      "count": 106
     },
     {
       "name": "Sector Construcción",
       "slug": "construccion",
-      "count": 15
+      "count": 16
     },
     {
       "name": "Sector Acuícola",
@@ -148,6 +148,11 @@
       "count": 1
     },
     {
+      "name": "San Félix - Bolívar",
+      "slug": "san-felix-bolivar",
+      "count": 1
+    },
+    {
       "name": "San Fernando de Apure - Apure",
       "slug": "san-fernando-de-apure-apure",
       "count": 1
@@ -272,6 +277,11 @@
     {
       "name": "AGF",
       "slug": "agf",
+      "count": 2
+    },
+    {
+      "name": "BELLOTA",
+      "slug": "bellota",
       "count": 2
     },
     {
@@ -450,6 +460,11 @@
       "count": 1
     },
     {
+      "name": "ARGOS",
+      "slug": "argos",
+      "count": 1
+    },
+    {
       "name": "ASCO",
       "slug": "asco",
       "count": 1
@@ -477,11 +492,6 @@
     {
       "name": "BELL",
       "slug": "bell",
-      "count": 1
-    },
-    {
-      "name": "BELLOTA",
-      "slug": "bellota",
       "count": 1
     },
     {
@@ -1065,6 +1075,11 @@
       "count": 1
     },
     {
+      "name": "PIRAMIDE",
+      "slug": "piramide",
+      "count": 1
+    },
+    {
       "name": "Plasson Brasil",
       "slug": "plasson-brasil",
       "count": 1
@@ -1165,6 +1180,11 @@
       "count": 1
     },
     {
+      "name": "SOLIMAX",
+      "slug": "solimax",
+      "count": 1
+    },
+    {
       "name": "Solpower",
       "slug": "solpower",
       "count": 1
@@ -1187,6 +1207,11 @@
     {
       "name": "Takima",
       "slug": "takima",
+      "count": 1
+    },
+    {
+      "name": "TAURO",
+      "slug": "tauro",
       "count": 1
     },
     {
