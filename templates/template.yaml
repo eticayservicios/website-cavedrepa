@@ -75,6 +75,26 @@ Parameters:
     Default: cavedrepa
     Description: Usuario del panel /admin/.
 
+  NotificationEmail:
+    Type: String
+    Default: cavedrepa2013@gmail.com,soporte@eticayservicios.com
+    Description: Correos separados por coma que reciben las nuevas solicitudes de afiliacion.
+
+  NotificationFrom:
+    Type: String
+    Default: info@cavedrepa.org
+    Description: Remitente verificado en Amazon SES.
+
+  NotificationFromName:
+    Type: String
+    Default: Cavedrepa
+    Description: Nombre visible del remitente en el cliente de correo.
+
+  ApiBaseUrl:
+    Type: String
+    Default: https://ohqbk8ppmi.execute-api.us-east-1.amazonaws.com/v1
+    Description: URL publica usada por los botones de revision enviados por correo.
+
 Conditions:
   HasDomainName: !Not [!Equals [!Ref DomainName, '']]
   HasWwwDomain: !And
@@ -523,6 +543,10 @@ Resources:
           TABLE_NAME: !Ref WebCoreTable
           BUCKET_NAME: !Ref SiteBucket
           ADMIN_SECRET_ARN: !Ref AdminSecret
+          API_BASE_URL: !Ref ApiBaseUrl
+          NOTIFICATION_EMAIL: !Ref NotificationEmail
+          NOTIFICATION_FROM: !Ref NotificationFrom
+          NOTIFICATION_FROM_NAME: !Ref NotificationFromName
       Policies:
         - DynamoDBCrudPolicy:
             TableName: !Ref WebCoreTable
@@ -535,6 +559,11 @@ Resources:
               Action:
                 - secretsmanager:GetSecretValue
               Resource: !Ref AdminSecret
+            - Effect: Allow
+              Action:
+                - ses:SendEmail
+                - ses:SendRawEmail
+              Resource: '*'
       Events:
         Root:
           Type: Api

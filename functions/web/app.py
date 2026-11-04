@@ -6,6 +6,7 @@ import base64
 import json
 import os
 from decimal import Decimal
+from html import escape
 from urllib.parse import unquote
 
 import boto3
@@ -44,6 +45,7 @@ from directory import (
     get_company,
     search_directory,
 )
+from notifications import verify_review_action
 
 TABLE_NAME = os.environ.get("TABLE_NAME", "")
 ALLOWED_ORIGINS = {
@@ -108,6 +110,30 @@ def respond(event: dict, status: int, payload: dict) -> dict:
     }
 
 
+def respond_html(status: int, body: str) -> dict:
+    return {
+        "statusCode": status,
+        "headers": {
+            "Content-Type": "text/html; charset=utf-8",
+            "Cache-Control": "no-store",
+            "X-Frame-Options": "DENY",
+            "Content-Security-Policy": "default-src 'none'; style-src 'unsafe-inline'; form-action 'self'",
+        },
+        "body": body,
+    }
+
+
+def review_page(title: str, message: str, *, confirm_url: str = "", action: str = "") -> str:
+    colors = {"approve": ("#16794f", "Confirmar aprobacion"), "reject": ("#b42318", "Confirmar rechazo")}
+    button = ""
+    if confirm_url and action in colors:
+        color, label = colors[action]
+        button = f'<form method="post" action="{escape(confirm_url, quote=True)}"><button style="border:0;border-radius:10px;background:{color};color:white;font-size:20px;font-weight:bold;padding:16px 25px;cursor:pointer">{label}</button></form>'
+    return f"""<!doctype html><html lang="es"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)}</title>
+<body style="margin:0;background:#f3f5f7;font-family:Arial,sans-serif;color:#172033"><main style="max-width:560px;margin:8vh auto;padding:36px;background:white;border-radius:16px;box-shadow:0 8px 28px rgba(23,32,51,.12);text-align:center">
+<div style="color:#0e4f3a;font-size:14px;font-weight:bold;letter-spacing:1.5px">CAVEDREPA</div><h1 style="font-size:28px;margin:14px 0">{escape(title)}</h1><p style="font-size:18px;line-height:1.55;margin:0 0 26px">{escape(message)}</p>{button}</main></body></html>"""
+
+
 def request_path(event: dict) -> str:
     raw = event.get("path") or "/"
     if raw.startswith("/v1/"):
@@ -160,6 +186,56 @@ def lambda_handler(event, context):
         return respond(event, 500, {"ok": False, "error": "TABLE_NAME no configurada"})
 
     try:
+        if path == "/applications/review" and method in {"GET", "POST"}:
+            raw_token = query_params(event).get("token") or ""
+            action_data = verify_review_action(raw_token)
+            if not action_data:
+                return respond_html(
+                    400,
+                    review_page(
+                        "Enlace no valido",
+                        "Este enlace vencio o no es valido. Puede revisar la solicitud desde el panel administrativo.",
+                    ),
+                )
+            company = get_application(table(), str(action_data["id"]))
+            if not company:
+                return respond_html(404, review_page("Solicitud no encontrada", "La solicitud ya no existe."))
+            if company.get("status") != "pending":
+                labels = {"publish": "aprobada", "rejected": "rechazada", "expired": "vencida"}
+                state = labels.get(str(company.get("status") or ""), "procesada")
+                return respond_html(
+                    200,
+                    review_page(
+                        "Solicitud ya procesada",
+                        f"{company.get('name') or 'La empresa'} ya fue {state}. No necesita hacer nada mas.",
+                    ),
+                )
+            action = str(action_data["action"])
+            if method == "GET":
+                verb = "aprobar" if action == "approve" else "rechazar"
+                return respond_html(
+                    200,
+                    review_page(
+                        f"Confirmar {verb}",
+                        f"¿Confirma que desea {verb} la solicitud de {company.get('name') or 'esta empresa'}?",
+                        confirm_url=f"?token={raw_token}",
+                        action=action,
+                    ),
+                )
+            if action == "approve":
+                result = approve_application(table(), str(action_data["id"]), "enlace-correo")
+                message = "La empresa ya aparece publicada en el directorio."
+                title = "Afiliacion aprobada"
+            else:
+                result = reject_application(
+                    table(), str(action_data["id"]), "Rechazada desde el correo", "enlace-correo"
+                )
+                message = "La solicitud fue rechazada y salio de la cola pendiente."
+                title = "Solicitud rechazada"
+            if not result.get("ok"):
+                return respond_html(400, review_page("No se pudo procesar", result.get("error") or "Intente desde el panel administrativo."))
+            return respond_html(200, review_page(title, message))
+
         if method == "GET" and path == "/directory":
             return respond(event, 200, search_directory(table(), query_params(event)))
 

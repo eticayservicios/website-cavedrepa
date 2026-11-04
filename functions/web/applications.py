@@ -12,6 +12,7 @@ from typing import Any
 import boto3
 
 from directory import default_expires_at, fold, items_for_company, search_blob
+from notifications import send_application_notification
 
 SECTORS = {
     "agricola": "Sector Agrícola",
@@ -241,9 +242,16 @@ def submit_application(table, payload: dict[str, Any]) -> dict[str, Any]:
     with table.batch_writer() as batch:
         for item in items_for_application(company):
             batch.put_item(Item=item)
+    notification_sent = False
+    try:
+        notification_sent = send_application_notification(company)
+    except Exception as exc:
+        # La solicitud nunca debe perderse porque el proveedor de correo falle.
+        print(f"No se pudo enviar la notificacion de afiliacion {company['id']}: {exc}")
     return {
         "ok": True,
         "status": "pending",
         "id": company["id"],
         "slug": company["slug"],
+        "notification_sent": notification_sent,
     }
