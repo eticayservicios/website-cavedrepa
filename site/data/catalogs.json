@@ -63,11 +63,6 @@
       "count": 4
     },
     {
-      "name": "Ciudad Bolívar - Bolívar",
-      "slug": "ciudad-bolivar-bolivar",
-      "count": 3
-    },
-    {
       "name": "Maracay - Aragua",
       "slug": "maracay-aragua",
       "count": 3
@@ -81,6 +76,11 @@
       "name": "San Juan de los Morros - Guárico",
       "slug": "san-juan-de-los-morros-guarico",
       "count": 3
+    },
+    {
+      "name": "Ciudad Bolívar - Bolívar",
+      "slug": "ciudad-bolivar-bolivar",
+      "count": 2
     },
     {
       "name": "Monagas - Maturín",
@@ -165,6 +165,11 @@
     {
       "name": "Santa Bárbara del Zulia - Zulia",
       "slug": "santa-barbara-del-zulia-zulia",
+      "count": 1
+    },
+    {
+      "name": "Sector Canaguapana - Parroquia Moitaco - Municipio Sucre - Bolívar",
+      "slug": "sector-canaguapana-parroquia-moitaco-municipio-sucre-bolivar",
       "count": 1
     },
     {
